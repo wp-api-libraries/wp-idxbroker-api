@@ -12,52 +12,51 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 	 * IdxBrokerAPI class.
 	 */
 	class IdxBrokerAPI {
+
 		/**
-		 * Headers
+		 * API URL.
+		 *
+		 * @var [String]
+		 */
+		private $api_url = 'https://api.idxbroker.com/';
+
+		/**
+		 * HTTP request arguments.
 		 *
 		 * (default value: array())
 		 *
 		 * @var array
 		 * @access protected
 		 */
-		private $args = array( 'sslverify' => false );
+		private $args = array();
+
 		/**
-		 * IDX Broker route to make a the call to
+		 * IDX Broker route to make a the call to.
 		 *
 		 * @var [String]
 		 */
 		private $route;
+
 		/**
-		 * Raw response from IDX Broker server
+		 * Raw response from IDX Broker server.
 		 *
 		 * @var [String]
 		 */
 		private $response;
+
 		/**
 		 * Response code from the server
 		 *
 		 * @var [Int]
 		 */
 		public $code;
+
 		/**
-		 * HTTP or HTTPS.
-		 *
+		 * Text domain to be used for i18n
 		 * @var [String]
 		 */
-		public $scheme;
-		/**
-		 * Domain
-		 *
-		 * @var [String] domain
-		 * @access public
-		 */
-		public $domain;
-		/**
-		 * IDX results URI
-		 *
-		 * @var [String] results_uri
-		 */
-		public $results_uri;
+		private $textdomain;
+
 		/**
 		 * __construct function.
 		 *
@@ -65,22 +64,19 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @param  [String] $api_key : IDX Broker API key.
 		 * @return void
 		 */
-		public function __construct( $api_key = null ) {
-			$idx_opts = get_option( 'idxbroker-general' );
-			$idx_info = get_option( 'idxbroker-info' );
-			$api_key      = $api_key ?? $idx_opts['apikey'] ?? '' ;
-			$partner_key  = $idx_opts['partner_key'] ?? '';
-			$this->scheme 		  = apply_filters( 'idx_subdomain_http_scheme', $idx_info['scheme'] ?? '' );
-			$this->domain 			= $idx_info['domain'] ?? '';
-			$this->results_uri  = $idx_info['results_uri'] ?? '';
+		public function __construct( $api_key, $partner_key = null, $outputtype = 'json', $apiversion = '1.4.0', $textdomain = 'wp-idxbroker-api' ) {
+
 			$this->args['headers'] = array(
-			'Content-Type' => IDXBROKER_CONTENT_TYPE,
-			'accesskey' => $api_key,
-			'ancillarykey' => $partner_key,
-			'outputtype' => IDXBROKER_OUTPUT_TYPE,
-			'apiversion' => IDXBROKER_API_VERSION,
+				'Content-Type' => 'application/x-www-form-urlencoded',
+				'accesskey' => $api_key,
+				'ancillarykey' => $partner_key,
+				'outputtype' => $outputtype,
+				'apiversion' => $apiversion,
 			);
+
+			$this->textdomain = $textdomain;
 		}
+
 		/**
 		 * Request function.
 		 *
@@ -89,14 +85,17 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 */
 		public function request() {
 			$result = false;
-			$this->response = wp_remote_request( IDXBROKER_API_URL . $this->route,  $this->args );
-			$this->check_usage();
+			$this->response = wp_remote_request( $this->api_url . $this->route,  $this->args );
+
 			$this->get_response_code();
-			if ( 200 === $this->code ) {
+
+			if ( in_array( $this->code, array( 200, 204 ) ) ) {
 				$result = json_decode( wp_remote_retrieve_body( $this->response ), true );
 			}
+
 			return $result;
 		}
+
 		/**
 		 * Builds the request for the API call to IDX Broker.
 		 *
@@ -111,22 +110,25 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 			$this->args['body'] = ( isset( $fields['body'] ) ) ? $fields['body'] : '';
 			return $this;
 		}
+
 		/**
 		 * Saves the hourly API key usage count.
 		 */
 		private function check_usage() {
-			$hour_usage = wp_remote_retrieve_header( $this->response, 'hourly-access-key-usage' );
-			update_option( 'idxbroker-api-hourly-usage', $hour_usage );
+			return $hour_usage = wp_remote_retrieve_header( $this->response, 'hourly-access-key-usage' );
 		}
+
 		/**
 		 * Gets the response code from the response.
 		 */
 		private function get_response_code() {
 			$this->code = wp_remote_retrieve_response_code( $this->response );
-			if ( WP_DEBUG && 200 !== $this->code ) {
+
+			if ( WP_DEBUG && ! in_array( $this->code, array( 200, 204 ) ) ) {
 				error_log( "[$this->route] response: $this->code" );
 			}
 		}
+
 		/**
 		 * Response code message.
 		 *
@@ -136,58 +138,59 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		public function response_code_msg( $code = '' ) {
 			switch ( $code ) {
 				case 200:
-					$msg = __( 'OK.','text-domain' );
+					$msg = __( 'OK.', $this->textdomain );
 					break;
 				case 204:
-					$msg = __( 'OK, nothing returned.','text-domain' );
+					$msg = __( 'OK, nothing returned.', $this->textdomain );
 					break;
 				case 400:
-					$msg = __( 'Required parameter missing or invalid.','text-domain' );
+					$msg = __( 'Required parameter missing or invalid.', $this->textdomain );
 					break;
 				case 401:
-					$msg = __( 'Accesskey not valid or revoked.','text-domain' );
+					$msg = __( 'Accesskey not valid or revoked.', $this->textdomain );
 					break;
 				case 403.4:
-					$msg = __( 'URL provided is not using SSL (HTTPS).','text-domain' );
+					$msg = __( 'URL provided is not using SSL (HTTPS).', $this->textdomain );
 					break;
 				case 404:
-					$msg = __( 'Invalid API component specified.','text-domain' );
+					$msg = __( 'Invalid API component specified.', $this->textdomain );
 					break;
 				case 405:
-					$msg = __( 'Method requested is invalid. This usually indicates a typo or that you may be requested a method that is part of a different API component.','text-domain' );
+					$msg = __( 'Method requested is invalid. This usually indicates a typo or that you may be requested a method that is part of a different API component.', $this->textdomain );
 					break;
 				case 406:
-					$msg = __( 'Accesskey not provided.','text-domain' );
+					$msg = __( 'Accesskey not provided.', $this->textdomain );
 					break;
 				case 409:
-					$msg = __( 'Duplicate unique data detected.','text-domain' );
+					$msg = __( 'Duplicate unique data detected.', $this->textdomain );
 					break;
 				case 412:
-					$msg = __( "Account is over it's hourly access limit.",'text-domain' );
+					$msg = __( "Account is over it's hourly access limit.", $this->textdomain );
 					break;
 				case 413:
-					$msg = __( 'Requested entity too large.','text-domain' );
+					$msg = __( 'Requested entity too large.', $this->textdomain );
 					break;
 				case 416:
-					$msg = __( 'Requested time range not satisfiable.','text-domain' );
+					$msg = __( 'Requested time range not satisfiable.', $this->textdomain );
 					break;
 				case 417:
-					$msg = __( 'There are more saved links in the account than allowed through the API.','text-domain' );
+					$msg = __( 'There are more saved links in the account than allowed through the API.', $this->textdomain );
 					break;
 				case 500:
-					$msg = __( 'General system error. Please try again later or contact IDX support.','text-domain' );
+					$msg = __( 'General system error. Please try again later or contact IDX support.', $this->textdomain );
 					break;
 				case 503:
-					$msg = __( 'Scheduled or emergency API maintenance will result in 503 errors.','text-domain' );
+					$msg = __( 'Scheduled or emergency API maintenance will result in 503 errors.', $this->textdomain );
 					break;
 				case 521:
-					$msg = __( 'Temporary error. There is a possibility that not all API methods are affected.','text-domain' );
+					$msg = __( 'Temporary error. There is a possibility that not all API methods are affected.', $this->textdomain );
 					break;
 				default:
-					$msg = __( 'Response code unknown','text-domain' );
+					$msg = __( 'Response code unknown', $this->textdomain );
 					break;
 			}
 			return $msg;
 		}
-	}
-}
+	} //End Class.
+
+} // End If.
