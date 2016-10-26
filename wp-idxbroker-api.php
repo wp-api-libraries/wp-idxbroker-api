@@ -4,9 +4,22 @@
  *
  * @package WP-IDX-Broker-API
  */
+
+/*
+* Plugin Name: WP IDX Broker API
+* Plugin URI: https://github.com/wp-api-libraries/wp-idxbroker-api
+* Description: Perform API requests to IDX Broker in WordPress.
+* Author: WP API Libraries
+* Version: 1.0.0
+* Author URI: https://wp-api-libraries.com
+* GitHub Plugin URI: https://github.com/wp-api-libraries/wp-idxbroker-api
+* GitHub Branch: master
+*/
+
 /* Exit if accessed directly */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
+/* Check if class exists. */
 if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 	/**
 	 * IdxBrokerAPI class.
