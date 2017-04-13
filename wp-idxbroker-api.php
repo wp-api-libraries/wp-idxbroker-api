@@ -77,7 +77,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @param  [String] $api_key : IDX Broker API key.
 		 * @return void
 		 */
-		public function __construct( $api_key, $partner_key = null, $outputtype = 'json', $apiversion = '1.4.0', $textdomain = 'wp-idxbroker-api' ) {
+		public function __construct( $api_key, $partner_key = null, $outputtype = 'json', $apiversion = '1.4.0' ) {
 
 			$this->args['headers'] = array(
 				'Content-Type' => 'application/x-www-form-urlencoded',
@@ -87,7 +87,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 				'apiversion' => $apiversion,
 			);
 
-			$this->textdomain = $textdomain;
+			'wp-idxbroker-api' = $textdomain;
 		}
 
 		/**
@@ -151,59 +151,399 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		public function response_code_msg( $code = '' ) {
 			switch ( $code ) {
 				case 200:
-					$msg = __( 'OK.', $this->textdomain );
+					$msg = __( 'OK.', 'wp-idxbroker-api' );
 					break;
 				case 204:
-					$msg = __( 'OK, nothing returned.', $this->textdomain );
+					$msg = __( 'OK, nothing returned.', 'wp-idxbroker-api' );
 					break;
 				case 400:
-					$msg = __( 'Required parameter missing or invalid.', $this->textdomain );
+					$msg = __( 'Required parameter missing or invalid.', 'wp-idxbroker-api' );
 					break;
 				case 401:
-					$msg = __( 'Accesskey not valid or revoked.', $this->textdomain );
+					$msg = __( 'Accesskey not valid or revoked.', 'wp-idxbroker-api' );
 					break;
 				case 403.4:
-					$msg = __( 'URL provided is not using SSL (HTTPS).', $this->textdomain );
+					$msg = __( 'URL provided is not using SSL (HTTPS).', 'wp-idxbroker-api' );
 					break;
 				case 404:
-					$msg = __( 'Invalid API component specified.', $this->textdomain );
+					$msg = __( 'Invalid API component specified.', 'wp-idxbroker-api' );
 					break;
 				case 405:
-					$msg = __( 'Method requested is invalid. This usually indicates a typo or that you may be requested a method that is part of a different API component.', $this->textdomain );
+					$msg = __( 'Method requested is invalid. This usually indicates a typo or that you may be requested a method that is part of a different API component.', 'wp-idxbroker-api' );
 					break;
 				case 406:
-					$msg = __( 'Accesskey not provided.', $this->textdomain );
+					$msg = __( 'Accesskey not provided.', 'wp-idxbroker-api' );
 					break;
 				case 409:
-					$msg = __( 'Duplicate unique data detected.', $this->textdomain );
+					$msg = __( 'Duplicate unique data detected.', 'wp-idxbroker-api' );
 					break;
 				case 412:
-					$msg = __( "Account is over it's hourly access limit.", $this->textdomain );
+					$msg = __( "Account is over it's hourly access limit.", 'wp-idxbroker-api' );
 					break;
 				case 413:
-					$msg = __( 'Requested entity too large.', $this->textdomain );
+					$msg = __( 'Requested entity too large.', 'wp-idxbroker-api' );
 					break;
 				case 416:
-					$msg = __( 'Requested time range not satisfiable.', $this->textdomain );
+					$msg = __( 'Requested time range not satisfiable.', 'wp-idxbroker-api' );
 					break;
 				case 417:
-					$msg = __( 'There are more saved links in the account than allowed through the API.', $this->textdomain );
+					$msg = __( 'There are more saved links in the account than allowed through the API.', 'wp-idxbroker-api' );
 					break;
 				case 500:
-					$msg = __( 'General system error. Please try again later or contact IDX support.', $this->textdomain );
+					$msg = __( 'General system error. Please try again later or contact IDX support.', 'wp-idxbroker-api' );
 					break;
 				case 503:
-					$msg = __( 'Scheduled or emergency API maintenance will result in 503 errors.', $this->textdomain );
+					$msg = __( 'Scheduled or emergency API maintenance will result in 503 errors.', 'wp-idxbroker-api' );
 					break;
 				case 521:
-					$msg = __( 'Temporary error. There is a possibility that not all API methods are affected.', $this->textdomain );
+					$msg = __( 'Temporary error. There is a possibility that not all API methods are affected.', 'wp-idxbroker-api' );
 					break;
 				default:
-					$msg = __( 'Response code unknown', $this->textdomain );
+					$msg = __( 'Response code unknown', 'wp-idxbroker-api' );
 					break;
 			}
 			return $msg;
 		}
+
+	/* Partners. */
+
+	public function get_aggregated_agents() {
+
+	}
+
+	public function get_aggregated_featured() {
+
+	}
+
+	public function get_aggregated_leads() {
+
+	}
+
+	public function get_aggregated_lead_traffic() {
+
+	}
+
+	public function get_aggregated_listing_status() {
+
+	}
+
+	public function get_aggregated_properties() {
+
+	}
+
+	public function get_aggregated_searches() {
+
+	}
+
+	public function get_aggregated_soldpending() {
+
+	}
+
+	public function get_aggregated_supplemental() {
+
+	}
+
+	public function get_partners_api_version() {
+
+	}
+
+	public function get_available_mls() {
+
+	}
+
+	public function get_clients() {
+
+	}
+
+	public function list_components() {
+
+	}
+
+	public function list_methods() {
+
+	}
+
+	public function get_partners_propertytypes() {
+
+	}
+
+	/* Clients. */
+
+	public function get_account_type() {
+
+	}
+
+	public function get_agents() {
+
+	}
+
+	public function get_api_version() {
+
+	}
+
+	public function get_cities() {
+
+	}
+
+	public function get_cities_listname() {
+
+	}
+
+	public function get_counties() {
+
+	}
+
+	public function get_counties_listname() {
+
+	}
+
+	public function send_dynamic_wrapper_url() {
+
+	}
+
+	public function get_featured() {
+
+	}
+
+	public function get_list_allowed_fields() {
+
+	}
+
+	public function get_list_components() {
+
+	}
+
+	public function get_listing() {
+
+	}
+
+	public function get_list_methods() {
+
+	}
+
+	public function get_offices() {
+
+	}
+
+	public function get_postalcodes() {
+
+	}
+
+	public function get_postalcodes_listname() {
+
+	}
+
+	public function get_properties() {
+
+	}
+
+	public function add_savedlink() {
+
+	}
+
+	public function delete_savedlink() {
+
+	}
+
+	public function get_savedlinks() {
+
+	}
+
+	public function update_savedlink() {
+
+	}
+
+	public function get_searchquery() {
+
+	}
+
+	public function get_soldpending() {
+
+	}
+
+	public function delete_supplemental() {
+
+	}
+
+	public function get_supplemental() {
+
+	}
+
+	public function add_supplemental() {
+
+	}
+
+	public function update_supplemental() {
+
+	}
+
+	public function get_systemlinks() {
+
+	}
+
+	public function get_widgets() {
+
+	}
+
+	public function delete_wrapper_cache() {
+
+	}
+
+	public function get_zipcodes() {
+
+	}
+
+	/* MLS. */
+
+	public function get_mls_age() {
+
+	}
+
+	public function get_approved_mls() {
+
+	}
+
+	public function get_mls_cities() {
+
+	}
+
+	public function get_mls_counties() {
+
+	}
+
+	public function get_mls_list_components() {
+
+	}
+
+	public function get_mls_list_methods() {
+
+	}
+
+	public function get_mls_postalcodes() {
+
+	}
+
+	public function get_mls_prices() {
+
+	}
+
+	public function get_mls_property_count() {
+
+	}
+
+	public function get_mls_property_types() {
+
+	}
+
+	public function get_mls_search_fields() {
+
+	}
+
+	public function get_mls_search_field_values() {
+
+	}
+
+	public function get_mls_zipcodes() {
+
+	}
+
+	/* LEADS. */
+
+	public function add_bulk_leads() {
+
+	}
+
+	public function update_bulk_leads() {
+
+	}
+
+	public function delete_lead() {
+
+	}
+
+	public function get_lead() {
+
+	}
+
+	public function update_lead() {
+
+	}
+
+	public function add_lead() {
+
+	}
+
+	public function get_lead_traffic() {
+
+	}
+
+	public function get_lead_list_components() {
+
+	}
+
+	public function get_lead_list_methods() {
+
+	}
+
+	public function delete_lead_note() {
+
+	}
+
+	public function add_lead_note() {
+
+	}
+
+	public function update_lead_note() {
+
+	}
+
+	public function get_lead_note() {
+
+	}
+
+	public function delete_lead_property() {
+
+	}
+
+	public function add_lead_property() {
+
+	}
+
+	public function update_lead_property() {
+
+	}
+
+	public function get_lead_property() {
+
+	}
+
+	public function delete_lead_search() {
+
+	}
+
+	public function add_lead_search() {
+
+	}
+
+	public function update_lead_search() {
+
+	}
+
+	public function get_lead_search() {
+
+	}
+
+
+	/* Specialty Partner. */
+
+	public function get_specialty_partner_pricing() {
+
+	}
+
+	public function add_specialty_partner_subscriber() {
+
+	}
+
 	} //End Class.
 
 } // End If.
