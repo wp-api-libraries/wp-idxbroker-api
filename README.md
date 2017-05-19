@@ -12,7 +12,7 @@ A WordPress php library for interacting with the [IDX Broker API](https://middle
 ```php
 $idx_api = new IdxBrokerAPI( 'example_api_key');
 
-$results = $idx_api->build_request( 'properties/featured' )->request();
+$results = $idx_api->build_request( 'clients/featured' )->request();
 ```
 
 ### POST Request
