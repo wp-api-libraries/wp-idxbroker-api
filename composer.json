@@ -1,4 +1,6 @@
 {
+    "name":"wp-api-libraries/wp-idxbroker-api",
+    "type":"wordpress-plugin",
     "require": {
         "stevegrunwell/wp-enforcer": "^0.4.1"
     },
