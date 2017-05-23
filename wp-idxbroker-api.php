@@ -64,11 +64,6 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 */
 		public $code;
 
-		/**
-		 * Text domain to be used for i18n
-		 * @var [String]
-		 */
-		private $textdomain;
 
 		/**
 		 * __construct function.
@@ -81,13 +76,12 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 
 			$this->args['headers'] = array(
 				'Content-Type' => 'application/x-www-form-urlencoded',
-				'accesskey' => $api_key,
+				'accesskey'    => $api_key,
 				'ancillarykey' => $partner_key,
-				'outputtype' => $outputtype,
-				'apiversion' => $apiversion,
+				'outputtype'   => $outputtype,
+				'apiversion'   => $apiversion,
 			);
 
-			'wp-idxbroker-api' = $textdomain;
 		}
 
 		/**
@@ -207,23 +201,39 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 
 	/* Partners. */
 
-	public function get_aggregated_agents() {
+
+	/**
+	 * get_aggregated_agents function.
+	 *
+	 * @access public
+	 * @param string $rf (default: '')
+	 * @param string $client_chunk (default: '')
+	 * @param string $include_disabled_accounts (default: '')
+	 * @param string $offset (default: '')
+	 * @param string $limit (default: '')
+	 * @return void
+	 */
+	public function get_aggregated_agents( $rf = '', $client_chunk = '', $include_disabled_accounts = '', $offset = '', $limit = '' ) {
+
+		$results = $this->build_request( 'partners/aggregatedagents??rf[]=' $rf . '&clientChunk=' . $client_chunk . '&includeDisabledAccounts=' . $include_disabled_accounts . '&offset=' . $offset . '&limit=' . $limit );
+
+		return $results;
 
 	}
 
-	public function get_aggregated_featured() {
+	public function get_aggregated_featured( $date_type = '', $interval = '', $start_date_time = '', $rf = '', $client_chunk = '', $include_disabled_accounts = '', $offset = '', $limit = '', $disclaimers = '' ) {
 
 	}
 
-	public function get_aggregated_leads() {
+	public function get_aggregated_leads( $date_type = '', $interval ='', $start_date_time = '', $rf = '', $client_chunk = '', $include_disabled_accounts = '' ) {
 
 	}
 
-	public function get_aggregated_lead_traffic() {
+	public function get_aggregated_lead_traffic( $interval = '', $start_date_time = '', $rf = '', $client_chunk = '', $include_disabled_accounts = '' ) {
 
 	}
 
-	public function get_aggregated_listing_status() {
+	public function get_aggregated_listing_status( $filter_field = '', $filter_value = '', $client_chunk = '', $include_disabled_accounts = '' ) {
 
 	}
 
