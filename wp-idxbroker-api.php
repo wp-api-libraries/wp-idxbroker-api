@@ -41,21 +41,21 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @var array
 		 * @access protected
 		 */
-		private $args = array();
+		protected $args = array();
 
 		/**
 		 * IDX Broker route to make a the call to.
 		 *
 		 * @var [String]
 		 */
-		private $route;
+		protected $route;
 
 		/**
 		 * Raw response from IDX Broker server.
 		 *
 		 * @var [String]
 		 */
-		private $response;
+		protected $response;
 
 		/**
 		 * Response code from the server
@@ -68,7 +68,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * Text domain to be used for i18n
 		 * @var [String]
 		 */
-		private $textdomain;
+		protected $textdomain;
 
 		/**
 		 * __construct function.
