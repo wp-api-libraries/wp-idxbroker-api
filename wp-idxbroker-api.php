@@ -101,6 +101,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 			$this->response = wp_remote_request( $this->api_url . $this->route,  $this->args );
 
 			$this->get_response_code();
+			$this->check_usage();
 
 			if ( in_array( $this->code, array( 200, 204 ) ) ) {
 				$result = json_decode( wp_remote_retrieve_body( $this->response ), true );
@@ -127,14 +128,14 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		/**
 		 * Saves the hourly API key usage count.
 		 */
-		private function check_usage() {
+		protected function check_usage() {
 			return $hour_usage = wp_remote_retrieve_header( $this->response, 'hourly-access-key-usage' );
 		}
 
 		/**
 		 * Gets the response code from the response.
 		 */
-		private function get_response_code() {
+		protected function get_response_code() {
 			$this->code = wp_remote_retrieve_response_code( $this->response );
 
 			if ( WP_DEBUG && ! in_array( $this->code, array( 200, 204 ) ) ) {
