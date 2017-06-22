@@ -4,6 +4,9 @@
     "require": {
         "stevegrunwell/wp-enforcer": "^0.4.1"
     },
+    "require-dev": {
+          "phpdocumentor/phpdocumentor": "2.*"
+    },
     "post-install-cmd": [
       "wp-enforcer"
     ],

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+    <title>WP IDXBroker API</title>
+    <parser>
+        <target>docs</target>
+        <encoding>utf8</encoding>
+        <markers>
+            <item>TODO</item>
+            <item>FIXME</item>
+        </markers>
+        <visibility></visibility>
+    </parser>
+    <transformer>
+        <target>docs</target>
+    </transformer>
+    <transformations>
+        <template name="responsive" />
+    </transformations>
+    <files>
+				<directory>.</directory>
+				<ignore>bin/*</ignore>
+				<ignore>tests/*</ignore>
+				<ignore>node_modules/*</ignore>
+				<ignore>vendor/*</ignore>
+    </files>
+</phpdoc>
