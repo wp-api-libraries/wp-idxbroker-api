@@ -2,7 +2,7 @@
 /**
  * IDX Broker API
  *
- * @package WP-IDX-Broker-API
+ * @package WP-API-Libraries\WP-IDX-Broker-API
  * @author sfgarza
  */
 
@@ -32,7 +32,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		/**
 		 * API URL.
 		 *
-		 * @var String
+		 * @var string
 		 */
 		private $api_url = 'https://api.idxbroker.com/';
 
@@ -49,28 +49,28 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		/**
 		 * IDX Broker route to make a the call to.
 		 *
-		 * @var String
+		 * @var string
 		 */
 		protected $route;
 
 		/**
 		 * Raw response from IDX Broker server.
 		 *
-		 * @var String
+		 * @var string
 		 */
 		protected $response;
 
 		/**
 		 * Response code from the server
 		 *
-		 * @var Integer
+		 * @var int
 		 */
 		public $code;
 
 		/**
 		 * Text domain to be used for i18n
 		 *
-		 * @var String
+		 * @var string
 		 */
 		protected $textdomain;
 
@@ -83,6 +83,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @param string $outputtype   XML or JSON.
 		 * @param string $apiversion   Version of API to use.
 		 * @param string $textdomain   Textdomain.
+		 * @return void
 		 */
 		public function __construct( $api_key, $partner_key = null, $outputtype = 'json', $apiversion = '1.4.0', $textdomain = 'wp-idxbroker-api' ) {
 
@@ -101,7 +102,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * Request function.
 		 *
 		 * @access public
-		 * @return Results
+		 * @return array Array of API results.
 		 */
 		public function request() {
 			$result = false;
@@ -120,10 +121,10 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		/**
 		 * Builds the request for the API call to IDX Broker.
 		 *
-		 * @param  String $route   The route to make the call to.
-		 * @param  Array  $fields  Array containing the http method and body
-		 *                         of call. Optional for GET requests.
-		 * @return Object          IdxBrokerAPI Object.
+		 * @param  string $route  The route to make the call to.
+		 * @param  array  $fields Array containing the http method and body
+		 *                        of call. Optional for GET requests.
+		 * @return IdxBrokerAPI   IdxBrokerAPI Object.
 		 */
 		public function build_request( $route, $fields = array() ) {
 			$this->route = ( isset( $route ) ) ? $route : '';
@@ -134,6 +135,8 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 
 		/**
 		 * Saves the hourly API key usage count.
+		 *
+		 * @return string API hourly usage count.
 		 */
 		protected function check_usage() {
 			return $hour_usage = wp_remote_retrieve_header( $this->response, 'hourly-access-key-usage' );
@@ -151,10 +154,32 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		}
 
 		/**
+		 * Get domain used for displaying IDX pages.
+		 *
+		 * @return array  Array containing domain 'scheme' & 'url'.
+		 */
+		public function get_idx_domain(){
+			// Make API call to systemlinks cuz IDX Broker doesnt send it in accounts info. ¯\_(ツ)_/¯
+			$links = $this->build_request( 'clients/systemlinks?rf=url' )->request();
+
+			// Default to false.
+			$domain = false;
+
+			// Parse URL if successful.
+			if( isset( $links[0]['url'] ) ){
+				$data = parse_url( $links[0]['url'] );
+				$domain['scheme'] = $data['scheme'];
+				$domain['url'] = $data['host'];
+			}
+
+			return $domain;
+		}
+
+		/**
 		 * Response code message.
 		 *
-		 * @param  String $code  Response code to get message from.
-		 * @return String        Message corresponding to response code sent in.
+		 * @param  string $code Response code to get message from.
+		 * @return string       Message corresponding to response code sent in.
 		 */
 		public function response_code_msg( $code = '' ) {
 			switch ( $code ) {
