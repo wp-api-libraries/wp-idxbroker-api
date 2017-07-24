@@ -20,6 +20,7 @@
 <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a>Packages</a></li>
+<li><a href="../packages/WP-API-Libraries.html"><i class="icon-folder-open"></i> WP-API-Libraries</a></li>
 <li><a href="../packages/WP-IDX-Broker-API.html"><i class="icon-folder-open"></i> WP-IDX-Broker-API</a></li>
 </ul>
 </li>
@@ -63,6 +64,7 @@
                     <ul>
 <li class="method public "><a href="#method___construct" title="__construct() :: __construct function."><span class="description">__construct function.</span><pre>__construct()</pre></a></li>
 <li class="method public "><a href="#method_build_request" title="build_request() :: Builds the request for the API call to IDX Broker."><span class="description">Builds the request for the API call to IDX Broker.</span><pre>build_request()</pre></a></li>
+<li class="method public "><a href="#method_get_idx_domain" title="get_idx_domain() :: Get domain used for displaying IDX pages."><span class="description">Get domain used for displaying IDX pages.</span><pre>get_idx_domain()</pre></a></li>
 <li class="method public "><a href="#method_request" title="request() :: Request function."><span class="description">Request function.</span><pre>request()</pre></a></li>
 <li class="method public "><a href="#method_response_code_msg" title="response_code_msg() :: Response code message."><span class="description">Response code message.</span><pre>response_code_msg()</pre></a></li>
 </ul>
@@ -111,7 +113,7 @@
 <i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
 <a id="method___construct"></a><div class="element clickable method public method___construct " data-toggle="collapse" data-target=".method___construct .collapse" title="public">
 <h2>__construct function.</h2>
-<pre>__construct(string $api_key, string $partner_key<code> = null</code>, string $outputtype<code> = 'json'</code>, string $apiversion<code> = '1.4.0'</code>, string $textdomain<code> = 'wp-idxbroker-api'</code>) </pre>
+<pre>__construct(string $api_key, string $partner_key<code> = null</code>, string $outputtype<code> = 'json'</code>, string $apiversion<code> = '1.4.0'</code>, string $textdomain<code> = 'wp-idxbroker-api'</code>) : void</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -139,26 +141,37 @@
 </div>
 <a id="method_build_request"></a><div class="element clickable method public method_build_request " data-toggle="collapse" data-target=".method_build_request .collapse" title="public">
 <h2>Builds the request for the API call to IDX Broker.</h2>
-<pre>build_request(String $route, Array $fields<code> = array()</code>) : Object</pre>
+<pre>build_request(string $route, array $fields<code> = array()</code>) : \IdxBrokerAPI</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$route</h4>
-<code>String</code><p>The route to make the call to.</p></div>
+<code>string</code><p>The route to make the call to.</p></div>
 <div class="subelement argument">
 <h4>$fields</h4>
-<code>Array</code><p>Array containing the http method and body
-                        of call. Optional for GET requests.</p></div>
+<code>array</code><p>Array containing the http method and body
+                       of call. Optional for GET requests.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>Object</code>IdxBrokerAPI Object.</div>
+<code>\IdxBrokerAPI</code>IdxBrokerAPI Object.</div>
+</div></div>
+</div>
+<a id="method_get_idx_domain"></a><div class="element clickable method public method_get_idx_domain " data-toggle="collapse" data-target=".method_get_idx_domain .collapse" title="public">
+<h2>Get domain used for displaying IDX pages.</h2>
+<pre>get_idx_domain() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Array containing domain 'scheme' &amp; 'url'.</div>
 </div></div>
 </div>
 <a id="method_request"></a><div class="element clickable method public method_request " data-toggle="collapse" data-target=".method_request .collapse" title="public">
 <h2>Request function.</h2>
-<pre>request() : \Results</pre>
+<pre>request() : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -167,29 +180,35 @@
 <td>public</td>
 </tr></table>
 <h3>Returns</h3>
-<div class="subelement response"><code>\Results</code></div>
+<div class="subelement response">
+<code>array</code>Array of API results.</div>
 </div></div>
 </div>
 <a id="method_response_code_msg"></a><div class="element clickable method public method_response_code_msg " data-toggle="collapse" data-target=".method_response_code_msg .collapse" title="public">
 <h2>Response code message.</h2>
-<pre>response_code_msg(String $code<code> = ''</code>) : String</pre>
+<pre>response_code_msg(string $code<code> = ''</code>) : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$code</h4>
-<code>String</code><p>Response code to get message from.</p></div>
+<code>string</code><p>Response code to get message from.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>String</code>Message corresponding to response code sent in.</div>
+<code>string</code>Message corresponding to response code sent in.</div>
 </div></div>
 </div>
 <a id="method_check_usage"></a><div class="element clickable method protected method_check_usage " data-toggle="collapse" data-target=".method_check_usage .collapse" title="protected">
 <h2>Saves the hourly API key usage count.</h2>
-<pre>check_usage() </pre>
+<pre>check_usage() : string</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>API hourly usage count.</div>
+</div></div>
 </div>
 <a id="method_get_response_code"></a><div class="element clickable method protected method_get_response_code " data-toggle="collapse" data-target=".method_get_response_code .collapse" title="protected">
 <h2>Gets the response code from the response.</h2>
@@ -201,7 +220,7 @@
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
 <a id="property_code"> </a><div class="element clickable property public property_code" data-toggle="collapse" data-target=".property_code .collapse" title="public">
 <h2>Response code from the server</h2>
-<pre>$code : Integer</pre>
+<pre>$code : integer</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -227,7 +246,7 @@
 </div>
 <a id="property_response"> </a><div class="element clickable property protected property_response" data-toggle="collapse" data-target=".property_response .collapse" title="protected">
 <h2>Raw response from IDX Broker server.</h2>
-<pre>$response : String</pre>
+<pre>$response : string</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -237,7 +256,7 @@
 </div>
 <a id="property_route"> </a><div class="element clickable property protected property_route" data-toggle="collapse" data-target=".property_route .collapse" title="protected">
 <h2>IDX Broker route to make a the call to.</h2>
-<pre>$route : String</pre>
+<pre>$route : string</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -247,7 +266,7 @@
 </div>
 <a id="property_textdomain"> </a><div class="element clickable property protected property_textdomain" data-toggle="collapse" data-target=".property_textdomain .collapse" title="protected">
 <h2>Text domain to be used for i18n</h2>
-<pre>$textdomain : String</pre>
+<pre>$textdomain : string</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -257,7 +276,7 @@
 </div>
 <a id="property_api_url"> </a><div class="element clickable property private property_api_url" data-toggle="collapse" data-target=".property_api_url .collapse" title="private">
 <h2>API URL.</h2>
-<pre>$api_url : String</pre>
+<pre>$api_url : string</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"><code>'https://api.idxbroker.com/'</code></div>
@@ -272,7 +291,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2017-06-22T01:13:50-07:00.<br></footer></div>
+            generated on 2017-07-24T10:58:58-07:00.<br></footer></div>
 </div>
 </body>
 </html>

@@ -14,11 +14,11 @@
     </docblock>
     <source>eJyNkmtP2zAUhr/nVxxVleJUJIFJ+8KlYwwGbLR00DG2qkJeYhKviZ3aTkuG+O87dkNBGxKzoijn8rw+l+y+q/LKi3s9D3qAn4cyqUsmjFTosL7RyQiumNJcCnjb+vYTalgmVQP/ILBf0WRGMwYAl4yqJHdOWptcKvTBgM8YLKiAC84K2C3RjNBUaO0LygSvdZTIsr+6R1aN4llu4M3m1maIr62/BGIYriAguTHVdhwvl8vomVDghAqeMKFtUc+yZIU+WauERVJlcZuj45KbsDUi7A8Gp+NWRMzAnVYEg6lMLIzx2PPiGDJmQLu+wTBVel37hj3QRhlZyCVTpHtzfDSe+DbgT4Mdh91ykToAuIDrwRmk7VC97l1ZIC/YEg7PB4+zJsjZSNgvJE2Jv7ryBlXYXYR+38UravIn9nqEJrGUvbQ7x/XtwSop7M9rphri2eY6cbygRc0miRSGcqGJUVToAndOog3w3x98ODz6eHxy+unz2WB4PvpycTn+evXt+vsPfwM6TiKCjk9/Jim7zXL+a1aUQlZzpU29WN41v/0AVdxg/GAaR1HHs9UqpuvCaKyJKkUb4ibTw7EvqLLlHxXMdg5d1n7gxG+lYhRHTVw3VK+DAdy7Qp4EZDmUKTvjGhVce2AFbM6jiWdvLRD2cZPtlfqgGdNsSEtGfJdrp+tInkJ7Xid5usZMU7H/xWzuGmxnNJki6N9Dx1XT2cZp48hpmuKSdM40WbUU9rlhJdkMwr7A3q+sL2j343dwVzx9ieXpq6At6iXU+l+EHQgP/o734HksySX4EwvzsiowieCfg89jfy59isl/ACqIaJw=</source>
   </file>
-  <file path="wp-idxbroker-api.php" generated-path="wp-idxbroker-api.html" hash="eb416dfceb13c9280b6376de87bfbfee" package="WP-IDX-Broker-API">
+  <file path="wp-idxbroker-api.php" generated-path="wp-idxbroker-api.html" hash="bfb112c6a976cabf83e34010e61e53e4" package="WP-API-Libraries\WP-IDX-Broker-API">
     <docblock line="0">
       <description>IDX Broker API</description>
       <long-description></long-description>
-      <tag name="package" line="0" description="WP-IDX-Broker-API"/>
+      <tag name="package" line="0" description="WP-API-Libraries\WP-IDX-Broker-API"/>
       <tag name="author" line="0" description="sfgarza"/>
     </docblock>
     <class final="false" abstract="false" namespace="" line="30" package="WP-IDX-Broker-API">
@@ -37,8 +37,8 @@
         <docblock line="37">
           <description>API URL.</description>
           <long-description></long-description>
-          <tag name="var" line="37" description="" type="String" variable="">
-            <type>String</type>
+          <tag name="var" line="37" description="" type="string" variable="">
+            <type>string</type>
           </tag>
         </docblock>
       </property>
@@ -62,8 +62,8 @@
         <docblock line="54">
           <description>IDX Broker route to make a the call to.</description>
           <long-description></long-description>
-          <tag name="var" line="54" description="" type="String" variable="">
-            <type>String</type>
+          <tag name="var" line="54" description="" type="string" variable="">
+            <type>string</type>
           </tag>
         </docblock>
       </property>
@@ -74,8 +74,8 @@
         <docblock line="61">
           <description>Raw response from IDX Broker server.</description>
           <long-description></long-description>
-          <tag name="var" line="61" description="" type="String" variable="">
-            <type>String</type>
+          <tag name="var" line="61" description="" type="string" variable="">
+            <type>string</type>
           </tag>
         </docblock>
       </property>
@@ -86,8 +86,8 @@
         <docblock line="68">
           <description>Response code from the server</description>
           <long-description></long-description>
-          <tag name="var" line="68" description="" type="Integer" variable="">
-            <type>Integer</type>
+          <tag name="var" line="68" description="" type="integer" variable="">
+            <type>integer</type>
           </tag>
         </docblock>
       </property>
@@ -98,32 +98,35 @@
         <docblock line="75">
           <description>Text domain to be used for i18n</description>
           <long-description></long-description>
-          <tag name="var" line="75" description="" type="String" variable="">
-            <type>String</type>
+          <tag name="var" line="75" description="" type="string" variable="">
+            <type>string</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="87" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="88" package="WP-IDX-Broker-API">
         <name>__construct</name>
         <full_name>\IdxBrokerAPI::__construct()</full_name>
-        <docblock line="87">
+        <docblock line="88">
           <description>__construct function.</description>
           <long-description></long-description>
-          <tag name="access" line="87" description="public"/>
-          <tag name="param" line="87" description="&lt;p&gt;IDX Broker API key.&lt;/p&gt;" type="string" variable="$api_key">
+          <tag name="access" line="88" description="public"/>
+          <tag name="param" line="88" description="&lt;p&gt;IDX Broker API key.&lt;/p&gt;" type="string" variable="$api_key">
             <type>string</type>
           </tag>
-          <tag name="param" line="87" description="&lt;p&gt;Ancillarykey.&lt;/p&gt;" type="string" variable="$partner_key">
+          <tag name="param" line="88" description="&lt;p&gt;Ancillarykey.&lt;/p&gt;" type="string" variable="$partner_key">
             <type>string</type>
           </tag>
-          <tag name="param" line="87" description="&lt;p&gt;XML or JSON.&lt;/p&gt;" type="string" variable="$outputtype">
+          <tag name="param" line="88" description="&lt;p&gt;XML or JSON.&lt;/p&gt;" type="string" variable="$outputtype">
             <type>string</type>
           </tag>
-          <tag name="param" line="87" description="&lt;p&gt;Version of API to use.&lt;/p&gt;" type="string" variable="$apiversion">
+          <tag name="param" line="88" description="&lt;p&gt;Version of API to use.&lt;/p&gt;" type="string" variable="$apiversion">
             <type>string</type>
           </tag>
-          <tag name="param" line="87" description="&lt;p&gt;Textdomain.&lt;/p&gt;" type="string" variable="$textdomain">
+          <tag name="param" line="88" description="&lt;p&gt;Textdomain.&lt;/p&gt;" type="string" variable="$textdomain">
             <type>string</type>
+          </tag>
+          <tag name="return" line="88" description="" type="void">
+            <type>void</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -152,84 +155,101 @@
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="106" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="107" package="WP-IDX-Broker-API">
         <name>request</name>
         <full_name>\IdxBrokerAPI::request()</full_name>
-        <docblock line="106">
+        <docblock line="107">
           <description>Request function.</description>
           <long-description></long-description>
-          <tag name="access" line="106" description="public"/>
-          <tag name="return" line="106" description="" type="\Results">
-            <type>\Results</type>
+          <tag name="access" line="107" description="public"/>
+          <tag name="return" line="107" description="Array of API results." type="array">
+            <type>array</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="128" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="129" package="WP-IDX-Broker-API">
         <name>build_request</name>
         <full_name>\IdxBrokerAPI::build_request()</full_name>
-        <docblock line="128">
+        <docblock line="129">
           <description>Builds the request for the API call to IDX Broker.</description>
           <long-description></long-description>
-          <tag name="param" line="128" description="&lt;p&gt;The route to make the call to.&lt;/p&gt;" type="String" variable="$route">
-            <type>String</type>
+          <tag name="param" line="129" description="&lt;p&gt;The route to make the call to.&lt;/p&gt;" type="string" variable="$route">
+            <type>string</type>
           </tag>
-          <tag name="param" line="128" description="&lt;p&gt;Array containing the http method and body&#10;                        of call. Optional for GET requests.&lt;/p&gt;" type="Array" variable="$fields">
-            <type>Array</type>
+          <tag name="param" line="129" description="&lt;p&gt;Array containing the http method and body&#10;                       of call. Optional for GET requests.&lt;/p&gt;" type="array" variable="$fields">
+            <type>array</type>
           </tag>
-          <tag name="return" line="128" description="IdxBrokerAPI Object." type="Object">
-            <type>Object</type>
+          <tag name="return" line="129" description="IdxBrokerAPI Object." type="\IdxBrokerAPI">
+            <type>\IdxBrokerAPI</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$route</name>
           <default></default>
-          <type>String</type>
+          <type>string</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$fields</name>
           <default>array()</default>
-          <type>Array</type>
+          <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="138" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="141" package="WP-IDX-Broker-API">
         <name>check_usage</name>
         <full_name>\IdxBrokerAPI::check_usage()</full_name>
-        <docblock line="138">
+        <docblock line="141">
           <description>Saves the hourly API key usage count.</description>
           <long-description></long-description>
+          <tag name="return" line="141" description="API hourly usage count." type="string">
+            <type>string</type>
+          </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="145" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="148" package="WP-IDX-Broker-API">
         <name>get_response_code</name>
         <full_name>\IdxBrokerAPI::get_response_code()</full_name>
-        <docblock line="145">
+        <docblock line="148">
           <description>Gets the response code from the response.</description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="159" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="161" package="WP-IDX-Broker-API">
+        <name>get_idx_domain</name>
+        <full_name>\IdxBrokerAPI::get_idx_domain()</full_name>
+        <docblock line="161">
+          <description>Get domain used for displaying IDX pages.</description>
+          <long-description></long-description>
+          <tag name="return" line="161" description="Array containing domain 'scheme' &amp;amp; 'url'." type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="184" package="WP-IDX-Broker-API">
         <name>response_code_msg</name>
         <full_name>\IdxBrokerAPI::response_code_msg()</full_name>
-        <docblock line="159">
+        <docblock line="184">
           <description>Response code message.</description>
           <long-description></long-description>
-          <tag name="param" line="159" description="&lt;p&gt;Response code to get message from.&lt;/p&gt;" type="String" variable="$code">
-            <type>String</type>
+          <tag name="param" line="184" description="&lt;p&gt;Response code to get message from.&lt;/p&gt;" type="string" variable="$code">
+            <type>string</type>
           </tag>
-          <tag name="return" line="159" description="Message corresponding to response code sent in." type="String">
-            <type>String</type>
+          <tag name="return" line="184" description="Message corresponding to response code sent in." type="string">
+            <type>string</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$code</name>
           <default>''</default>
-          <type>String</type>
+          <type>string</type>
         </argument>
       </method>
     </class>
-    <source>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</source>
+    <source>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</source>
   </file>
   <package name="Search" full_name="Search"/>
+  <package name="WP-API-Libraries" full_name="WP-API-Libraries">
+    <package name="WP-IDX-Broker-API" full_name="WP-API-Libraries\WP-IDX-Broker-API"/>
+  </package>
   <package name="WP-IDX-Broker-API" full_name="WP-IDX-Broker-API"/>
   <package name="global" full_name="global"/>
   <namespace name="global" full_name="global"/>
