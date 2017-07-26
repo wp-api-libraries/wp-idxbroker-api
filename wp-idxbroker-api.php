@@ -245,7 +245,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 	 */
 	public function get_aggregated_agents( $rf = '', $client_chunk = '', $include_disabled_accounts = '', $offset = '', $limit = '' ) {
 
-		$results = $this->build_request( 'partners/aggregatedagents??rf[]=' $rf . '&clientChunk=' . $client_chunk . '&includeDisabledAccounts=' . $include_disabled_accounts . '&offset=' . $offset . '&limit=' . $limit );
+		$results = $this->build_request( 'partners/aggregatedagents??rf[]=' . $rf . '&clientChunk=' . $client_chunk . '&includeDisabledAccounts=' . $include_disabled_accounts . '&offset=' . $offset . '&limit=' . $limit );
 		return $results;
 
 	}
