@@ -12,6 +12,7 @@
 * Description: Perform API requests to IDX Broker in WordPress.
 * Author: WP API Libraries
 * Version: 1.0.0
+* Text Domain: wp-idxbroker-api
 * Author URI: https://wp-api-libraries.com
 * GitHub Plugin URI: https://github.com/wp-api-libraries/wp-idxbroker-api
 * GitHub Branch: master
@@ -68,13 +69,6 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		public $code;
 
 		/**
-		 * Text domain to be used for i18n
-		 *
-		 * @var string
-		 */
-		protected $textdomain;
-
-		/**
 		 * __construct function.
 		 *
 		 * @access public
@@ -85,7 +79,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @param string $textdomain   Textdomain.
 		 * @return void
 		 */
-		public function __construct( $api_key, $partner_key = null, $outputtype = 'json', $apiversion = '1.4.0', $textdomain = 'wp-idxbroker-api' ) {
+		public function __construct( $api_key, $partner_key = null, $outputtype = 'json', $apiversion = '1.4.0' ) {
 
 			$this->args['headers'] = array(
 				'Content-Type' => 'application/x-www-form-urlencoded',
@@ -95,7 +89,6 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 				'apiversion' => $apiversion,
 			);
 
-			$this->textdomain = $textdomain;
 		}
 
 		/**
@@ -184,55 +177,55 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		public function response_code_msg( $code = '' ) {
 			switch ( $code ) {
 				case 200:
-					$msg = __( 'OK.', $this->textdomain );
+					$msg = __( 'OK.', 'wp-idxbroker-api' );
 					break;
 				case 204:
-					$msg = __( 'OK, nothing returned.', $this->textdomain );
+					$msg = __( 'OK, nothing returned.', 'wp-idxbroker-api' );
 					break;
 				case 400:
-					$msg = __( 'Required parameter missing or invalid.', $this->textdomain );
+					$msg = __( 'Required parameter missing or invalid.', 'wp-idxbroker-api' );
 					break;
 				case 401:
-					$msg = __( 'Accesskey not valid or revoked.', $this->textdomain );
+					$msg = __( 'Accesskey not valid or revoked.', 'wp-idxbroker-api' );
 					break;
 				case 403.4:
-					$msg = __( 'URL provided is not using SSL (HTTPS).', $this->textdomain );
+					$msg = __( 'URL provided is not using SSL (HTTPS).', 'wp-idxbroker-api' );
 					break;
 				case 404:
-					$msg = __( 'Invalid API component specified.', $this->textdomain );
+					$msg = __( 'Invalid API component specified.', 'wp-idxbroker-api' );
 					break;
 				case 405:
-					$msg = __( 'Method requested is invalid. This usually indicates a typo or that you may be requested a method that is part of a different API component.', $this->textdomain );
+					$msg = __( 'Method requested is invalid. This usually indicates a typo or that you may be requested a method that is part of a different API component.', 'wp-idxbroker-api' );
 					break;
 				case 406:
-					$msg = __( 'Accesskey not provided.', $this->textdomain );
+					$msg = __( 'Accesskey not provided.', 'wp-idxbroker-api' );
 					break;
 				case 409:
-					$msg = __( 'Duplicate unique data detected.', $this->textdomain );
+					$msg = __( 'Duplicate unique data detected.', 'wp-idxbroker-api' );
 					break;
 				case 412:
-					$msg = __( "Account is over it's hourly access limit.", $this->textdomain );
+					$msg = __( "Account is over it's hourly access limit.", 'wp-idxbroker-api' );
 					break;
 				case 413:
-					$msg = __( 'Requested entity too large.', $this->textdomain );
+					$msg = __( 'Requested entity too large.', 'wp-idxbroker-api' );
 					break;
 				case 416:
-					$msg = __( 'Requested time range not satisfiable.', $this->textdomain );
+					$msg = __( 'Requested time range not satisfiable.', 'wp-idxbroker-api' );
 					break;
 				case 417:
-					$msg = __( 'There are more saved links in the account than allowed through the API.', $this->textdomain );
+					$msg = __( 'There are more saved links in the account than allowed through the API.', 'wp-idxbroker-api' );
 					break;
 				case 500:
-					$msg = __( 'General system error. Please try again later or contact IDX support.', $this->textdomain );
+					$msg = __( 'General system error. Please try again later or contact IDX support.', 'wp-idxbroker-api' );
 					break;
 				case 503:
-					$msg = __( 'Scheduled or emergency API maintenance will result in 503 errors.', $this->textdomain );
+					$msg = __( 'Scheduled or emergency API maintenance will result in 503 errors.', 'wp-idxbroker-api' );
 					break;
 				case 521:
-					$msg = __( 'Temporary error. There is a possibility that not all API methods are affected.', $this->textdomain );
+					$msg = __( 'Temporary error. There is a possibility that not all API methods are affected.', 'wp-idxbroker-api' );
 					break;
 				default:
-					$msg = __( 'Response code unknown', $this->textdomain );
+					$msg = __( 'Response code unknown', 'wp-idxbroker-api' );
 					break;
 			}
 			return $msg;
