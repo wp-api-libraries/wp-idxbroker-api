@@ -236,7 +236,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 	 * get_aggregated_agents function.
 	 *
 	 * @access public
-	 * @param string $rf (default: '')
+	 * @param string $rf (default: '') Array of Return Fields
 	 * @param string $client_chunk (default: '')
 	 * @param string $include_disabled_accounts (default: '')
 	 * @param string $offset (default: '')
@@ -244,16 +244,72 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 	 * @return void
 	 */
 	public function get_aggregated_agents( $rf = '', $client_chunk = '', $include_disabled_accounts = '', $offset = '', $limit = '' ) {
+
 		$results = $this->build_request( 'partners/aggregatedagents??rf[]=' $rf . '&clientChunk=' . $client_chunk . '&includeDisabledAccounts=' . $include_disabled_accounts . '&offset=' . $offset . '&limit=' . $limit );
 		return $results;
+
 	}
 
+
+	/**
+	 * get_aggregated_featured function.
+	 *
+	 * @access public
+	 * @param string $date_type (default: '')
+	 * @param string $interval (default: '')
+	 * @param string $start_date_time (default: '')
+	 * @param string $rf (default: '') Array of Return Fields
+	 * @param string $client_chunk (default: '')
+	 * @param string $include_disabled_accounts (default: '')
+	 * @param string $offset (default: '')
+	 * @param string $limit (default: '')
+	 * @param string $disclaimers (default: '')
+	 * @return void
+	 */
 	public function get_aggregated_featured( $date_type = '', $interval = '', $start_date_time = '', $rf = '', $client_chunk = '', $include_disabled_accounts = '', $offset = '', $limit = '', $disclaimers = '' ) {
+
+
 	}
+
+	/**
+	 * get_aggregated_leads function.
+	 *
+	 * @access public
+	 * @param string $date_type (default: '')
+	 * @param string $interval (default: '')
+	 * @param string $start_date_time (default: '')
+	 * @param string $rf (default: '')
+	 * @param string $client_chunk (default: '')
+	 * @param string $include_disabled_accounts (default: '')
+	 * @return void
+	 */
 	public function get_aggregated_leads( $date_type = '', $interval ='', $start_date_time = '', $rf = '', $client_chunk = '', $include_disabled_accounts = '' ) {
 	}
+
+	/**
+	 * get_aggregated_lead_traffic function.
+	 *
+	 * @access public
+	 * @param string $interval (default: '')
+	 * @param string $start_date_time (default: '')
+	 * @param string $rf (default: '')
+	 * @param string $client_chunk (default: '')
+	 * @param string $include_disabled_accounts (default: '')
+	 * @return void
+	 */
 	public function get_aggregated_lead_traffic( $interval = '', $start_date_time = '', $rf = '', $client_chunk = '', $include_disabled_accounts = '' ) {
 	}
+
+	/**
+	 * get_aggregated_listing_status function.
+	 *
+	 * @access public
+	 * @param string $filter_field (default: '')
+	 * @param string $filter_value (default: '')
+	 * @param string $client_chunk (default: '')
+	 * @param string $include_disabled_accounts (default: '')
+	 * @return void
+	 */
 	public function get_aggregated_listing_status( $filter_field = '', $filter_value = '', $client_chunk = '', $include_disabled_accounts = '' ) {
 	}
 	public function get_aggregated_properties() {
