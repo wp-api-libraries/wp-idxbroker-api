@@ -167,39 +167,39 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 			return $domain;
 		}
 
-		/* Partners. */
+		/* Partners Endpoints. */
+
 		/**
 		 * get_aggregated_agents function.
 		 *
 		 * @access public
-		 * @param string $rf (default: '') Array of Return Fields
-		 * @param string $client_chunk (default: '')
-		 * @param string $include_disabled_accounts (default: '')
-		 * @param string $offset (default: '')
-		 * @param string $limit (default: '')
+		 * @param string $rf (default: '') Array of Return Fields.
+		 * @param string $client_chunk (default: '').
+		 * @param string $include_disabled_accounts (default: '').
+		 * @param string $offset (default: '').
+		 * @param string $limit (default: '').
 		 * @return void
 		 */
 		public function get_aggregated_agents( $rf = '', $client_chunk = '', $include_disabled_accounts = '', $offset = '', $limit = '' ) {
 
-			$results = $this->build_request( 'partners/aggregatedagents??rf[]=' . $rf . '&clientChunk=' . $client_chunk . '&includeDisabledAccounts=' . $include_disabled_accounts . '&offset=' . $offset . '&limit=' . $limit );
+			$results = $this->build_request( 'partners/aggregatedagents?rf[]=' . $rf . '&clientChunk=' . $client_chunk . '&includeDisabledAccounts=' . $include_disabled_accounts . '&offset=' . $offset . '&limit=' . $limit );
 			return $results;
 
 		}
 
-
 		/**
-		 * get_aggregated_featured function.
+		 * Get_aggregated_featured function.
 		 *
 		 * @access public
-		 * @param string $date_type (default: '')
-		 * @param string $interval (default: '')
-		 * @param string $start_date_time (default: '')
-		 * @param string $rf (default: '') Array of Return Fields
-		 * @param string $client_chunk (default: '')
-		 * @param string $include_disabled_accounts (default: '')
-		 * @param string $offset (default: '')
-		 * @param string $limit (default: '')
-		 * @param string $disclaimers (default: '')
+		 * @param string $date_type (default: '').
+		 * @param string $interval (default: '').
+		 * @param string $start_date_time (default: '').
+		 * @param string $rf (default: '') Array of Return Fields.
+		 * @param string $client_chunk (default: '').
+		 * @param string $include_disabled_accounts (default: '').
+		 * @param string $offset (default: '').
+		 * @param string $limit (default: '').
+		 * @param string $disclaimers (default: '').
 		 * @return void
 		 */
 		public function get_aggregated_featured( $date_type = '', $interval = '', $start_date_time = '', $rf = '', $client_chunk = '', $include_disabled_accounts = '', $offset = '', $limit = '', $disclaimers = '' ) {
@@ -210,12 +210,12 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * get_aggregated_leads function.
 		 *
 		 * @access public
-		 * @param string $date_type (default: '')
-		 * @param string $interval (default: '')
-		 * @param string $start_date_time (default: '')
-		 * @param string $rf (default: '')
-		 * @param string $client_chunk (default: '')
-		 * @param string $include_disabled_accounts (default: '')
+		 * @param string $date_type (default: '').
+		 * @param string $interval (default: '').
+		 * @param string $start_date_time (default: '').
+		 * @param string $rf (default: '').
+		 * @param string $client_chunk (default: '').
+		 * @param string $include_disabled_accounts (default: '').
 		 * @return void
 		 */
 		public function get_aggregated_leads( $date_type = '', $interval = '', $start_date_time = '', $rf = '', $client_chunk = '', $include_disabled_accounts = '' ) {
@@ -225,11 +225,11 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * get_aggregated_lead_traffic function.
 		 *
 		 * @access public
-		 * @param string $interval (default: '')
-		 * @param string $start_date_time (default: '')
-		 * @param string $rf (default: '')
-		 * @param string $client_chunk (default: '')
-		 * @param string $include_disabled_accounts (default: '')
+		 * @param string $interval (default: '').
+		 * @param string $start_date_time (default: '').
+		 * @param string $rf (default: '').
+		 * @param string $client_chunk (default: '').
+		 * @param string $include_disabled_accounts (default: '').
 		 * @return void
 		 */
 		public function get_aggregated_lead_traffic( $interval = '', $start_date_time = '', $rf = '', $client_chunk = '', $include_disabled_accounts = '' ) {
@@ -239,10 +239,10 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * get_aggregated_listing_status function.
 		 *
 		 * @access public
-		 * @param string $filter_field (default: '')
-		 * @param string $filter_value (default: '')
-		 * @param string $client_chunk (default: '')
-		 * @param string $include_disabled_accounts (default: '')
+		 * @param string $filter_field (default: '').
+		 * @param string $filter_value (default: '').
+		 * @param string $client_chunk (default: '').
+		 * @param string $include_disabled_accounts (default: '').
 		 * @return void
 		 */
 		public function get_aggregated_listing_status( $filter_field = '', $filter_value = '', $client_chunk = '', $include_disabled_accounts = '' ) {
@@ -267,7 +267,14 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		}
 		public function get_partners_propertytypes() {
 		}
-		/* Clients. */
+
+		/* Clients Endpoints. */
+
+		/**
+		 * [get_account_type description]
+		 *
+		 * @return [type] [description]
+		 */
 		public function get_account_type() {
 		}
 		public function get_agents() {
@@ -330,7 +337,14 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		}
 		public function get_zipcodes() {
 		}
-		/* MLS. */
+
+		/* MLS Endpoints. */
+
+		/**
+		 * [get_mls_age description]
+		 *
+		 * @return [type] [description]
+		 */
 		public function get_mls_age() {
 		}
 		public function get_approved_mls() {
@@ -357,7 +371,12 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		}
 		public function get_mls_zipcodes() {
 		}
-		/* LEADS. */
+
+		/* Leads Endpoints. */
+
+		/**
+		 * [add_bulk_leads description]
+		 */
 		public function add_bulk_leads() {
 		}
 		public function update_bulk_leads() {
@@ -400,7 +419,14 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		}
 		public function get_lead_search() {
 		}
-		/* Specialty Partner. */
+
+		/* Specialty Partner Endpoints. */
+
+		/**
+		 * [get_specialty_partner_pricing description]
+		 *
+		 * @return [type] [description]
+		 */
 		public function get_specialty_partner_pricing() {
 		}
 		public function add_specialty_partner_subscriber() {
