@@ -230,6 +230,191 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 			}
 			return $msg;
 		}
+
+		/* Partners. */
+	/**
+	 * get_aggregated_agents function.
+	 *
+	 * @access public
+	 * @param string $rf (default: '')
+	 * @param string $client_chunk (default: '')
+	 * @param string $include_disabled_accounts (default: '')
+	 * @param string $offset (default: '')
+	 * @param string $limit (default: '')
+	 * @return void
+	 */
+	public function get_aggregated_agents( $rf = '', $client_chunk = '', $include_disabled_accounts = '', $offset = '', $limit = '' ) {
+		$results = $this->build_request( 'partners/aggregatedagents??rf[]=' $rf . '&clientChunk=' . $client_chunk . '&includeDisabledAccounts=' . $include_disabled_accounts . '&offset=' . $offset . '&limit=' . $limit );
+		return $results;
+	}
+
+	public function get_aggregated_featured( $date_type = '', $interval = '', $start_date_time = '', $rf = '', $client_chunk = '', $include_disabled_accounts = '', $offset = '', $limit = '', $disclaimers = '' ) {
+	}
+	public function get_aggregated_leads( $date_type = '', $interval ='', $start_date_time = '', $rf = '', $client_chunk = '', $include_disabled_accounts = '' ) {
+	}
+	public function get_aggregated_lead_traffic( $interval = '', $start_date_time = '', $rf = '', $client_chunk = '', $include_disabled_accounts = '' ) {
+	}
+	public function get_aggregated_listing_status( $filter_field = '', $filter_value = '', $client_chunk = '', $include_disabled_accounts = '' ) {
+	}
+	public function get_aggregated_properties() {
+	}
+	public function get_aggregated_searches() {
+	}
+	public function get_aggregated_soldpending() {
+	}
+	public function get_aggregated_supplemental() {
+	}
+	public function get_partners_api_version() {
+	}
+	public function get_available_mls() {
+	}
+	public function get_clients() {
+	}
+	public function list_components() {
+	}
+	public function list_methods() {
+	}
+	public function get_partners_propertytypes() {
+	}
+	/* Clients. */
+	public function get_account_type() {
+	}
+	public function get_agents() {
+	}
+	public function get_api_version() {
+	}
+	public function get_cities() {
+	}
+	public function get_cities_listname() {
+	}
+	public function get_counties() {
+	}
+	public function get_counties_listname() {
+	}
+	public function send_dynamic_wrapper_url() {
+	}
+	public function get_featured() {
+	}
+	public function get_list_allowed_fields() {
+	}
+	public function get_list_components() {
+	}
+	public function get_listing() {
+	}
+	public function get_list_methods() {
+	}
+	public function get_offices() {
+	}
+	public function get_postalcodes() {
+	}
+	public function get_postalcodes_listname() {
+	}
+	public function get_properties() {
+	}
+	public function add_savedlink() {
+	}
+	public function delete_savedlink() {
+	}
+	public function get_savedlinks() {
+	}
+	public function update_savedlink() {
+	}
+	public function get_searchquery() {
+	}
+	public function get_soldpending() {
+	}
+	public function delete_supplemental() {
+	}
+	public function get_supplemental() {
+	}
+	public function add_supplemental() {
+	}
+	public function update_supplemental() {
+	}
+	public function get_systemlinks() {
+	}
+	public function get_widgets() {
+	}
+	public function delete_wrapper_cache() {
+	}
+	public function get_zipcodes() {
+	}
+	/* MLS. */
+	public function get_mls_age() {
+	}
+	public function get_approved_mls() {
+	}
+	public function get_mls_cities() {
+	}
+	public function get_mls_counties() {
+	}
+	public function get_mls_list_components() {
+	}
+	public function get_mls_list_methods() {
+	}
+	public function get_mls_postalcodes() {
+	}
+	public function get_mls_prices() {
+	}
+	public function get_mls_property_count() {
+	}
+	public function get_mls_property_types() {
+	}
+	public function get_mls_search_fields() {
+	}
+	public function get_mls_search_field_values() {
+	}
+	public function get_mls_zipcodes() {
+	}
+	/* LEADS. */
+	public function add_bulk_leads() {
+	}
+	public function update_bulk_leads() {
+	}
+	public function delete_lead() {
+	}
+	public function get_lead() {
+	}
+	public function update_lead() {
+	}
+	public function add_lead() {
+	}
+	public function get_lead_traffic() {
+	}
+	public function get_lead_list_components() {
+	}
+	public function get_lead_list_methods() {
+	}
+	public function delete_lead_note() {
+	}
+	public function add_lead_note() {
+	}
+	public function update_lead_note() {
+	}
+	public function get_lead_note() {
+	}
+	public function delete_lead_property() {
+	}
+	public function add_lead_property() {
+	}
+	public function update_lead_property() {
+	}
+	public function get_lead_property() {
+	}
+	public function delete_lead_search() {
+	}
+	public function add_lead_search() {
+	}
+	public function update_lead_search() {
+	}
+	public function get_lead_search() {
+	}
+	/* Specialty Partner. */
+	public function get_specialty_partner_pricing() {
+	}
+	public function add_specialty_partner_subscriber() {
+	}
+
 	} //End Class.
 
 } // End If.
