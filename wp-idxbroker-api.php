@@ -564,19 +564,115 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 			return $this->build_request( 'clients/countieslistname' )->request();
 		}
 
-		public function post_clients_dynamicwrapperurl() {
+		/**
+		 * Update dynamic wrapper url for global, pages and saved links. If savedLinkID, or pageID are not passed, the
+		 * global dynamic wrapper url will be updated.
+		 *
+		 * @api POST
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-postDynamicwrapperurl Documentation.
+		 * @param  string $dynamic_url  Dynamic wrapper url.
+		 * @param  int    $savedlink_id Saved link ID if setting dynamic wrapper url for a specific saved link.
+		 * @param  int    $page_id      Page ID if setting dynamic wrapper url for a specific page.
+		 * @return void                 No data returned on success.
+		 */
+		public function post_clients_dynamicwrapperurl( $dynamic_url, $savedlink_id = null , $page_id = null ) {
+			// Prepare request.
+			$fields['method'] = 'POST';
+			$fields['body']['dynamicURL'] = $dynamic_url;
+
+			if( null !== $savedlink_id ){
+				$fields['body']['savedLinkID'] = $savedlink_id;
+			}
+			if( null !== $page_id ){
+				$fields['body']['pageID'] = $page_id;
+			}
+
+			return $this->build_request( 'clients/dynamicwrapperurl', $fields )->request();
 		}
 
-		public function get_clients_featured() {
+		/**
+		 * Returns a basic set of information for all of the client's featured (active) properties
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getFeatured Documentation.
+		 *
+		 * @param  array $args  Query args to send in to API call.
+		 * @return array        Featured properties on the account.
+		 */
+		public function get_clients_featured( $args = array() ) {
+			// Prepare request.
+			$route = 'clients/featured';
+			$route = add_query_arg( $args, $route );
+
+			return $this->build_request( $route )->request();
 		}
-		public function get_clients_listallowedfields() {
+
+		/**
+		 * Returns the allowed returnable fields for a given listingID.
+     *
+     * Note: Valid ancillarykey is required in the request header.
+     *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-listallowedfields Documentation.
+		 * @param  string $idx_id     The idxID of MLS.
+		 * @param  string $listing_id The listing ID.
+		 * @return array             List of fields that are returnable for the listingID.
+		 */
+		public function get_clients_listallowedfields( $idx_id, $listing_id ) {
+			// Prepare request.
+			$route =  "clients/listallowedfields/$idx_id/$listing_id";
+
+			return $this->build_request( $route )->request();
 		}
+
+		/**
+		 * This is a simple, access anywhere, method for getting a list of all API components available.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getListcomponents Documentation.
+		 *
+		 * @return array All available APIs/Components.
+		 */
 		public function get_clients_listcomponents() {
+			return $this->build_request( 'clients/listcomponents' )->request();
 		}
-		public function get_clients_listing() {
+
+
+		/**
+		 * Returns the detailed information for a given listingID.
+		 *
+		 * Note: Valid ancillarykey is required in the request header.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-listing Documentation.
+		 * @param  string $idx_id      The idxID of MLS.
+		 * @param  string $listing_id  The listing ID.
+		 * @param  string $rf          Array of fields to return in the output.
+		 * @param  bool   $disclaimers Include MLS disclaimer/courtesy in the response. Default true.
+		 * @return array               [description]
+		 */
+		public function get_clients_listing( $idx_id, $listing_id, $rf = '', $disclaimers = true ) {
+			// Prepare request.
+			$route =  "clients/listing/$idx_id/$listing_id";
+			$route = add_query_arg( array( 'rf' => $rf, 'disclaimers' => $disclaimers ), $route );
+
+			return $this->build_request( $route )->request();
 		}
+
+		/**
+		 * A simple method for listing all available methods in the current API component. This method will also list which
+		 * request methods (GET, PUT, POST, or DELETE) are supported by each method in addition to each method status.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-listmethods Documentation.
+		 *
+		 * @return array Basic information about all available methods in this API.
+		 */
 		public function get_clients_listmethods() {
+			return $this->build_request( 'clients/listmethods' )->request();
 		}
+
+
 		public function get_clients_offices() {
 		}
 		public function get_clients_postalcodes() {
@@ -585,33 +681,33 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		}
 		public function get_clients_properties() {
 		}
-		public function add_savedlink() {
+		public function delete_clients_savedlink() {
 		}
-		public function delete_savedlink() {
+		public function get_clients_savedlinks() {
 		}
-		public function get_savedlinks() {
+		public function post_clients_savedlink() {
 		}
-		public function update_savedlink() {
+		public function put_clients_savedlink() {
 		}
-		public function get_searchquery() {
+		public function get_clients_searchquery() {
 		}
-		public function get_soldpending() {
+		public function get_clients_soldpending() {
 		}
-		public function delete_supplemental() {
+		public function delete_clients_supplemental() {
 		}
-		public function get_supplemental() {
+		public function get_clients_supplemental() {
 		}
-		public function add_supplemental() {
+		public function post_clients_supplemental() {
 		}
-		public function update_supplemental() {
+		public function put_clients_supplemental() {
 		}
-		public function get_systemlinks() {
+		public function get_clients_systemlinks() {
 		}
-		public function get_widgets() {
+		public function get_clients_widgets() {
 		}
-		public function delete_wrapper_cache() {
+		public function delete_clients_wrappercache() {
 		}
-		public function get_zipcodes() {
+		public function get_clients_zipcodes() {
 		}
 
 		/* MLS Endpoints. */
@@ -623,27 +719,27 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 */
 		public function get_mls_age() {
 		}
-		public function get_approved_mls() {
+		public function get_mls_approvedmls() {
 		}
 		public function get_mls_cities() {
 		}
 		public function get_mls_counties() {
 		}
-		public function get_mls_list_components() {
+		public function get_mls_listcomponents() {
 		}
-		public function get_mls_list_methods() {
+		public function get_mls_listmethods() {
 		}
 		public function get_mls_postalcodes() {
 		}
 		public function get_mls_prices() {
 		}
-		public function get_mls_property_count() {
+		public function get_mls_propertycount() {
 		}
-		public function get_mls_property_types() {
+		public function get_mls_propertytypes() {
 		}
-		public function get_mls_search_fields() {
+		public function get_mls_searchfields() {
 		}
-		public function get_mls_search_field_values() {
+		public function get_mls_searchfieldvalues() {
 		}
 		public function get_mls_zipcodes() {
 		}
