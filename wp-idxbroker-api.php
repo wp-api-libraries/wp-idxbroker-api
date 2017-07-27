@@ -550,7 +550,18 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 			return $this->build_request( $route )->request();
 		}
 
+		/**
+		 * Returns the IDs and names for each of a client's counties lists including MLS counties lists. To get the list of
+		 * all counties lists available do not send the primary request ID. The default list on each account has the ID
+		 * combinedActiveMLS
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getCountieslistname Documentation.
+		 *
+		 * @return array A list of counties list IDs and names
+		 */
 		public function get_clients_countieslistname() {
+			return $this->build_request( 'clients/countieslistname' )->request();
 		}
 
 		public function post_clients_dynamicwrapperurl() {
