@@ -271,43 +271,89 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		/* Clients Endpoints. */
 
 		/**
-		 * [get_account_type description]
+		 * Get your account type.
 		 *
-		 * @return [type] [description]
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getAccounttypes API Doc.
+		 *
+		 * @return string "IDX Broker Platinum" | "IDX Broker Lite"
 		 */
-		public function get_account_type() {
+		public function get_clients_accounttype() {
+			 return $this->build_request( 'clients/accounttype' )->request();
 		}
-		public function get_agents() {
+
+		/**
+		 * View agent information on a multi-user account.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getAgents API Doc.
+		 *
+		 * @param  array $args  Query args to send in to API call.
+		 * @return array Array of API results.
+		 */
+		public function get_clients_agents( $args = array() ) {
+			// Prepare request.
+			$route = 'clients/agents';
+			$route = add_query_arg( $args, $route );
+
+			return $this->build_request( $route )->request();
 		}
-		public function get_api_version() {
+
+		/**
+		 * Get the default api version.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-apiversion API Doc.
+		 *
+		 * @return array API version info.
+		 */
+		public function get_clients_apiversion() {
+			return $this->build_request( 'clients/apiversion' )->request();
 		}
-		public function get_cities() {
+
+		/**
+		 * Returns the cities available in each of a client's city lists. Since a client can build any number of city
+		 * lists this method requires the ID of which list you want to view. To get a list of all city lists available do
+		 * not send the primary request ID. The default list on each account has the id combinedActiveMLS
+		 *
+		 * @api GET
+		 *
+		 * @param  string         $list_id City list id
+		 * @param  string | array $rf      A string or an array of strings of return field names.
+		 * @return array                   Array of API results.
+		 */
+		public function get_clients_cities( $list_id = '', $rf = '' ) {
+			// Prepare request.
+			$route = ('' === $list_id ) ? "clients/cities" : "clients/cities/$list_id";
+			$route = add_query_arg( array( 'rf' => $rf ), $route );
+
+			return $this->build_request( $route )->request();
 		}
-		public function get_cities_listname() {
+		public function get_clients_citieslistname() {
 		}
-		public function get_counties() {
+		public function get_clients_counties() {
 		}
-		public function get_counties_listname() {
+		public function get_clients_countieslistname() {
 		}
-		public function send_dynamic_wrapper_url() {
+		public function post_clients_dynamicwrapperurl() {
 		}
-		public function get_featured() {
+		public function get_clients_featured() {
 		}
-		public function get_list_allowed_fields() {
+		public function get_clients_listallowedfields() {
 		}
-		public function get_list_components() {
+		public function get_clients_listcomponents() {
 		}
-		public function get_listing() {
+		public function get_clients_listing() {
 		}
-		public function get_list_methods() {
+		public function get_clients_listmethods() {
 		}
-		public function get_offices() {
+		public function get_clients_offices() {
 		}
-		public function get_postalcodes() {
+		public function get_clients_postalcodes() {
 		}
-		public function get_postalcodes_listname() {
+		public function get_clients_postalcodeslistname() {
 		}
-		public function get_properties() {
+		public function get_clients_properties() {
 		}
 		public function add_savedlink() {
 		}
