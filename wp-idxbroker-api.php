@@ -2,7 +2,7 @@
 /**
  * IDX Broker API
  *
- * @link http://middleware.idxbroker.com/docs/api/methods/index.html API Documentation
+ * @see http://middleware.idxbroker.com/docs/api/methods/index.html API Documentation
  * @package WP-API-Libraries\WP-IDX-Broker-API
  * @author sfgarza
  */
@@ -575,15 +575,15 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @param  int    $page_id      Page ID if setting dynamic wrapper url for a specific page.
 		 * @return void                 No data returned on success.
 		 */
-		public function post_clients_dynamicwrapperurl( $dynamic_url, $savedlink_id = null , $page_id = null ) {
+		public function post_clients_dynamicwrapperurl( $dynamic_url, $savedlink_id = null, $page_id = null ) {
 			// Prepare request.
 			$fields['method'] = 'POST';
 			$fields['body']['dynamicURL'] = $dynamic_url;
 
-			if( null !== $savedlink_id ){
+			if ( null !== $savedlink_id ) {
 				$fields['body']['savedLinkID'] = $savedlink_id;
 			}
-			if( null !== $page_id ){
+			if ( null !== $page_id ) {
 				$fields['body']['pageID'] = $page_id;
 			}
 
@@ -609,9 +609,9 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 
 		/**
 		 * Returns the allowed returnable fields for a given listingID.
-     *
-     * Note: Valid ancillarykey is required in the request header.
-     *
+		 *
+		 * Note: Valid ancillarykey is required in the request header.
+		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-listallowedfields Documentation.
 		 * @param  string $idx_id     The idxID of MLS.
@@ -620,7 +620,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 */
 		public function get_clients_listallowedfields( $idx_id, $listing_id ) {
 			// Prepare request.
-			$route =  "clients/listallowedfields/$idx_id/$listing_id";
+			$route = "clients/listallowedfields/$idx_id/$listing_id";
 
 			return $this->build_request( $route )->request();
 		}
@@ -649,11 +649,11 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @param  string $listing_id  The listing ID.
 		 * @param  string $rf          Array of fields to return in the output.
 		 * @param  bool   $disclaimers Include MLS disclaimer/courtesy in the response. Default true.
-		 * @return array               [description]
+		 * @return array               List of fields that are returnable for the listingID.
 		 */
 		public function get_clients_listing( $idx_id, $listing_id, $rf = '', $disclaimers = true ) {
 			// Prepare request.
-			$route =  "clients/listing/$idx_id/$listing_id";
+			$route = "clients/listing/$idx_id/$listing_id";
 			$route = add_query_arg( array( 'rf' => $rf, 'disclaimers' => $disclaimers ), $route );
 
 			return $this->build_request( $route )->request();
@@ -749,47 +749,47 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		/**
 		 * [add_bulk_leads description]
 		 */
-		public function add_bulk_leads() {
+		public function post_bulkleads() {
 		}
-		public function update_bulk_leads() {
+		public function put_bulkleads() {
 		}
 		public function delete_lead() {
 		}
 		public function get_lead() {
 		}
-		public function update_lead() {
+		public function post_lead() {
 		}
-		public function add_lead() {
+		public function put_lead() {
 		}
-		public function get_lead_traffic() {
+		public function get_leadtraffic() {
 		}
-		public function get_lead_list_components() {
+		public function get_leads_listcomponents() {
 		}
-		public function get_lead_list_methods() {
+		public function get_leads_listmethods() {
 		}
-		public function delete_lead_note() {
+		public function delete_leads_note() {
 		}
-		public function add_lead_note() {
+		public function post_leads_note() {
 		}
-		public function update_lead_note() {
+		public function put_leads_note() {
 		}
-		public function get_lead_note() {
+		public function get_leads_note() {
 		}
-		public function delete_lead_property() {
+		public function delete_leads_property() {
 		}
-		public function add_lead_property() {
+		public function post_leads_property() {
 		}
-		public function update_lead_property() {
+		public function put_leads_property() {
 		}
-		public function get_lead_property() {
+		public function get_leads_property() {
 		}
-		public function delete_lead_search() {
+		public function delete_leads_search() {
 		}
-		public function add_lead_search() {
+		public function post_leads_search() {
 		}
-		public function update_lead_search() {
+		public function put_leads_search() {
 		}
-		public function get_lead_search() {
+		public function get_leads_search() {
 		}
 
 		/* Specialty Partner Endpoints. */
@@ -799,9 +799,9 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @return [type] [description]
 		 */
-		public function get_specialty_partner_pricing() {
+		public function get_specialtypartner_pricing() {
 		}
-		public function add_specialty_partner_subscriber() {
+		public function put_specialtypartner_subscriber() {
 		}
 
 		/**
