@@ -117,7 +117,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @param  string $route  The route to make the call to.
 		 * @param  array  $fields Array containing the http method and body
 		 *                        of call. Optional for GET requests.
-		 * @return IdxBrokerAPI   IdxBrokerAPI Object.
+		 * @return self           IdxBrokerAPI Object.
 		 */
 		public function build_request( $route, $fields = array() ) {
 			$this->route = ( isset( $route ) ) ? $route : '';

@@ -8,6 +8,7 @@ A WordPress php library for interacting with the [IDX Broker API](https://middle
 [![Build Status](https://travis-ci.org/wp-api-libraries/wp-idxbroker-api.svg?branch=master)](https://travis-ci.org/wp-api-libraries/wp-idxbroker-api)
 
 # Example usage
+Visit the [PHPDocs](https://wp-api-libraries.github.io/wp-idxbroker-api/classes/IdxBrokerAPI.html) for the full library documentation.
 ### GET Request
 ```php
 $idx_api = new IdxBrokerAPI( 'example_api_key');
