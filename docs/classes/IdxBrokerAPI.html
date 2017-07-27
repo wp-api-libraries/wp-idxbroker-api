@@ -32,7 +32,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">60</span></a></li>
+                <span class="label label-info">57</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -103,12 +103,19 @@ lists this method requires the ID of which list you want to view. To get a list 
 not send the primary request ID. The default list on each account has the id combinedActiveMLS"><span class="description">Returns the cities available in each of a client's city lists. Since a client can build any number of city
 lists this method requires the ID of which list you want to view. To get a list of all city lists available do
 not send the primary request ID. The default list on each account has the id combinedActiveMLS</span><pre>get_clients_cities()</pre></a></li>
-<li class="method public "><a href="#method_get_clients_citieslistname" title="get_clients_citieslistname() :: "><span class="description">get_clients_citieslistname()
-        </span><pre>get_clients_citieslistname()</pre></a></li>
-<li class="method public "><a href="#method_get_clients_counties" title="get_clients_counties() :: "><span class="description">get_clients_counties()
-        </span><pre>get_clients_counties()</pre></a></li>
-<li class="method public "><a href="#method_get_clients_countieslistname" title="get_clients_countieslistname() :: "><span class="description">get_clients_countieslistname()
-        </span><pre>get_clients_countieslistname()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_citieslistname" title="get_clients_citieslistname() :: Returns the IDs and names for each of a client's city lists including MLS city lists. To get the list of all city
+lists available do not send the primary request ID. The default list on each account has the ID combinedActiveMLS"><span class="description">Returns the IDs and names for each of a client's city lists including MLS city lists. To get the list of all city
+lists available do not send the primary request ID. The default list on each account has the ID combinedActiveMLS</span><pre>get_clients_citieslistname()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_counties" title="get_clients_counties() :: Returns the counties available in each of a client's county lists. Since a client can build any number of county
+lists this method requires the ID of which list you want to view. To get a list of all county lists available do
+not send the primary request ID. The default list on each account has the id combinedActiveMLS."><span class="description">Returns the counties available in each of a client's county lists. Since a client can build any number of county
+lists this method requires the ID of which list you want to view. To get a list of all county lists available do
+not send the primary request ID. The default list on each account has the id combinedActiveMLS.</span><pre>get_clients_counties()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_countieslistname" title="get_clients_countieslistname() :: Returns the IDs and names for each of a client's counties lists including MLS counties lists. To get the list of
+all counties lists available do not send the primary request ID. The default list on each account has the ID
+combinedActiveMLS"><span class="description">Returns the IDs and names for each of a client's counties lists including MLS counties lists. To get the list of
+all counties lists available do not send the primary request ID. The default list on each account has the ID
+combinedActiveMLS</span><pre>get_clients_countieslistname()</pre></a></li>
 <li class="method public "><a href="#method_get_clients_featured" title="get_clients_featured() :: "><span class="description">get_clients_featured()
         </span><pre>get_clients_featured()</pre></a></li>
 <li class="method public "><a href="#method_get_clients_listallowedfields" title="get_clients_listallowedfields() :: "><span class="description">get_clients_listallowedfields()
@@ -432,12 +439,12 @@ which the client is a member.</span><pre>get_partners_propertytypes()</pre></a><
 </tr>
 <tr>
 <th>see</th>
-<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getAccounttypes">API Doc.</a></td>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getAccounttypes">Documentation.</a></td>
 </tr>
 </table>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>string</code>"IDX Broker Platinum" | "IDX Broker Lite"</div>
+<code>string</code>Account type.</div>
 </div></div>
 </div>
 <a id="method_get_clients_agents"></a><div class="element clickable method public method_get_clients_agents " data-toggle="collapse" data-target=".method_get_clients_agents .collapse" title="public">
@@ -453,7 +460,7 @@ which the client is a member.</span><pre>get_partners_propertytypes()</pre></a><
 </tr>
 <tr>
 <th>see</th>
-<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getAgents">API Doc.</a></td>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getAgents">Documentation.</a></td>
 </tr>
 </table>
 <h3>Parameters</h3>
@@ -462,7 +469,7 @@ which the client is a member.</span><pre>get_partners_propertytypes()</pre></a><
 <code>array</code><p>Query args to send in to API call.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>array</code>Array of API results.</div>
+<code>array</code>All agents on the account or those matching filter values.</div>
 </div></div>
 </div>
 <a id="method_get_clients_apiversion"></a><div class="element clickable method public method_get_clients_apiversion " data-toggle="collapse" data-target=".method_get_clients_apiversion .collapse" title="public">
@@ -478,58 +485,118 @@ which the client is a member.</span><pre>get_partners_propertytypes()</pre></a><
 </tr>
 <tr>
 <th>see</th>
-<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-apiversion">API Doc.</a></td>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-apiversion">Documentation.</a></td>
 </tr>
 </table>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>array</code>API version info.</div>
+<code>array</code>The default api version.</div>
 </div></div>
 </div>
 <a id="method_get_clients_cities"></a><div class="element clickable method public method_get_clients_cities " data-toggle="collapse" data-target=".method_get_clients_cities .collapse" title="public">
 <h2>Returns the cities available in each of a client's city lists. Since a client can build any number of city
 lists this method requires the ID of which list you want to view. To get a list of all city lists available do
 not send the primary request ID. The default list on each account has the id combinedActiveMLS</h2>
-<pre>get_clients_cities(string $list_id<code> = ''</code>, string $rf<code> = ''</code>) : array</pre>
+<pre>get_clients_cities(string $list_id<code> = ''</code>, string|array $rf<code> = ''</code>) : array</pre>
 <div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
-<table class="table table-bordered"><tr>
+<table class="table table-bordered">
+<tr>
 <th>api</th>
 <td>GET</td>
-</tr></table>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getCities">Documentation.</a></td>
+</tr>
+</table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$list_id</h4>
-<code>string</code><p>City list id</p></div>
+<code>string</code><p>City list id.</p></div>
 <div class="subelement argument">
 <h4>$rf</h4>
-<code>string</code><p>| array $rf      A string or an array of strings of return field names.</p></div>
+<code>string</code><code>array</code><p>A string or an array of strings of return field names.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>array</code>Array of API results.</div>
+<code>array</code>All cities in a given list or, if no list ID is provided, a list of list IDs.</div>
 </div></div>
 </div>
 <a id="method_get_clients_citieslistname"></a><div class="element clickable method public method_get_clients_citieslistname " data-toggle="collapse" data-target=".method_get_clients_citieslistname .collapse" title="public">
-<h2>get_clients_citieslistname()
-        </h2>
-<pre>get_clients_citieslistname() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Returns the IDs and names for each of a client's city lists including MLS city lists. To get the list of all city
+lists available do not send the primary request ID. The default list on each account has the ID combinedActiveMLS</h2>
+<pre>get_clients_citieslistname() : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getCitieslistname">Documentation.</a></td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>A list of city list IDs and names.</div>
+</div></div>
 </div>
 <a id="method_get_clients_counties"></a><div class="element clickable method public method_get_clients_counties " data-toggle="collapse" data-target=".method_get_clients_counties .collapse" title="public">
-<h2>get_clients_counties()
-        </h2>
-<pre>get_clients_counties() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Returns the counties available in each of a client's county lists. Since a client can build any number of county
+lists this method requires the ID of which list you want to view. To get a list of all county lists available do
+not send the primary request ID. The default list on each account has the id combinedActiveMLS.</h2>
+<pre>get_clients_counties(string $list_id<code> = ''</code>, string|array $rf<code> = ''</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getCounties">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$list_id</h4>
+<code>string</code><p>If no ID is given a list of IDs is returned.</p></div>
+<div class="subelement argument">
+<h4>$rf</h4>
+<code>string</code><code>array</code><p>A string or an array of strings of fields to return in the output..</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>All counties in a given list or, if no list ID is provided, a list of list IDs.</div>
+</div></div>
 </div>
 <a id="method_get_clients_countieslistname"></a><div class="element clickable method public method_get_clients_countieslistname " data-toggle="collapse" data-target=".method_get_clients_countieslistname .collapse" title="public">
-<h2>get_clients_countieslistname()
-        </h2>
-<pre>get_clients_countieslistname() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Returns the IDs and names for each of a client's counties lists including MLS counties lists. To get the list of
+all counties lists available do not send the primary request ID. The default list on each account has the ID
+combinedActiveMLS</h2>
+<pre>get_clients_countieslistname() : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getCountieslistname">Documentation.</a></td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>A list of counties list IDs and names</div>
+</div></div>
 </div>
 <a id="method_get_clients_featured"></a><div class="element clickable method public method_get_clients_featured " data-toggle="collapse" data-target=".method_get_clients_featured .collapse" title="public">
 <h2>get_clients_featured()
@@ -754,6 +821,10 @@ not send the primary request ID. The default list on each account has the id com
 <td>GET</td>
 </tr>
 <tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedagents">Documentation</a></td>
+</tr>
+<tr>
 <th>access</th>
 <td>public</td>
 </tr>
@@ -764,7 +835,7 @@ not send the primary request ID. The default list on each account has the id com
 <code>array</code><p>Query args to send in to API call.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>array</code>Array of API results.</div>
+<code>array</code>All available agents.</div>
 </div></div>
 </div>
 <a id="method_get_partners_aggregatedfeatured"></a><div class="element clickable method public method_get_partners_aggregatedfeatured " data-toggle="collapse" data-target=".method_get_partners_aggregatedfeatured .collapse" title="public">
@@ -779,6 +850,10 @@ not send the primary request ID. The default list on each account has the id com
 <td>GET</td>
 </tr>
 <tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedfeatured">Documentation</a></td>
+</tr>
+<tr>
 <th>access</th>
 <td>public</td>
 </tr>
@@ -789,7 +864,7 @@ not send the primary request ID. The default list on each account has the id com
 <code>array</code><p>Query args to send in to API call.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>array</code>Array of API results.</div>
+<code>array</code>List of featured MLS properties for each client.</div>
 </div></div>
 </div>
 <a id="method_get_partners_aggregatedleads"></a><div class="element clickable method public method_get_partners_aggregatedleads " data-toggle="collapse" data-target=".method_get_partners_aggregatedleads .collapse" title="public">
@@ -808,6 +883,10 @@ Large error is returned. If encountered a smaller interval will need to be used.
 <td>GET</td>
 </tr>
 <tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedleads">Documentation</a></td>
+</tr>
+<tr>
 <th>access</th>
 <td>public</td>
 </tr>
@@ -818,7 +897,11 @@ Large error is returned. If encountered a smaller interval will need to be used.
 <code>array</code><p>Query args to send in to API call.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>array</code>Array of API results.</div>
+<code>array</code>The applicable client account ID, lead ID, first name, last name, email address, address, city,
+              state/province, country, zipCode, phone number, ID of the agent assigned, email format (html or
+              plain text), disabled status (y/n), allowed to log in to their account (y/n), will receive property
+              updates (y/n), subscribe date, last edited, last login date, last property update date, last
+              activity type, and last activity date.</div>
 </div></div>
 </div>
 <a id="method_get_partners_aggregatedleadtraffic"></a><div class="element clickable method public method_get_partners_aggregatedleadtraffic " data-toggle="collapse" data-target=".method_get_partners_aggregatedleadtraffic .collapse" title="public">
@@ -834,6 +917,10 @@ returned in any single request.</p></div>
 <td>GET</td>
 </tr>
 <tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedleadtraffic">Documentation</a></td>
+</tr>
+<tr>
 <th>access</th>
 <td>public</td>
 </tr>
@@ -844,7 +931,7 @@ returned in any single request.</p></div>
 <code>array</code><p>Query args to send in to API call.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>array</code>Array of API results.</div>
+<code>array</code>The applicable client account ID, date, lead ID, IP , page, and referrer.</div>
 </div></div>
 </div>
 <a id="method_get_partners_aggregatedlistingstatus"></a><div class="element clickable method public method_get_partners_aggregatedlistingstatus " data-toggle="collapse" data-target=".method_get_partners_aggregatedlistingstatus .collapse" title="public">
@@ -860,6 +947,10 @@ includes sold/pending listings with an unknown status which are not usually retu
 <td>GET</td>
 </tr>
 <tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedlistingstatus">Documentation</a></td>
+</tr>
+<tr>
 <th>access</th>
 <td>public</td>
 </tr>
@@ -870,7 +961,7 @@ includes sold/pending listings with an unknown status which are not usually retu
 <code>array</code><p>Query args to send in to API call.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>array</code>Array of API results.</div>
+<code>array</code>MLS listings along with their statuses.</div>
 </div></div>
 </div>
 <a id="method_get_partners_aggregatedproperties"></a><div class="element clickable method public method_get_partners_aggregatedproperties " data-toggle="collapse" data-target=".method_get_partners_aggregatedproperties .collapse" title="public">
@@ -886,6 +977,10 @@ in any single request.</p></div>
 <td>GET</td>
 </tr>
 <tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedproperties">Documentation</a></td>
+</tr>
+<tr>
 <th>access</th>
 <td>public</td>
 </tr>
@@ -896,7 +991,8 @@ in any single request.</p></div>
 <code>array</code><p>Query args to send in to API call.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>array</code>Array of API results.</div>
+<code>array</code>Search ID, the applicable client account ID, lead ID, page ID, search name, search parameters, lead
+              will receive property updates (y/n), created date, last edited date.</div>
 </div></div>
 </div>
 <a id="method_get_partners_aggregatedsearches"></a><div class="element clickable method public method_get_partners_aggregatedsearches " data-toggle="collapse" data-target=".method_get_partners_aggregatedsearches .collapse" title="public">
@@ -912,6 +1008,10 @@ in any single request.</p></div>
 <td>GET</td>
 </tr>
 <tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedsearches">Documentation</a></td>
+</tr>
+<tr>
 <th>access</th>
 <td>public</td>
 </tr>
@@ -922,7 +1022,8 @@ in any single request.</p></div>
 <code>array</code><p>Query args to send in to API call.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>array</code>Array of API results.</div>
+<code>array</code>Search ID, the applicable client account ID, lead ID, page ID, search name, search parameters, lead
+              will receive property updates (y/n), created date, last edited date.</div>
 </div></div>
 </div>
 <a id="method_get_partners_aggregatedsoldpending"></a><div class="element clickable method public method_get_partners_aggregatedsoldpending " data-toggle="collapse" data-target=".method_get_partners_aggregatedsoldpending .collapse" title="public">
@@ -939,6 +1040,10 @@ date it was sold in a future update.</p></div>
 <td>GET</td>
 </tr>
 <tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedsoldpending">Documentation</a></td>
+</tr>
+<tr>
 <th>access</th>
 <td>public</td>
 </tr>
@@ -949,7 +1054,7 @@ date it was sold in a future update.</p></div>
 <code>array</code><p>Query args to send in to API call.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>array</code>Array of API results.</div>
+<code>array</code>List of soldpending properties for each client.</div>
 </div></div>
 </div>
 <a id="method_get_partners_aggregatedsupplemental"></a><div class="element clickable method public method_get_partners_aggregatedsupplemental " data-toggle="collapse" data-target=".method_get_partners_aggregatedsupplemental .collapse" title="public">
@@ -964,6 +1069,10 @@ date it was sold in a future update.</p></div>
 <td>GET</td>
 </tr>
 <tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedsupplemental">Documentation</a></td>
+</tr>
+<tr>
 <th>access</th>
 <td>public</td>
 </tr>
@@ -974,7 +1083,7 @@ date it was sold in a future update.</p></div>
 <code>array</code><p>Query args to send in to API call.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>array</code>Array of API results.</div>
+<code>array</code>List of supplemental (non-MLS) properties for each client.</div>
 </div></div>
 </div>
 <a id="method_get_partners_apiversion"></a><div class="element clickable method public method_get_partners_apiversion " data-toggle="collapse" data-target=".method_get_partners_apiversion .collapse" title="public">
@@ -989,13 +1098,17 @@ date it was sold in a future update.</p></div>
 <td>GET</td>
 </tr>
 <tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-apiversion">Documentation</a></td>
+</tr>
+<tr>
 <th>access</th>
 <td>public</td>
 </tr>
 </table>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>string</code>API version.</div>
+<code>string</code>The default api version.</div>
 </div></div>
 </div>
 <a id="method_get_partners_availablemls"></a><div class="element clickable method public method_get_partners_availablemls " data-toggle="collapse" data-target=".method_get_partners_availablemls .collapse" title="public">
@@ -1010,13 +1123,17 @@ date it was sold in a future update.</p></div>
 <td>GET</td>
 </tr>
 <tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAvailableMls">Documentation</a></td>
+</tr>
+<tr>
 <th>access</th>
 <td>public</td>
 </tr>
 </table>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>array</code>Array of API results.</div>
+<code>array</code>List of available MLSs with their fees.</div>
 </div></div>
 </div>
 <a id="method_get_partners_clients"></a><div class="element clickable method public method_get_partners_clients " data-toggle="collapse" data-target=".method_get_partners_clients .collapse" title="public">
@@ -1031,6 +1148,10 @@ date it was sold in a future update.</p></div>
 <td>GET</td>
 </tr>
 <tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getClients">Documentation</a></td>
+</tr>
+<tr>
 <th>access</th>
 <td>public</td>
 </tr>
@@ -1041,7 +1162,8 @@ date it was sold in a future update.</p></div>
 <code>array</code><p>Query args to send in to API call.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>array</code>Array of API results.</div>
+<code>array</code>The account ID, company name, display name, account status, and current API key of each client or
+              clients matching the filter values.</div>
 </div></div>
 </div>
 <a id="method_get_partners_listcomponents"></a><div class="element clickable method public method_get_partners_listcomponents " data-toggle="collapse" data-target=".method_get_partners_listcomponents .collapse" title="public">
@@ -1056,13 +1178,17 @@ date it was sold in a future update.</p></div>
 <td>GET</td>
 </tr>
 <tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getListcomponents">Documentation</a></td>
+</tr>
+<tr>
 <th>access</th>
 <td>public</td>
 </tr>
 </table>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>array</code>Array of API results.</div>
+<code>array</code>All available APIs/Components.</div>
 </div></div>
 </div>
 <a id="method_get_partners_listmethods"></a><div class="element clickable method public method_get_partners_listmethods " data-toggle="collapse" data-target=".method_get_partners_listmethods .collapse" title="public">
@@ -1078,20 +1204,24 @@ request methods (GET, PUT, POST, or DELETE) are supported by each method in addi
 <td>GET</td>
 </tr>
 <tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-listmethods">Documentation</a></td>
+</tr>
+<tr>
 <th>access</th>
 <td>public</td>
 </tr>
 </table>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>array</code>Array of API results.</div>
+<code>array</code>Basic information about all available methods in this API.</div>
 </div></div>
 </div>
 <a id="method_get_partners_propertytypes"></a><div class="element clickable method public method_get_partners_propertytypes " data-toggle="collapse" data-target=".method_get_partners_propertytypes .collapse" title="public">
 <h2>Gives the names and IDs of all available property types. This method differs from the property type lookup method
 in the client API component in that it can look up property types for any active Platinum MLS, not just those for
 which the client is a member.</h2>
-<pre>get_partners_propertytypes(string $idx_id<code> = ''</code>, string $rf<code> = ''</code>) : array</pre>
+<pre>get_partners_propertytypes(string $idx_id<code> = ''</code>, string|array $rf<code> = ''</code>) : array</pre>
 <div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>Note: The IDX property types are those used for multiple MLS searches and are equivalent to the property types
@@ -1107,10 +1237,16 @@ information and in single MLS search queries as the variable pt.</li>
 <li>propertyType - the human friendly property type name.</li>
 <li>parentPtID - the ID of the IDX property type to which this MLS property type belongs.</li>
 </ul></div>
-<table class="table table-bordered"><tr>
+<table class="table table-bordered">
+<tr>
 <th>api</th>
 <td>GET</td>
-</tr></table>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getPropertytypess">Documentation</a></td>
+</tr>
+</table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$idx_id</h4>
@@ -1118,10 +1254,11 @@ information and in single MLS search queries as the variable pt.</li>
 is specified then only the IDX property types (parentPtID) will be returned.</p></div>
 <div class="subelement argument">
 <h4>$rf</h4>
-<code>string</code><p>| array $rf      A string or an array of strings of return field names.</p></div>
+<code>string</code><code>array</code><p>A string or an array of strings of return field names.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>array</code>Array of API results.</div>
+<code>array</code>An array containing the IDX property types and, if an IDX ID has been provided,
+                              the MLS's property types and their IDs.</div>
 </div></div>
 </div>
 <a id="method_get_savedlinks"></a><div class="element clickable method public method_get_savedlinks " data-toggle="collapse" data-target=".method_get_savedlinks .collapse" title="public">
@@ -1352,7 +1489,7 @@ is specified then only the IDX property types (parentPtID) will be returned.</p>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2017-07-26T19:50:39-07:00.<br></footer></div>
+            generated on 2017-07-27T03:40:36-07:00.<br></footer></div>
 </div>
 </body>
 </html>

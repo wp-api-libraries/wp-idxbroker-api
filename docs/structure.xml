@@ -14,103 +14,104 @@
     </docblock>
     <source>eJyNkmtP2zAUhr/nVxxVleJUJIFJ+8KlYwwGbLR00DG2qkJeYhKviZ3aTkuG+O87dkNBGxKzoijn8rw+l+y+q/LKi3s9D3qAn4cyqUsmjFTosL7RyQiumNJcCnjb+vYTalgmVQP/ILBf0WRGMwYAl4yqJHdOWptcKvTBgM8YLKiAC84K2C3RjNBUaO0LygSvdZTIsr+6R1aN4llu4M3m1maIr62/BGIYriAguTHVdhwvl8vomVDghAqeMKFtUc+yZIU+WauERVJlcZuj45KbsDUi7A8Gp+NWRMzAnVYEg6lMLIzx2PPiGDJmQLu+wTBVel37hj3QRhlZyCVTpHtzfDSe+DbgT4Mdh91ykToAuIDrwRmk7VC97l1ZIC/YEg7PB4+zJsjZSNgvJE2Jv7ryBlXYXYR+38UravIn9nqEJrGUvbQ7x/XtwSop7M9rphri2eY6cbygRc0miRSGcqGJUVToAndOog3w3x98ODz6eHxy+unz2WB4PvpycTn+evXt+vsPfwM6TiKCjk9/Jim7zXL+a1aUQlZzpU29WN41v/0AVdxg/GAaR1HHs9UqpuvCaKyJKkUb4ibTw7EvqLLlHxXMdg5d1n7gxG+lYhRHTVw3VK+DAdy7Qp4EZDmUKTvjGhVce2AFbM6jiWdvLRD2cZPtlfqgGdNsSEtGfJdrp+tInkJ7Xid5usZMU7H/xWzuGmxnNJki6N9Dx1XT2cZp48hpmuKSdM40WbUU9rlhJdkMwr7A3q+sL2j343dwVzx9ieXpq6At6iXU+l+EHQgP/o734HksySX4EwvzsiowieCfg89jfy59isl/ACqIaJw=</source>
   </file>
-  <file path="wp-idxbroker-api.php" generated-path="wp-idxbroker-api.html" hash="3f1f7f1de2eb09022542b37e41a82a90" package="WP-API-Libraries\WP-IDX-Broker-API">
+  <file path="wp-idxbroker-api.php" generated-path="wp-idxbroker-api.html" hash="dabd49262c76421cb797a427b2fead93" package="WP-API-Libraries\WP-IDX-Broker-API">
     <docblock line="0">
       <description>IDX Broker API</description>
       <long-description></long-description>
+      <tag name="link" line="0" description="API Documentation" link="http://middleware.idxbroker.com/docs/api/methods/index.html"/>
       <tag name="package" line="0" description="WP-API-Libraries\WP-IDX-Broker-API"/>
       <tag name="author" line="0" description="sfgarza"/>
     </docblock>
-    <class final="false" abstract="false" namespace="" line="31" package="WP-IDX-Broker-API">
+    <class final="false" abstract="false" namespace="" line="32" package="WP-IDX-Broker-API">
       <extends/>
       <name>IdxBrokerAPI</name>
       <full_name>\IdxBrokerAPI</full_name>
-      <docblock line="31">
+      <docblock line="32">
         <description>IdxBrokerAPI class.</description>
         <long-description></long-description>
-        <tag name="package" line="31" description="WP-IDX-Broker-API"/>
+        <tag name="package" line="32" description="WP-IDX-Broker-API"/>
       </docblock>
-      <property static="false" visibility="private" namespace="" line="38" package="WP-IDX-Broker-API">
+      <property static="false" visibility="private" namespace="" line="39" package="WP-IDX-Broker-API">
         <name>$api_url</name>
         <full_name>\IdxBrokerAPI::api_url</full_name>
         <default>'https://api.idxbroker.com/'</default>
-        <docblock line="38">
+        <docblock line="39">
           <description>API URL.</description>
           <long-description></long-description>
-          <tag name="var" line="38" description="" type="string" variable="">
+          <tag name="var" line="39" description="" type="string" variable="">
             <type>string</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="protected" namespace="" line="48" package="WP-IDX-Broker-API">
+      <property static="false" visibility="protected" namespace="" line="49" package="WP-IDX-Broker-API">
         <name>$args</name>
         <full_name>\IdxBrokerAPI::args</full_name>
         <default>array()</default>
-        <docblock line="48">
+        <docblock line="49">
           <description>HTTP request arguments.</description>
           <long-description>(default value: array())</long-description>
-          <tag name="var" line="48" description="" type="Array" variable="">
+          <tag name="var" line="49" description="" type="Array" variable="">
             <type>Array</type>
           </tag>
-          <tag name="access" line="48" description="protected"/>
+          <tag name="access" line="49" description="protected"/>
         </docblock>
       </property>
-      <property static="false" visibility="protected" namespace="" line="55" package="WP-IDX-Broker-API">
+      <property static="false" visibility="protected" namespace="" line="56" package="WP-IDX-Broker-API">
         <name>$route</name>
         <full_name>\IdxBrokerAPI::route</full_name>
         <default></default>
-        <docblock line="55">
+        <docblock line="56">
           <description>IDX Broker route to make a the call to.</description>
           <long-description></long-description>
-          <tag name="var" line="55" description="" type="string" variable="">
+          <tag name="var" line="56" description="" type="string" variable="">
             <type>string</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="protected" namespace="" line="62" package="WP-IDX-Broker-API">
+      <property static="false" visibility="protected" namespace="" line="63" package="WP-IDX-Broker-API">
         <name>$response</name>
         <full_name>\IdxBrokerAPI::response</full_name>
         <default></default>
-        <docblock line="62">
+        <docblock line="63">
           <description>Raw response from IDX Broker server.</description>
           <long-description></long-description>
-          <tag name="var" line="62" description="" type="string" variable="">
+          <tag name="var" line="63" description="" type="string" variable="">
             <type>string</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="" line="69" package="WP-IDX-Broker-API">
+      <property static="false" visibility="public" namespace="" line="70" package="WP-IDX-Broker-API">
         <name>$code</name>
         <full_name>\IdxBrokerAPI::code</full_name>
         <default></default>
-        <docblock line="69">
+        <docblock line="70">
           <description>Response code from the server</description>
           <long-description></long-description>
-          <tag name="var" line="69" description="" type="integer" variable="">
+          <tag name="var" line="70" description="" type="integer" variable="">
             <type>integer</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="81" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="82" package="WP-IDX-Broker-API">
         <name>__construct</name>
         <full_name>\IdxBrokerAPI::__construct()</full_name>
-        <docblock line="81">
+        <docblock line="82">
           <description>__construct function.</description>
           <long-description></long-description>
-          <tag name="access" line="81" description="public"/>
-          <tag name="param" line="81" description="&lt;p&gt;IDX Broker API key.&lt;/p&gt;" type="string" variable="$api_key">
+          <tag name="access" line="82" description="public"/>
+          <tag name="param" line="82" description="&lt;p&gt;IDX Broker API key.&lt;/p&gt;" type="string" variable="$api_key">
             <type>string</type>
           </tag>
-          <tag name="param" line="81" description="&lt;p&gt;Ancillarykey.&lt;/p&gt;" type="string" variable="$partner_key">
+          <tag name="param" line="82" description="&lt;p&gt;Ancillarykey.&lt;/p&gt;" type="string" variable="$partner_key">
             <type>string</type>
           </tag>
-          <tag name="param" line="81" description="&lt;p&gt;XML or JSON.&lt;/p&gt;" type="string" variable="$outputtype">
+          <tag name="param" line="82" description="&lt;p&gt;XML or JSON.&lt;/p&gt;" type="string" variable="$outputtype">
             <type>string</type>
           </tag>
-          <tag name="param" line="81" description="&lt;p&gt;Version of API to use.&lt;/p&gt;" type="string" variable="$apiversion">
+          <tag name="param" line="82" description="&lt;p&gt;Version of API to use.&lt;/p&gt;" type="string" variable="$apiversion">
             <type>string</type>
           </tag>
-          <tag name="return" line="81" description="" type="void">
+          <tag name="return" line="82" description="" type="void">
             <type>void</type>
           </tag>
         </docblock>
@@ -135,31 +136,31 @@
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="99" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="100" package="WP-IDX-Broker-API">
         <name>request</name>
         <full_name>\IdxBrokerAPI::request()</full_name>
-        <docblock line="99">
+        <docblock line="100">
           <description>Request function.</description>
           <long-description></long-description>
-          <tag name="access" line="99" description="public"/>
-          <tag name="return" line="99" description="Array of API results." type="array">
+          <tag name="access" line="100" description="public"/>
+          <tag name="return" line="100" description="Array of API results." type="array">
             <type>array</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="121" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="122" package="WP-IDX-Broker-API">
         <name>build_request</name>
         <full_name>\IdxBrokerAPI::build_request()</full_name>
-        <docblock line="121">
+        <docblock line="122">
           <description>Builds the request for the API call to IDX Broker.</description>
           <long-description></long-description>
-          <tag name="param" line="121" description="&lt;p&gt;The route to make the call to.&lt;/p&gt;" type="string" variable="$route">
+          <tag name="param" line="122" description="&lt;p&gt;The route to make the call to.&lt;/p&gt;" type="string" variable="$route">
             <type>string</type>
           </tag>
-          <tag name="param" line="121" description="&lt;p&gt;Array containing the http method and body&#10;                       of call. Optional for GET requests.&lt;/p&gt;" type="array" variable="$fields">
+          <tag name="param" line="122" description="&lt;p&gt;Array containing the http method and body&#10;                       of call. Optional for GET requests.&lt;/p&gt;" type="array" variable="$fields">
             <type>array</type>
           </tag>
-          <tag name="return" line="121" description="IdxBrokerAPI Object." type="\IdxBrokerAPI">
+          <tag name="return" line="122" description="IdxBrokerAPI Object." type="\IdxBrokerAPI">
             <type>\IdxBrokerAPI</type>
           </tag>
         </docblock>
@@ -174,48 +175,49 @@
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="133" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="134" package="WP-IDX-Broker-API">
         <name>check_usage</name>
         <full_name>\IdxBrokerAPI::check_usage()</full_name>
-        <docblock line="133">
+        <docblock line="134">
           <description>Saves the hourly API key usage count.</description>
           <long-description></long-description>
-          <tag name="return" line="133" description="API hourly usage count." type="string">
+          <tag name="return" line="134" description="API hourly usage count." type="string">
             <type>string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="140" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="141" package="WP-IDX-Broker-API">
         <name>get_response_code</name>
         <full_name>\IdxBrokerAPI::get_response_code()</full_name>
-        <docblock line="140">
+        <docblock line="141">
           <description>Gets the response code from the response.</description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="153" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="154" package="WP-IDX-Broker-API">
         <name>get_idx_domain</name>
         <full_name>\IdxBrokerAPI::get_idx_domain()</full_name>
-        <docblock line="153">
+        <docblock line="154">
           <description>Get domain used for displaying IDX pages.</description>
           <long-description></long-description>
-          <tag name="return" line="153" description="Array containing domain 'scheme' &amp;amp; 'url'." type="array">
+          <tag name="return" line="154" description="Array containing domain 'scheme' &amp;amp; 'url'." type="array">
             <type>array</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="181" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="182" package="WP-IDX-Broker-API">
         <name>get_partners_aggregatedagents</name>
         <full_name>\IdxBrokerAPI::get_partners_aggregatedagents()</full_name>
-        <docblock line="181">
+        <docblock line="182">
           <description>Get a list of all agents for your clients.</description>
           <long-description></long-description>
-          <tag name="api" line="181" description="GET"/>
-          <tag name="access" line="181" description="public"/>
-          <tag name="param" line="181" description="&lt;p&gt;Query args to send in to API call.&lt;/p&gt;" type="array" variable="$args">
+          <tag name="api" line="182" description="GET"/>
+          <tag name="see" line="182" description="Documentation" link="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedagents"/>
+          <tag name="access" line="182" description="public"/>
+          <tag name="param" line="182" description="&lt;p&gt;Query args to send in to API call.&lt;/p&gt;" type="array" variable="$args">
             <type>array</type>
           </tag>
-          <tag name="return" line="181" description="Array of API results." type="array">
+          <tag name="return" line="182" description="All available agents." type="array">
             <type>array</type>
           </tag>
         </docblock>
@@ -225,18 +227,19 @@
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="198" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="199" package="WP-IDX-Broker-API">
         <name>get_partners_aggregatedfeatured</name>
         <full_name>\IdxBrokerAPI::get_partners_aggregatedfeatured()</full_name>
-        <docblock line="198">
+        <docblock line="199">
           <description>Get a list of featured MLS properties.</description>
           <long-description></long-description>
-          <tag name="api" line="198" description="GET"/>
-          <tag name="access" line="198" description="public"/>
-          <tag name="param" line="198" description="&lt;p&gt;Query args to send in to API call.&lt;/p&gt;" type="array" variable="$args">
+          <tag name="api" line="199" description="GET"/>
+          <tag name="see" line="199" description="Documentation" link="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedfeatured"/>
+          <tag name="access" line="199" description="public"/>
+          <tag name="param" line="199" description="&lt;p&gt;Query args to send in to API call.&lt;/p&gt;" type="array" variable="$args">
             <type>array</type>
           </tag>
-          <tag name="return" line="198" description="Array of API results." type="array">
+          <tag name="return" line="199" description="List of featured MLS properties for each client." type="array">
             <type>array</type>
           </tag>
         </docblock>
@@ -246,22 +249,23 @@
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="221" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="226" package="WP-IDX-Broker-API">
         <name>get_partners_aggregatedleads</name>
         <full_name>\IdxBrokerAPI::get_partners_aggregatedleads()</full_name>
-        <docblock line="221">
+        <docblock line="226">
           <description>Get a list of all leads.</description>
           <long-description>For bandwidth and memory considerations there is a limit of 5,000 on the number of leads that can be returned in
 any single request. Even if a full week of data is requested this limit will only be encountered if your clients
 have a combined average 30+ leads created, updated, or active per hour (as such it will be most common when
 requesting leads based on last property update date). If this limit is exceeded a 413 -Requested Entity Too
 Large error is returned. If encountered a smaller interval will need to be used.</long-description>
-          <tag name="api" line="221" description="GET"/>
-          <tag name="access" line="221" description="public"/>
-          <tag name="param" line="221" description="&lt;p&gt;Query args to send in to API call.&lt;/p&gt;" type="array" variable="$args">
+          <tag name="api" line="226" description="GET"/>
+          <tag name="see" line="226" description="Documentation" link="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedleads"/>
+          <tag name="access" line="226" description="public"/>
+          <tag name="param" line="226" description="&lt;p&gt;Query args to send in to API call.&lt;/p&gt;" type="array" variable="$args">
             <type>array</type>
           </tag>
-          <tag name="return" line="221" description="Array of API results." type="array">
+          <tag name="return" line="226" description="The applicable client account ID, lead ID, first name, last name, email address, address, city,&#10;              state/province, country, zipCode, phone number, ID of the agent assigned, email format (html or&#10;              plain text), disabled status (y/n), allowed to log in to their account (y/n), will receive property&#10;              updates (y/n), subscribe date, last edited, last login date, last property update date, last&#10;              activity type, and last activity date." type="array">
             <type>array</type>
           </tag>
         </docblock>
@@ -271,19 +275,20 @@ Large error is returned. If encountered a smaller interval will need to be used.
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="241" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="246" package="WP-IDX-Broker-API">
         <name>get_partners_aggregatedleadtraffic</name>
         <full_name>\IdxBrokerAPI::get_partners_aggregatedleadtraffic()</full_name>
-        <docblock line="241">
+        <docblock line="246">
           <description>Get a list of all leads traffic history.</description>
           <long-description>Note: For bandwidth and memory considerations there is a limit of 5,000 on the number of searches that can be
 returned in any single request.</long-description>
-          <tag name="api" line="241" description="GET"/>
-          <tag name="access" line="241" description="public"/>
-          <tag name="param" line="241" description="&lt;p&gt;Query args to send in to API call.&lt;/p&gt;" type="array" variable="$args">
+          <tag name="api" line="246" description="GET"/>
+          <tag name="see" line="246" description="Documentation" link="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedleadtraffic"/>
+          <tag name="access" line="246" description="public"/>
+          <tag name="param" line="246" description="&lt;p&gt;Query args to send in to API call.&lt;/p&gt;" type="array" variable="$args">
             <type>array</type>
           </tag>
-          <tag name="return" line="241" description="Array of API results." type="array">
+          <tag name="return" line="246" description="The applicable client account ID, date, lead ID, IP , page, and referrer." type="array">
             <type>array</type>
           </tag>
         </docblock>
@@ -293,19 +298,20 @@ returned in any single request.</long-description>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="260" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="265" package="WP-IDX-Broker-API">
         <name>get_partners_aggregatedlistingstatus</name>
         <full_name>\IdxBrokerAPI::get_partners_aggregatedlistingstatus()</full_name>
-        <docblock line="260">
+        <docblock line="265">
           <description>This method gives the status for all MLS listings (not supplemental) broken down by client account ID. This
 includes sold/pending listings with an unknown status which are not usually returned by sold/pending api methods.</description>
           <long-description>This is helpful if you need to know when previously gathered featured properties have left the market.</long-description>
-          <tag name="api" line="260" description="GET"/>
-          <tag name="access" line="260" description="public"/>
-          <tag name="param" line="260" description="&lt;p&gt;Query args to send in to API call.&lt;/p&gt;" type="array" variable="$args">
+          <tag name="api" line="265" description="GET"/>
+          <tag name="see" line="265" description="Documentation" link="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedlistingstatus"/>
+          <tag name="access" line="265" description="public"/>
+          <tag name="param" line="265" description="&lt;p&gt;Query args to send in to API call.&lt;/p&gt;" type="array" variable="$args">
             <type>array</type>
           </tag>
-          <tag name="return" line="260" description="Array of API results." type="array">
+          <tag name="return" line="265" description="MLS listings along with their statuses." type="array">
             <type>array</type>
           </tag>
         </docblock>
@@ -315,19 +321,20 @@ includes sold/pending listings with an unknown status which are not usually retu
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="280" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="286" package="WP-IDX-Broker-API">
         <name>get_partners_aggregatedproperties</name>
         <full_name>\IdxBrokerAPI::get_partners_aggregatedproperties()</full_name>
-        <docblock line="280">
+        <docblock line="286">
           <description>Get a list of all lead saved properties.</description>
           <long-description>For bandwidth and memory considerations there is a limit of 5,000 on the number of searches that can be returned
 in any single request.</long-description>
-          <tag name="api" line="280" description="GET"/>
-          <tag name="access" line="280" description="public"/>
-          <tag name="param" line="280" description="&lt;p&gt;Query args to send in to API call.&lt;/p&gt;" type="array" variable="$args">
+          <tag name="api" line="286" description="GET"/>
+          <tag name="see" line="286" description="Documentation" link="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedproperties"/>
+          <tag name="access" line="286" description="public"/>
+          <tag name="param" line="286" description="&lt;p&gt;Query args to send in to API call.&lt;/p&gt;" type="array" variable="$args">
             <type>array</type>
           </tag>
-          <tag name="return" line="280" description="Array of API results." type="array">
+          <tag name="return" line="286" description="Search ID, the applicable client account ID, lead ID, page ID, search name, search parameters, lead&#10;              will receive property updates (y/n), created date, last edited date." type="array">
             <type>array</type>
           </tag>
         </docblock>
@@ -337,19 +344,20 @@ in any single request.</long-description>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="300" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="307" package="WP-IDX-Broker-API">
         <name>get_partners_aggregatedsearches</name>
         <full_name>\IdxBrokerAPI::get_partners_aggregatedsearches()</full_name>
-        <docblock line="300">
+        <docblock line="307">
           <description>Get a list of all lead saved searches.</description>
           <long-description>For bandwidth and memory considerations there is a limit of 5,000 on the number of searches that can be returned
 in any single request.</long-description>
-          <tag name="api" line="300" description="GET"/>
-          <tag name="access" line="300" description="public"/>
-          <tag name="param" line="300" description="&lt;p&gt;Query args to send in to API call.&lt;/p&gt;" type="array" variable="$args">
+          <tag name="api" line="307" description="GET"/>
+          <tag name="see" line="307" description="Documentation" link="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedsearches"/>
+          <tag name="access" line="307" description="public"/>
+          <tag name="param" line="307" description="&lt;p&gt;Query args to send in to API call.&lt;/p&gt;" type="array" variable="$args">
             <type>array</type>
           </tag>
-          <tag name="return" line="300" description="Array of API results." type="array">
+          <tag name="return" line="307" description="Search ID, the applicable client account ID, lead ID, page ID, search name, search parameters, lead&#10;              will receive property updates (y/n), created date, last edited date." type="array">
             <type>array</type>
           </tag>
         </docblock>
@@ -359,21 +367,22 @@ in any single request.</long-description>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="322" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="329" package="WP-IDX-Broker-API">
         <name>get_partners_aggregatedsoldpending</name>
         <full_name>\IdxBrokerAPI::get_partners_aggregatedsoldpending()</full_name>
-        <docblock line="322">
+        <docblock line="329">
           <description>Get a list of sold/pending MLS properties.</description>
           <long-description>Output fields may or may not be populated depending on how the information was entered into the IDX system.
 
 We are planning to add the ability to query by the date the property left the market and, for sold listings, the
 date it was sold in a future update.</long-description>
-          <tag name="api" line="322" description="GET"/>
-          <tag name="access" line="322" description="public"/>
-          <tag name="param" line="322" description="&lt;p&gt;Query args to send in to API call.&lt;/p&gt;" type="array" variable="$args">
+          <tag name="api" line="329" description="GET"/>
+          <tag name="see" line="329" description="Documentation" link="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedsoldpending"/>
+          <tag name="access" line="329" description="public"/>
+          <tag name="param" line="329" description="&lt;p&gt;Query args to send in to API call.&lt;/p&gt;" type="array" variable="$args">
             <type>array</type>
           </tag>
-          <tag name="return" line="322" description="Array of API results." type="array">
+          <tag name="return" line="329" description="List of soldpending properties for each client." type="array">
             <type>array</type>
           </tag>
         </docblock>
@@ -383,18 +392,19 @@ date it was sold in a future update.</long-description>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="341" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="348" package="WP-IDX-Broker-API">
         <name>get_partners_aggregatedsupplemental</name>
         <full_name>\IdxBrokerAPI::get_partners_aggregatedsupplemental()</full_name>
-        <docblock line="341">
+        <docblock line="348">
           <description>Get a list of supplemental (non-MLS) properties.</description>
           <long-description>Output fields may or may not be populated depending on how the information was entered into the IDX system.</long-description>
-          <tag name="api" line="341" description="GET"/>
-          <tag name="access" line="341" description="public"/>
-          <tag name="param" line="341" description="&lt;p&gt;Query args to send in to API call.&lt;/p&gt;" type="array" variable="$args">
+          <tag name="api" line="348" description="GET"/>
+          <tag name="see" line="348" description="Documentation" link="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedsupplemental"/>
+          <tag name="access" line="348" description="public"/>
+          <tag name="param" line="348" description="&lt;p&gt;Query args to send in to API call.&lt;/p&gt;" type="array" variable="$args">
             <type>array</type>
           </tag>
-          <tag name="return" line="341" description="Array of API results." type="array">
+          <tag name="return" line="348" description="List of supplemental (non-MLS) properties for each client." type="array">
             <type>array</type>
           </tag>
         </docblock>
@@ -404,44 +414,47 @@ date it was sold in a future update.</long-description>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="357" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="364" package="WP-IDX-Broker-API">
         <name>get_partners_apiversion</name>
         <full_name>\IdxBrokerAPI::get_partners_apiversion()</full_name>
-        <docblock line="357">
+        <docblock line="364">
           <description>Get the default api version.</description>
           <long-description></long-description>
-          <tag name="api" line="357" description="GET"/>
-          <tag name="access" line="357" description="public"/>
-          <tag name="return" line="357" description="API version." type="string">
+          <tag name="api" line="364" description="GET"/>
+          <tag name="see" line="364" description="Documentation" link="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-apiversion"/>
+          <tag name="access" line="364" description="public"/>
+          <tag name="return" line="364" description="The default api version." type="string">
             <type>string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="369" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="376" package="WP-IDX-Broker-API">
         <name>get_partners_availablemls</name>
         <full_name>\IdxBrokerAPI::get_partners_availablemls()</full_name>
-        <docblock line="369">
+        <docblock line="376">
           <description>List of available MLSs with their fees.</description>
           <long-description></long-description>
-          <tag name="api" line="369" description="GET"/>
-          <tag name="access" line="369" description="public"/>
-          <tag name="return" line="369" description="Array of API results." type="array">
+          <tag name="api" line="376" description="GET"/>
+          <tag name="see" line="376" description="Documentation" link="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAvailableMls"/>
+          <tag name="access" line="376" description="public"/>
+          <tag name="return" line="376" description="List of available MLSs with their fees." type="array">
             <type>array</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="382" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="390" package="WP-IDX-Broker-API">
         <name>get_partners_clients</name>
         <full_name>\IdxBrokerAPI::get_partners_clients()</full_name>
-        <docblock line="382">
+        <docblock line="390">
           <description>A list of clients available to a given partner. The list of clients can be filtered by GET values.</description>
           <long-description></long-description>
-          <tag name="api" line="382" description="GET"/>
-          <tag name="access" line="382" description="public"/>
-          <tag name="param" line="382" description="&lt;p&gt;Query args to send in to API call.&lt;/p&gt;" type="array" variable="$args">
+          <tag name="api" line="390" description="GET"/>
+          <tag name="see" line="390" description="Documentation" link="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getClients"/>
+          <tag name="access" line="390" description="public"/>
+          <tag name="param" line="390" description="&lt;p&gt;Query args to send in to API call.&lt;/p&gt;" type="array" variable="$args">
             <type>array</type>
           </tag>
-          <tag name="return" line="382" description="Array of API results." type="array">
+          <tag name="return" line="390" description="The account ID, company name, display name, account status, and current API key of each client or&#10;              clients matching the filter values." type="array">
             <type>array</type>
           </tag>
         </docblock>
@@ -451,37 +464,39 @@ date it was sold in a future update.</long-description>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="398" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="406" package="WP-IDX-Broker-API">
         <name>get_partners_listcomponents</name>
         <full_name>\IdxBrokerAPI::get_partners_listcomponents()</full_name>
-        <docblock line="398">
+        <docblock line="406">
           <description>This is a simple, access anywhere, method for getting a list of all API components available.</description>
           <long-description></long-description>
-          <tag name="api" line="398" description="GET"/>
-          <tag name="access" line="398" description="public"/>
-          <tag name="return" line="398" description="Array of API results." type="array">
+          <tag name="api" line="406" description="GET"/>
+          <tag name="see" line="406" description="Documentation" link="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getListcomponents"/>
+          <tag name="access" line="406" description="public"/>
+          <tag name="return" line="406" description="All available APIs/Components." type="array">
             <type>array</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="411" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="419" package="WP-IDX-Broker-API">
         <name>get_partners_listmethods</name>
         <full_name>\IdxBrokerAPI::get_partners_listmethods()</full_name>
-        <docblock line="411">
+        <docblock line="419">
           <description>A simple method for listing all available methods in the current API component. This method will also list which
 request methods (GET, PUT, POST, or DELETE) are supported by each method in addition to each method status.</description>
           <long-description></long-description>
-          <tag name="api" line="411" description="GET"/>
-          <tag name="access" line="411" description="public"/>
-          <tag name="return" line="411" description="Array of API results." type="array">
+          <tag name="api" line="419" description="GET"/>
+          <tag name="see" line="419" description="Documentation" link="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-listmethods"/>
+          <tag name="access" line="419" description="public"/>
+          <tag name="return" line="419" description="Basic information about all available methods in this API." type="array">
             <type>array</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="440" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="449" package="WP-IDX-Broker-API">
         <name>get_partners_propertytypes</name>
         <full_name>\IdxBrokerAPI::get_partners_propertytypes()</full_name>
-        <docblock line="440">
+        <docblock line="449">
           <description>Gives the names and IDs of all available property types. This method differs from the property type lookup method
 in the client API component in that it can look up property types for any active Platinum MLS, not just those for
 which the client is a member.</description>
@@ -497,14 +512,16 @@ idxPropTypes
                 information and in single MLS search queries as the variable pt.
     * propertyType - the human friendly property type name.
     * parentPtID - the ID of the IDX property type to which this MLS property type belongs.</long-description>
-          <tag name="api" line="440" description="GET"/>
-          <tag name="param" line="440" description="&lt;p&gt;The IDX ID of the MLS from which you need property type information. If no IDX ID&#10;is specified then only the IDX property types (parentPtID) will be returned.&lt;/p&gt;" type="string" variable="$idx_id">
+          <tag name="api" line="449" description="GET"/>
+          <tag name="see" line="449" description="Documentation" link="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getPropertytypess"/>
+          <tag name="param" line="449" description="&lt;p&gt;The IDX ID of the MLS from which you need property type information. If no IDX ID&#10;is specified then only the IDX property types (parentPtID) will be returned.&lt;/p&gt;" type="string" variable="$idx_id">
             <type>string</type>
           </tag>
-          <tag name="param" line="440" description="&lt;p&gt;| array $rf      A string or an array of strings of return field names.&lt;/p&gt;" type="string" variable="$rf">
+          <tag name="param" line="449" description="&lt;p&gt;A string or an array of strings of return field names.&lt;/p&gt;" type="string|array" variable="$rf">
             <type>string</type>
+            <type>array</type>
           </tag>
-          <tag name="return" line="440" description="Array of API results." type="array">
+          <tag name="return" line="449" description="An array containing the IDX property types and, if an IDX ID has been provided,&#10;                              the MLS's property types and their IDs." type="array">
             <type>array</type>
           </tag>
         </docblock>
@@ -516,34 +533,34 @@ idxPropTypes
         <argument line="0" by_reference="false">
           <name>$rf</name>
           <default>''</default>
-          <type/>
+          <type>string|array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="460" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="469" package="WP-IDX-Broker-API">
         <name>get_clients_accounttype</name>
         <full_name>\IdxBrokerAPI::get_clients_accounttype()</full_name>
-        <docblock line="460">
+        <docblock line="469">
           <description>Get your account type.</description>
           <long-description></long-description>
-          <tag name="api" line="460" description="GET"/>
-          <tag name="see" line="460" description="API Doc." link="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getAccounttypes"/>
-          <tag name="return" line="460" description="&quot;IDX Broker Platinum&quot; | &quot;IDX Broker Lite&quot;" type="string">
+          <tag name="api" line="469" description="GET"/>
+          <tag name="see" line="469" description="Documentation." link="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getAccounttypes"/>
+          <tag name="return" line="469" description="Account type." type="string">
             <type>string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="473" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="482" package="WP-IDX-Broker-API">
         <name>get_clients_agents</name>
         <full_name>\IdxBrokerAPI::get_clients_agents()</full_name>
-        <docblock line="473">
+        <docblock line="482">
           <description>View agent information on a multi-user account.</description>
           <long-description></long-description>
-          <tag name="api" line="473" description="GET"/>
-          <tag name="see" line="473" description="API Doc." link="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getAgents"/>
-          <tag name="param" line="473" description="&lt;p&gt;Query args to send in to API call.&lt;/p&gt;" type="array" variable="$args">
+          <tag name="api" line="482" description="GET"/>
+          <tag name="see" line="482" description="Documentation." link="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getAgents"/>
+          <tag name="param" line="482" description="&lt;p&gt;Query args to send in to API call.&lt;/p&gt;" type="array" variable="$args">
             <type>array</type>
           </tag>
-          <tag name="return" line="473" description="Array of API results." type="array">
+          <tag name="return" line="482" description="All agents on the account or those matching filter values." type="array">
             <type>array</type>
           </tag>
         </docblock>
@@ -553,35 +570,37 @@ idxPropTypes
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="489" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="498" package="WP-IDX-Broker-API">
         <name>get_clients_apiversion</name>
         <full_name>\IdxBrokerAPI::get_clients_apiversion()</full_name>
-        <docblock line="489">
+        <docblock line="498">
           <description>Get the default api version.</description>
           <long-description></long-description>
-          <tag name="api" line="489" description="GET"/>
-          <tag name="see" line="489" description="API Doc." link="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-apiversion"/>
-          <tag name="return" line="489" description="API version info." type="array">
+          <tag name="api" line="498" description="GET"/>
+          <tag name="see" line="498" description="Documentation." link="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-apiversion"/>
+          <tag name="return" line="498" description="The default api version." type="array">
             <type>array</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="504" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="513" package="WP-IDX-Broker-API">
         <name>get_clients_cities</name>
         <full_name>\IdxBrokerAPI::get_clients_cities()</full_name>
-        <docblock line="504">
+        <docblock line="513">
           <description>Returns the cities available in each of a client's city lists. Since a client can build any number of city
 lists this method requires the ID of which list you want to view. To get a list of all city lists available do
 not send the primary request ID. The default list on each account has the id combinedActiveMLS</description>
           <long-description></long-description>
-          <tag name="api" line="504" description="GET"/>
-          <tag name="param" line="504" description="&lt;p&gt;City list id&lt;/p&gt;" type="string" variable="$list_id">
+          <tag name="api" line="513" description="GET"/>
+          <tag name="see" line="513" description="Documentation." link="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getCities"/>
+          <tag name="param" line="513" description="&lt;p&gt;City list id.&lt;/p&gt;" type="string" variable="$list_id">
             <type>string</type>
           </tag>
-          <tag name="param" line="504" description="&lt;p&gt;| array $rf      A string or an array of strings of return field names.&lt;/p&gt;" type="string" variable="$rf">
+          <tag name="param" line="513" description="&lt;p&gt;A string or an array of strings of return field names.&lt;/p&gt;" type="string|array" variable="$rf">
             <type>string</type>
+            <type>array</type>
           </tag>
-          <tag name="return" line="504" description="Array of API results." type="array">
+          <tag name="return" line="513" description="All cities in a given list or, if no list ID is provided, a list of list IDs." type="array">
             <type>array</type>
           </tag>
         </docblock>
@@ -593,529 +612,566 @@ not send the primary request ID. The default list on each account has the id com
         <argument line="0" by_reference="false">
           <name>$rf</name>
           <default>''</default>
-          <type/>
+          <type>string|array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="511" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="530" package="WP-IDX-Broker-API">
         <name>get_clients_citieslistname</name>
         <full_name>\IdxBrokerAPI::get_clients_citieslistname()</full_name>
-        <docblock line="511">
-          <description></description>
+        <docblock line="530">
+          <description>Returns the IDs and names for each of a client's city lists including MLS city lists. To get the list of all city
+lists available do not send the primary request ID. The default list on each account has the ID combinedActiveMLS</description>
           <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="513" package="WP-IDX-Broker-API">
-        <name>get_clients_counties</name>
-        <full_name>\IdxBrokerAPI::get_clients_counties()</full_name>
-        <docblock line="513">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="515" package="WP-IDX-Broker-API">
-        <name>get_clients_countieslistname</name>
-        <full_name>\IdxBrokerAPI::get_clients_countieslistname()</full_name>
-        <docblock line="515">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="517" package="WP-IDX-Broker-API">
-        <name>post_clients_dynamicwrapperurl</name>
-        <full_name>\IdxBrokerAPI::post_clients_dynamicwrapperurl()</full_name>
-        <docblock line="517">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="519" package="WP-IDX-Broker-API">
-        <name>get_clients_featured</name>
-        <full_name>\IdxBrokerAPI::get_clients_featured()</full_name>
-        <docblock line="519">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="521" package="WP-IDX-Broker-API">
-        <name>get_clients_listallowedfields</name>
-        <full_name>\IdxBrokerAPI::get_clients_listallowedfields()</full_name>
-        <docblock line="521">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="523" package="WP-IDX-Broker-API">
-        <name>get_clients_listcomponents</name>
-        <full_name>\IdxBrokerAPI::get_clients_listcomponents()</full_name>
-        <docblock line="523">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="525" package="WP-IDX-Broker-API">
-        <name>get_clients_listing</name>
-        <full_name>\IdxBrokerAPI::get_clients_listing()</full_name>
-        <docblock line="525">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="527" package="WP-IDX-Broker-API">
-        <name>get_clients_listmethods</name>
-        <full_name>\IdxBrokerAPI::get_clients_listmethods()</full_name>
-        <docblock line="527">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="529" package="WP-IDX-Broker-API">
-        <name>get_clients_offices</name>
-        <full_name>\IdxBrokerAPI::get_clients_offices()</full_name>
-        <docblock line="529">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="531" package="WP-IDX-Broker-API">
-        <name>get_clients_postalcodes</name>
-        <full_name>\IdxBrokerAPI::get_clients_postalcodes()</full_name>
-        <docblock line="531">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="533" package="WP-IDX-Broker-API">
-        <name>get_clients_postalcodeslistname</name>
-        <full_name>\IdxBrokerAPI::get_clients_postalcodeslistname()</full_name>
-        <docblock line="533">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="535" package="WP-IDX-Broker-API">
-        <name>get_clients_properties</name>
-        <full_name>\IdxBrokerAPI::get_clients_properties()</full_name>
-        <docblock line="535">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="537" package="WP-IDX-Broker-API">
-        <name>add_savedlink</name>
-        <full_name>\IdxBrokerAPI::add_savedlink()</full_name>
-        <docblock line="537">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="539" package="WP-IDX-Broker-API">
-        <name>delete_savedlink</name>
-        <full_name>\IdxBrokerAPI::delete_savedlink()</full_name>
-        <docblock line="539">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="541" package="WP-IDX-Broker-API">
-        <name>get_savedlinks</name>
-        <full_name>\IdxBrokerAPI::get_savedlinks()</full_name>
-        <docblock line="541">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="543" package="WP-IDX-Broker-API">
-        <name>update_savedlink</name>
-        <full_name>\IdxBrokerAPI::update_savedlink()</full_name>
-        <docblock line="543">
-          <description></description>
-          <long-description></long-description>
+          <tag name="api" line="530" description="GET"/>
+          <tag name="see" line="530" description="Documentation." link="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getCitieslistname"/>
+          <tag name="return" line="530" description="A list of city list IDs and names." type="array">
+            <type>array</type>
+          </tag>
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="" line="545" package="WP-IDX-Broker-API">
-        <name>get_searchquery</name>
-        <full_name>\IdxBrokerAPI::get_searchquery()</full_name>
+        <name>get_clients_counties</name>
+        <full_name>\IdxBrokerAPI::get_clients_counties()</full_name>
         <docblock line="545">
-          <description></description>
+          <description>Returns the counties available in each of a client's county lists. Since a client can build any number of county
+lists this method requires the ID of which list you want to view. To get a list of all county lists available do
+not send the primary request ID. The default list on each account has the id combinedActiveMLS.</description>
           <long-description></long-description>
+          <tag name="api" line="545" description="GET"/>
+          <tag name="see" line="545" description="Documentation." link="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getCounties"/>
+          <tag name="param" line="545" description="&lt;p&gt;If no ID is given a list of IDs is returned.&lt;/p&gt;" type="string" variable="$list_id">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="545" description="&lt;p&gt;A string or an array of strings of fields to return in the output..&lt;/p&gt;" type="string|array" variable="$rf">
+            <type>string</type>
+            <type>array</type>
+          </tag>
+          <tag name="return" line="545" description="All counties in a given list or, if no list ID is provided, a list of list IDs." type="array">
+            <type>array</type>
+          </tag>
         </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="547" package="WP-IDX-Broker-API">
-        <name>get_soldpending</name>
-        <full_name>\IdxBrokerAPI::get_soldpending()</full_name>
-        <docblock line="547">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="549" package="WP-IDX-Broker-API">
-        <name>delete_supplemental</name>
-        <full_name>\IdxBrokerAPI::delete_supplemental()</full_name>
-        <docblock line="549">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="551" package="WP-IDX-Broker-API">
-        <name>get_supplemental</name>
-        <full_name>\IdxBrokerAPI::get_supplemental()</full_name>
-        <docblock line="551">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="553" package="WP-IDX-Broker-API">
-        <name>add_supplemental</name>
-        <full_name>\IdxBrokerAPI::add_supplemental()</full_name>
-        <docblock line="553">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="555" package="WP-IDX-Broker-API">
-        <name>update_supplemental</name>
-        <full_name>\IdxBrokerAPI::update_supplemental()</full_name>
-        <docblock line="555">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="557" package="WP-IDX-Broker-API">
-        <name>get_systemlinks</name>
-        <full_name>\IdxBrokerAPI::get_systemlinks()</full_name>
-        <docblock line="557">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="559" package="WP-IDX-Broker-API">
-        <name>get_widgets</name>
-        <full_name>\IdxBrokerAPI::get_widgets()</full_name>
-        <docblock line="559">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="561" package="WP-IDX-Broker-API">
-        <name>delete_wrapper_cache</name>
-        <full_name>\IdxBrokerAPI::delete_wrapper_cache()</full_name>
-        <docblock line="561">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$list_id</name>
+          <default>''</default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$rf</name>
+          <default>''</default>
+          <type>string|array</type>
+        </argument>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="" line="563" package="WP-IDX-Broker-API">
-        <name>get_zipcodes</name>
-        <full_name>\IdxBrokerAPI::get_zipcodes()</full_name>
+        <name>get_clients_countieslistname</name>
+        <full_name>\IdxBrokerAPI::get_clients_countieslistname()</full_name>
         <docblock line="563">
+          <description>Returns the IDs and names for each of a client's counties lists including MLS counties lists. To get the list of
+all counties lists available do not send the primary request ID. The default list on each account has the ID
+combinedActiveMLS</description>
+          <long-description></long-description>
+          <tag name="api" line="563" description="GET"/>
+          <tag name="see" line="563" description="Documentation." link="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getCountieslistname"/>
+          <tag name="return" line="563" description="A list of counties list IDs and names" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="567" package="WP-IDX-Broker-API">
+        <name>post_clients_dynamicwrapperurl</name>
+        <full_name>\IdxBrokerAPI::post_clients_dynamicwrapperurl()</full_name>
+        <docblock line="567">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="573" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="570" package="WP-IDX-Broker-API">
+        <name>get_clients_featured</name>
+        <full_name>\IdxBrokerAPI::get_clients_featured()</full_name>
+        <docblock line="570">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="572" package="WP-IDX-Broker-API">
+        <name>get_clients_listallowedfields</name>
+        <full_name>\IdxBrokerAPI::get_clients_listallowedfields()</full_name>
+        <docblock line="572">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="574" package="WP-IDX-Broker-API">
+        <name>get_clients_listcomponents</name>
+        <full_name>\IdxBrokerAPI::get_clients_listcomponents()</full_name>
+        <docblock line="574">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="576" package="WP-IDX-Broker-API">
+        <name>get_clients_listing</name>
+        <full_name>\IdxBrokerAPI::get_clients_listing()</full_name>
+        <docblock line="576">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="578" package="WP-IDX-Broker-API">
+        <name>get_clients_listmethods</name>
+        <full_name>\IdxBrokerAPI::get_clients_listmethods()</full_name>
+        <docblock line="578">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="580" package="WP-IDX-Broker-API">
+        <name>get_clients_offices</name>
+        <full_name>\IdxBrokerAPI::get_clients_offices()</full_name>
+        <docblock line="580">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="582" package="WP-IDX-Broker-API">
+        <name>get_clients_postalcodes</name>
+        <full_name>\IdxBrokerAPI::get_clients_postalcodes()</full_name>
+        <docblock line="582">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="584" package="WP-IDX-Broker-API">
+        <name>get_clients_postalcodeslistname</name>
+        <full_name>\IdxBrokerAPI::get_clients_postalcodeslistname()</full_name>
+        <docblock line="584">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="586" package="WP-IDX-Broker-API">
+        <name>get_clients_properties</name>
+        <full_name>\IdxBrokerAPI::get_clients_properties()</full_name>
+        <docblock line="586">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="588" package="WP-IDX-Broker-API">
+        <name>add_savedlink</name>
+        <full_name>\IdxBrokerAPI::add_savedlink()</full_name>
+        <docblock line="588">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="590" package="WP-IDX-Broker-API">
+        <name>delete_savedlink</name>
+        <full_name>\IdxBrokerAPI::delete_savedlink()</full_name>
+        <docblock line="590">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="592" package="WP-IDX-Broker-API">
+        <name>get_savedlinks</name>
+        <full_name>\IdxBrokerAPI::get_savedlinks()</full_name>
+        <docblock line="592">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="594" package="WP-IDX-Broker-API">
+        <name>update_savedlink</name>
+        <full_name>\IdxBrokerAPI::update_savedlink()</full_name>
+        <docblock line="594">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="596" package="WP-IDX-Broker-API">
+        <name>get_searchquery</name>
+        <full_name>\IdxBrokerAPI::get_searchquery()</full_name>
+        <docblock line="596">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="598" package="WP-IDX-Broker-API">
+        <name>get_soldpending</name>
+        <full_name>\IdxBrokerAPI::get_soldpending()</full_name>
+        <docblock line="598">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="600" package="WP-IDX-Broker-API">
+        <name>delete_supplemental</name>
+        <full_name>\IdxBrokerAPI::delete_supplemental()</full_name>
+        <docblock line="600">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="602" package="WP-IDX-Broker-API">
+        <name>get_supplemental</name>
+        <full_name>\IdxBrokerAPI::get_supplemental()</full_name>
+        <docblock line="602">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="604" package="WP-IDX-Broker-API">
+        <name>add_supplemental</name>
+        <full_name>\IdxBrokerAPI::add_supplemental()</full_name>
+        <docblock line="604">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="606" package="WP-IDX-Broker-API">
+        <name>update_supplemental</name>
+        <full_name>\IdxBrokerAPI::update_supplemental()</full_name>
+        <docblock line="606">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="608" package="WP-IDX-Broker-API">
+        <name>get_systemlinks</name>
+        <full_name>\IdxBrokerAPI::get_systemlinks()</full_name>
+        <docblock line="608">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="610" package="WP-IDX-Broker-API">
+        <name>get_widgets</name>
+        <full_name>\IdxBrokerAPI::get_widgets()</full_name>
+        <docblock line="610">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="612" package="WP-IDX-Broker-API">
+        <name>delete_wrapper_cache</name>
+        <full_name>\IdxBrokerAPI::delete_wrapper_cache()</full_name>
+        <docblock line="612">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="614" package="WP-IDX-Broker-API">
+        <name>get_zipcodes</name>
+        <full_name>\IdxBrokerAPI::get_zipcodes()</full_name>
+        <docblock line="614">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="624" package="WP-IDX-Broker-API">
         <name>get_mls_age</name>
         <full_name>\IdxBrokerAPI::get_mls_age()</full_name>
-        <docblock line="573">
+        <docblock line="624">
           <description>[get_mls_age description]</description>
           <long-description></long-description>
-          <tag name="return" line="573" description="[description]" type="\[type]">
+          <tag name="return" line="624" description="[description]" type="\[type]">
             <type>\[type]</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="575" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="626" package="WP-IDX-Broker-API">
         <name>get_approved_mls</name>
         <full_name>\IdxBrokerAPI::get_approved_mls()</full_name>
-        <docblock line="575">
+        <docblock line="626">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="577" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="628" package="WP-IDX-Broker-API">
         <name>get_mls_cities</name>
         <full_name>\IdxBrokerAPI::get_mls_cities()</full_name>
-        <docblock line="577">
+        <docblock line="628">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="579" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="630" package="WP-IDX-Broker-API">
         <name>get_mls_counties</name>
         <full_name>\IdxBrokerAPI::get_mls_counties()</full_name>
-        <docblock line="579">
+        <docblock line="630">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="581" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="632" package="WP-IDX-Broker-API">
         <name>get_mls_list_components</name>
         <full_name>\IdxBrokerAPI::get_mls_list_components()</full_name>
-        <docblock line="581">
+        <docblock line="632">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="583" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="634" package="WP-IDX-Broker-API">
         <name>get_mls_list_methods</name>
         <full_name>\IdxBrokerAPI::get_mls_list_methods()</full_name>
-        <docblock line="583">
+        <docblock line="634">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="585" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="636" package="WP-IDX-Broker-API">
         <name>get_mls_postalcodes</name>
         <full_name>\IdxBrokerAPI::get_mls_postalcodes()</full_name>
-        <docblock line="585">
+        <docblock line="636">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="587" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="638" package="WP-IDX-Broker-API">
         <name>get_mls_prices</name>
         <full_name>\IdxBrokerAPI::get_mls_prices()</full_name>
-        <docblock line="587">
+        <docblock line="638">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="589" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="640" package="WP-IDX-Broker-API">
         <name>get_mls_property_count</name>
         <full_name>\IdxBrokerAPI::get_mls_property_count()</full_name>
-        <docblock line="589">
+        <docblock line="640">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="591" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="642" package="WP-IDX-Broker-API">
         <name>get_mls_property_types</name>
         <full_name>\IdxBrokerAPI::get_mls_property_types()</full_name>
-        <docblock line="591">
+        <docblock line="642">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="593" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="644" package="WP-IDX-Broker-API">
         <name>get_mls_search_fields</name>
         <full_name>\IdxBrokerAPI::get_mls_search_fields()</full_name>
-        <docblock line="593">
+        <docblock line="644">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="595" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="646" package="WP-IDX-Broker-API">
         <name>get_mls_search_field_values</name>
         <full_name>\IdxBrokerAPI::get_mls_search_field_values()</full_name>
-        <docblock line="595">
+        <docblock line="646">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="597" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="648" package="WP-IDX-Broker-API">
         <name>get_mls_zipcodes</name>
         <full_name>\IdxBrokerAPI::get_mls_zipcodes()</full_name>
-        <docblock line="597">
+        <docblock line="648">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="605" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="656" package="WP-IDX-Broker-API">
         <name>add_bulk_leads</name>
         <full_name>\IdxBrokerAPI::add_bulk_leads()</full_name>
-        <docblock line="605">
+        <docblock line="656">
           <description>[add_bulk_leads description]</description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="607" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="658" package="WP-IDX-Broker-API">
         <name>update_bulk_leads</name>
         <full_name>\IdxBrokerAPI::update_bulk_leads()</full_name>
-        <docblock line="607">
+        <docblock line="658">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="609" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="660" package="WP-IDX-Broker-API">
         <name>delete_lead</name>
         <full_name>\IdxBrokerAPI::delete_lead()</full_name>
-        <docblock line="609">
+        <docblock line="660">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="611" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="662" package="WP-IDX-Broker-API">
         <name>get_lead</name>
         <full_name>\IdxBrokerAPI::get_lead()</full_name>
-        <docblock line="611">
+        <docblock line="662">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="613" package="WP-IDX-Broker-API">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="664" package="WP-IDX-Broker-API">
         <name>update_lead</name>
         <full_name>\IdxBrokerAPI::update_lead()</full_name>
-        <docblock line="613">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="615" package="WP-IDX-Broker-API">
-        <name>add_lead</name>
-        <full_name>\IdxBrokerAPI::add_lead()</full_name>
-        <docblock line="615">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="617" package="WP-IDX-Broker-API">
-        <name>get_lead_traffic</name>
-        <full_name>\IdxBrokerAPI::get_lead_traffic()</full_name>
-        <docblock line="617">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="619" package="WP-IDX-Broker-API">
-        <name>get_lead_list_components</name>
-        <full_name>\IdxBrokerAPI::get_lead_list_components()</full_name>
-        <docblock line="619">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="621" package="WP-IDX-Broker-API">
-        <name>get_lead_list_methods</name>
-        <full_name>\IdxBrokerAPI::get_lead_list_methods()</full_name>
-        <docblock line="621">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="623" package="WP-IDX-Broker-API">
-        <name>delete_lead_note</name>
-        <full_name>\IdxBrokerAPI::delete_lead_note()</full_name>
-        <docblock line="623">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="625" package="WP-IDX-Broker-API">
-        <name>add_lead_note</name>
-        <full_name>\IdxBrokerAPI::add_lead_note()</full_name>
-        <docblock line="625">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="627" package="WP-IDX-Broker-API">
-        <name>update_lead_note</name>
-        <full_name>\IdxBrokerAPI::update_lead_note()</full_name>
-        <docblock line="627">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="629" package="WP-IDX-Broker-API">
-        <name>get_lead_note</name>
-        <full_name>\IdxBrokerAPI::get_lead_note()</full_name>
-        <docblock line="629">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="631" package="WP-IDX-Broker-API">
-        <name>delete_lead_property</name>
-        <full_name>\IdxBrokerAPI::delete_lead_property()</full_name>
-        <docblock line="631">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="633" package="WP-IDX-Broker-API">
-        <name>add_lead_property</name>
-        <full_name>\IdxBrokerAPI::add_lead_property()</full_name>
-        <docblock line="633">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="635" package="WP-IDX-Broker-API">
-        <name>update_lead_property</name>
-        <full_name>\IdxBrokerAPI::update_lead_property()</full_name>
-        <docblock line="635">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="637" package="WP-IDX-Broker-API">
-        <name>get_lead_property</name>
-        <full_name>\IdxBrokerAPI::get_lead_property()</full_name>
-        <docblock line="637">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="639" package="WP-IDX-Broker-API">
-        <name>delete_lead_search</name>
-        <full_name>\IdxBrokerAPI::delete_lead_search()</full_name>
-        <docblock line="639">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="641" package="WP-IDX-Broker-API">
-        <name>add_lead_search</name>
-        <full_name>\IdxBrokerAPI::add_lead_search()</full_name>
-        <docblock line="641">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="643" package="WP-IDX-Broker-API">
-        <name>update_lead_search</name>
-        <full_name>\IdxBrokerAPI::update_lead_search()</full_name>
-        <docblock line="643">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="645" package="WP-IDX-Broker-API">
-        <name>get_lead_search</name>
-        <full_name>\IdxBrokerAPI::get_lead_search()</full_name>
-        <docblock line="645">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="655" package="WP-IDX-Broker-API">
-        <name>get_specialty_partner_pricing</name>
-        <full_name>\IdxBrokerAPI::get_specialty_partner_pricing()</full_name>
-        <docblock line="655">
-          <description>[get_specialty_partner_pricing description]</description>
-          <long-description></long-description>
-          <tag name="return" line="655" description="[description]" type="\[type]">
-            <type>\[type]</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="657" package="WP-IDX-Broker-API">
-        <name>add_specialty_partner_subscriber</name>
-        <full_name>\IdxBrokerAPI::add_specialty_partner_subscriber()</full_name>
-        <docblock line="657">
+        <docblock line="664">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="" line="666" package="WP-IDX-Broker-API">
+        <name>add_lead</name>
+        <full_name>\IdxBrokerAPI::add_lead()</full_name>
+        <docblock line="666">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="668" package="WP-IDX-Broker-API">
+        <name>get_lead_traffic</name>
+        <full_name>\IdxBrokerAPI::get_lead_traffic()</full_name>
+        <docblock line="668">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="670" package="WP-IDX-Broker-API">
+        <name>get_lead_list_components</name>
+        <full_name>\IdxBrokerAPI::get_lead_list_components()</full_name>
+        <docblock line="670">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="672" package="WP-IDX-Broker-API">
+        <name>get_lead_list_methods</name>
+        <full_name>\IdxBrokerAPI::get_lead_list_methods()</full_name>
+        <docblock line="672">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="674" package="WP-IDX-Broker-API">
+        <name>delete_lead_note</name>
+        <full_name>\IdxBrokerAPI::delete_lead_note()</full_name>
+        <docblock line="674">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="676" package="WP-IDX-Broker-API">
+        <name>add_lead_note</name>
+        <full_name>\IdxBrokerAPI::add_lead_note()</full_name>
+        <docblock line="676">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="678" package="WP-IDX-Broker-API">
+        <name>update_lead_note</name>
+        <full_name>\IdxBrokerAPI::update_lead_note()</full_name>
+        <docblock line="678">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="680" package="WP-IDX-Broker-API">
+        <name>get_lead_note</name>
+        <full_name>\IdxBrokerAPI::get_lead_note()</full_name>
+        <docblock line="680">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="682" package="WP-IDX-Broker-API">
+        <name>delete_lead_property</name>
+        <full_name>\IdxBrokerAPI::delete_lead_property()</full_name>
+        <docblock line="682">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="684" package="WP-IDX-Broker-API">
+        <name>add_lead_property</name>
+        <full_name>\IdxBrokerAPI::add_lead_property()</full_name>
+        <docblock line="684">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="686" package="WP-IDX-Broker-API">
+        <name>update_lead_property</name>
+        <full_name>\IdxBrokerAPI::update_lead_property()</full_name>
+        <docblock line="686">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="688" package="WP-IDX-Broker-API">
+        <name>get_lead_property</name>
+        <full_name>\IdxBrokerAPI::get_lead_property()</full_name>
+        <docblock line="688">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="690" package="WP-IDX-Broker-API">
+        <name>delete_lead_search</name>
+        <full_name>\IdxBrokerAPI::delete_lead_search()</full_name>
+        <docblock line="690">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="692" package="WP-IDX-Broker-API">
+        <name>add_lead_search</name>
+        <full_name>\IdxBrokerAPI::add_lead_search()</full_name>
+        <docblock line="692">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="694" package="WP-IDX-Broker-API">
+        <name>update_lead_search</name>
+        <full_name>\IdxBrokerAPI::update_lead_search()</full_name>
+        <docblock line="694">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="696" package="WP-IDX-Broker-API">
+        <name>get_lead_search</name>
+        <full_name>\IdxBrokerAPI::get_lead_search()</full_name>
+        <docblock line="696">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="706" package="WP-IDX-Broker-API">
+        <name>get_specialty_partner_pricing</name>
+        <full_name>\IdxBrokerAPI::get_specialty_partner_pricing()</full_name>
+        <docblock line="706">
+          <description>[get_specialty_partner_pricing description]</description>
+          <long-description></long-description>
+          <tag name="return" line="706" description="[description]" type="\[type]">
+            <type>\[type]</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="708" package="WP-IDX-Broker-API">
+        <name>add_specialty_partner_subscriber</name>
+        <full_name>\IdxBrokerAPI::add_specialty_partner_subscriber()</full_name>
+        <docblock line="708">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="717" package="WP-IDX-Broker-API">
         <name>response_code_msg</name>
         <full_name>\IdxBrokerAPI::response_code_msg()</full_name>
-        <docblock line="666">
+        <docblock line="717">
           <description>Response code message.</description>
           <long-description></long-description>
-          <tag name="param" line="666" description="&lt;p&gt;Response code to get message from.&lt;/p&gt;" type="string" variable="$code">
+          <tag name="param" line="717" description="&lt;p&gt;Response code to get message from.&lt;/p&gt;" type="string" variable="$code">
             <type>string</type>
           </tag>
-          <tag name="return" line="666" description="Message corresponding to response code sent in." type="string">
+          <tag name="return" line="717" description="Message corresponding to response code sent in." type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -1127,68 +1183,65 @@ not send the primary request ID. The default list on each account has the id com
       </method>
     </class>
     <parse_markers>
-      <error line="511" code="PPC:ERR-50008">No summary for method get_clients_citieslistname()</error>
-      <error line="513" code="PPC:ERR-50008">No summary for method get_clients_counties()</error>
-      <error line="515" code="PPC:ERR-50008">No summary for method get_clients_countieslistname()</error>
-      <error line="517" code="PPC:ERR-50008">No summary for method post_clients_dynamicwrapperurl()</error>
-      <error line="519" code="PPC:ERR-50008">No summary for method get_clients_featured()</error>
-      <error line="521" code="PPC:ERR-50008">No summary for method get_clients_listallowedfields()</error>
-      <error line="523" code="PPC:ERR-50008">No summary for method get_clients_listcomponents()</error>
-      <error line="525" code="PPC:ERR-50008">No summary for method get_clients_listing()</error>
-      <error line="527" code="PPC:ERR-50008">No summary for method get_clients_listmethods()</error>
-      <error line="529" code="PPC:ERR-50008">No summary for method get_clients_offices()</error>
-      <error line="531" code="PPC:ERR-50008">No summary for method get_clients_postalcodes()</error>
-      <error line="533" code="PPC:ERR-50008">No summary for method get_clients_postalcodeslistname()</error>
-      <error line="535" code="PPC:ERR-50008">No summary for method get_clients_properties()</error>
-      <error line="537" code="PPC:ERR-50008">No summary for method add_savedlink()</error>
-      <error line="539" code="PPC:ERR-50008">No summary for method delete_savedlink()</error>
-      <error line="541" code="PPC:ERR-50008">No summary for method get_savedlinks()</error>
-      <error line="543" code="PPC:ERR-50008">No summary for method update_savedlink()</error>
-      <error line="545" code="PPC:ERR-50008">No summary for method get_searchquery()</error>
-      <error line="547" code="PPC:ERR-50008">No summary for method get_soldpending()</error>
-      <error line="549" code="PPC:ERR-50008">No summary for method delete_supplemental()</error>
-      <error line="551" code="PPC:ERR-50008">No summary for method get_supplemental()</error>
-      <error line="553" code="PPC:ERR-50008">No summary for method add_supplemental()</error>
-      <error line="555" code="PPC:ERR-50008">No summary for method update_supplemental()</error>
-      <error line="557" code="PPC:ERR-50008">No summary for method get_systemlinks()</error>
-      <error line="559" code="PPC:ERR-50008">No summary for method get_widgets()</error>
-      <error line="561" code="PPC:ERR-50008">No summary for method delete_wrapper_cache()</error>
-      <error line="563" code="PPC:ERR-50008">No summary for method get_zipcodes()</error>
-      <error line="575" code="PPC:ERR-50008">No summary for method get_approved_mls()</error>
-      <error line="577" code="PPC:ERR-50008">No summary for method get_mls_cities()</error>
-      <error line="579" code="PPC:ERR-50008">No summary for method get_mls_counties()</error>
-      <error line="581" code="PPC:ERR-50008">No summary for method get_mls_list_components()</error>
-      <error line="583" code="PPC:ERR-50008">No summary for method get_mls_list_methods()</error>
-      <error line="585" code="PPC:ERR-50008">No summary for method get_mls_postalcodes()</error>
-      <error line="587" code="PPC:ERR-50008">No summary for method get_mls_prices()</error>
-      <error line="589" code="PPC:ERR-50008">No summary for method get_mls_property_count()</error>
-      <error line="591" code="PPC:ERR-50008">No summary for method get_mls_property_types()</error>
-      <error line="593" code="PPC:ERR-50008">No summary for method get_mls_search_fields()</error>
-      <error line="595" code="PPC:ERR-50008">No summary for method get_mls_search_field_values()</error>
-      <error line="597" code="PPC:ERR-50008">No summary for method get_mls_zipcodes()</error>
-      <error line="607" code="PPC:ERR-50008">No summary for method update_bulk_leads()</error>
-      <error line="609" code="PPC:ERR-50008">No summary for method delete_lead()</error>
-      <error line="611" code="PPC:ERR-50008">No summary for method get_lead()</error>
-      <error line="613" code="PPC:ERR-50008">No summary for method update_lead()</error>
-      <error line="615" code="PPC:ERR-50008">No summary for method add_lead()</error>
-      <error line="617" code="PPC:ERR-50008">No summary for method get_lead_traffic()</error>
-      <error line="619" code="PPC:ERR-50008">No summary for method get_lead_list_components()</error>
-      <error line="621" code="PPC:ERR-50008">No summary for method get_lead_list_methods()</error>
-      <error line="623" code="PPC:ERR-50008">No summary for method delete_lead_note()</error>
-      <error line="625" code="PPC:ERR-50008">No summary for method add_lead_note()</error>
-      <error line="627" code="PPC:ERR-50008">No summary for method update_lead_note()</error>
-      <error line="629" code="PPC:ERR-50008">No summary for method get_lead_note()</error>
-      <error line="631" code="PPC:ERR-50008">No summary for method delete_lead_property()</error>
-      <error line="633" code="PPC:ERR-50008">No summary for method add_lead_property()</error>
-      <error line="635" code="PPC:ERR-50008">No summary for method update_lead_property()</error>
-      <error line="637" code="PPC:ERR-50008">No summary for method get_lead_property()</error>
-      <error line="639" code="PPC:ERR-50008">No summary for method delete_lead_search()</error>
-      <error line="641" code="PPC:ERR-50008">No summary for method add_lead_search()</error>
-      <error line="643" code="PPC:ERR-50008">No summary for method update_lead_search()</error>
-      <error line="645" code="PPC:ERR-50008">No summary for method get_lead_search()</error>
-      <error line="657" code="PPC:ERR-50008">No summary for method add_specialty_partner_subscriber()</error>
+      <error line="567" code="PPC:ERR-50008">No summary for method post_clients_dynamicwrapperurl()</error>
+      <error line="570" code="PPC:ERR-50008">No summary for method get_clients_featured()</error>
+      <error line="572" code="PPC:ERR-50008">No summary for method get_clients_listallowedfields()</error>
+      <error line="574" code="PPC:ERR-50008">No summary for method get_clients_listcomponents()</error>
+      <error line="576" code="PPC:ERR-50008">No summary for method get_clients_listing()</error>
+      <error line="578" code="PPC:ERR-50008">No summary for method get_clients_listmethods()</error>
+      <error line="580" code="PPC:ERR-50008">No summary for method get_clients_offices()</error>
+      <error line="582" code="PPC:ERR-50008">No summary for method get_clients_postalcodes()</error>
+      <error line="584" code="PPC:ERR-50008">No summary for method get_clients_postalcodeslistname()</error>
+      <error line="586" code="PPC:ERR-50008">No summary for method get_clients_properties()</error>
+      <error line="588" code="PPC:ERR-50008">No summary for method add_savedlink()</error>
+      <error line="590" code="PPC:ERR-50008">No summary for method delete_savedlink()</error>
+      <error line="592" code="PPC:ERR-50008">No summary for method get_savedlinks()</error>
+      <error line="594" code="PPC:ERR-50008">No summary for method update_savedlink()</error>
+      <error line="596" code="PPC:ERR-50008">No summary for method get_searchquery()</error>
+      <error line="598" code="PPC:ERR-50008">No summary for method get_soldpending()</error>
+      <error line="600" code="PPC:ERR-50008">No summary for method delete_supplemental()</error>
+      <error line="602" code="PPC:ERR-50008">No summary for method get_supplemental()</error>
+      <error line="604" code="PPC:ERR-50008">No summary for method add_supplemental()</error>
+      <error line="606" code="PPC:ERR-50008">No summary for method update_supplemental()</error>
+      <error line="608" code="PPC:ERR-50008">No summary for method get_systemlinks()</error>
+      <error line="610" code="PPC:ERR-50008">No summary for method get_widgets()</error>
+      <error line="612" code="PPC:ERR-50008">No summary for method delete_wrapper_cache()</error>
+      <error line="614" code="PPC:ERR-50008">No summary for method get_zipcodes()</error>
+      <error line="626" code="PPC:ERR-50008">No summary for method get_approved_mls()</error>
+      <error line="628" code="PPC:ERR-50008">No summary for method get_mls_cities()</error>
+      <error line="630" code="PPC:ERR-50008">No summary for method get_mls_counties()</error>
+      <error line="632" code="PPC:ERR-50008">No summary for method get_mls_list_components()</error>
+      <error line="634" code="PPC:ERR-50008">No summary for method get_mls_list_methods()</error>
+      <error line="636" code="PPC:ERR-50008">No summary for method get_mls_postalcodes()</error>
+      <error line="638" code="PPC:ERR-50008">No summary for method get_mls_prices()</error>
+      <error line="640" code="PPC:ERR-50008">No summary for method get_mls_property_count()</error>
+      <error line="642" code="PPC:ERR-50008">No summary for method get_mls_property_types()</error>
+      <error line="644" code="PPC:ERR-50008">No summary for method get_mls_search_fields()</error>
+      <error line="646" code="PPC:ERR-50008">No summary for method get_mls_search_field_values()</error>
+      <error line="648" code="PPC:ERR-50008">No summary for method get_mls_zipcodes()</error>
+      <error line="658" code="PPC:ERR-50008">No summary for method update_bulk_leads()</error>
+      <error line="660" code="PPC:ERR-50008">No summary for method delete_lead()</error>
+      <error line="662" code="PPC:ERR-50008">No summary for method get_lead()</error>
+      <error line="664" code="PPC:ERR-50008">No summary for method update_lead()</error>
+      <error line="666" code="PPC:ERR-50008">No summary for method add_lead()</error>
+      <error line="668" code="PPC:ERR-50008">No summary for method get_lead_traffic()</error>
+      <error line="670" code="PPC:ERR-50008">No summary for method get_lead_list_components()</error>
+      <error line="672" code="PPC:ERR-50008">No summary for method get_lead_list_methods()</error>
+      <error line="674" code="PPC:ERR-50008">No summary for method delete_lead_note()</error>
+      <error line="676" code="PPC:ERR-50008">No summary for method add_lead_note()</error>
+      <error line="678" code="PPC:ERR-50008">No summary for method update_lead_note()</error>
+      <error line="680" code="PPC:ERR-50008">No summary for method get_lead_note()</error>
+      <error line="682" code="PPC:ERR-50008">No summary for method delete_lead_property()</error>
+      <error line="684" code="PPC:ERR-50008">No summary for method add_lead_property()</error>
+      <error line="686" code="PPC:ERR-50008">No summary for method update_lead_property()</error>
+      <error line="688" code="PPC:ERR-50008">No summary for method get_lead_property()</error>
+      <error line="690" code="PPC:ERR-50008">No summary for method delete_lead_search()</error>
+      <error line="692" code="PPC:ERR-50008">No summary for method add_lead_search()</error>
+      <error line="694" code="PPC:ERR-50008">No summary for method update_lead_search()</error>
+      <error line="696" code="PPC:ERR-50008">No summary for method get_lead_search()</error>
+      <error line="708" code="PPC:ERR-50008">No summary for method add_specialty_partner_subscriber()</error>
     </parse_markers>
-    <source>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</source>
+    <source>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</source>
   </file>
   <package name="Search" full_name="Search"/>
   <package name="WP-API-Libraries" full_name="WP-API-Libraries">
