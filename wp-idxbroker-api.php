@@ -510,14 +510,44 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 			return $this->build_request( $route )->request();
 		}
 
+		/**
+		 * Returns the IDs and names for each of a client's city lists including MLS city lists. To get the list of all city
+		 * lists available do not send the primary request ID. The default list on each account has the ID combinedActiveMLS
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getCitieslistname Documentation.
+		 *
+		 * @return array A list of city list IDs and names.
+		 */
 		public function get_clients_citieslistname() {
+			return $this->build_request( 'clients/citieslistname' )->request();
 		}
-		public function get_clients_counties() {
+
+		/**
+		 * Returns the counties available in each of a client's county lists. Since a client can build any number of county
+		 * lists this method requires the ID of which list you want to view. To get a list of all county lists available do
+		 * not send the primary request ID. The default list on each account has the id combinedActiveMLS.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getCounties Documentation.
+		 * @param  string         $list_id If no ID is given a list of IDs is returned.
+		 * @param  string | array $rf      A string or an array of strings of fields to return in the output..
+		 * @return array                   All counties in a given list or, if no list ID is provided, a list of list IDs.
+		 */
+		public function get_clients_counties( $list_id = '', $rf = '' ) {
+			// Prepare request.
+			$route = ('' === $list_id ) ? 'clients/counties' : "clients/counties/$list_id";
+			$route = add_query_arg( array( 'rf' => $rf ), $route );
+
+			return $this->build_request( $route )->request();
 		}
+
 		public function get_clients_countieslistname() {
 		}
+
 		public function post_clients_dynamicwrapperurl() {
 		}
+
 		public function get_clients_featured() {
 		}
 		public function get_clients_listallowedfields() {
