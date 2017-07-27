@@ -2,6 +2,7 @@
 /**
  * IDX Broker API
  *
+ * @link http://middleware.idxbroker.com/docs/api/methods/index.html API Documentation
  * @package WP-API-Libraries\WP-IDX-Broker-API
  * @author sfgarza
  */
@@ -103,7 +104,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 			$this->get_response_code();
 			$this->check_usage();
 
-			if ( in_array( $this->code, array( 200, 204 ) ) ) {
+			if ( in_array( (int) $this->code, array( 200, 204 ), true ) ) {
 				$result = json_decode( wp_remote_retrieve_body( $this->response ), true );
 			}
 
@@ -140,7 +141,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		protected function get_response_code() {
 			$this->code = wp_remote_retrieve_response_code( $this->response );
 
-			if ( WP_DEBUG && ! in_array( $this->code, array( 200, 204 ) ) ) {
+			if ( WP_DEBUG && ! in_array( (int) $this->code, array( 200, 204 ), true ) ) {
 				error_log( "[$this->route] response: $this->code" );
 			}
 		}
@@ -151,7 +152,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return array  Array containing domain 'scheme' & 'url'.
 		 */
 		public function get_idx_domain() {
-			// Make API call to systemlinks cuz IDX Broker doesnt send it in accounts info. ¯\_(ツ)_/¯
+			// Make API call to systemlinks cuz IDX Broker doesnt send it in accounts info. ¯\_(ツ)_/¯.
 			$links = $this->build_request( 'clients/systemlinks?rf=url' )->request();
 
 			// Default to false.
@@ -173,7 +174,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * Get a list of all agents for your clients.
 		 *
 		 * @api GET
-		 *
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedagents Documentation
 		 * @access public
 		 * @param  array $args  Query args to send in to API call.
 		 * @return array Array of API results.
@@ -190,7 +191,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * Get a list of featured MLS properties.
 		 *
 		 * @api GET
-		 *
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedfeatured Documentation
 		 * @access public
 		 * @param  array $args  Query args to send in to API call.
 		 * @return array Array of API results.
@@ -213,7 +214,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * Large error is returned. If encountered a smaller interval will need to be used.
 		 *
 		 * @api GET
-		 *
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedleads Documentation
 		 * @access public
 		 * @param  array $args  Query args to send in to API call.
 		 * @return array Array of API results.
@@ -233,7 +234,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * returned in any single request.
 		 *
 		 * @api GET
-		 *
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedleadtraffic Documentation
 		 * @access public
 		 * @param  array $args  Query args to send in to API call.
 		 * @return array Array of API results.
@@ -252,7 +253,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * This is helpful if you need to know when previously gathered featured properties have left the market.
 		 *
 		 * @api GET
-		 *
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedlistingstatus Documentation
 		 * @access public
 		 * @param  array $args  Query args to send in to API call.
 		 * @return array Array of API results.
@@ -272,9 +273,9 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * in any single request.
 		 *
 		 * @api GET
-		 *
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedproperties Documentation
 		 * @access public
- 		 * @param  array $args  Query args to send in to API call.
+		 * @param  array $args  Query args to send in to API call.
 		 * @return array Array of API results.
 		 */
 		public function get_partners_aggregatedproperties( $args = array() ) {
@@ -292,7 +293,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * in any single request.
 		 *
 		 * @api GET
-		 *
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedsearches Documentation
 		 * @access public
 		 * @param  array $args  Query args to send in to API call.
 		 * @return array Array of API results.
@@ -314,7 +315,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * date it was sold in a future update.
 		 *
 		 * @api GET
-		 *
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedsoldpending Documentation
 		 * @access public
 		 * @param  array $args  Query args to send in to API call.
 		 * @return array Array of API results.
@@ -333,7 +334,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * Output fields may or may not be populated depending on how the information was entered into the IDX system.
 		 *
 		 * @api GET
-		 *
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedsupplemental Documentation
 		 * @access public
 		 * @param  array $args  Query args to send in to API call.
 		 * @return array Array of API results.
@@ -350,7 +351,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * Get the default api version.
 		 *
 		 * @api GET
-		 *
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-apiversion Documentation
 		 * @access public
 		 * @return string API version.
 		 */
@@ -362,7 +363,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * List of available MLSs with their fees.
 		 *
 		 * @api GET
-		 *
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAvailableMls Documentation
 		 * @access public
 		 * @return array Array of API results.
 		 */
@@ -374,7 +375,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * A list of clients available to a given partner. The list of clients can be filtered by GET values.
 		 *
 		 * @api GET
-		 *
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getClients Documentation
 		 * @access public
 		 * @param  array $args  Query args to send in to API call.
 		 * @return array Array of API results.
@@ -391,7 +392,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * This is a simple, access anywhere, method for getting a list of all API components available.
 		 *
 		 * @api GET
-		 *
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getListcomponents Documentation
 		 * @access public
 		 * @return array Array of API results.
 		 */
@@ -404,7 +405,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * request methods (GET, PUT, POST, or DELETE) are supported by each method in addition to each method status.
 		 *
 		 * @api GET
-		 *
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-listmethods Documentation
 		 * @access public
 		 * @return array Array of API results.
 		 */
@@ -416,22 +417,22 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * Gives the names and IDs of all available property types. This method differs from the property type lookup method
 		 * in the client API component in that it can look up property types for any active Platinum MLS, not just those for
 		 * which the client is a member.
-     *
-     * Note: The IDX property types are those used for multiple MLS searches and are equivalent to the property types
-     * used in the original IDX product. The data returned is structured as:
-     *
-     * idxPropTypes
-     *     * parentPtID - the numeric ID for IDX property types; seen as parentPtID when retrieving property information.
-     *     * pt - the 2 to 3 letter abbreviated property type as seen in multiple MLS search queries as the variable pt.
-     *     * propertyType - the human friendly property type name.
-     * [idxID] in the format a### (this element will not be present at all if no IDX ID is provided)
-     *     * mlsPtID - the numeric ID given to MLS property types; seen as parentPtID when retrieving property
-     *                 information and in single MLS search queries as the variable pt.
-     *     * propertyType - the human friendly property type name.
-     *     * parentPtID - the ID of the IDX property type to which this MLS property type belongs.
+		 *
+		 * Note: The IDX property types are those used for multiple MLS searches and are equivalent to the property types
+		 * used in the original IDX product. The data returned is structured as:
+		 *
+		 * idxPropTypes
+		 *     * parentPtID - the numeric ID for IDX property types; seen as parentPtID when retrieving property information.
+		 *     * pt - the 2 to 3 letter abbreviated property type as seen in multiple MLS search queries as the variable pt.
+		 *     * propertyType - the human friendly property type name.
+		 * [idxID] in the format a### (this element will not be present at all if no IDX ID is provided)
+		 *     * mlsPtID - the numeric ID given to MLS property types; seen as parentPtID when retrieving property
+		 *                 information and in single MLS search queries as the variable pt.
+		 *     * propertyType - the human friendly property type name.
+		 *     * parentPtID - the ID of the IDX property type to which this MLS property type belongs.
 		 *
 		 * @api GET
-		 *
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getPropertytypess Documentation
 		 * @param  string         $idx_id  The IDX ID of the MLS from which you need property type information. If no IDX ID
 		 *                                 is specified then only the IDX property types (parentPtID) will be returned.
 		 * @param  string | array $rf      A string or an array of strings of return field names.
@@ -439,7 +440,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 */
 		public function get_partners_propertytypes( $idx_id = '', $rf = '' ) {
 			// Prepare request.
-			$route = ('' === $idx_id ) ? "partners/propertytypes" : "partners/propertytypes/$idx_id";
+			$route = ('' === $idx_id ) ? 'partners/propertytypes' : "partners/propertytypes/$idx_id";
 			$route = add_query_arg( array( 'rf' => $rf ), $route );
 
 			return $this->build_request( $route )->request();
@@ -453,7 +454,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * Get your account type.
 		 *
 		 * @api GET
-		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getAccounttypes API Doc.
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getAccounttypes Documentation.
 		 *
 		 * @return string "IDX Broker Platinum" | "IDX Broker Lite"
 		 */
@@ -465,7 +466,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * View agent information on a multi-user account.
 		 *
 		 * @api GET
-		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getAgents API Doc.
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getAgents Documentation.
 		 *
 		 * @param  array $args  Query args to send in to API call.
 		 * @return array Array of API results.
@@ -482,7 +483,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * Get the default api version.
 		 *
 		 * @api GET
-		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-apiversion API Doc.
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-apiversion Documentation.
 		 *
 		 * @return array API version info.
 		 */
@@ -496,18 +497,19 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * not send the primary request ID. The default list on each account has the id combinedActiveMLS
 		 *
 		 * @api GET
-		 *
-		 * @param  string         $list_id City list id
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getCities Documentation.
+		 * @param  string         $list_id City list id.
 		 * @param  string | array $rf      A string or an array of strings of return field names.
 		 * @return array                   Array of API results.
 		 */
 		public function get_clients_cities( $list_id = '', $rf = '' ) {
 			// Prepare request.
-			$route = ('' === $list_id ) ? "clients/cities" : "clients/cities/$list_id";
+			$route = ('' === $list_id ) ? 'clients/cities' : "clients/cities/$list_id";
 			$route = add_query_arg( array( 'rf' => $rf ), $route );
 
 			return $this->build_request( $route )->request();
 		}
+
 		public function get_clients_citieslistname() {
 		}
 		public function get_clients_counties() {
