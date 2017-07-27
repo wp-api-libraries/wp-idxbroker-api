@@ -32,7 +32,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">0</span></a></li>
+                <span class="label label-info">60</span></a></li>
 <li><a href="markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -53,11 +53,43 @@
 <h2>Documentation</h2>
 </div>
 <div class="row">
-<div class="span7"><div class="well"><ul class="nav nav-list">
+<div class="span7">
+<div class="well"><ul class="nav nav-list">
 <li class="nav-header">Packages</li>
 <li><a href="packages/WP-API-Libraries.html"><i class="icon-folder-open"></i> WP-API-Libraries</a></li>
 <li><a href="packages/WP-IDX-Broker-API.html"><i class="icon-folder-open"></i> WP-IDX-Broker-API</a></li>
-</ul></div></div>
+</ul></div>
+<div class="well"><ul class="nav nav-list">
+<li class="nav-header">Api</li>
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Public API Methods</li>
+<li><a href="classes/IdxBrokerAPI.html#get_partners_aggregatedagents" title="Get a list of all agents for your clients.">IdxBrokerAPI.get_partners_aggregatedagents</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_partners_aggregatedfeatured" title="Get a list of featured MLS properties.">IdxBrokerAPI.get_partners_aggregatedfeatured</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_partners_aggregatedleads" title="Get a list of all leads.">IdxBrokerAPI.get_partners_aggregatedleads</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_partners_aggregatedleadtraffic" title="Get a list of all leads traffic history.">IdxBrokerAPI.get_partners_aggregatedleadtraffic</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_partners_aggregatedlistingstatus" title="This method gives the status for all MLS listings (not supplemental) broken down by client account ID. This
+includes sold/pending listings with an unknown status which are not usually returned by sold/pending api methods.">IdxBrokerAPI.get_partners_aggregatedlistingstatus</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_partners_aggregatedproperties" title="Get a list of all lead saved properties.">IdxBrokerAPI.get_partners_aggregatedproperties</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_partners_aggregatedsearches" title="Get a list of all lead saved searches.">IdxBrokerAPI.get_partners_aggregatedsearches</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_partners_aggregatedsoldpending" title="Get a list of sold/pending MLS properties.">IdxBrokerAPI.get_partners_aggregatedsoldpending</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_partners_aggregatedsupplemental" title="Get a list of supplemental (non-MLS) properties.">IdxBrokerAPI.get_partners_aggregatedsupplemental</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_partners_apiversion" title="Get the default api version.">IdxBrokerAPI.get_partners_apiversion</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_partners_availablemls" title="List of available MLSs with their fees.">IdxBrokerAPI.get_partners_availablemls</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_partners_clients" title="A list of clients available to a given partner. The list of clients can be filtered by GET values.">IdxBrokerAPI.get_partners_clients</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_partners_listcomponents" title="This is a simple, access anywhere, method for getting a list of all API components available.">IdxBrokerAPI.get_partners_listcomponents</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_partners_listmethods" title="A simple method for listing all available methods in the current API component. This method will also list which
+request methods (GET, PUT, POST, or DELETE) are supported by each method in addition to each method status.">IdxBrokerAPI.get_partners_listmethods</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_partners_propertytypes" title="Gives the names and IDs of all available property types. This method differs from the property type lookup method
+in the client API component in that it can look up property types for any active Platinum MLS, not just those for
+which the client is a member.">IdxBrokerAPI.get_partners_propertytypes</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_clients_accounttype" title="Get your account type.">IdxBrokerAPI.get_clients_accounttype</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_clients_agents" title="View agent information on a multi-user account.">IdxBrokerAPI.get_clients_agents</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_clients_apiversion" title="Get the default api version.">IdxBrokerAPI.get_clients_apiversion</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_clients_cities" title="Returns the cities available in each of a client's city lists. Since a client can build any number of city
+lists this method requires the ID of which list you want to view. To get a list of all city lists available do
+not send the primary request ID. The default list on each account has the id combinedActiveMLS">IdxBrokerAPI.get_clients_cities</a></li>
+</ul></div>
+</div>
 <div class="span5">
 <div class="well"><ul class="nav nav-list">
 <li class="nav-header">Charts</li>
@@ -67,7 +99,7 @@
 <div class="well"><ul class="nav nav-list">
 <li class="nav-header">Reports</li>
 <li><a href="errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">0</span></a></li>
+                <span class="label label-info">60</span></a></li>
 <li><a href="markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -78,7 +110,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2017-07-24T10:58:58-07:00.<br></footer></div>
+            generated on 2017-07-26T19:50:39-07:00.<br></footer></div>
 </div>
 </body>
 </html>
