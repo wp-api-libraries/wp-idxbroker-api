@@ -167,108 +167,287 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 			return $domain;
 		}
 
-		/* Partners Endpoints. */
+		/* --------------------------------------------- Partners Endpoints -------------------------------------------- */
 
 		/**
-		 * get_aggregated_agents function.
+		 * Get a list of all agents for your clients.
+		 *
+		 * @api GET
 		 *
 		 * @access public
-		 * @param string $rf (default: '') Array of Return Fields.
-		 * @param string $client_chunk (default: '').
-		 * @param string $include_disabled_accounts (default: '').
-		 * @param string $offset (default: '').
-		 * @param string $limit (default: '').
-		 * @return void
+		 * @param  array $args  Query args to send in to API call.
+		 * @return array Array of API results.
 		 */
-		public function get_aggregated_agents( $rf = '', $client_chunk = '', $include_disabled_accounts = '', $offset = '', $limit = '' ) {
+		public function get_partners_aggregatedagents( $args = array() ) {
+			// Prepare request.
+			$route = 'partners/aggregatedagents';
+			$route = add_query_arg( $args, $route );
 
-			$results = $this->build_request( 'partners/aggregatedagents?rf[]=' . $rf . '&clientChunk=' . $client_chunk . '&includeDisabledAccounts=' . $include_disabled_accounts . '&offset=' . $offset . '&limit=' . $limit );
-			return $results;
-
-		}
-
-		/**
-		 * Get_aggregated_featured function.
-		 *
-		 * @access public
-		 * @param string $date_type (default: '').
-		 * @param string $interval (default: '').
-		 * @param string $start_date_time (default: '').
-		 * @param string $rf (default: '') Array of Return Fields.
-		 * @param string $client_chunk (default: '').
-		 * @param string $include_disabled_accounts (default: '').
-		 * @param string $offset (default: '').
-		 * @param string $limit (default: '').
-		 * @param string $disclaimers (default: '').
-		 * @return void
-		 */
-		public function get_aggregated_featured( $date_type = '', $interval = '', $start_date_time = '', $rf = '', $client_chunk = '', $include_disabled_accounts = '', $offset = '', $limit = '', $disclaimers = '' ) {
-
+			return $this->build_request( $route )->request();
 		}
 
 		/**
-		 * get_aggregated_leads function.
+		 * Get a list of featured MLS properties.
+		 *
+		 * @api GET
 		 *
 		 * @access public
-		 * @param string $date_type (default: '').
-		 * @param string $interval (default: '').
-		 * @param string $start_date_time (default: '').
-		 * @param string $rf (default: '').
-		 * @param string $client_chunk (default: '').
-		 * @param string $include_disabled_accounts (default: '').
-		 * @return void
+		 * @param  array $args  Query args to send in to API call.
+		 * @return array Array of API results.
 		 */
-		public function get_aggregated_leads( $date_type = '', $interval = '', $start_date_time = '', $rf = '', $client_chunk = '', $include_disabled_accounts = '' ) {
+		public function get_partners_aggregatedfeatured( $args = array() ) {
+			// Prepare request.
+			$route = 'partners/aggregatedfeatured';
+			$route = add_query_arg( $args, $route );
+
+			return $this->build_request( $route )->request();
 		}
 
 		/**
-		 * get_aggregated_lead_traffic function.
+		 * Get a list of all leads.
+		 *
+		 * For bandwidth and memory considerations there is a limit of 5,000 on the number of leads that can be returned in
+		 * any single request. Even if a full week of data is requested this limit will only be encountered if your clients
+		 * have a combined average 30+ leads created, updated, or active per hour (as such it will be most common when
+		 * requesting leads based on last property update date). If this limit is exceeded a 413 -Requested Entity Too
+		 * Large error is returned. If encountered a smaller interval will need to be used.
+		 *
+		 * @api GET
 		 *
 		 * @access public
-		 * @param string $interval (default: '').
-		 * @param string $start_date_time (default: '').
-		 * @param string $rf (default: '').
-		 * @param string $client_chunk (default: '').
-		 * @param string $include_disabled_accounts (default: '').
-		 * @return void
+		 * @param  array $args  Query args to send in to API call.
+		 * @return array Array of API results.
 		 */
-		public function get_aggregated_lead_traffic( $interval = '', $start_date_time = '', $rf = '', $client_chunk = '', $include_disabled_accounts = '' ) {
+		public function get_partners_aggregatedleads( $args = array() ) {
+			// Prepare request.
+			$route = 'partners/aggregatedleads';
+			$route = add_query_arg( $args, $route );
+
+			return $this->build_request( $route )->request();
 		}
 
 		/**
-		 * get_aggregated_listing_status function.
+		 * Get a list of all leads traffic history.
+		 *
+		 * Note: For bandwidth and memory considerations there is a limit of 5,000 on the number of searches that can be
+		 * returned in any single request.
+		 *
+		 * @api GET
 		 *
 		 * @access public
-		 * @param string $filter_field (default: '').
-		 * @param string $filter_value (default: '').
-		 * @param string $client_chunk (default: '').
-		 * @param string $include_disabled_accounts (default: '').
-		 * @return void
+		 * @param  array $args  Query args to send in to API call.
+		 * @return array Array of API results.
 		 */
-		public function get_aggregated_listing_status( $filter_field = '', $filter_value = '', $client_chunk = '', $include_disabled_accounts = '' ) {
-		}
-		public function get_aggregated_properties() {
-		}
-		public function get_aggregated_searches() {
-		}
-		public function get_aggregated_soldpending() {
-		}
-		public function get_aggregated_supplemental() {
-		}
-		public function get_partners_api_version() {
-		}
-		public function get_available_mls() {
-		}
-		public function get_clients() {
-		}
-		public function list_components() {
-		}
-		public function list_methods() {
-		}
-		public function get_partners_propertytypes() {
+		public function get_partners_aggregatedleadtraffic( $args = array() ) {
+			// Prepare request.
+			$route = 'partners/aggregatedleadtraffic';
+			$route = add_query_arg( $args, $route );
+
+			return $this->build_request( $route )->request();
 		}
 
-		/* Clients Endpoints. */
+		/**
+		 * This method gives the status for all MLS listings (not supplemental) broken down by client account ID. This
+		 * includes sold/pending listings with an unknown status which are not usually returned by sold/pending api methods.
+		 * This is helpful if you need to know when previously gathered featured properties have left the market.
+		 *
+		 * @api GET
+		 *
+		 * @access public
+		 * @param  array $args  Query args to send in to API call.
+		 * @return array Array of API results.
+		 */
+		public function get_partners_aggregatedlistingstatus( $args = array() ) {
+			// Prepare request.
+			$route = 'partners/aggregatedlistingstatus';
+			$route = add_query_arg( $args, $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+		/**
+		 * Get a list of all lead saved properties.
+		 *
+		 * For bandwidth and memory considerations there is a limit of 5,000 on the number of searches that can be returned
+		 * in any single request.
+		 *
+		 * @api GET
+		 *
+		 * @access public
+ 		 * @param  array $args  Query args to send in to API call.
+		 * @return array Array of API results.
+		 */
+		public function get_partners_aggregatedproperties( $args = array() ) {
+			// Prepare request.
+			$route = 'partners/aggregatedproperties';
+			$route = add_query_arg( $args, $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+		/**
+		 * Get a list of all lead saved searches.
+		 *
+		 * For bandwidth and memory considerations there is a limit of 5,000 on the number of searches that can be returned
+		 * in any single request.
+		 *
+		 * @api GET
+		 *
+		 * @access public
+		 * @param  array $args  Query args to send in to API call.
+		 * @return array Array of API results.
+		 */
+		public function get_partners_aggregatedsearches( $args = array() ) {
+			// Prepare request.
+			$route = 'partners/aggregatedsearches';
+			$route = add_query_arg( $args, $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+		/**
+		 * Get a list of sold/pending MLS properties.
+		 *
+		 * Output fields may or may not be populated depending on how the information was entered into the IDX system.
+		 *
+		 * We are planning to add the ability to query by the date the property left the market and, for sold listings, the
+		 * date it was sold in a future update.
+		 *
+		 * @api GET
+		 *
+		 * @access public
+		 * @param  array $args  Query args to send in to API call.
+		 * @return array Array of API results.
+		 */
+		public function get_partners_aggregatedsoldpending( $args = array() ) {
+			// Prepare request.
+			$route = 'partners/aggregatedsoldpending';
+			$route = add_query_arg( $args, $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+		/**
+		 * Get a list of supplemental (non-MLS) properties.
+		 *
+		 * Output fields may or may not be populated depending on how the information was entered into the IDX system.
+		 *
+		 * @api GET
+		 *
+		 * @access public
+		 * @param  array $args  Query args to send in to API call.
+		 * @return array Array of API results.
+		 */
+		public function get_partners_aggregatedsupplemental( $args = array() ) {
+			// Prepare request.
+			$route = 'partners/aggregatedsupplemental';
+			$route = add_query_arg( $args, $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+		/**
+		 * Get the default api version.
+		 *
+		 * @api GET
+		 *
+		 * @access public
+		 * @return string API version.
+		 */
+		public function get_partners_apiversion() {
+			return $this->build_request( 'partners/apiversion' )->request();
+		}
+
+		/**
+		 * List of available MLSs with their fees.
+		 *
+		 * @api GET
+		 *
+		 * @access public
+		 * @return array Array of API results.
+		 */
+		public function get_partners_availablemls() {
+			return $this->build_request( 'partners/availablemls' )->request();
+		}
+
+		/**
+		 * A list of clients available to a given partner. The list of clients can be filtered by GET values.
+		 *
+		 * @api GET
+		 *
+		 * @access public
+		 * @param  array $args  Query args to send in to API call.
+		 * @return array Array of API results.
+		 */
+		public function get_partners_clients( $args = array() ) {
+			// Prepare request.
+			$route = 'partners/clients';
+			$route = add_query_arg( $args, $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+		/**
+		 * This is a simple, access anywhere, method for getting a list of all API components available.
+		 *
+		 * @api GET
+		 *
+		 * @access public
+		 * @return array Array of API results.
+		 */
+		public function get_partners_listcomponents() {
+			return $this->build_request( 'partners/listcomponents' )->request();
+		}
+
+		/**
+		 * A simple method for listing all available methods in the current API component. This method will also list which
+		 * request methods (GET, PUT, POST, or DELETE) are supported by each method in addition to each method status.
+		 *
+		 * @api GET
+		 *
+		 * @access public
+		 * @return array Array of API results.
+		 */
+		public function get_partners_listmethods() {
+			return $this->build_request( 'partners/listmethods' )->request();
+		}
+
+		/**
+		 * Gives the names and IDs of all available property types. This method differs from the property type lookup method
+		 * in the client API component in that it can look up property types for any active Platinum MLS, not just those for
+		 * which the client is a member.
+     *
+     * Note: The IDX property types are those used for multiple MLS searches and are equivalent to the property types
+     * used in the original IDX product. The data returned is structured as:
+     *
+     * idxPropTypes
+     *     * parentPtID - the numeric ID for IDX property types; seen as parentPtID when retrieving property information.
+     *     * pt - the 2 to 3 letter abbreviated property type as seen in multiple MLS search queries as the variable pt.
+     *     * propertyType - the human friendly property type name.
+     * [idxID] in the format a### (this element will not be present at all if no IDX ID is provided)
+     *     * mlsPtID - the numeric ID given to MLS property types; seen as parentPtID when retrieving property
+     *                 information and in single MLS search queries as the variable pt.
+     *     * propertyType - the human friendly property type name.
+     *     * parentPtID - the ID of the IDX property type to which this MLS property type belongs.
+		 *
+		 * @api GET
+		 *
+		 * @param  string         $idx_id  The IDX ID of the MLS from which you need property type information. If no IDX ID
+		 *                                 is specified then only the IDX property types (parentPtID) will be returned.
+		 * @param  string | array $rf      A string or an array of strings of return field names.
+		 * @return array                   Array of API results.
+		 */
+		public function get_partners_propertytypes( $idx_id = '', $rf = '' ) {
+			// Prepare request.
+			$route = ('' === $idx_id ) ? "partners/propertytypes" : "partners/propertytypes/$idx_id";
+			$route = add_query_arg( array( 'rf' => $rf ), $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+
+		/* --------------------------------------------- Client Endpoints ----------------------------------------------- */
+
 
 		/**
 		 * Get your account type.
