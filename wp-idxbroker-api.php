@@ -177,7 +177,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedagents Documentation
 		 * @access public
 		 * @param  array $args  Query args to send in to API call.
-		 * @return array All available agents.
+		 * @return array        All available agents.
 		 */
 		public function get_partners_aggregatedagents( $args = array() ) {
 			// Prepare request.
@@ -193,8 +193,8 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedfeatured Documentation
 		 * @access public
-		 * @param  array $args  Query args to send in to API call.
-		 * @return array List of featured MLS properties for each client.
+		 * @param  array $args Query args to send in to API call.
+		 * @return array       List of featured MLS properties for each client.
 		 */
 		public function get_partners_aggregatedfeatured( $args = array() ) {
 			// Prepare request.
@@ -241,7 +241,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedleadtraffic Documentation
 		 * @access public
 		 * @param  array $args  Query args to send in to API call.
-		 * @return array The applicable client account ID, date, lead ID, IP , page, and referrer.
+		 * @return array        The applicable client account ID, date, lead ID, IP , page, and referrer.
 		 */
 		public function get_partners_aggregatedleadtraffic( $args = array() ) {
 			// Prepare request.
@@ -260,7 +260,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedlistingstatus Documentation
 		 * @access public
 		 * @param  array $args  Query args to send in to API call.
-		 * @return array MLS listings along with their statuses.
+		 * @return array        MLS listings along with their statuses.
 		 */
 		public function get_partners_aggregatedlistingstatus( $args = array() ) {
 			// Prepare request.
@@ -324,7 +324,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedsoldpending Documentation
 		 * @access public
 		 * @param  array $args  Query args to send in to API call.
-		 * @return array List of soldpending properties for each client.
+		 * @return array        List of soldpending properties for each client.
 		 */
 		public function get_partners_aggregatedsoldpending( $args = array() ) {
 			// Prepare request.
@@ -343,7 +343,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getAggregatedsupplemental Documentation
 		 * @access public
 		 * @param  array $args  Query args to send in to API call.
-		 * @return array List of supplemental (non-MLS) properties for each client.
+		 * @return array        List of supplemental (non-MLS) properties for each client.
 		 */
 		public function get_partners_aggregatedsupplemental( $args = array() ) {
 			// Prepare request.
@@ -440,11 +440,11 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getPropertytypess Documentation
-		 * @param  string         $idx_id  The IDX ID of the MLS from which you need property type information. If no IDX ID
+		 * @param  string       $idx_id  The IDX ID of the MLS from which you need property type information. If no IDX ID
 		 *                                 is specified then only the IDX property types (parentPtID) will be returned.
-		 * @param  string | array $rf      A string or an array of strings of return field names.
-		 * @return array                   An array containing the IDX property types and, if an IDX ID has been provided,
-		 *                                 the MLS's property types and their IDs.
+		 * @param  string|array $rf      A string or an array of strings of return field names.
+		 * @return array                 An array containing the IDX property types and, if an IDX ID has been provided,
+		 *                               the MLS's property types and their IDs.
 		 */
 		public function get_partners_propertytypes( $idx_id = '', $rf = '' ) {
 			// Prepare request.
@@ -477,7 +477,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getAgents Documentation.
 		 *
 		 * @param  array $args  Query args to send in to API call.
-		 * @return array All agents on the account or those matching filter values.
+		 * @return array        All agents on the account or those matching filter values.
 		 */
 		public function get_clients_agents( $args = array() ) {
 			// Prepare request.
@@ -506,9 +506,9 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getCities Documentation.
-		 * @param  string         $list_id City list id.
-		 * @param  string | array $rf      A string or an array of strings of return field names.
-		 * @return array                   All cities in a given list or, if no list ID is provided, a list of list IDs.
+		 * @param  string       $list_id City list id.
+		 * @param  string|array $rf      A string or an array of strings of return field names.
+		 * @return array                 All cities in a given list or, if no list ID is provided, a list of list IDs.
 		 */
 		public function get_clients_cities( $list_id = '', $rf = '' ) {
 			// Prepare request.
@@ -538,9 +538,9 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getCounties Documentation.
-		 * @param  string         $list_id If no ID is given a list of IDs is returned.
-		 * @param  string | array $rf      A string or an array of strings of fields to return in the output..
-		 * @return array                   All counties in a given list or, if no list ID is provided, a list of list IDs.
+		 * @param  string       $list_id If no ID is given a list of IDs is returned.
+		 * @param  string|array $rf      A string or an array of strings of fields to return in the output..
+		 * @return array                 All counties in a given list or, if no list ID is provided, a list of list IDs.
 		 */
 		public function get_clients_counties( $list_id = '', $rf = '' ) {
 			// Prepare request.
