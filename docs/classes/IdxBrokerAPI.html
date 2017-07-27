@@ -32,7 +32,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">57</span></a></li>
+                <span class="label label-info">51</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -72,13 +72,15 @@
         </span><pre>add_lead_property()</pre></a></li>
 <li class="method public "><a href="#method_add_lead_search" title="add_lead_search() :: "><span class="description">add_lead_search()
         </span><pre>add_lead_search()</pre></a></li>
-<li class="method public "><a href="#method_add_savedlink" title="add_savedlink() :: "><span class="description">add_savedlink()
-        </span><pre>add_savedlink()</pre></a></li>
 <li class="method public "><a href="#method_add_specialty_partner_subscriber" title="add_specialty_partner_subscriber() :: "><span class="description">add_specialty_partner_subscriber()
         </span><pre>add_specialty_partner_subscriber()</pre></a></li>
-<li class="method public "><a href="#method_add_supplemental" title="add_supplemental() :: "><span class="description">add_supplemental()
-        </span><pre>add_supplemental()</pre></a></li>
 <li class="method public "><a href="#method_build_request" title="build_request() :: Builds the request for the API call to IDX Broker."><span class="description">Builds the request for the API call to IDX Broker.</span><pre>build_request()</pre></a></li>
+<li class="method public "><a href="#method_delete_clients_savedlink" title="delete_clients_savedlink() :: "><span class="description">delete_clients_savedlink()
+        </span><pre>delete_clients_savedlink()</pre></a></li>
+<li class="method public "><a href="#method_delete_clients_supplemental" title="delete_clients_supplemental() :: "><span class="description">delete_clients_supplemental()
+        </span><pre>delete_clients_supplemental()</pre></a></li>
+<li class="method public "><a href="#method_delete_clients_wrappercache" title="delete_clients_wrappercache() :: "><span class="description">delete_clients_wrappercache()
+        </span><pre>delete_clients_wrappercache()</pre></a></li>
 <li class="method public "><a href="#method_delete_lead" title="delete_lead() :: "><span class="description">delete_lead()
         </span><pre>delete_lead()</pre></a></li>
 <li class="method public "><a href="#method_delete_lead_note" title="delete_lead_note() :: "><span class="description">delete_lead_note()
@@ -87,14 +89,6 @@
         </span><pre>delete_lead_property()</pre></a></li>
 <li class="method public "><a href="#method_delete_lead_search" title="delete_lead_search() :: "><span class="description">delete_lead_search()
         </span><pre>delete_lead_search()</pre></a></li>
-<li class="method public "><a href="#method_delete_savedlink" title="delete_savedlink() :: "><span class="description">delete_savedlink()
-        </span><pre>delete_savedlink()</pre></a></li>
-<li class="method public "><a href="#method_delete_supplemental" title="delete_supplemental() :: "><span class="description">delete_supplemental()
-        </span><pre>delete_supplemental()</pre></a></li>
-<li class="method public "><a href="#method_delete_wrapper_cache" title="delete_wrapper_cache() :: "><span class="description">delete_wrapper_cache()
-        </span><pre>delete_wrapper_cache()</pre></a></li>
-<li class="method public "><a href="#method_get_approved_mls" title="get_approved_mls() :: "><span class="description">get_approved_mls()
-        </span><pre>get_approved_mls()</pre></a></li>
 <li class="method public "><a href="#method_get_clients_accounttype" title="get_clients_accounttype() :: Get your account type."><span class="description">Get your account type.</span><pre>get_clients_accounttype()</pre></a></li>
 <li class="method public "><a href="#method_get_clients_agents" title="get_clients_agents() :: View agent information on a multi-user account."><span class="description">View agent information on a multi-user account.</span><pre>get_clients_agents()</pre></a></li>
 <li class="method public "><a href="#method_get_clients_apiversion" title="get_clients_apiversion() :: Get the default api version."><span class="description">Get the default api version.</span><pre>get_clients_apiversion()</pre></a></li>
@@ -116,16 +110,13 @@ all counties lists available do not send the primary request ID. The default lis
 combinedActiveMLS"><span class="description">Returns the IDs and names for each of a client's counties lists including MLS counties lists. To get the list of
 all counties lists available do not send the primary request ID. The default list on each account has the ID
 combinedActiveMLS</span><pre>get_clients_countieslistname()</pre></a></li>
-<li class="method public "><a href="#method_get_clients_featured" title="get_clients_featured() :: "><span class="description">get_clients_featured()
-        </span><pre>get_clients_featured()</pre></a></li>
-<li class="method public "><a href="#method_get_clients_listallowedfields" title="get_clients_listallowedfields() :: "><span class="description">get_clients_listallowedfields()
-        </span><pre>get_clients_listallowedfields()</pre></a></li>
-<li class="method public "><a href="#method_get_clients_listcomponents" title="get_clients_listcomponents() :: "><span class="description">get_clients_listcomponents()
-        </span><pre>get_clients_listcomponents()</pre></a></li>
-<li class="method public "><a href="#method_get_clients_listing" title="get_clients_listing() :: "><span class="description">get_clients_listing()
-        </span><pre>get_clients_listing()</pre></a></li>
-<li class="method public "><a href="#method_get_clients_listmethods" title="get_clients_listmethods() :: "><span class="description">get_clients_listmethods()
-        </span><pre>get_clients_listmethods()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_featured" title="get_clients_featured() :: Returns a basic set of information for all of the client's featured (active) properties"><span class="description">Returns a basic set of information for all of the client's featured (active) properties</span><pre>get_clients_featured()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_listallowedfields" title="get_clients_listallowedfields() :: Returns the allowed returnable fields for a given listingID."><span class="description">Returns the allowed returnable fields for a given listingID.</span><pre>get_clients_listallowedfields()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_listcomponents" title="get_clients_listcomponents() :: This is a simple, access anywhere, method for getting a list of all API components available."><span class="description">This is a simple, access anywhere, method for getting a list of all API components available.</span><pre>get_clients_listcomponents()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_listing" title="get_clients_listing() :: Returns the detailed information for a given listingID."><span class="description">Returns the detailed information for a given listingID.</span><pre>get_clients_listing()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_listmethods" title="get_clients_listmethods() :: A simple method for listing all available methods in the current API component. This method will also list which
+request methods (GET, PUT, POST, or DELETE) are supported by each method in addition to each method status."><span class="description">A simple method for listing all available methods in the current API component. This method will also list which
+request methods (GET, PUT, POST, or DELETE) are supported by each method in addition to each method status.</span><pre>get_clients_listmethods()</pre></a></li>
 <li class="method public "><a href="#method_get_clients_offices" title="get_clients_offices() :: "><span class="description">get_clients_offices()
         </span><pre>get_clients_offices()</pre></a></li>
 <li class="method public "><a href="#method_get_clients_postalcodes" title="get_clients_postalcodes() :: "><span class="description">get_clients_postalcodes()
@@ -134,6 +125,20 @@ combinedActiveMLS</span><pre>get_clients_countieslistname()</pre></a></li>
         </span><pre>get_clients_postalcodeslistname()</pre></a></li>
 <li class="method public "><a href="#method_get_clients_properties" title="get_clients_properties() :: "><span class="description">get_clients_properties()
         </span><pre>get_clients_properties()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_savedlinks" title="get_clients_savedlinks() :: "><span class="description">get_clients_savedlinks()
+        </span><pre>get_clients_savedlinks()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_searchquery" title="get_clients_searchquery() :: "><span class="description">get_clients_searchquery()
+        </span><pre>get_clients_searchquery()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_soldpending" title="get_clients_soldpending() :: "><span class="description">get_clients_soldpending()
+        </span><pre>get_clients_soldpending()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_supplemental" title="get_clients_supplemental() :: "><span class="description">get_clients_supplemental()
+        </span><pre>get_clients_supplemental()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_systemlinks" title="get_clients_systemlinks() :: "><span class="description">get_clients_systemlinks()
+        </span><pre>get_clients_systemlinks()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_widgets" title="get_clients_widgets() :: "><span class="description">get_clients_widgets()
+        </span><pre>get_clients_widgets()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_zipcodes" title="get_clients_zipcodes() :: "><span class="description">get_clients_zipcodes()
+        </span><pre>get_clients_zipcodes()</pre></a></li>
 <li class="method public "><a href="#method_get_idx_domain" title="get_idx_domain() :: Get domain used for displaying IDX pages."><span class="description">Get domain used for displaying IDX pages.</span><pre>get_idx_domain()</pre></a></li>
 <li class="method public "><a href="#method_get_lead" title="get_lead() :: "><span class="description">get_lead()
         </span><pre>get_lead()</pre></a></li>
@@ -150,26 +155,28 @@ combinedActiveMLS</span><pre>get_clients_countieslistname()</pre></a></li>
 <li class="method public "><a href="#method_get_lead_traffic" title="get_lead_traffic() :: "><span class="description">get_lead_traffic()
         </span><pre>get_lead_traffic()</pre></a></li>
 <li class="method public "><a href="#method_get_mls_age" title="get_mls_age() :: [get_mls_age description]"><span class="description">[get_mls_age description]</span><pre>get_mls_age()</pre></a></li>
+<li class="method public "><a href="#method_get_mls_approvedmls" title="get_mls_approvedmls() :: "><span class="description">get_mls_approvedmls()
+        </span><pre>get_mls_approvedmls()</pre></a></li>
 <li class="method public "><a href="#method_get_mls_cities" title="get_mls_cities() :: "><span class="description">get_mls_cities()
         </span><pre>get_mls_cities()</pre></a></li>
 <li class="method public "><a href="#method_get_mls_counties" title="get_mls_counties() :: "><span class="description">get_mls_counties()
         </span><pre>get_mls_counties()</pre></a></li>
-<li class="method public "><a href="#method_get_mls_list_components" title="get_mls_list_components() :: "><span class="description">get_mls_list_components()
-        </span><pre>get_mls_list_components()</pre></a></li>
-<li class="method public "><a href="#method_get_mls_list_methods" title="get_mls_list_methods() :: "><span class="description">get_mls_list_methods()
-        </span><pre>get_mls_list_methods()</pre></a></li>
+<li class="method public "><a href="#method_get_mls_listcomponents" title="get_mls_listcomponents() :: "><span class="description">get_mls_listcomponents()
+        </span><pre>get_mls_listcomponents()</pre></a></li>
+<li class="method public "><a href="#method_get_mls_listmethods" title="get_mls_listmethods() :: "><span class="description">get_mls_listmethods()
+        </span><pre>get_mls_listmethods()</pre></a></li>
 <li class="method public "><a href="#method_get_mls_postalcodes" title="get_mls_postalcodes() :: "><span class="description">get_mls_postalcodes()
         </span><pre>get_mls_postalcodes()</pre></a></li>
 <li class="method public "><a href="#method_get_mls_prices" title="get_mls_prices() :: "><span class="description">get_mls_prices()
         </span><pre>get_mls_prices()</pre></a></li>
-<li class="method public "><a href="#method_get_mls_property_count" title="get_mls_property_count() :: "><span class="description">get_mls_property_count()
-        </span><pre>get_mls_property_count()</pre></a></li>
-<li class="method public "><a href="#method_get_mls_property_types" title="get_mls_property_types() :: "><span class="description">get_mls_property_types()
-        </span><pre>get_mls_property_types()</pre></a></li>
-<li class="method public "><a href="#method_get_mls_search_field_values" title="get_mls_search_field_values() :: "><span class="description">get_mls_search_field_values()
-        </span><pre>get_mls_search_field_values()</pre></a></li>
-<li class="method public "><a href="#method_get_mls_search_fields" title="get_mls_search_fields() :: "><span class="description">get_mls_search_fields()
-        </span><pre>get_mls_search_fields()</pre></a></li>
+<li class="method public "><a href="#method_get_mls_propertycount" title="get_mls_propertycount() :: "><span class="description">get_mls_propertycount()
+        </span><pre>get_mls_propertycount()</pre></a></li>
+<li class="method public "><a href="#method_get_mls_propertytypes" title="get_mls_propertytypes() :: "><span class="description">get_mls_propertytypes()
+        </span><pre>get_mls_propertytypes()</pre></a></li>
+<li class="method public "><a href="#method_get_mls_searchfields" title="get_mls_searchfields() :: "><span class="description">get_mls_searchfields()
+        </span><pre>get_mls_searchfields()</pre></a></li>
+<li class="method public "><a href="#method_get_mls_searchfieldvalues" title="get_mls_searchfieldvalues() :: "><span class="description">get_mls_searchfieldvalues()
+        </span><pre>get_mls_searchfieldvalues()</pre></a></li>
 <li class="method public "><a href="#method_get_mls_zipcodes" title="get_mls_zipcodes() :: "><span class="description">get_mls_zipcodes()
         </span><pre>get_mls_zipcodes()</pre></a></li>
 <li class="method public "><a href="#method_get_partners_aggregatedagents" title="get_partners_aggregatedagents() :: Get a list of all agents for your clients."><span class="description">Get a list of all agents for your clients.</span><pre>get_partners_aggregatedagents()</pre></a></li>
@@ -195,23 +202,18 @@ in the client API component in that it can look up property types for any active
 which the client is a member."><span class="description">Gives the names and IDs of all available property types. This method differs from the property type lookup method
 in the client API component in that it can look up property types for any active Platinum MLS, not just those for
 which the client is a member.</span><pre>get_partners_propertytypes()</pre></a></li>
-<li class="method public "><a href="#method_get_savedlinks" title="get_savedlinks() :: "><span class="description">get_savedlinks()
-        </span><pre>get_savedlinks()</pre></a></li>
-<li class="method public "><a href="#method_get_searchquery" title="get_searchquery() :: "><span class="description">get_searchquery()
-        </span><pre>get_searchquery()</pre></a></li>
-<li class="method public "><a href="#method_get_soldpending" title="get_soldpending() :: "><span class="description">get_soldpending()
-        </span><pre>get_soldpending()</pre></a></li>
 <li class="method public "><a href="#method_get_specialty_partner_pricing" title="get_specialty_partner_pricing() :: [get_specialty_partner_pricing description]"><span class="description">[get_specialty_partner_pricing description]</span><pre>get_specialty_partner_pricing()</pre></a></li>
-<li class="method public "><a href="#method_get_supplemental" title="get_supplemental() :: "><span class="description">get_supplemental()
-        </span><pre>get_supplemental()</pre></a></li>
-<li class="method public "><a href="#method_get_systemlinks" title="get_systemlinks() :: "><span class="description">get_systemlinks()
-        </span><pre>get_systemlinks()</pre></a></li>
-<li class="method public "><a href="#method_get_widgets" title="get_widgets() :: "><span class="description">get_widgets()
-        </span><pre>get_widgets()</pre></a></li>
-<li class="method public "><a href="#method_get_zipcodes" title="get_zipcodes() :: "><span class="description">get_zipcodes()
-        </span><pre>get_zipcodes()</pre></a></li>
-<li class="method public "><a href="#method_post_clients_dynamicwrapperurl" title="post_clients_dynamicwrapperurl() :: "><span class="description">post_clients_dynamicwrapperurl()
-        </span><pre>post_clients_dynamicwrapperurl()</pre></a></li>
+<li class="method public "><a href="#method_post_clients_dynamicwrapperurl" title="post_clients_dynamicwrapperurl() :: Update dynamic wrapper url for global, pages and saved links. If savedLinkID, or pageID are not passed, the
+global dynamic wrapper url will be updated."><span class="description">Update dynamic wrapper url for global, pages and saved links. If savedLinkID, or pageID are not passed, the
+global dynamic wrapper url will be updated.</span><pre>post_clients_dynamicwrapperurl()</pre></a></li>
+<li class="method public "><a href="#method_post_clients_savedlink" title="post_clients_savedlink() :: "><span class="description">post_clients_savedlink()
+        </span><pre>post_clients_savedlink()</pre></a></li>
+<li class="method public "><a href="#method_post_clients_supplemental" title="post_clients_supplemental() :: "><span class="description">post_clients_supplemental()
+        </span><pre>post_clients_supplemental()</pre></a></li>
+<li class="method public "><a href="#method_put_clients_savedlink" title="put_clients_savedlink() :: "><span class="description">put_clients_savedlink()
+        </span><pre>put_clients_savedlink()</pre></a></li>
+<li class="method public "><a href="#method_put_clients_supplemental" title="put_clients_supplemental() :: "><span class="description">put_clients_supplemental()
+        </span><pre>put_clients_supplemental()</pre></a></li>
 <li class="method public "><a href="#method_request" title="request() :: Request function."><span class="description">Request function.</span><pre>request()</pre></a></li>
 <li class="method public "><a href="#method_response_code_msg" title="response_code_msg() :: Response code message."><span class="description">Response code message.</span><pre>response_code_msg()</pre></a></li>
 <li class="method public "><a href="#method_update_bulk_leads" title="update_bulk_leads() :: "><span class="description">update_bulk_leads()
@@ -224,10 +226,6 @@ which the client is a member.</span><pre>get_partners_propertytypes()</pre></a><
         </span><pre>update_lead_property()</pre></a></li>
 <li class="method public "><a href="#method_update_lead_search" title="update_lead_search() :: "><span class="description">update_lead_search()
         </span><pre>update_lead_search()</pre></a></li>
-<li class="method public "><a href="#method_update_savedlink" title="update_savedlink() :: "><span class="description">update_savedlink()
-        </span><pre>update_savedlink()</pre></a></li>
-<li class="method public "><a href="#method_update_supplemental" title="update_supplemental() :: "><span class="description">update_supplemental()
-        </span><pre>update_supplemental()</pre></a></li>
 </ul>
 </li>
 <li class="nav-header protected">» Protected
@@ -330,24 +328,10 @@ which the client is a member.</span><pre>get_partners_propertytypes()</pre></a><
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a id="method_add_savedlink"></a><div class="element clickable method public method_add_savedlink " data-toggle="collapse" data-target=".method_add_savedlink .collapse" title="public">
-<h2>add_savedlink()
-        </h2>
-<pre>add_savedlink() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
 <a id="method_add_specialty_partner_subscriber"></a><div class="element clickable method public method_add_specialty_partner_subscriber " data-toggle="collapse" data-target=".method_add_specialty_partner_subscriber .collapse" title="public">
 <h2>add_specialty_partner_subscriber()
         </h2>
 <pre>add_specialty_partner_subscriber() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="method_add_supplemental"></a><div class="element clickable method public method_add_supplemental " data-toggle="collapse" data-target=".method_add_supplemental .collapse" title="public">
-<h2>add_supplemental()
-        </h2>
-<pre>add_supplemental() </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
@@ -369,6 +353,27 @@ which the client is a member.</span><pre>get_partners_propertytypes()</pre></a><
 <div class="subelement response">
 <code>\IdxBrokerAPI</code>IdxBrokerAPI Object.</div>
 </div></div>
+</div>
+<a id="method_delete_clients_savedlink"></a><div class="element clickable method public method_delete_clients_savedlink " data-toggle="collapse" data-target=".method_delete_clients_savedlink .collapse" title="public">
+<h2>delete_clients_savedlink()
+        </h2>
+<pre>delete_clients_savedlink() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_delete_clients_supplemental"></a><div class="element clickable method public method_delete_clients_supplemental " data-toggle="collapse" data-target=".method_delete_clients_supplemental .collapse" title="public">
+<h2>delete_clients_supplemental()
+        </h2>
+<pre>delete_clients_supplemental() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_delete_clients_wrappercache"></a><div class="element clickable method public method_delete_clients_wrappercache " data-toggle="collapse" data-target=".method_delete_clients_wrappercache .collapse" title="public">
+<h2>delete_clients_wrappercache()
+        </h2>
+<pre>delete_clients_wrappercache() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 <a id="method_delete_lead"></a><div class="element clickable method public method_delete_lead " data-toggle="collapse" data-target=".method_delete_lead .collapse" title="public">
 <h2>delete_lead()
@@ -395,34 +400,6 @@ which the client is a member.</span><pre>get_partners_propertytypes()</pre></a><
 <h2>delete_lead_search()
         </h2>
 <pre>delete_lead_search() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="method_delete_savedlink"></a><div class="element clickable method public method_delete_savedlink " data-toggle="collapse" data-target=".method_delete_savedlink .collapse" title="public">
-<h2>delete_savedlink()
-        </h2>
-<pre>delete_savedlink() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="method_delete_supplemental"></a><div class="element clickable method public method_delete_supplemental " data-toggle="collapse" data-target=".method_delete_supplemental .collapse" title="public">
-<h2>delete_supplemental()
-        </h2>
-<pre>delete_supplemental() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="method_delete_wrapper_cache"></a><div class="element clickable method public method_delete_wrapper_cache " data-toggle="collapse" data-target=".method_delete_wrapper_cache .collapse" title="public">
-<h2>delete_wrapper_cache()
-        </h2>
-<pre>delete_wrapper_cache() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="method_get_approved_mls"></a><div class="element clickable method public method_get_approved_mls " data-toggle="collapse" data-target=".method_get_approved_mls .collapse" title="public">
-<h2>get_approved_mls()
-        </h2>
-<pre>get_approved_mls() </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
@@ -599,39 +576,134 @@ combinedActiveMLS</h2>
 </div></div>
 </div>
 <a id="method_get_clients_featured"></a><div class="element clickable method public method_get_clients_featured " data-toggle="collapse" data-target=".method_get_clients_featured .collapse" title="public">
-<h2>get_clients_featured()
-        </h2>
-<pre>get_clients_featured() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Returns a basic set of information for all of the client's featured (active) properties</h2>
+<pre>get_clients_featured(array $args<code> = array()</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getFeatured">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Query args to send in to API call.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Featured properties on the account.</div>
+</div></div>
 </div>
 <a id="method_get_clients_listallowedfields"></a><div class="element clickable method public method_get_clients_listallowedfields " data-toggle="collapse" data-target=".method_get_clients_listallowedfields .collapse" title="public">
-<h2>get_clients_listallowedfields()
-        </h2>
-<pre>get_clients_listallowedfields() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Returns the allowed returnable fields for a given listingID.</h2>
+<pre>get_clients_listallowedfields(string $idx_id, string $listing_id) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Note: Valid ancillarykey is required in the request header.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-listallowedfields">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$idx_id</h4>
+<code>string</code><p>The idxID of MLS.</p></div>
+<div class="subelement argument">
+<h4>$listing_id</h4>
+<code>string</code><p>The listing ID.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>List of fields that are returnable for the listingID.</div>
+</div></div>
 </div>
 <a id="method_get_clients_listcomponents"></a><div class="element clickable method public method_get_clients_listcomponents " data-toggle="collapse" data-target=".method_get_clients_listcomponents .collapse" title="public">
-<h2>get_clients_listcomponents()
-        </h2>
-<pre>get_clients_listcomponents() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>This is a simple, access anywhere, method for getting a list of all API components available.</h2>
+<pre>get_clients_listcomponents() : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getListcomponents">Documentation.</a></td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>All available APIs/Components.</div>
+</div></div>
 </div>
 <a id="method_get_clients_listing"></a><div class="element clickable method public method_get_clients_listing " data-toggle="collapse" data-target=".method_get_clients_listing .collapse" title="public">
-<h2>get_clients_listing()
-        </h2>
-<pre>get_clients_listing() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Returns the detailed information for a given listingID.</h2>
+<pre>get_clients_listing(string $idx_id, string $listing_id, string $rf<code> = ''</code>, boolean $disclaimers<code> = true</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Note: Valid ancillarykey is required in the request header.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-listing">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$idx_id</h4>
+<code>string</code><p>The idxID of MLS.</p></div>
+<div class="subelement argument">
+<h4>$listing_id</h4>
+<code>string</code><p>The listing ID.</p></div>
+<div class="subelement argument">
+<h4>$rf</h4>
+<code>string</code><p>Array of fields to return in the output.</p></div>
+<div class="subelement argument">
+<h4>$disclaimers</h4>
+<code>boolean</code><p>Include MLS disclaimer/courtesy in the response. Default true.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>[description]</div>
+</div></div>
 </div>
 <a id="method_get_clients_listmethods"></a><div class="element clickable method public method_get_clients_listmethods " data-toggle="collapse" data-target=".method_get_clients_listmethods .collapse" title="public">
-<h2>get_clients_listmethods()
-        </h2>
-<pre>get_clients_listmethods() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>A simple method for listing all available methods in the current API component. This method will also list which
+request methods (GET, PUT, POST, or DELETE) are supported by each method in addition to each method status.</h2>
+<pre>get_clients_listmethods() : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-listmethods">Documentation.</a></td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Basic information about all available methods in this API.</div>
+</div></div>
 </div>
 <a id="method_get_clients_offices"></a><div class="element clickable method public method_get_clients_offices " data-toggle="collapse" data-target=".method_get_clients_offices .collapse" title="public">
 <h2>get_clients_offices()
@@ -658,6 +730,55 @@ combinedActiveMLS</h2>
 <h2>get_clients_properties()
         </h2>
 <pre>get_clients_properties() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_get_clients_savedlinks"></a><div class="element clickable method public method_get_clients_savedlinks " data-toggle="collapse" data-target=".method_get_clients_savedlinks .collapse" title="public">
+<h2>get_clients_savedlinks()
+        </h2>
+<pre>get_clients_savedlinks() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_get_clients_searchquery"></a><div class="element clickable method public method_get_clients_searchquery " data-toggle="collapse" data-target=".method_get_clients_searchquery .collapse" title="public">
+<h2>get_clients_searchquery()
+        </h2>
+<pre>get_clients_searchquery() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_get_clients_soldpending"></a><div class="element clickable method public method_get_clients_soldpending " data-toggle="collapse" data-target=".method_get_clients_soldpending .collapse" title="public">
+<h2>get_clients_soldpending()
+        </h2>
+<pre>get_clients_soldpending() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_get_clients_supplemental"></a><div class="element clickable method public method_get_clients_supplemental " data-toggle="collapse" data-target=".method_get_clients_supplemental .collapse" title="public">
+<h2>get_clients_supplemental()
+        </h2>
+<pre>get_clients_supplemental() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_get_clients_systemlinks"></a><div class="element clickable method public method_get_clients_systemlinks " data-toggle="collapse" data-target=".method_get_clients_systemlinks .collapse" title="public">
+<h2>get_clients_systemlinks()
+        </h2>
+<pre>get_clients_systemlinks() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_get_clients_widgets"></a><div class="element clickable method public method_get_clients_widgets " data-toggle="collapse" data-target=".method_get_clients_widgets .collapse" title="public">
+<h2>get_clients_widgets()
+        </h2>
+<pre>get_clients_widgets() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_get_clients_zipcodes"></a><div class="element clickable method public method_get_clients_zipcodes " data-toggle="collapse" data-target=".method_get_clients_zipcodes .collapse" title="public">
+<h2>get_clients_zipcodes()
+        </h2>
+<pre>get_clients_zipcodes() </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
@@ -732,6 +853,13 @@ combinedActiveMLS</h2>
 <code>\[type]</code>[description]</div>
 </div></div>
 </div>
+<a id="method_get_mls_approvedmls"></a><div class="element clickable method public method_get_mls_approvedmls " data-toggle="collapse" data-target=".method_get_mls_approvedmls .collapse" title="public">
+<h2>get_mls_approvedmls()
+        </h2>
+<pre>get_mls_approvedmls() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 <a id="method_get_mls_cities"></a><div class="element clickable method public method_get_mls_cities " data-toggle="collapse" data-target=".method_get_mls_cities .collapse" title="public">
 <h2>get_mls_cities()
         </h2>
@@ -746,17 +874,17 @@ combinedActiveMLS</h2>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a id="method_get_mls_list_components"></a><div class="element clickable method public method_get_mls_list_components " data-toggle="collapse" data-target=".method_get_mls_list_components .collapse" title="public">
-<h2>get_mls_list_components()
+<a id="method_get_mls_listcomponents"></a><div class="element clickable method public method_get_mls_listcomponents " data-toggle="collapse" data-target=".method_get_mls_listcomponents .collapse" title="public">
+<h2>get_mls_listcomponents()
         </h2>
-<pre>get_mls_list_components() </pre>
+<pre>get_mls_listcomponents() </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a id="method_get_mls_list_methods"></a><div class="element clickable method public method_get_mls_list_methods " data-toggle="collapse" data-target=".method_get_mls_list_methods .collapse" title="public">
-<h2>get_mls_list_methods()
+<a id="method_get_mls_listmethods"></a><div class="element clickable method public method_get_mls_listmethods " data-toggle="collapse" data-target=".method_get_mls_listmethods .collapse" title="public">
+<h2>get_mls_listmethods()
         </h2>
-<pre>get_mls_list_methods() </pre>
+<pre>get_mls_listmethods() </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
@@ -774,31 +902,31 @@ combinedActiveMLS</h2>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a id="method_get_mls_property_count"></a><div class="element clickable method public method_get_mls_property_count " data-toggle="collapse" data-target=".method_get_mls_property_count .collapse" title="public">
-<h2>get_mls_property_count()
+<a id="method_get_mls_propertycount"></a><div class="element clickable method public method_get_mls_propertycount " data-toggle="collapse" data-target=".method_get_mls_propertycount .collapse" title="public">
+<h2>get_mls_propertycount()
         </h2>
-<pre>get_mls_property_count() </pre>
+<pre>get_mls_propertycount() </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a id="method_get_mls_property_types"></a><div class="element clickable method public method_get_mls_property_types " data-toggle="collapse" data-target=".method_get_mls_property_types .collapse" title="public">
-<h2>get_mls_property_types()
+<a id="method_get_mls_propertytypes"></a><div class="element clickable method public method_get_mls_propertytypes " data-toggle="collapse" data-target=".method_get_mls_propertytypes .collapse" title="public">
+<h2>get_mls_propertytypes()
         </h2>
-<pre>get_mls_property_types() </pre>
+<pre>get_mls_propertytypes() </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a id="method_get_mls_search_field_values"></a><div class="element clickable method public method_get_mls_search_field_values " data-toggle="collapse" data-target=".method_get_mls_search_field_values .collapse" title="public">
-<h2>get_mls_search_field_values()
+<a id="method_get_mls_searchfields"></a><div class="element clickable method public method_get_mls_searchfields " data-toggle="collapse" data-target=".method_get_mls_searchfields .collapse" title="public">
+<h2>get_mls_searchfields()
         </h2>
-<pre>get_mls_search_field_values() </pre>
+<pre>get_mls_searchfields() </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a id="method_get_mls_search_fields"></a><div class="element clickable method public method_get_mls_search_fields " data-toggle="collapse" data-target=".method_get_mls_search_fields .collapse" title="public">
-<h2>get_mls_search_fields()
+<a id="method_get_mls_searchfieldvalues"></a><div class="element clickable method public method_get_mls_searchfieldvalues " data-toggle="collapse" data-target=".method_get_mls_searchfieldvalues .collapse" title="public">
+<h2>get_mls_searchfieldvalues()
         </h2>
-<pre>get_mls_search_fields() </pre>
+<pre>get_mls_searchfieldvalues() </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
@@ -1261,27 +1389,6 @@ is specified then only the IDX property types (parentPtID) will be returned.</p>
                               the MLS's property types and their IDs.</div>
 </div></div>
 </div>
-<a id="method_get_savedlinks"></a><div class="element clickable method public method_get_savedlinks " data-toggle="collapse" data-target=".method_get_savedlinks .collapse" title="public">
-<h2>get_savedlinks()
-        </h2>
-<pre>get_savedlinks() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="method_get_searchquery"></a><div class="element clickable method public method_get_searchquery " data-toggle="collapse" data-target=".method_get_searchquery .collapse" title="public">
-<h2>get_searchquery()
-        </h2>
-<pre>get_searchquery() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="method_get_soldpending"></a><div class="element clickable method public method_get_soldpending " data-toggle="collapse" data-target=".method_get_soldpending .collapse" title="public">
-<h2>get_soldpending()
-        </h2>
-<pre>get_soldpending() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
 <a id="method_get_specialty_partner_pricing"></a><div class="element clickable method public method_get_specialty_partner_pricing " data-toggle="collapse" data-target=".method_get_specialty_partner_pricing .collapse" title="public">
 <h2>[get_specialty_partner_pricing description]</h2>
 <pre>get_specialty_partner_pricing() : \[type]</pre>
@@ -1293,38 +1400,60 @@ is specified then only the IDX property types (parentPtID) will be returned.</p>
 <code>\[type]</code>[description]</div>
 </div></div>
 </div>
-<a id="method_get_supplemental"></a><div class="element clickable method public method_get_supplemental " data-toggle="collapse" data-target=".method_get_supplemental .collapse" title="public">
-<h2>get_supplemental()
-        </h2>
-<pre>get_supplemental() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="method_get_systemlinks"></a><div class="element clickable method public method_get_systemlinks " data-toggle="collapse" data-target=".method_get_systemlinks .collapse" title="public">
-<h2>get_systemlinks()
-        </h2>
-<pre>get_systemlinks() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="method_get_widgets"></a><div class="element clickable method public method_get_widgets " data-toggle="collapse" data-target=".method_get_widgets .collapse" title="public">
-<h2>get_widgets()
-        </h2>
-<pre>get_widgets() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="method_get_zipcodes"></a><div class="element clickable method public method_get_zipcodes " data-toggle="collapse" data-target=".method_get_zipcodes .collapse" title="public">
-<h2>get_zipcodes()
-        </h2>
-<pre>get_zipcodes() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
 <a id="method_post_clients_dynamicwrapperurl"></a><div class="element clickable method public method_post_clients_dynamicwrapperurl " data-toggle="collapse" data-target=".method_post_clients_dynamicwrapperurl .collapse" title="public">
-<h2>post_clients_dynamicwrapperurl()
+<h2>Update dynamic wrapper url for global, pages and saved links. If savedLinkID, or pageID are not passed, the
+global dynamic wrapper url will be updated.</h2>
+<pre>post_clients_dynamicwrapperurl(string $dynamic_url, integer $savedlink_id<code> = null</code>, integer $page_id<code> = null</code>) : void</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>POST</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-postDynamicwrapperurl">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$dynamic_url</h4>
+<code>string</code><p>Dynamic wrapper url.</p></div>
+<div class="subelement argument">
+<h4>$savedlink_id</h4>
+<code>integer</code><p>Saved link ID if setting dynamic wrapper url for a specific saved link.</p></div>
+<div class="subelement argument">
+<h4>$page_id</h4>
+<code>integer</code><p>Page ID if setting dynamic wrapper url for a specific page.</p></div>
+</div></div>
+</div>
+<a id="method_post_clients_savedlink"></a><div class="element clickable method public method_post_clients_savedlink " data-toggle="collapse" data-target=".method_post_clients_savedlink .collapse" title="public">
+<h2>post_clients_savedlink()
         </h2>
-<pre>post_clients_dynamicwrapperurl() </pre>
+<pre>post_clients_savedlink() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_post_clients_supplemental"></a><div class="element clickable method public method_post_clients_supplemental " data-toggle="collapse" data-target=".method_post_clients_supplemental .collapse" title="public">
+<h2>post_clients_supplemental()
+        </h2>
+<pre>post_clients_supplemental() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_put_clients_savedlink"></a><div class="element clickable method public method_put_clients_savedlink " data-toggle="collapse" data-target=".method_put_clients_savedlink .collapse" title="public">
+<h2>put_clients_savedlink()
+        </h2>
+<pre>put_clients_savedlink() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_put_clients_supplemental"></a><div class="element clickable method public method_put_clients_supplemental " data-toggle="collapse" data-target=".method_put_clients_supplemental .collapse" title="public">
+<h2>put_clients_supplemental()
+        </h2>
+<pre>put_clients_supplemental() </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
@@ -1390,20 +1519,6 @@ is specified then only the IDX property types (parentPtID) will be returned.</p>
 <h2>update_lead_search()
         </h2>
 <pre>update_lead_search() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="method_update_savedlink"></a><div class="element clickable method public method_update_savedlink " data-toggle="collapse" data-target=".method_update_savedlink .collapse" title="public">
-<h2>update_savedlink()
-        </h2>
-<pre>update_savedlink() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="method_update_supplemental"></a><div class="element clickable method public method_update_supplemental " data-toggle="collapse" data-target=".method_update_supplemental .collapse" title="public">
-<h2>update_supplemental()
-        </h2>
-<pre>update_supplemental() </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
@@ -1489,7 +1604,7 @@ is specified then only the IDX property types (parentPtID) will be returned.</p>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2017-07-27T03:40:36-07:00.<br></footer></div>
+            generated on 2017-07-27T13:25:39-07:00.<br></footer></div>
 </div>
 </body>
 </html>
