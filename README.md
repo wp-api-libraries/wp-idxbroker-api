@@ -1,4 +1,4 @@
-# wp-idxbroker-api
+# WP IDX Broker API
 
 A WordPress php library for interacting with the [IDX Broker API](https://middleware.idxbroker.com/docs/api/overview.php).
 
@@ -8,7 +8,7 @@ A WordPress php library for interacting with the [IDX Broker API](https://middle
 [![Build Status](https://travis-ci.org/wp-api-libraries/wp-idxbroker-api.svg?branch=master)](https://travis-ci.org/wp-api-libraries/wp-idxbroker-api)
 
 # Example usage
-The IDX Broker API library contains a method for each API endpoint. Visit the [PHPDocs](https://wp-api-libraries.github.io/wp-idxbroker-api/classes/IdxBrokerAPI.html) for the full library documentation.
+The IDX Broker API library contains a method for each API endpoint. Visit the [PHPDocs](https://wp-api-libraries.github.io/wp-idxbroker-api/classes/IdxBrokerAPI.html) for the full documentation.
 
 #### GET Requests
 ```php
@@ -43,15 +43,19 @@ $res1 = $idx_api->put_leads_property( 812, $data );
 ```php
 $res1 = $idx_api->delete_clients_supplemental( 345678 );
 ```
-### Helper methods
+
+## Helper methods
 
 The library also provides a few methods that assist in  extracting  information that is not necessarilly easy to access through the API.
+
 #### Check API Key Usage
 After you make a call to the API you can check your hourly API key usage using the check_usage method
 ```php
 $usage = $idx_api->check_usage();
 ```
-#### GET Client Domain used for client wrapper pages.
+
+#### Get domain used for client wrapper pages.
+The API doesnt have an easy way of getting the subdomain used on the client wrapper pages. The domain returned can either be `<youraccount>.idxbroker.com` or `<customsubdomain>.<yourdomain>.com`
 ```php
 $domain = $idx_api->get_idx_domain();
  
