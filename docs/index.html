@@ -32,7 +32,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">51</span></a></li>
+                <span class="label label-info">12</span></a></li>
 <li><a href="markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -104,6 +104,61 @@ global dynamic wrapper url will be updated.">IdxBrokerAPI.post_clients_dynamicwr
 <li><a href="classes/IdxBrokerAPI.html#get_clients_listing" title="Returns the detailed information for a given listingID.">IdxBrokerAPI.get_clients_listing</a></li>
 <li><a href="classes/IdxBrokerAPI.html#get_clients_listmethods" title="A simple method for listing all available methods in the current API component. This method will also list which
 request methods (GET, PUT, POST, or DELETE) are supported by each method in addition to each method status.">IdxBrokerAPI.get_clients_listmethods</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_clients_offices" title="View all offices on a mutli-user account.">IdxBrokerAPI.get_clients_offices</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_clients_postalcodes" title="Returns the postalcodes available in each of a client's postalcode lists. Since a client can build any number of
+postalcode lists this method requires the ID of which list you want to view. To get a list of all postalcode
+lists available do not send the primary request ID. The default list on each account has the id combinedActiveMLS.">IdxBrokerAPI.get_clients_postalcodes</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_clients_postalcodeslistname" title="Returns the IDs and names for each of a client's postalcode lists including MLS postalcode lists. To get the list
+of all postal code lists available do not send the primary request ID. The default list on each account has the ID
+combinedActiveMLS">IdxBrokerAPI.get_clients_postalcodeslistname</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_clients_properties" title="Returns the search results for a provided saved link ID.">IdxBrokerAPI.get_clients_properties</a></li>
+<li><a href="classes/IdxBrokerAPI.html#delete_clients_savedlink" title="Remove a new client saved link.">IdxBrokerAPI.delete_clients_savedlink</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_clients_savedlinks" title="Get saved links for a given client account.">IdxBrokerAPI.get_clients_savedlinks</a></li>
+<li><a href="classes/IdxBrokerAPI.html#post_clients_savedlink" title="Update an existing client's saved link">IdxBrokerAPI.post_clients_savedlink</a></li>
+<li><a href="classes/IdxBrokerAPI.html#put_clients_savedlink" title="Create a new client saved link.">IdxBrokerAPI.put_clients_savedlink</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_clients_searchquery" title="Performs search and returns the results.">IdxBrokerAPI.get_clients_searchquery</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_clients_soldpending" title="Returns a basic set of information for all of the client's sold and pending properties. That is, those that have
+been removed from their MLS data.">IdxBrokerAPI.get_clients_soldpending</a></li>
+<li><a href="classes/IdxBrokerAPI.html#delete_clients_supplemental" title="Remove a clients supplemental property.">IdxBrokerAPI.delete_clients_supplemental</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_clients_supplemental" title="Returns a basic set of information for all of the client's supplemental (non-MLS) properties.">IdxBrokerAPI.get_clients_supplemental</a></li>
+<li><a href="classes/IdxBrokerAPI.html#post_clients_supplemental" title="Update an existing supplemental listing.">IdxBrokerAPI.post_clients_supplemental</a></li>
+<li><a href="classes/IdxBrokerAPI.html#put_clients_supplemental" title="Create a new supplemental listing.">IdxBrokerAPI.put_clients_supplemental</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_clients_systemlinks" title="Gathers all the pages system pages (search, featured, contact, etc) that can be directly linked to without
+additional property information being included in the URL.">IdxBrokerAPI.get_clients_systemlinks</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_clients_widgets" title="Gather all the URLs for javascript widgets on the user's account. These widgets can then be placed on the user's
+main site via the included URLs.">IdxBrokerAPI.get_clients_widgets</a></li>
+<li><a href="classes/IdxBrokerAPI.html#delete_clients_wrappercache" title="Remove a clients supplemental property.">IdxBrokerAPI.delete_clients_wrappercache</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_clients_zipcodes" title="Returns the zipcodes available in each of a client's zipcode lists. Since a client can build any number of
+zipcode lists this method requires the ID of which list you want to view. To get a list of all zipcode lists
+available do not send the primary request ID. The default list on each account has the id combinedActiveMLS.">IdxBrokerAPI.get_clients_zipcodes</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_mls_age" title="Gives the date and time a particular MLS was last downloaded, processed and the last time images gathering was completed.">IdxBrokerAPI.get_mls_age</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_mls_approvedmls" title="This method provides all of the IDX IDs and names for all of the paperwork approved MLSs on the client's account.">IdxBrokerAPI.get_mls_approvedmls</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_mls_cities" title="All cities represented in the current set of MLS data are available from this method. The output can be filtered
+using additional GET parameters.">IdxBrokerAPI.get_mls_cities</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_mls_counties" title="All counties represented in the current set of MLS data are available from this method. The output can be
+filtered using additional GET parameters.">IdxBrokerAPI.get_mls_counties</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_mls_listcomponents" title="This is a simple, access anywhere, method for getting a list of all API components available.">IdxBrokerAPI.get_mls_listcomponents</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_mls_listmethods" title="A simple method for listing all available methods in the current API component. This method will also list which
+request methods (GET, PUT, POST, or DELETE) are supported by each method in addition to each method status.">IdxBrokerAPI.get_mls_listmethods</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_mls_postalcodes" title="All postal codes represented in the current set of MLS data are available from this method. The output can be
+filtered using additional GET parameters.">IdxBrokerAPI.get_mls_postalcodes</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_mls_prices" title="The sum total of properties listed in a given MLS as well as sums for each property type in the MLS.">IdxBrokerAPI.get_mls_prices</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_mls_propertycount" title="Gives a total number of listings available for a given city, county, or zipcode.">IdxBrokerAPI.get_mls_propertycount</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_mls_propertytypes" title="Gives the property type information for all types that are available on a given MLS.">IdxBrokerAPI.get_mls_propertytypes</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_mls_searchfields" title="All the fields in a given MLS that are currently allowed to be searched according to MLS guidelines.">IdxBrokerAPI.get_mls_searchfields</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_mls_searchfieldvalues" title="Field values in a given MLS that are currently allowed to be searched according to MLS guidelines.">IdxBrokerAPI.get_mls_searchfieldvalues</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_mls_zipcodes" title="All zip codes represented in the current set of MLS data are available from this method. The output can be
+filtered using additional GET parameters.">IdxBrokerAPI.get_mls_zipcodes</a></li>
+<li><a href="classes/IdxBrokerAPI.html#post_bulkleads" title="Update leads in batches of up to 100 per request.">IdxBrokerAPI.post_bulkleads</a></li>
+<li><a href="classes/IdxBrokerAPI.html#put_bulkleads" title="Add leads in batches of up to 100 per request.">IdxBrokerAPI.put_bulkleads</a></li>
+<li><a href="classes/IdxBrokerAPI.html#delete_lead" title="Remove a lead system wide.">IdxBrokerAPI.delete_lead</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_leads" title="Get information for one or multiple leads.">IdxBrokerAPI.get_leads</a></li>
+<li><a href="classes/IdxBrokerAPI.html#post_lead" title="Update the information for one lead specified by the primary request ID.">IdxBrokerAPI.post_lead</a></li>
+<li><a href="classes/IdxBrokerAPI.html#put_lead" title="Create a new lead.">IdxBrokerAPI.put_lead</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_leadtraffic" title="Get traffic history for a specified lead.">IdxBrokerAPI.get_leadtraffic</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_leads_listcomponents" title="This is a simple, access anywhere, method for getting a list of all API components available.">IdxBrokerAPI.get_leads_listcomponents</a></li>
+<li><a href="classes/IdxBrokerAPI.html#get_leads_listmethods" title="This is a simple, access anywhere, method for getting a list of all API components available.">IdxBrokerAPI.get_leads_listmethods</a></li>
+<li><a href="classes/IdxBrokerAPI.html#delete_leads_note" title="Remove a lead note.">IdxBrokerAPI.delete_leads_note</a></li>
 </ul></div>
 </div>
 <div class="span5">
@@ -115,7 +170,7 @@ request methods (GET, PUT, POST, or DELETE) are supported by each method in addi
 <div class="well"><ul class="nav nav-list">
 <li class="nav-header">Reports</li>
 <li><a href="errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">51</span></a></li>
+                <span class="label label-info">12</span></a></li>
 <li><a href="markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -126,7 +181,7 @@ request methods (GET, PUT, POST, or DELETE) are supported by each method in addi
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2017-07-27T14:27:08-07:00.<br></footer></div>
+            generated on 2017-07-28T17:32:04-07:00.<br></footer></div>
 </div>
 </body>
 </html>

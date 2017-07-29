@@ -32,7 +32,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">51</span></a></li>
+                <span class="label label-info">12</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -64,16 +64,11 @@
                     <ul>
 <li class="method public "><a href="#method___construct" title="__construct() :: __construct function."><span class="description">__construct function.</span><pre>__construct()</pre></a></li>
 <li class="method public "><a href="#method_build_request" title="build_request() :: Builds the request for the API call to IDX Broker."><span class="description">Builds the request for the API call to IDX Broker.</span><pre>build_request()</pre></a></li>
-<li class="method public "><a href="#method_delete_clients_savedlink" title="delete_clients_savedlink() :: "><span class="description">delete_clients_savedlink()
-        </span><pre>delete_clients_savedlink()</pre></a></li>
-<li class="method public "><a href="#method_delete_clients_supplemental" title="delete_clients_supplemental() :: "><span class="description">delete_clients_supplemental()
-        </span><pre>delete_clients_supplemental()</pre></a></li>
-<li class="method public "><a href="#method_delete_clients_wrappercache" title="delete_clients_wrappercache() :: "><span class="description">delete_clients_wrappercache()
-        </span><pre>delete_clients_wrappercache()</pre></a></li>
-<li class="method public "><a href="#method_delete_lead" title="delete_lead() :: "><span class="description">delete_lead()
-        </span><pre>delete_lead()</pre></a></li>
-<li class="method public "><a href="#method_delete_leads_note" title="delete_leads_note() :: "><span class="description">delete_leads_note()
-        </span><pre>delete_leads_note()</pre></a></li>
+<li class="method public "><a href="#method_delete_clients_savedlink" title="delete_clients_savedlink() :: Remove a new client saved link."><span class="description">Remove a new client saved link.</span><pre>delete_clients_savedlink()</pre></a></li>
+<li class="method public "><a href="#method_delete_clients_supplemental" title="delete_clients_supplemental() :: Remove a clients supplemental property."><span class="description">Remove a clients supplemental property.</span><pre>delete_clients_supplemental()</pre></a></li>
+<li class="method public "><a href="#method_delete_clients_wrappercache" title="delete_clients_wrappercache() :: Remove a clients supplemental property."><span class="description">Remove a clients supplemental property.</span><pre>delete_clients_wrappercache()</pre></a></li>
+<li class="method public "><a href="#method_delete_lead" title="delete_lead() :: Remove a lead system wide."><span class="description">Remove a lead system wide.</span><pre>delete_lead()</pre></a></li>
+<li class="method public "><a href="#method_delete_leads_note" title="delete_leads_note() :: Remove a lead note."><span class="description">Remove a lead note.</span><pre>delete_leads_note()</pre></a></li>
 <li class="method public "><a href="#method_delete_leads_property" title="delete_leads_property() :: "><span class="description">delete_leads_property()
         </span><pre>delete_leads_property()</pre></a></li>
 <li class="method public "><a href="#method_delete_leads_search" title="delete_leads_search() :: "><span class="description">delete_leads_search()
@@ -106,68 +101,69 @@ combinedActiveMLS</span><pre>get_clients_countieslistname()</pre></a></li>
 <li class="method public "><a href="#method_get_clients_listmethods" title="get_clients_listmethods() :: A simple method for listing all available methods in the current API component. This method will also list which
 request methods (GET, PUT, POST, or DELETE) are supported by each method in addition to each method status."><span class="description">A simple method for listing all available methods in the current API component. This method will also list which
 request methods (GET, PUT, POST, or DELETE) are supported by each method in addition to each method status.</span><pre>get_clients_listmethods()</pre></a></li>
-<li class="method public "><a href="#method_get_clients_offices" title="get_clients_offices() :: "><span class="description">get_clients_offices()
-        </span><pre>get_clients_offices()</pre></a></li>
-<li class="method public "><a href="#method_get_clients_postalcodes" title="get_clients_postalcodes() :: "><span class="description">get_clients_postalcodes()
-        </span><pre>get_clients_postalcodes()</pre></a></li>
-<li class="method public "><a href="#method_get_clients_postalcodeslistname" title="get_clients_postalcodeslistname() :: "><span class="description">get_clients_postalcodeslistname()
-        </span><pre>get_clients_postalcodeslistname()</pre></a></li>
-<li class="method public "><a href="#method_get_clients_properties" title="get_clients_properties() :: "><span class="description">get_clients_properties()
-        </span><pre>get_clients_properties()</pre></a></li>
-<li class="method public "><a href="#method_get_clients_savedlinks" title="get_clients_savedlinks() :: "><span class="description">get_clients_savedlinks()
-        </span><pre>get_clients_savedlinks()</pre></a></li>
-<li class="method public "><a href="#method_get_clients_searchquery" title="get_clients_searchquery() :: "><span class="description">get_clients_searchquery()
-        </span><pre>get_clients_searchquery()</pre></a></li>
-<li class="method public "><a href="#method_get_clients_soldpending" title="get_clients_soldpending() :: "><span class="description">get_clients_soldpending()
-        </span><pre>get_clients_soldpending()</pre></a></li>
-<li class="method public "><a href="#method_get_clients_supplemental" title="get_clients_supplemental() :: "><span class="description">get_clients_supplemental()
-        </span><pre>get_clients_supplemental()</pre></a></li>
-<li class="method public "><a href="#method_get_clients_systemlinks" title="get_clients_systemlinks() :: "><span class="description">get_clients_systemlinks()
-        </span><pre>get_clients_systemlinks()</pre></a></li>
-<li class="method public "><a href="#method_get_clients_widgets" title="get_clients_widgets() :: "><span class="description">get_clients_widgets()
-        </span><pre>get_clients_widgets()</pre></a></li>
-<li class="method public "><a href="#method_get_clients_zipcodes" title="get_clients_zipcodes() :: "><span class="description">get_clients_zipcodes()
-        </span><pre>get_clients_zipcodes()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_offices" title="get_clients_offices() :: View all offices on a mutli-user account."><span class="description">View all offices on a mutli-user account.</span><pre>get_clients_offices()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_postalcodes" title="get_clients_postalcodes() :: Returns the postalcodes available in each of a client's postalcode lists. Since a client can build any number of
+postalcode lists this method requires the ID of which list you want to view. To get a list of all postalcode
+lists available do not send the primary request ID. The default list on each account has the id combinedActiveMLS."><span class="description">Returns the postalcodes available in each of a client's postalcode lists. Since a client can build any number of
+postalcode lists this method requires the ID of which list you want to view. To get a list of all postalcode
+lists available do not send the primary request ID. The default list on each account has the id combinedActiveMLS.</span><pre>get_clients_postalcodes()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_postalcodeslistname" title="get_clients_postalcodeslistname() :: Returns the IDs and names for each of a client's postalcode lists including MLS postalcode lists. To get the list
+of all postal code lists available do not send the primary request ID. The default list on each account has the ID
+combinedActiveMLS"><span class="description">Returns the IDs and names for each of a client's postalcode lists including MLS postalcode lists. To get the list
+of all postal code lists available do not send the primary request ID. The default list on each account has the ID
+combinedActiveMLS</span><pre>get_clients_postalcodeslistname()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_properties" title="get_clients_properties() :: Returns the search results for a provided saved link ID."><span class="description">Returns the search results for a provided saved link ID.</span><pre>get_clients_properties()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_savedlinks" title="get_clients_savedlinks() :: Get saved links for a given client account."><span class="description">Get saved links for a given client account.</span><pre>get_clients_savedlinks()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_searchquery" title="get_clients_searchquery() :: Performs search and returns the results."><span class="description">Performs search and returns the results.</span><pre>get_clients_searchquery()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_soldpending" title="get_clients_soldpending() :: Returns a basic set of information for all of the client's sold and pending properties. That is, those that have
+been removed from their MLS data."><span class="description">Returns a basic set of information for all of the client's sold and pending properties. That is, those that have
+been removed from their MLS data.</span><pre>get_clients_soldpending()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_supplemental" title="get_clients_supplemental() :: Returns a basic set of information for all of the client's supplemental (non-MLS) properties."><span class="description">Returns a basic set of information for all of the client's supplemental (non-MLS) properties.</span><pre>get_clients_supplemental()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_systemlinks" title="get_clients_systemlinks() :: Gathers all the pages system pages (search, featured, contact, etc) that can be directly linked to without
+additional property information being included in the URL."><span class="description">Gathers all the pages system pages (search, featured, contact, etc) that can be directly linked to without
+additional property information being included in the URL.</span><pre>get_clients_systemlinks()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_widgets" title="get_clients_widgets() :: Gather all the URLs for javascript widgets on the user's account. These widgets can then be placed on the user's
+main site via the included URLs."><span class="description">Gather all the URLs for javascript widgets on the user's account. These widgets can then be placed on the user's
+main site via the included URLs.</span><pre>get_clients_widgets()</pre></a></li>
+<li class="method public "><a href="#method_get_clients_zipcodes" title="get_clients_zipcodes() :: Returns the zipcodes available in each of a client's zipcode lists. Since a client can build any number of
+zipcode lists this method requires the ID of which list you want to view. To get a list of all zipcode lists
+available do not send the primary request ID. The default list on each account has the id combinedActiveMLS."><span class="description">Returns the zipcodes available in each of a client's zipcode lists. Since a client can build any number of
+zipcode lists this method requires the ID of which list you want to view. To get a list of all zipcode lists
+available do not send the primary request ID. The default list on each account has the id combinedActiveMLS.</span><pre>get_clients_zipcodes()</pre></a></li>
 <li class="method public "><a href="#method_get_idx_domain" title="get_idx_domain() :: Get domain used for displaying IDX pages."><span class="description">Get domain used for displaying IDX pages.</span><pre>get_idx_domain()</pre></a></li>
-<li class="method public "><a href="#method_get_lead" title="get_lead() :: "><span class="description">get_lead()
-        </span><pre>get_lead()</pre></a></li>
-<li class="method public "><a href="#method_get_leads_listcomponents" title="get_leads_listcomponents() :: "><span class="description">get_leads_listcomponents()
-        </span><pre>get_leads_listcomponents()</pre></a></li>
-<li class="method public "><a href="#method_get_leads_listmethods" title="get_leads_listmethods() :: "><span class="description">get_leads_listmethods()
-        </span><pre>get_leads_listmethods()</pre></a></li>
+<li class="method public "><a href="#method_get_leads" title="get_leads() :: Get information for one or multiple leads."><span class="description">Get information for one or multiple leads.</span><pre>get_leads()</pre></a></li>
+<li class="method public "><a href="#method_get_leads_listcomponents" title="get_leads_listcomponents() :: This is a simple, access anywhere, method for getting a list of all API components available."><span class="description">This is a simple, access anywhere, method for getting a list of all API components available.</span><pre>get_leads_listcomponents()</pre></a></li>
+<li class="method public "><a href="#method_get_leads_listmethods" title="get_leads_listmethods() :: This is a simple, access anywhere, method for getting a list of all API components available."><span class="description">This is a simple, access anywhere, method for getting a list of all API components available.</span><pre>get_leads_listmethods()</pre></a></li>
 <li class="method public "><a href="#method_get_leads_note" title="get_leads_note() :: "><span class="description">get_leads_note()
         </span><pre>get_leads_note()</pre></a></li>
 <li class="method public "><a href="#method_get_leads_property" title="get_leads_property() :: "><span class="description">get_leads_property()
         </span><pre>get_leads_property()</pre></a></li>
 <li class="method public "><a href="#method_get_leads_search" title="get_leads_search() :: "><span class="description">get_leads_search()
         </span><pre>get_leads_search()</pre></a></li>
-<li class="method public "><a href="#method_get_leadtraffic" title="get_leadtraffic() :: "><span class="description">get_leadtraffic()
-        </span><pre>get_leadtraffic()</pre></a></li>
-<li class="method public "><a href="#method_get_mls_age" title="get_mls_age() :: [get_mls_age description]"><span class="description">[get_mls_age description]</span><pre>get_mls_age()</pre></a></li>
-<li class="method public "><a href="#method_get_mls_approvedmls" title="get_mls_approvedmls() :: "><span class="description">get_mls_approvedmls()
-        </span><pre>get_mls_approvedmls()</pre></a></li>
-<li class="method public "><a href="#method_get_mls_cities" title="get_mls_cities() :: "><span class="description">get_mls_cities()
-        </span><pre>get_mls_cities()</pre></a></li>
-<li class="method public "><a href="#method_get_mls_counties" title="get_mls_counties() :: "><span class="description">get_mls_counties()
-        </span><pre>get_mls_counties()</pre></a></li>
-<li class="method public "><a href="#method_get_mls_listcomponents" title="get_mls_listcomponents() :: "><span class="description">get_mls_listcomponents()
-        </span><pre>get_mls_listcomponents()</pre></a></li>
-<li class="method public "><a href="#method_get_mls_listmethods" title="get_mls_listmethods() :: "><span class="description">get_mls_listmethods()
-        </span><pre>get_mls_listmethods()</pre></a></li>
-<li class="method public "><a href="#method_get_mls_postalcodes" title="get_mls_postalcodes() :: "><span class="description">get_mls_postalcodes()
-        </span><pre>get_mls_postalcodes()</pre></a></li>
-<li class="method public "><a href="#method_get_mls_prices" title="get_mls_prices() :: "><span class="description">get_mls_prices()
-        </span><pre>get_mls_prices()</pre></a></li>
-<li class="method public "><a href="#method_get_mls_propertycount" title="get_mls_propertycount() :: "><span class="description">get_mls_propertycount()
-        </span><pre>get_mls_propertycount()</pre></a></li>
-<li class="method public "><a href="#method_get_mls_propertytypes" title="get_mls_propertytypes() :: "><span class="description">get_mls_propertytypes()
-        </span><pre>get_mls_propertytypes()</pre></a></li>
-<li class="method public "><a href="#method_get_mls_searchfields" title="get_mls_searchfields() :: "><span class="description">get_mls_searchfields()
-        </span><pre>get_mls_searchfields()</pre></a></li>
-<li class="method public "><a href="#method_get_mls_searchfieldvalues" title="get_mls_searchfieldvalues() :: "><span class="description">get_mls_searchfieldvalues()
-        </span><pre>get_mls_searchfieldvalues()</pre></a></li>
-<li class="method public "><a href="#method_get_mls_zipcodes" title="get_mls_zipcodes() :: "><span class="description">get_mls_zipcodes()
-        </span><pre>get_mls_zipcodes()</pre></a></li>
+<li class="method public "><a href="#method_get_leadtraffic" title="get_leadtraffic() :: Get traffic history for a specified lead."><span class="description">Get traffic history for a specified lead.</span><pre>get_leadtraffic()</pre></a></li>
+<li class="method public "><a href="#method_get_mls_age" title="get_mls_age() :: Gives the date and time a particular MLS was last downloaded, processed and the last time images gathering was completed."><span class="description">Gives the date and time a particular MLS was last downloaded, processed and the last time images gathering was completed.</span><pre>get_mls_age()</pre></a></li>
+<li class="method public "><a href="#method_get_mls_approvedmls" title="get_mls_approvedmls() :: This method provides all of the IDX IDs and names for all of the paperwork approved MLSs on the client's account."><span class="description">This method provides all of the IDX IDs and names for all of the paperwork approved MLSs on the client's account.</span><pre>get_mls_approvedmls()</pre></a></li>
+<li class="method public "><a href="#method_get_mls_cities" title="get_mls_cities() :: All cities represented in the current set of MLS data are available from this method. The output can be filtered
+using additional GET parameters."><span class="description">All cities represented in the current set of MLS data are available from this method. The output can be filtered
+using additional GET parameters.</span><pre>get_mls_cities()</pre></a></li>
+<li class="method public "><a href="#method_get_mls_counties" title="get_mls_counties() :: All counties represented in the current set of MLS data are available from this method. The output can be
+filtered using additional GET parameters."><span class="description">All counties represented in the current set of MLS data are available from this method. The output can be
+filtered using additional GET parameters.</span><pre>get_mls_counties()</pre></a></li>
+<li class="method public "><a href="#method_get_mls_listcomponents" title="get_mls_listcomponents() :: This is a simple, access anywhere, method for getting a list of all API components available."><span class="description">This is a simple, access anywhere, method for getting a list of all API components available.</span><pre>get_mls_listcomponents()</pre></a></li>
+<li class="method public "><a href="#method_get_mls_listmethods" title="get_mls_listmethods() :: A simple method for listing all available methods in the current API component. This method will also list which
+request methods (GET, PUT, POST, or DELETE) are supported by each method in addition to each method status."><span class="description">A simple method for listing all available methods in the current API component. This method will also list which
+request methods (GET, PUT, POST, or DELETE) are supported by each method in addition to each method status.</span><pre>get_mls_listmethods()</pre></a></li>
+<li class="method public "><a href="#method_get_mls_postalcodes" title="get_mls_postalcodes() :: All postal codes represented in the current set of MLS data are available from this method. The output can be
+filtered using additional GET parameters."><span class="description">All postal codes represented in the current set of MLS data are available from this method. The output can be
+filtered using additional GET parameters.</span><pre>get_mls_postalcodes()</pre></a></li>
+<li class="method public "><a href="#method_get_mls_prices" title="get_mls_prices() :: The sum total of properties listed in a given MLS as well as sums for each property type in the MLS."><span class="description">The sum total of properties listed in a given MLS as well as sums for each property type in the MLS.</span><pre>get_mls_prices()</pre></a></li>
+<li class="method public "><a href="#method_get_mls_propertycount" title="get_mls_propertycount() :: Gives a total number of listings available for a given city, county, or zipcode."><span class="description">Gives a total number of listings available for a given city, county, or zipcode.</span><pre>get_mls_propertycount()</pre></a></li>
+<li class="method public "><a href="#method_get_mls_propertytypes" title="get_mls_propertytypes() :: Gives the property type information for all types that are available on a given MLS."><span class="description">Gives the property type information for all types that are available on a given MLS.</span><pre>get_mls_propertytypes()</pre></a></li>
+<li class="method public "><a href="#method_get_mls_searchfields" title="get_mls_searchfields() :: All the fields in a given MLS that are currently allowed to be searched according to MLS guidelines."><span class="description">All the fields in a given MLS that are currently allowed to be searched according to MLS guidelines.</span><pre>get_mls_searchfields()</pre></a></li>
+<li class="method public "><a href="#method_get_mls_searchfieldvalues" title="get_mls_searchfieldvalues() :: Field values in a given MLS that are currently allowed to be searched according to MLS guidelines."><span class="description">Field values in a given MLS that are currently allowed to be searched according to MLS guidelines.</span><pre>get_mls_searchfieldvalues()</pre></a></li>
+<li class="method public "><a href="#method_get_mls_zipcodes" title="get_mls_zipcodes() :: All zip codes represented in the current set of MLS data are available from this method. The output can be
+filtered using additional GET parameters."><span class="description">All zip codes represented in the current set of MLS data are available from this method. The output can be
+filtered using additional GET parameters.</span><pre>get_mls_zipcodes()</pre></a></li>
 <li class="method public "><a href="#method_get_partners_aggregatedagents" title="get_partners_aggregatedagents() :: Get a list of all agents for your clients."><span class="description">Get a list of all agents for your clients.</span><pre>get_partners_aggregatedagents()</pre></a></li>
 <li class="method public "><a href="#method_get_partners_aggregatedfeatured" title="get_partners_aggregatedfeatured() :: Get a list of featured MLS properties."><span class="description">Get a list of featured MLS properties.</span><pre>get_partners_aggregatedfeatured()</pre></a></li>
 <li class="method public "><a href="#method_get_partners_aggregatedleads" title="get_partners_aggregatedleads() :: Get a list of all leads."><span class="description">Get a list of all leads.</span><pre>get_partners_aggregatedleads()</pre></a></li>
@@ -192,30 +188,23 @@ which the client is a member."><span class="description">Gives the names and IDs
 in the client API component in that it can look up property types for any active Platinum MLS, not just those for
 which the client is a member.</span><pre>get_partners_propertytypes()</pre></a></li>
 <li class="method public "><a href="#method_get_specialtypartner_pricing" title="get_specialtypartner_pricing() :: [get_specialty_partner_pricing description]"><span class="description">[get_specialty_partner_pricing description]</span><pre>get_specialtypartner_pricing()</pre></a></li>
-<li class="method public "><a href="#method_post_bulkleads" title="post_bulkleads() :: [add_bulk_leads description]"><span class="description">[add_bulk_leads description]</span><pre>post_bulkleads()</pre></a></li>
+<li class="method public "><a href="#method_post_bulkleads" title="post_bulkleads() :: Update leads in batches of up to 100 per request."><span class="description">Update leads in batches of up to 100 per request.</span><pre>post_bulkleads()</pre></a></li>
 <li class="method public "><a href="#method_post_clients_dynamicwrapperurl" title="post_clients_dynamicwrapperurl() :: Update dynamic wrapper url for global, pages and saved links. If savedLinkID, or pageID are not passed, the
 global dynamic wrapper url will be updated."><span class="description">Update dynamic wrapper url for global, pages and saved links. If savedLinkID, or pageID are not passed, the
 global dynamic wrapper url will be updated.</span><pre>post_clients_dynamicwrapperurl()</pre></a></li>
-<li class="method public "><a href="#method_post_clients_savedlink" title="post_clients_savedlink() :: "><span class="description">post_clients_savedlink()
-        </span><pre>post_clients_savedlink()</pre></a></li>
-<li class="method public "><a href="#method_post_clients_supplemental" title="post_clients_supplemental() :: "><span class="description">post_clients_supplemental()
-        </span><pre>post_clients_supplemental()</pre></a></li>
-<li class="method public "><a href="#method_post_lead" title="post_lead() :: "><span class="description">post_lead()
-        </span><pre>post_lead()</pre></a></li>
+<li class="method public "><a href="#method_post_clients_savedlink" title="post_clients_savedlink() :: Update an existing client's saved link"><span class="description">Update an existing client's saved link</span><pre>post_clients_savedlink()</pre></a></li>
+<li class="method public "><a href="#method_post_clients_supplemental" title="post_clients_supplemental() :: Update an existing supplemental listing."><span class="description">Update an existing supplemental listing.</span><pre>post_clients_supplemental()</pre></a></li>
+<li class="method public "><a href="#method_post_lead" title="post_lead() :: Update the information for one lead specified by the primary request ID."><span class="description">Update the information for one lead specified by the primary request ID.</span><pre>post_lead()</pre></a></li>
 <li class="method public "><a href="#method_post_leads_note" title="post_leads_note() :: "><span class="description">post_leads_note()
         </span><pre>post_leads_note()</pre></a></li>
 <li class="method public "><a href="#method_post_leads_property" title="post_leads_property() :: "><span class="description">post_leads_property()
         </span><pre>post_leads_property()</pre></a></li>
 <li class="method public "><a href="#method_post_leads_search" title="post_leads_search() :: "><span class="description">post_leads_search()
         </span><pre>post_leads_search()</pre></a></li>
-<li class="method public "><a href="#method_put_bulkleads" title="put_bulkleads() :: "><span class="description">put_bulkleads()
-        </span><pre>put_bulkleads()</pre></a></li>
-<li class="method public "><a href="#method_put_clients_savedlink" title="put_clients_savedlink() :: "><span class="description">put_clients_savedlink()
-        </span><pre>put_clients_savedlink()</pre></a></li>
-<li class="method public "><a href="#method_put_clients_supplemental" title="put_clients_supplemental() :: "><span class="description">put_clients_supplemental()
-        </span><pre>put_clients_supplemental()</pre></a></li>
-<li class="method public "><a href="#method_put_lead" title="put_lead() :: "><span class="description">put_lead()
-        </span><pre>put_lead()</pre></a></li>
+<li class="method public "><a href="#method_put_bulkleads" title="put_bulkleads() :: Add leads in batches of up to 100 per request."><span class="description">Add leads in batches of up to 100 per request.</span><pre>put_bulkleads()</pre></a></li>
+<li class="method public "><a href="#method_put_clients_savedlink" title="put_clients_savedlink() :: Create a new client saved link."><span class="description">Create a new client saved link.</span><pre>put_clients_savedlink()</pre></a></li>
+<li class="method public "><a href="#method_put_clients_supplemental" title="put_clients_supplemental() :: Create a new supplemental listing."><span class="description">Create a new supplemental listing.</span><pre>put_clients_supplemental()</pre></a></li>
+<li class="method public "><a href="#method_put_lead" title="put_lead() :: Create a new lead."><span class="description">Create a new lead.</span><pre>put_lead()</pre></a></li>
 <li class="method public "><a href="#method_put_leads_note" title="put_leads_note() :: "><span class="description">put_leads_note()
         </span><pre>put_leads_note()</pre></a></li>
 <li class="method public "><a href="#method_put_leads_property" title="put_leads_property() :: "><span class="description">put_leads_property()
@@ -318,39 +307,109 @@ global dynamic wrapper url will be updated.</span><pre>post_clients_dynamicwrapp
 </div></div>
 </div>
 <a id="method_delete_clients_savedlink"></a><div class="element clickable method public method_delete_clients_savedlink " data-toggle="collapse" data-target=".method_delete_clients_savedlink .collapse" title="public">
-<h2>delete_clients_savedlink()
-        </h2>
-<pre>delete_clients_savedlink() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Remove a new client saved link.</h2>
+<pre>delete_clients_savedlink(string $saved_links_id) : void</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>DELETE</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-deleteSavedlinks">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$saved_links_id</h4>
+<code>string</code><p>The ID of a client's saved link.</p></div>
+</div></div>
 </div>
 <a id="method_delete_clients_supplemental"></a><div class="element clickable method public method_delete_clients_supplemental " data-toggle="collapse" data-target=".method_delete_clients_supplemental .collapse" title="public">
-<h2>delete_clients_supplemental()
-        </h2>
-<pre>delete_clients_supplemental() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Remove a clients supplemental property.</h2>
+<pre>delete_clients_supplemental(string $listing_id) : void</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This method is to be used at your own risk. We will NOT be held accountable for programmatic errors in your code
+or the improper use of search values or options within said values resulting in deletion of supplemental properties.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>DELETE</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-deleteSupplemental">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$listing_id</h4>
+<code>string</code><p>The listingID of a supplmental property</p></div>
+</div></div>
 </div>
 <a id="method_delete_clients_wrappercache"></a><div class="element clickable method public method_delete_clients_wrappercache " data-toggle="collapse" data-target=".method_delete_clients_wrappercache .collapse" title="public">
-<h2>delete_clients_wrappercache()
-        </h2>
-<pre>delete_clients_wrappercache() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Remove a clients supplemental property.</h2>
+<pre>delete_clients_wrappercache() : void</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This method is to be used at your own risk. We will NOT be held accountable for programmatic errors in your code
+or the improper use of search values or options within said values resulting in deletion of supplemental properties.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>DELETE</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getWrappercache">Documentation.</a></td>
+</tr>
+</table>
+</div></div>
 </div>
 <a id="method_delete_lead"></a><div class="element clickable method public method_delete_lead " data-toggle="collapse" data-target=".method_delete_lead .collapse" title="public">
-<h2>delete_lead()
-        </h2>
-<pre>delete_lead() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Remove a lead system wide.</h2>
+<pre>delete_lead(integer $lead_id) : void</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This method is to be used at your own risk. We will NOT be held accountable for programmatic errors in your code
+or the improper use of search values or options within said values resulting in deletion of leads.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>DELETE</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-deleteLead">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$lead_id</h4>
+<code>integer</code><p>The ID of a lead.</p></div>
+</div></div>
 </div>
 <a id="method_delete_leads_note"></a><div class="element clickable method public method_delete_leads_note " data-toggle="collapse" data-target=".method_delete_leads_note .collapse" title="public">
-<h2>delete_leads_note()
-        </h2>
-<pre>delete_leads_note() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Remove a lead note.</h2>
+<pre>delete_leads_note() : void</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>DELETE</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-deleteNote">Documentation.</a></td>
+</tr>
+</table>
+</div></div>
 </div>
 <a id="method_delete_leads_property"></a><div class="element clickable method public method_delete_leads_property " data-toggle="collapse" data-target=".method_delete_leads_property .collapse" title="public">
 <h2>delete_leads_property()
@@ -669,81 +728,300 @@ request methods (GET, PUT, POST, or DELETE) are supported by each method in addi
 </div></div>
 </div>
 <a id="method_get_clients_offices"></a><div class="element clickable method public method_get_clients_offices " data-toggle="collapse" data-target=".method_get_clients_offices .collapse" title="public">
-<h2>get_clients_offices()
-        </h2>
-<pre>get_clients_offices() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>View all offices on a mutli-user account.</h2>
+<pre>get_clients_offices(array $args<code> = array()</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getOffices">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Query args to send in to API call.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>All offices on the account or those matching filter values.</div>
+</div></div>
 </div>
 <a id="method_get_clients_postalcodes"></a><div class="element clickable method public method_get_clients_postalcodes " data-toggle="collapse" data-target=".method_get_clients_postalcodes .collapse" title="public">
-<h2>get_clients_postalcodes()
-        </h2>
-<pre>get_clients_postalcodes() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Returns the postalcodes available in each of a client's postalcode lists. Since a client can build any number of
+postalcode lists this method requires the ID of which list you want to view. To get a list of all postalcode
+lists available do not send the primary request ID. The default list on each account has the id combinedActiveMLS.</h2>
+<pre>get_clients_postalcodes(string $list_id<code> = ''</code>, array $args<code> = array()</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Note: This method was previously called as &quot;zipcodes&quot; but was changed to keep API format more international.
+Calls to &quot;zipcodes&quot; will be forwarded to &quot;postalcodes&quot; and &quot;zipcodes&quot; is listed as deprecated in the method list.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getPostalcodes">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$list_id</h4>
+<code>string</code><p>If no ID is given a list of IDs is returned.</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Query args to send in to API call.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>All postalcodes in a given list or, if no list ID is provided, a list of list IDs.</div>
+</div></div>
 </div>
 <a id="method_get_clients_postalcodeslistname"></a><div class="element clickable method public method_get_clients_postalcodeslistname " data-toggle="collapse" data-target=".method_get_clients_postalcodeslistname .collapse" title="public">
-<h2>get_clients_postalcodeslistname()
-        </h2>
-<pre>get_clients_postalcodeslistname() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Returns the IDs and names for each of a client's postalcode lists including MLS postalcode lists. To get the list
+of all postal code lists available do not send the primary request ID. The default list on each account has the ID
+combinedActiveMLS</h2>
+<pre>get_clients_postalcodeslistname() : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getPostalcodeslistname">Documentation.</a></td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>A list of city list IDs and names</div>
+</div></div>
 </div>
 <a id="method_get_clients_properties"></a><div class="element clickable method public method_get_clients_properties " data-toggle="collapse" data-target=".method_get_clients_properties .collapse" title="public">
-<h2>get_clients_properties()
-        </h2>
-<pre>get_clients_properties() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Returns the search results for a provided saved link ID.</h2>
+<pre>get_clients_properties(string $saved_links_id, array $args<code> = array()</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Note: Valid ancillarykey is required in the request header.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-properties">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$saved_links_id</h4>
+<code>string</code><p>The ID of a client's saved link.</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Query args to send in to API call.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>All property results for a provided Saved Link ID.</div>
+</div></div>
 </div>
 <a id="method_get_clients_savedlinks"></a><div class="element clickable method public method_get_clients_savedlinks " data-toggle="collapse" data-target=".method_get_clients_savedlinks .collapse" title="public">
-<h2>get_clients_savedlinks()
-        </h2>
-<pre>get_clients_savedlinks() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Get saved links for a given client account.</h2>
+<pre>get_clients_savedlinks(array $args<code> = array()</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getSavedlinks">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Query args to send in to API call.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>All saved links on the account.</div>
+</div></div>
 </div>
 <a id="method_get_clients_searchquery"></a><div class="element clickable method public method_get_clients_searchquery " data-toggle="collapse" data-target=".method_get_clients_searchquery .collapse" title="public">
-<h2>get_clients_searchquery()
-        </h2>
-<pre>get_clients_searchquery() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Performs search and returns the results.</h2>
+<pre>get_clients_searchquery(array $args<code> = array()</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Note: Valid ancillarykey is required in the request header.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getSearchquery">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Query args to send in to API call.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>All available APIs/Components.</div>
+</div></div>
 </div>
 <a id="method_get_clients_soldpending"></a><div class="element clickable method public method_get_clients_soldpending " data-toggle="collapse" data-target=".method_get_clients_soldpending .collapse" title="public">
-<h2>get_clients_soldpending()
-        </h2>
-<pre>get_clients_soldpending() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Returns a basic set of information for all of the client's sold and pending properties. That is, those that have
+been removed from their MLS data.</h2>
+<pre>get_clients_soldpending(array $args<code> = array()</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getSoldpending">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Query args to send in to API call.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Sold/pending properties on the account.</div>
+</div></div>
 </div>
 <a id="method_get_clients_supplemental"></a><div class="element clickable method public method_get_clients_supplemental " data-toggle="collapse" data-target=".method_get_clients_supplemental .collapse" title="public">
-<h2>get_clients_supplemental()
-        </h2>
-<pre>get_clients_supplemental() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Returns a basic set of information for all of the client's supplemental (non-MLS) properties.</h2>
+<pre>get_clients_supplemental(array $args<code> = array()</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getSupplemental">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Query args to send in to API call.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Supplemental properties on the account.</div>
+</div></div>
 </div>
 <a id="method_get_clients_systemlinks"></a><div class="element clickable method public method_get_clients_systemlinks " data-toggle="collapse" data-target=".method_get_clients_systemlinks .collapse" title="public">
-<h2>get_clients_systemlinks()
-        </h2>
-<pre>get_clients_systemlinks() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Gathers all the pages system pages (search, featured, contact, etc) that can be directly linked to without
+additional property information being included in the URL.</h2>
+<pre>get_clients_systemlinks(string|array $rf<code> = ''</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getSystemlinks">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$rf</h4>
+<code>string</code><code>array</code><p>String or array of fields to return in the output.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>The name, unique ID, and URL for all system links on the account. Additionally there
+                           is a boolean named systemresults. If true this is a property results page that requires
+                           additional parameters. This means the url can be useful when dynamically building
+                           results page links but should not be linked to directly. When a client has more than
+                           one MLS on their account, listings for search pages that can vary by MLS ID will
+                           include a subpages array element.</div>
+</div></div>
 </div>
 <a id="method_get_clients_widgets"></a><div class="element clickable method public method_get_clients_widgets " data-toggle="collapse" data-target=".method_get_clients_widgets .collapse" title="public">
-<h2>get_clients_widgets()
-        </h2>
-<pre>get_clients_widgets() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Gather all the URLs for javascript widgets on the user's account. These widgets can then be placed on the user's
+main site via the included URLs.</h2>
+<pre>get_clients_widgets(string|array $rf<code> = ''</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getWidgetsrc">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$rf</h4>
+<code>string</code><code>array</code><p>String or array of fields to return in the output.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>The name, unique ID and URL for all javascript widgets that have been created on the
+                           user's account.</div>
+</div></div>
 </div>
 <a id="method_get_clients_zipcodes"></a><div class="element clickable method public method_get_clients_zipcodes " data-toggle="collapse" data-target=".method_get_clients_zipcodes .collapse" title="public">
-<h2>get_clients_zipcodes()
-        </h2>
-<pre>get_clients_zipcodes() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Returns the zipcodes available in each of a client's zipcode lists. Since a client can build any number of
+zipcode lists this method requires the ID of which list you want to view. To get a list of all zipcode lists
+available do not send the primary request ID. The default list on each account has the id combinedActiveMLS.</h2>
+<pre>get_clients_zipcodes(string $list_id<code> = ''</code>, string|array $rf<code> = ''</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getZipcodes">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$list_id</h4>
+<code>string</code><p>If no ID is given a list of IDs is returned.</p></div>
+<div class="subelement argument">
+<h4>$rf</h4>
+<code>string</code><code>array</code><p>String or array of fields to return in the output.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>All zipcodes in a given list or, if no list ID is provided, a list of list IDs..</div>
+</div></div>
 </div>
 <a id="method_get_idx_domain"></a><div class="element clickable method public method_get_idx_domain " data-toggle="collapse" data-target=".method_get_idx_domain .collapse" title="public">
 <h2>Get domain used for displaying IDX pages.</h2>
@@ -756,26 +1034,76 @@ request methods (GET, PUT, POST, or DELETE) are supported by each method in addi
 <code>array</code>Array containing domain 'scheme' &amp; 'url'.</div>
 </div></div>
 </div>
-<a id="method_get_lead"></a><div class="element clickable method public method_get_lead " data-toggle="collapse" data-target=".method_get_lead .collapse" title="public">
-<h2>get_lead()
-        </h2>
-<pre>get_lead() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<a id="method_get_leads"></a><div class="element clickable method public method_get_leads " data-toggle="collapse" data-target=".method_get_leads .collapse" title="public">
+<h2>Get information for one or multiple leads.</h2>
+<pre>get_leads(string $lead_id<code> = ''</code>, array $args<code> = array()</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-getlead">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$lead_id</h4>
+<code>string</code><p>If no ID is given a list of IDs is returned.</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Query args to send in to API call.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>If a lead ID is provided detailed information about that lead is returned. Otherwise
+                        simple information about all leads is returned.</div>
+</div></div>
 </div>
 <a id="method_get_leads_listcomponents"></a><div class="element clickable method public method_get_leads_listcomponents " data-toggle="collapse" data-target=".method_get_leads_listcomponents .collapse" title="public">
-<h2>get_leads_listcomponents()
-        </h2>
-<pre>get_leads_listcomponents() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>This is a simple, access anywhere, method for getting a list of all API components available.</h2>
+<pre>get_leads_listcomponents() : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-getListcomponents">Documentation.</a></td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>All available APIs/Components.</div>
+</div></div>
 </div>
 <a id="method_get_leads_listmethods"></a><div class="element clickable method public method_get_leads_listmethods " data-toggle="collapse" data-target=".method_get_leads_listmethods .collapse" title="public">
-<h2>get_leads_listmethods()
-        </h2>
-<pre>get_leads_listmethods() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>This is a simple, access anywhere, method for getting a list of all API components available.</h2>
+<pre>get_leads_listmethods() : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-listmethods">Documentation.</a></td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Basic information about all available methods in this API.</div>
+</div></div>
 </div>
 <a id="method_get_leads_note"></a><div class="element clickable method public method_get_leads_note " data-toggle="collapse" data-target=".method_get_leads_note .collapse" title="public">
 <h2>get_leads_note()
@@ -799,106 +1127,445 @@ request methods (GET, PUT, POST, or DELETE) are supported by each method in addi
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 <a id="method_get_leadtraffic"></a><div class="element clickable method public method_get_leadtraffic " data-toggle="collapse" data-target=".method_get_leadtraffic .collapse" title="public">
-<h2>get_leadtraffic()
-        </h2>
-<pre>get_leadtraffic() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="method_get_mls_age"></a><div class="element clickable method public method_get_mls_age " data-toggle="collapse" data-target=".method_get_mls_age .collapse" title="public">
-<h2>[get_mls_age description]</h2>
-<pre>get_mls_age() : \[type]</pre>
-<div class="labels"></div>
+<h2>Get traffic history for a specified lead.</h2>
+<pre>get_leadtraffic(string $lead_id, array $args<code> = array()</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
+<div class="long_description"><p>For bandwidth and memory considerations there is a limit of 5,000 on the number of lead traffics that can be
+returned in any single request.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-getLeadtraffic">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$lead_id</h4>
+<code>string</code><p>If no ID is given a list of IDs is returned.</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Query args to send in to API call.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>\[type]</code>[description]</div>
+<code>array</code>The applicable client account ID, date, lead ID, IP , page, and referrer.</div>
+</div></div>
+</div>
+<a id="method_get_mls_age"></a><div class="element clickable method public method_get_mls_age " data-toggle="collapse" data-target=".method_get_mls_age .collapse" title="public">
+<h2>Gives the date and time a particular MLS was last downloaded, processed and the last time images gathering was completed.</h2>
+<pre>get_mls_age(string $idx_id, string|array $rf<code> = ''</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Note: dates/times given are UTC.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getAge">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$idx_id</h4>
+<code>string</code><p>Format: x000</p></div>
+<div class="subelement argument">
+<h4>$rf</h4>
+<code>string</code><code>array</code><p>String or array of fields to return in the output.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>An array of timestamps for last downloaded, last processes and last images gathered.</div>
 </div></div>
 </div>
 <a id="method_get_mls_approvedmls"></a><div class="element clickable method public method_get_mls_approvedmls " data-toggle="collapse" data-target=".method_get_mls_approvedmls .collapse" title="public">
-<h2>get_mls_approvedmls()
-        </h2>
-<pre>get_mls_approvedmls() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>This method provides all of the IDX IDs and names for all of the paperwork approved MLSs on the client's account.</h2>
+<pre>get_mls_approvedmls(string|array $rf<code> = ''</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Note: This method was previously camelcased as &quot;approvedMLS&quot; but was made lower case to fit the API naming
+convention. Calls to &quot;approvedMLS&quot; will be forwarded to &quot;approvedmls&quot; and &quot;approvedMLS&quot; is listed as deprecated
+in the method list.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getApprovedmls">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$rf</h4>
+<code>string</code><code>array</code><p>String or array of fields to return in the output.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>A list of IDs and names for all MLSs approved for display on the client account.</div>
+</div></div>
 </div>
 <a id="method_get_mls_cities"></a><div class="element clickable method public method_get_mls_cities " data-toggle="collapse" data-target=".method_get_mls_cities .collapse" title="public">
-<h2>get_mls_cities()
-        </h2>
-<pre>get_mls_cities() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>All cities represented in the current set of MLS data are available from this method. The output can be filtered
+using additional GET parameters.</h2>
+<pre>get_mls_cities(string $idx_id, string $filter_field<code> = ''</code>, string $filter_value<code> = ''</code>, string|array $rf<code> = ''</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getCities">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$idx_id</h4>
+<code>string</code><p>Format: x000</p></div>
+<div class="subelement argument">
+<h4>$filter_field</h4>
+<code>string</code><p>The field to use when filtering output.
+Allowed values: "cityID, cityName, stateAbrv, mlsPtID"</p></div>
+<div class="subelement argument">
+<h4>$filter_value</h4>
+<code>string</code><p>The value by which to filter. Conditional on use of filterField</p></div>
+<div class="subelement argument">
+<h4>$rf</h4>
+<code>string</code><code>array</code><p>String or array of fields to return in the output.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Available cities along with applicable city ID, property type, and state as
+                                     well as a count of the number of occurrences for each value.</div>
+</div></div>
 </div>
 <a id="method_get_mls_counties"></a><div class="element clickable method public method_get_mls_counties " data-toggle="collapse" data-target=".method_get_mls_counties .collapse" title="public">
-<h2>get_mls_counties()
-        </h2>
-<pre>get_mls_counties() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>All counties represented in the current set of MLS data are available from this method. The output can be
+filtered using additional GET parameters.</h2>
+<pre>get_mls_counties(string $idx_id, string $filter_field<code> = ''</code>, string $filter_value<code> = ''</code>, string|array $rf<code> = ''</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getCounties">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$idx_id</h4>
+<code>string</code><p>Format: x000</p></div>
+<div class="subelement argument">
+<h4>$filter_field</h4>
+<code>string</code><p>The field to use when filtering output.
+Allowed values: "countyID, countyName, stateAbrv, mlsPtID"</p></div>
+<div class="subelement argument">
+<h4>$filter_value</h4>
+<code>string</code><p>The value by which to filter. Conditional on use of filterField</p></div>
+<div class="subelement argument">
+<h4>$rf</h4>
+<code>string</code><code>array</code><p>String or array of fields to return in the output.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Available counties along with applicable county ID, property type, and state
+                                     as well as a count of the number of occurrences of each value.</div>
+</div></div>
 </div>
 <a id="method_get_mls_listcomponents"></a><div class="element clickable method public method_get_mls_listcomponents " data-toggle="collapse" data-target=".method_get_mls_listcomponents .collapse" title="public">
-<h2>get_mls_listcomponents()
-        </h2>
-<pre>get_mls_listcomponents() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>This is a simple, access anywhere, method for getting a list of all API components available.</h2>
+<pre>get_mls_listcomponents() : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getListcomponents">Documentation.</a></td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>All available APIs/Components</div>
+</div></div>
 </div>
 <a id="method_get_mls_listmethods"></a><div class="element clickable method public method_get_mls_listmethods " data-toggle="collapse" data-target=".method_get_mls_listmethods .collapse" title="public">
-<h2>get_mls_listmethods()
-        </h2>
-<pre>get_mls_listmethods() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>A simple method for listing all available methods in the current API component. This method will also list which
+request methods (GET, PUT, POST, or DELETE) are supported by each method in addition to each method status.</h2>
+<pre>get_mls_listmethods() : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-listmethods">Documentation.</a></td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Basic information about all available methods in this API.</div>
+</div></div>
 </div>
 <a id="method_get_mls_postalcodes"></a><div class="element clickable method public method_get_mls_postalcodes " data-toggle="collapse" data-target=".method_get_mls_postalcodes .collapse" title="public">
-<h2>get_mls_postalcodes()
-        </h2>
-<pre>get_mls_postalcodes() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>All postal codes represented in the current set of MLS data are available from this method. The output can be
+filtered using additional GET parameters.</h2>
+<pre>get_mls_postalcodes(string $idx_id, string $filter_field<code> = ''</code>, string $filter_value<code> = ''</code>, string|array $rf<code> = ''</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getPostalcodes">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$idx_id</h4>
+<code>string</code><p>Format: x000</p></div>
+<div class="subelement argument">
+<h4>$filter_field</h4>
+<code>string</code><p>The field to use when filtering output.
+Allowed values: "id, stateAbrv, mlsPtID"</p></div>
+<div class="subelement argument">
+<h4>$filter_value</h4>
+<code>string</code><p>The value by which to filter. Conditional on use of filterField</p></div>
+<div class="subelement argument">
+<h4>$rf</h4>
+<code>string</code><code>array</code><p>String or array of fields to return in the output.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Available postalcodes along with applicable property type and state as well
+                                     as a count of the number of occurrences of each value.</div>
+</div></div>
 </div>
 <a id="method_get_mls_prices"></a><div class="element clickable method public method_get_mls_prices " data-toggle="collapse" data-target=".method_get_mls_prices .collapse" title="public">
-<h2>get_mls_prices()
-        </h2>
-<pre>get_mls_prices() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>The sum total of properties listed in a given MLS as well as sums for each property type in the MLS.</h2>
+<pre>get_mls_prices(string $idx_id, string|array $rf<code> = ''</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getPrices">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$idx_id</h4>
+<code>string</code><p>Format: x000</p></div>
+<div class="subelement argument">
+<h4>$rf</h4>
+<code>string</code><code>array</code><p>String or array of fields to return in the output.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>A multidimensional array with the total sum and the sum for each property type.</div>
+</div></div>
 </div>
 <a id="method_get_mls_propertycount"></a><div class="element clickable method public method_get_mls_propertycount " data-toggle="collapse" data-target=".method_get_mls_propertycount .collapse" title="public">
-<h2>get_mls_propertycount()
-        </h2>
-<pre>get_mls_propertycount() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Gives a total number of listings available for a given city, county, or zipcode.</h2>
+<pre>get_mls_propertycount(string $idx_id, string $count_type<code> = ''</code>, integer $count_specifier<code> = ''</code>) : integer</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getPropertycount">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$idx_id</h4>
+<code>string</code><p>Format: x000</p></div>
+<div class="subelement argument">
+<h4>$count_type</h4>
+<code>string</code><p>Specify if you are looking for the count of a city, county, or zipcode.
+Allowed values: "city", "county", "zipcode"</p></div>
+<div class="subelement argument">
+<h4>$count_specifier</h4>
+<code>integer</code><p>The numeric city ID, county ID, or zipcode for which you want to get a property count.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>integer</code>An integer count of the number of properties.</div>
+</div></div>
 </div>
 <a id="method_get_mls_propertytypes"></a><div class="element clickable method public method_get_mls_propertytypes " data-toggle="collapse" data-target=".method_get_mls_propertytypes .collapse" title="public">
-<h2>get_mls_propertytypes()
-        </h2>
-<pre>get_mls_propertytypes() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Gives the property type information for all types that are available on a given MLS.</h2>
+<pre>get_mls_propertytypes(string $idx_id, string $filter_field<code> = ''</code>, string $filter_value<code> = ''</code>, string|array $rf<code> = ''</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getPropertytypes">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$idx_id</h4>
+<code>string</code><p>Format: x000</p></div>
+<div class="subelement argument">
+<h4>$filter_field</h4>
+<code>string</code><p>The field to use when filtering output.
+Allowed values: "mlsPtID, mlsPropertyType"</p></div>
+<div class="subelement argument">
+<h4>$filter_value</h4>
+<code>string</code><p>The value by which to filter. Conditional on use of filterField</p></div>
+<div class="subelement argument">
+<h4>$rf</h4>
+<code>string</code><code>array</code><p>String or array of fields to return in the output.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>An array of property type information including MLS property type ID, MLS
+                                     property type name, parent property type, and subtypes.</div>
+</div></div>
 </div>
 <a id="method_get_mls_searchfields"></a><div class="element clickable method public method_get_mls_searchfields " data-toggle="collapse" data-target=".method_get_mls_searchfields .collapse" title="public">
-<h2>get_mls_searchfields()
-        </h2>
-<pre>get_mls_searchfields() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>All the fields in a given MLS that are currently allowed to be searched according to MLS guidelines.</h2>
+<pre>get_mls_searchfields(string $idx_id, string $filter_field<code> = ''</code>, string $filter_value<code> = ''</code>, string|array $rf<code> = ''</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getSearchfields">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$idx_id</h4>
+<code>string</code><p>Format: x000</p></div>
+<div class="subelement argument">
+<h4>$filter_field</h4>
+<code>string</code><p>The field to use when filtering output.
+Allowed values: "mlsPtID, parentPtID"</p></div>
+<div class="subelement argument">
+<h4>$filter_value</h4>
+<code>string</code><p>The value by which to filter. Conditional on use of filterField</p></div>
+<div class="subelement argument">
+<h4>$rf</h4>
+<code>string</code><code>array</code><p>String or array of fields to return in the output.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>An array containing all MLS fields that are searchable according to MLS rules
+                                     and IDX guidelines. Array contains the field's name (which is the field to
+                                     be used as a key when performing a search), the display name (as should be
+                                     displayed in a search form), and both the mlsPtID and parentPtID to which
+                                     the field belongs.</div>
+</div></div>
 </div>
 <a id="method_get_mls_searchfieldvalues"></a><div class="element clickable method public method_get_mls_searchfieldvalues " data-toggle="collapse" data-target=".method_get_mls_searchfieldvalues .collapse" title="public">
-<h2>get_mls_searchfieldvalues()
-        </h2>
-<pre>get_mls_searchfieldvalues() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Field values in a given MLS that are currently allowed to be searched according to MLS guidelines.</h2>
+<pre>get_mls_searchfieldvalues(string $idx_id, integer $mls_pt_id, string $name) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getSearchfieldvalues">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$idx_id</h4>
+<code>string</code><p>Format: x000</p></div>
+<div class="subelement argument">
+<h4>$mls_pt_id</h4>
+<code>integer</code><p>The IDX assigned ID of the MLS property type(s). See the propertytypes method in this API/Component for a lookup of property type IDs.</p></div>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>Mls field name - the IDX assigned name of the MLS field name. See the searchfields for the list of searchable fields.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>An array containing all the values for the given mls field.</div>
+</div></div>
 </div>
 <a id="method_get_mls_zipcodes"></a><div class="element clickable method public method_get_mls_zipcodes " data-toggle="collapse" data-target=".method_get_mls_zipcodes .collapse" title="public">
-<h2>get_mls_zipcodes()
-        </h2>
-<pre>get_mls_zipcodes() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>All zip codes represented in the current set of MLS data are available from this method. The output can be
+filtered using additional GET parameters.</h2>
+<pre>get_mls_zipcodes(string $idx_id, string $filter_field<code> = ''</code>, string $filter_value<code> = ''</code>, string|array $rf<code> = ''</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getZipcodes">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$idx_id</h4>
+<code>string</code><p>Format: x000</p></div>
+<div class="subelement argument">
+<h4>$filter_field</h4>
+<code>string</code><p>The field to use when filtering output.
+Allowed values: "mlsPtID, parentPtID"</p></div>
+<div class="subelement argument">
+<h4>$filter_value</h4>
+<code>string</code><p>The value by which to filter. Conditional on use of filterField</p></div>
+<div class="subelement argument">
+<h4>$rf</h4>
+<code>string</code><code>array</code><p>String or array of fields to return in the output.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Available zipcodes along with applicable property type and state as well as
+                                     a count of the number of occurrences of each value.</div>
+</div></div>
 </div>
 <a id="method_get_partners_aggregatedagents"></a><div class="element clickable method public method_get_partners_aggregatedagents " data-toggle="collapse" data-target=".method_get_partners_aggregatedagents .collapse" title="public">
 <h2>Get a list of all agents for your clients.</h2>
@@ -1364,10 +2031,42 @@ is specified then only the IDX property types (parentPtID) will be returned.</p>
 </div></div>
 </div>
 <a id="method_post_bulkleads"></a><div class="element clickable method public method_post_bulkleads " data-toggle="collapse" data-target=".method_post_bulkleads .collapse" title="public">
-<h2>[add_bulk_leads description]</h2>
-<pre>post_bulkleads() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Update leads in batches of up to 100 per request.</h2>
+<pre>post_bulkleads(array $data<code> = array()</code>) : mixed</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Note: Each lead field should be passed as an indexed array starting at and going to, at most, 100. There must not
+be any gaps. LeadID is required for each lead to be updated</p>
+<p>Data Example:
+$data = array(
+'id[0]' = 1,
+'firstName[0]' =&gt; 'John',
+'lastName[0]' =&gt; 'Doe',
+'email[0]' =&gt; 'john@example.com',
+'id[1]' = 2,
+'firstName[1]' =&gt; 'Aaron',
+'lastName[1]' =&gt; 'Aaronson',
+'email[1]' =&gt; 'aaron@example.com'
+);</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>POST</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-postBulklead">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code><p>Supplemental fields to update.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>If a leads are successfully updated the updated lead IDs will be returned. If no POST
+                      data is supplied then a list of updatable fields with format information is returned.</div>
+</div></div>
 </div>
 <a id="method_post_clients_dynamicwrapperurl"></a><div class="element clickable method public method_post_clients_dynamicwrapperurl " data-toggle="collapse" data-target=".method_post_clients_dynamicwrapperurl .collapse" title="public">
 <h2>Update dynamic wrapper url for global, pages and saved links. If savedLinkID, or pageID are not passed, the
@@ -1399,25 +2098,111 @@ global dynamic wrapper url will be updated.</h2>
 </div></div>
 </div>
 <a id="method_post_clients_savedlink"></a><div class="element clickable method public method_post_clients_savedlink " data-toggle="collapse" data-target=".method_post_clients_savedlink .collapse" title="public">
-<h2>post_clients_savedlink()
-        </h2>
-<pre>post_clients_savedlink() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Update an existing client's saved link</h2>
+<pre>post_clients_savedlink(string $saved_links_id, array $data<code> = array()</code>) : mixed</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This method is to be used at your own risk. We will NOT be held accountable for programmatic errors in your code
+or the improper use of search values or options within said values resulting in broken saved links.</p>
+<p>Note: The updatable fields need to be in a URL encoded, ampersand delineated query string format.</p>
+<p>Data Example:
+$data = array(
+'linkName' =&gt; 'Good_side_of_tracks',
+'pageTitle' =&gt; 'Good_side_of_tracks',
+'linkTitle' =&gt; 'Good_side_of_tracks',
+'queryString' =&gt; array('idxID' =&gt; 'a001', 'hp' =&gt; '200000')
+);</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>POST</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-postSavedlinks">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$saved_links_id</h4>
+<code>string</code><p>The ID of a client's saved link.</p></div>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code><p>Savedlink fields to update.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>If no POST data is supplied, then a list of updatable fields with format
+                               information is returned, otherwise on success 204 is returned.</div>
+</div></div>
 </div>
 <a id="method_post_clients_supplemental"></a><div class="element clickable method public method_post_clients_supplemental " data-toggle="collapse" data-target=".method_post_clients_supplemental .collapse" title="public">
-<h2>post_clients_supplemental()
-        </h2>
-<pre>post_clients_supplemental() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Update an existing supplemental listing.</h2>
+<pre>post_clients_supplemental(string $listing_id, array $data<code> = array()</code>) : mixed</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Note: if updating images, existing images are deleted and the new images are inserted instead for the listing.</p>
+<p>Data Example:
+$data = array(
+'likeIdxID' =&gt; 'a001',
+'likeMlsPtID' =&gt; '1',
+'images' =&gt; array('<a href="http://example.com/image1.jpg">http://example.com/image1.jpg</a>', '<a href="http://example.com/image2.jpg">http://example.com/image2.jpg</a>')
+);</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>POST</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-postSupplemental">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$listing_id</h4>
+<code>string</code><p>The supplemental listing ID.</p></div>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code><p>Supplemental fields to update.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>If no POST data is supplied, then a list of updatable fields with format information
+                           is returned, otherwise on success 204 is returned.</div>
+</div></div>
 </div>
 <a id="method_post_lead"></a><div class="element clickable method public method_post_lead " data-toggle="collapse" data-target=".method_post_lead .collapse" title="public">
-<h2>post_lead()
-        </h2>
-<pre>post_lead() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Update the information for one lead specified by the primary request ID.</h2>
+<pre>post_lead(integer $lead_id, array $data) : mixed</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Data Example:
+$data = array(
+'firstName' =&gt; 'John',
+'lastName' =&gt; 'Doe',
+'email' =&gt; 'john@example.com'
+);</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>POST</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-postLead">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$lead_id</h4>
+<code>integer</code><p>The ID of a lead.</p></div>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code><p>Lead fields to update.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>If a leads are successfully updated the updated lead IDs will be returned. If no POST
+                         data is supplied then a list of updatable fields with format information is returned.</div>
+</div></div>
 </div>
 <a id="method_post_leads_note"></a><div class="element clickable method public method_post_leads_note " data-toggle="collapse" data-target=".method_post_leads_note .collapse" title="public">
 <h2>post_leads_note()
@@ -1441,32 +2226,140 @@ global dynamic wrapper url will be updated.</h2>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 <a id="method_put_bulkleads"></a><div class="element clickable method public method_put_bulkleads " data-toggle="collapse" data-target=".method_put_bulkleads .collapse" title="public">
-<h2>put_bulkleads()
-        </h2>
-<pre>put_bulkleads() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Add leads in batches of up to 100 per request.</h2>
+<pre>put_bulkleads(array $data<code> = array()</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Note: Each lead field should be passed as an indexed array starting at and going to, at most, 100. There must not
+be any gaps.</p>
+<p>Data Example:
+$data = array(
+'firstName[0]' =&gt; 'John',
+'lastName[0]' =&gt; 'Doe',
+'email[0]' =&gt; 'john@example.com',
+'firstName[1]' =&gt; 'Aaron',
+'lastName[1]' =&gt; 'Aaronson',
+'email[1]' =&gt; 'aaron@example.com'
+);</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>PUT</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-getBulklead">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code><p>Supplemental fields to update.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>If a lead is successfully created the new lead IDs will be returned. If no PUT data is
+                      supplied then a list of updatable fields with format information is returned.</div>
+</div></div>
 </div>
 <a id="method_put_clients_savedlink"></a><div class="element clickable method public method_put_clients_savedlink " data-toggle="collapse" data-target=".method_put_clients_savedlink .collapse" title="public">
-<h2>put_clients_savedlink()
-        </h2>
-<pre>put_clients_savedlink() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Create a new client saved link.</h2>
+<pre>put_clients_savedlink(array $data<code> = array()</code>) : mixed</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Note: The updatable fields need to be in a URL encoded, ampersand delineated query string format. This action is
+not allowed if the client has more than 1000 saved links.</p>
+<p>Data Example:
+$data = array(
+'linkName' =&gt; 'Good_side_of_tracks',
+'pageTitle' =&gt; 'Good_side_of_tracks',
+'linkTitle' =&gt; 'Good_side_of_tracks',
+'queryString' =&gt; array('idxID' =&gt; 'a001', 'hp' =&gt; '200000')
+);</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>PUT</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-putSavedlinks">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code><p>Savedlink fields to create.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>If a client saved link is successfully created, the new saved link's ID will be
+                               returned. If no PUT data is supplied, then a list of updatable fields with format
+                               information is returned.</div>
+</div></div>
 </div>
 <a id="method_put_clients_supplemental"></a><div class="element clickable method public method_put_clients_supplemental " data-toggle="collapse" data-target=".method_put_clients_supplemental .collapse" title="public">
-<h2>put_clients_supplemental()
-        </h2>
-<pre>put_clients_supplemental() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Create a new supplemental listing.</h2>
+<pre>put_clients_supplemental(array $data<code> = array()</code>) : mixed</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Note: likeIdxID and likeMlsPtID fields are required.</p>
+<p>Data Example:
+$data = array(
+'likeIdxID' =&gt; 'a001',
+'likeMlsPtID' =&gt; '1',
+'images' =&gt; array('<a href="http://example.com/image1.jpg">http://example.com/image1.jpg</a>', '<a href="http://example.com/image2.jpg">http://example.com/image2.jpg</a>')
+);</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>PUT</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-putSupplemental">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code><p>Supplemental fields to create.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>If a supplemental listing is successfully created, the new supplemental listing ID will be
+                      returned. If no PUT data is supplied, then a list of updatable fields with format
+                      information is returned.</div>
+</div></div>
 </div>
 <a id="method_put_lead"></a><div class="element clickable method public method_put_lead " data-toggle="collapse" data-target=".method_put_lead .collapse" title="public">
-<h2>put_lead()
-        </h2>
-<pre>put_lead() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Create a new lead.</h2>
+<pre>put_lead() : mixed</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Special Note: Currently the API cannot differentiate between a lead rejected due to server error or one rejected
+due to bad email address. The lead system requires email addresses that are correctly formatted to
+cut down on garbage accounts, and they need to have a valid MX record. Most 500 error from this
+method are a result of bad email addresses. In future versions we will differentiate the error and
+make the MX record requirement optional.</p>
+<p>Data Example:
+$data = array(
+'firstName' =&gt; 'John',
+'lastName' =&gt; 'Doe',
+'email' =&gt; 'john@example.com'
+);</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>PUT</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-putLead">Documentation.</a></td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>If a lead is successfully created the new lead's ID will be returned. If no PUT data is
+                      supplied then a list of updatable fields with format information is returned.</div>
+</div></div>
 </div>
 <a id="method_put_leads_note"></a><div class="element clickable method public method_put_leads_note " data-toggle="collapse" data-target=".method_put_leads_note .collapse" title="public">
 <h2>put_leads_note()
@@ -1608,7 +2501,7 @@ global dynamic wrapper url will be updated.</h2>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2017-07-27T14:27:08-07:00.<br></footer></div>
+            generated on 2017-07-28T17:32:04-07:00.<br></footer></div>
 </div>
 </body>
 </html>
