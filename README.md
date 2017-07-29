@@ -8,23 +8,40 @@ A WordPress php library for interacting with the [IDX Broker API](https://middle
 [![Build Status](https://travis-ci.org/wp-api-libraries/wp-idxbroker-api.svg?branch=master)](https://travis-ci.org/wp-api-libraries/wp-idxbroker-api)
 
 # Example usage
-Visit the [PHPDocs](https://wp-api-libraries.github.io/wp-idxbroker-api/classes/IdxBrokerAPI.html) for the full library documentation.
+The IDX Broker API library contains a method for each API endpoint. Visit the [PHPDocs](https://wp-api-libraries.github.io/wp-idxbroker-api/classes/IdxBrokerAPI.html) for the full library documentation.
+
 ### GET Request
 ```php
 $idx_api = new IdxBrokerAPI( 'example_api_key');
 
-$results = $idx_api->build_request( 'clients/featured' )->request();
+$res1 = $idx_api->get_clients_featured();
+
+$res2 = $idx_api->get_clients_systemlinks( 'url' );
+
+$res3 = $idx_api->get_mls_approvedmls();
 ```
 
 ### POST Request
 ```php
-$fields['method'] = 'POST';
-$fields['body'] = array(
-	'dynamicURL' => 'https://example.com/luxury-real-estate',
-	'savedLinkID' => 'xxxxxx'
-);
+$res1 = $idx_api->post_clients_dynamicwrapperurl( 'https://example.com/luxury-real-estate', '12345' );
 
-$results = $idx_api->build_request( 'clients/dynamicwrapperurl', $fields )->request();
+$data = array( 'note' => 'Wheres my IDX?' );
+$res2 = $idx_api->post_leads_note( '3', '1', $data );
+
+```
+
+### PUT Request
+```php
+$data = array( 
+  'propertyName' => 'Test Property',
+  'property' => array('idxID' => 'a001', 'listingID' => '345678')
+);
+$res1 = $idx_api->put_leads_property( 812, $data );
+```
+
+### DELETE Request
+```php
+$res1 = $idx_api->delete_leads_search( 321, 8 );
 ```
 
 ### Check API Key Usage
