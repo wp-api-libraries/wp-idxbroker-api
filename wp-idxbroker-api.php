@@ -1,10 +1,9 @@
 <?php
 /**
- * IDX Broker API
+ * Library for accessing the IDX Broker API on WordPress
  *
  * @link http://middleware.idxbroker.com/docs/api/methods/index.html API Documentation
  * @package WP-API-Libraries\WP-IDX-Broker-API
- * @author sfgarza
  */
 
 /*
@@ -12,7 +11,7 @@
 * Plugin URI: https://github.com/wp-api-libraries/wp-idxbroker-api
 * Description: Perform API requests to IDX Broker in WordPress.
 * Author: WP API Libraries
-* Version: 1.0.0
+* Version: 1.1.0
 * Text Domain: wp-idxbroker-api
 * Author URI: https://wp-api-libraries.com
 * GitHub Plugin URI: https://github.com/wp-api-libraries/wp-idxbroker-api
@@ -25,9 +24,13 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 /* Check if class exists. */
 if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 	/**
-	 * IdxBrokerAPI class.
+	 * A WordPress API library for accessing the IDX Broker API.
 	 *
-	 * @package WP-IDX-Broker-API
+	 * @version 1.1.0
+	 * @link http://middleware.idxbroker.com/docs/api/methods/index.html API Documentation
+   * @package WP-API-Libraries\WP-IDX-Broker-API
+	 * @author Santiago Garza <https://github.com/sfgarza>
+   * @author imFORZA <https://github.com/imforza>
 	 */
 	class IdxBrokerAPI {
 
