@@ -168,9 +168,9 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 			return $domain;
 		}
 
-		/* ------------------------------------------------------------------------------------------------------------- */
-		/* ------------------------------------------- Partners Endpoints ---------------------------------------------- */
-		/* ------------------------------------------------------------------------------------------------------------- */
+		/* -------------------------------------------------------------------------------------------------------------
+		   ------------------------------------------- Partners Endpoints ----------------------------------------------
+		   ------------------------------------------------------------------------------------------------------------- */
 
 		/**
 		 * Get a list of all agents for your clients.
@@ -457,10 +457,9 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		}
 
 
-		/* ------------------------------------------------------------------------------------------------------------- */
-		/* ------------------------------------------- Client Endpoints ------------------------------------------------ */
-		/* ------------------------------------------------------------------------------------------------------------- */
-
+		/* -------------------------------------------------------------------------------------------------------------
+		   ------------------------------------------- Client Endpoints ------------------------------------------------
+		   ------------------------------------------------------------------------------------------------------------- */
 
 		/**
 		 * Get your account type.
@@ -768,12 +767,12 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getSavedlinks Documentation.
-		 * @param  array  $args           Query args to send in to API call.
-		 * @return array                  All saved links on the account.
+		 * @param  array $args  Query args to send in to API call.
+		 * @return array        All saved links on the account.
 		 */
 		public function get_clients_savedlinks( $args = array() ) {
 			// Prepare request.
-			$route = "clients/savedlinks";
+			$route = 'clients/savedlinks';
 			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
@@ -787,13 +786,13 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * Note: The updatable fields need to be in a URL encoded, ampersand delineated query string format.
 		 *
-     * Data Example:
-     * $data = array(
-     *  'linkName' => 'Good_side_of_tracks',
-     *  'pageTitle' => 'Good_side_of_tracks',
-     *  'linkTitle' => 'Good_side_of_tracks',
-     *  'queryString' => array('idxID' => 'a001', 'hp' => '200000')
-     * );
+		 * Data Example:
+		 * $data = array(
+		 *  'linkName' => 'Good_side_of_tracks',
+		 *  'pageTitle' => 'Good_side_of_tracks',
+		 *  'linkTitle' => 'Good_side_of_tracks',
+		 *  'queryString' => array('idxID' => 'a001', 'hp' => '200000')
+		 * );
 		 *
 		 * @api POST
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-postSavedlinks Documentation.
@@ -826,15 +825,15 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api PUT
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-putSavedlinks Documentation.
-		 * @param  array  $data           Savedlink fields to create.
-		 * @return mixed                  If a client saved link is successfully created, the new saved link's ID will be
-		 *                                returned. If no PUT data is supplied, then a list of updatable fields with format
-		 *                                information is returned.
+		 * @param  array $data    Savedlink fields to create.
+		 * @return mixed          If a client saved link is successfully created, the new saved link's ID will be
+		 *                        returned. If no PUT data is supplied, then a list of updatable fields with format
+		 *                        information is returned.
 		 */
 		public function put_clients_savedlink( $data = array() ) {
 			$fields['method'] = 'PUT';
 			$fields['body'] = $data;
-			$route = "clients/savedlinks";
+			$route = 'clients/savedlinks';
 
 			return $this->build_request( $route, $fields )->request();
 		}
@@ -846,12 +845,12 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getSearchquery Documentation.
-		 * @param  array  $args           Query args to send in to API call.
-		 * @return array                  All available APIs/Components.
+		 * @param  array $args  Query args to send in to API call.
+		 * @return array        All available APIs/Components.
 		 */
 		public function get_clients_searchquery( $args = array() ) {
 			// Prepare request.
-			$route = "clients/searchquery";
+			$route = 'clients/searchquery';
 			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
@@ -863,12 +862,12 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getSoldpending Documentation.
-		 * @param  array  $args           Query args to send in to API call.
-		 * @return array                  Sold/pending properties on the account.
+		 * @param  array $args  Query args to send in to API call.
+		 * @return array        Sold/pending properties on the account.
 		 */
 		public function get_clients_soldpending( $args = array() ) {
 			// Prepare request.
-			$route = "clients/soldpending";
+			$route = 'clients/soldpending';
 			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
@@ -897,12 +896,12 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getSupplemental Documentation.
-		 * @param  array  $args           Query args to send in to API call.
-		 * @return array                  Supplemental properties on the account.
+		 * @param  array $args  Query args to send in to API call.
+		 * @return array        Supplemental properties on the account.
 		 */
 		public function get_clients_supplemental( $args = array() ) {
 			// Prepare request.
-			$route = "clients/supplemental";
+			$route = 'clients/supplemental';
 			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
@@ -913,12 +912,12 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * Note: if updating images, existing images are deleted and the new images are inserted instead for the listing.
 		 *
-     * Data Example:
-     * $data = array(
-     *  'likeIdxID' => 'a001',
-     *  'likeMlsPtID' => '1',
-     *  'images' => array('http://example.com/image1.jpg', 'http://example.com/image2.jpg')
-     * );
+		 * Data Example:
+		 * $data = array(
+		 *  'likeIdxID' => 'a001',
+		 *  'likeMlsPtID' => '1',
+		 *  'images' => array('http://example.com/image1.jpg', 'http://example.com/image2.jpg')
+		 * );
 		 *
 		 * @api POST
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-postSupplemental Documentation.
@@ -942,22 +941,22 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * Data Example:
 		 * $data = array(
-     *  'likeIdxID' => 'a001',
-     *  'likeMlsPtID' => '1',
-     *  'images' => array('http://example.com/image1.jpg', 'http://example.com/image2.jpg')
-     * );
+		 *  'likeIdxID' => 'a001',
+		 *  'likeMlsPtID' => '1',
+		 *  'images' => array('http://example.com/image1.jpg', 'http://example.com/image2.jpg')
+		 * );
 		 *
 		 * @api PUT
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-putSupplemental Documentation.
-		 * @param  array  $data  Supplemental fields to create.
-		 * @return mixed         If a supplemental listing is successfully created, the new supplemental listing ID will be
-		 *                       returned. If no PUT data is supplied, then a list of updatable fields with format
-		 *                       information is returned.
+		 * @param  array $data  Supplemental fields to create.
+		 * @return mixed        If a supplemental listing is successfully created, the new supplemental listing ID will be
+		 *                      returned. If no PUT data is supplied, then a list of updatable fields with format
+		 *                      information is returned.
 		 */
 		public function put_clients_supplemental( $data = array() ) {
 			$fields['method'] = 'PUT';
 			$fields['body'] = $data;
-			$route = "clients/supplemental";
+			$route = 'clients/supplemental';
 
 			return $this->build_request( $route, $fields )->request();
 		}
@@ -968,17 +967,17 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getSystemlinks Documentation.
-		 * @param  string|array  $rf  String or array of fields to return in the output.
-		 * @return array              The name, unique ID, and URL for all system links on the account. Additionally there
-		 *                            is a boolean named systemresults. If true this is a property results page that requires
-		 *                            additional parameters. This means the url can be useful when dynamically building
-		 *                            results page links but should not be linked to directly. When a client has more than
-		 *                            one MLS on their account, listings for search pages that can vary by MLS ID will
-		 *                            include a subpages array element.
+		 * @param  string|array $rf  String or array of fields to return in the output.
+		 * @return array             The name, unique ID, and URL for all system links on the account. Additionally there
+		 *                           is a boolean named systemresults. If true this is a property results page that requires
+		 *                           additional parameters. This means the url can be useful when dynamically building
+		 *                           results page links but should not be linked to directly. When a client has more than
+		 *                           one MLS on their account, listings for search pages that can vary by MLS ID will
+		 *                           include a subpages array element.
 		 */
-		public function get_clients_systemlinks( $rf = '') {
+		public function get_clients_systemlinks( $rf = '' ) {
 			// Prepare request.
-			$route = "clients/systemlinks";
+			$route = 'clients/systemlinks';
 			$route = add_query_arg( array( 'rf' => $rf ), $route );
 
 			return $this->build_request( $route )->request();
@@ -990,13 +989,13 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getWidgetsrc Documentation.
-		 * @param  string|array  $rf  String or array of fields to return in the output.
-		 * @return array              The name, unique ID and URL for all javascript widgets that have been created on the
-		 *                            user's account.
+		 * @param  string|array $rf  String or array of fields to return in the output.
+		 * @return array             The name, unique ID and URL for all javascript widgets that have been created on the
+		 *                           user's account.
 		 */
 		public function get_clients_widgets( $rf = '' ) {
 			// Prepare request.
-			$route = "clients/widgetsrc";
+			$route = 'clients/widgetsrc';
 			$route = add_query_arg( array( 'rf' => $rf ), $route );
 
 			return $this->build_request( $route )->request();
@@ -1014,7 +1013,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 */
 		public function delete_clients_wrappercache() {
 			$fields['method'] = 'DELETE';
-			return $this->build_request( "clients/wrappercache", $fields )->request();
+			return $this->build_request( 'clients/wrappercache', $fields )->request();
 		}
 
 		/**
@@ -1024,9 +1023,9 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getZipcodes Documentation.
-		 * @param  string        $list_id If no ID is given a list of IDs is returned.
-		 * @param  string|array  $rf      String or array of fields to return in the output.
-		 * @return array                  All zipcodes in a given list or, if no list ID is provided, a list of list IDs..
+		 * @param  string       $list_id If no ID is given a list of IDs is returned.
+		 * @param  string|array $rf      String or array of fields to return in the output.
+		 * @return array                 All zipcodes in a given list or, if no list ID is provided, a list of list IDs..
 		 */
 		public function get_clients_zipcodes( $list_id = '', $rf = '' ) {
 			// Prepare request.
@@ -1036,9 +1035,9 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 			return $this->build_request( $route )->request();
 		}
 
-		/* ------------------------------------------------------------------------------------------------------------- */
-		/* --------------------------------------------- MLS Endpoints ------------------------------------------------- */
-		/* ------------------------------------------------------------------------------------------------------------- */
+		/* -------------------------------------------------------------------------------------------------------------
+		   --------------------------------------------- MLS Endpoints -------------------------------------------------
+		   ------------------------------------------------------------------------------------------------------------- */
 
 		/**
 		 * Gives the date and time a particular MLS was last downloaded, processed and the last time images gathering was completed.
@@ -1047,9 +1046,9 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getAge Documentation.
-		 * @param  string        $idx_id  Format: x000
-		 * @param  string|array  $rf      String or array of fields to return in the output.
-		 * @return array                  An array of timestamps for last downloaded, last processes and last images gathered.
+		 * @param  string       $idx_id  Format: x000
+		 * @param  string|array $rf      String or array of fields to return in the output.
+		 * @return array                 An array of timestamps for last downloaded, last processes and last images gathered.
 		 */
 		public function get_mls_age( $idx_id, $rf = '' ) {
 			// Prepare request.
@@ -1068,12 +1067,12 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getApprovedmls Documentation.
-		 * @param  string|array  $rf  String or array of fields to return in the output.
-		 * @return array              A list of IDs and names for all MLSs approved for display on the client account.
+		 * @param  string|array $rf  String or array of fields to return in the output.
+		 * @return array             A list of IDs and names for all MLSs approved for display on the client account.
 		 */
 		public function get_mls_approvedmls( $rf = '' ) {
 			// Prepare request.
-			$route = "mls/approvedmls";
+			$route = 'mls/approvedmls';
 			$route = add_query_arg( array( 'rf' => $rf ), $route );
 
 			return $this->build_request( $route )->request();
@@ -1085,13 +1084,13 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getCities Documentation.
-		 * @param  string        $idx_id        Format: x000
-		 * @param  string        $filter_field  The field to use when filtering output.
-		 *                                      Allowed values: "cityID, cityName, stateAbrv, mlsPtID"
-		 * @param  string        $filter_value  The value by which to filter. Conditional on use of filterField
-		 * @param  string|array  $rf            String or array of fields to return in the output.
-		 * @return array                        Available cities along with applicable city ID, property type, and state as
-		 *                                      well as a count of the number of occurrences for each value.
+		 * @param  string       $idx_id        Format: x000
+		 * @param  string       $filter_field  The field to use when filtering output.
+		 *                                     Allowed values: "cityID, cityName, stateAbrv, mlsPtID"
+		 * @param  string       $filter_value  The value by which to filter. Conditional on use of filterField
+		 * @param  string|array $rf            String or array of fields to return in the output.
+		 * @return array                       Available cities along with applicable city ID, property type, and state as
+		 *                                     well as a count of the number of occurrences for each value.
 		 */
 		public function get_mls_cities( $idx_id, $filter_field = '', $filter_value = '', $rf = '' ) {
 			// Prepare request.
@@ -1107,13 +1106,13 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getCounties Documentation.
-		 * @param  string        $idx_id        Format: x000
-		 * @param  string        $filter_field  The field to use when filtering output.
-		 *                                      Allowed values: "countyID, countyName, stateAbrv, mlsPtID"
-		 * @param  string        $filter_value  The value by which to filter. Conditional on use of filterField
-		 * @param  string|array  $rf            String or array of fields to return in the output.
-		 * @return array                        Available counties along with applicable county ID, property type, and state
-		 *                                      as well as a count of the number of occurrences of each value.
+		 * @param  string       $idx_id        Format: x000
+		 * @param  string       $filter_field  The field to use when filtering output.
+		 *                                     Allowed values: "countyID, countyName, stateAbrv, mlsPtID"
+		 * @param  string       $filter_value  The value by which to filter. Conditional on use of filterField
+		 * @param  string|array $rf            String or array of fields to return in the output.
+		 * @return array                       Available counties along with applicable county ID, property type, and state
+		 *                                     as well as a count of the number of occurrences of each value.
 		 */
 		public function get_mls_counties( $idx_id, $filter_field = '', $filter_value = '', $rf = '' ) {
 			// Prepare request.
@@ -1132,7 +1131,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return array All available APIs/Components
 		 */
 		public function get_mls_listcomponents() {
-			return $this->build_request( "mls/listcomponents" )->request();
+			return $this->build_request( 'mls/listcomponents' )->request();
 		}
 
 		/**
@@ -1145,7 +1144,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return array Basic information about all available methods in this API.
 		 */
 		public function get_mls_listmethods() {
-			return $this->build_request( "mls/listmethods" )->request();
+			return $this->build_request( 'mls/listmethods' )->request();
 		}
 
 		/**
@@ -1154,13 +1153,13 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getPostalcodes Documentation.
-		 * @param  string        $idx_id        Format: x000
-		 * @param  string        $filter_field  The field to use when filtering output.
-		 *                                      Allowed values: "id, stateAbrv, mlsPtID"
-		 * @param  string        $filter_value  The value by which to filter. Conditional on use of filterField
-		 * @param  string|array  $rf            String or array of fields to return in the output.
-		 * @return array                        Available postalcodes along with applicable property type and state as well
-		 *                                      as a count of the number of occurrences of each value.
+		 * @param  string       $idx_id        Format: x000
+		 * @param  string       $filter_field  The field to use when filtering output.
+		 *                                     Allowed values: "id, stateAbrv, mlsPtID"
+		 * @param  string       $filter_value  The value by which to filter. Conditional on use of filterField
+		 * @param  string|array $rf            String or array of fields to return in the output.
+		 * @return array                       Available postalcodes along with applicable property type and state as well
+		 *                                     as a count of the number of occurrences of each value.
 		 */
 		public function get_mls_postalcodes( $idx_id, $filter_field = '', $filter_value = '', $rf = '' ) {
 			// Prepare request.
@@ -1175,11 +1174,11 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getPrices Documentation.
-		 * @param  string        $idx_id        Format: x000
-		 * @param  string|array  $rf            String or array of fields to return in the output.
-		 * @return array                        A multidimensional array with the total sum and the sum for each property type.
+		 * @param  string       $idx_id        Format: x000
+		 * @param  string|array $rf            String or array of fields to return in the output.
+		 * @return array                       A multidimensional array with the total sum and the sum for each property type.
 		 */
-		public function get_mls_prices( $idx_id, $rf = '') {
+		public function get_mls_prices( $idx_id, $rf = '' ) {
 			// Prepare request.
 			$route = "mls/prices/$idx_id";
 			$route = add_query_arg( array( 'rf' => $rf ), $route );
@@ -1198,7 +1197,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @param  int    $count_specifier  The numeric city ID, county ID, or zipcode for which you want to get a property count.
 		 * @return int                      An integer count of the number of properties.
 		 */
-		public function get_mls_propertycount( $idx_id, $count_type = '', $count_specifier = '') {
+		public function get_mls_propertycount( $idx_id, $count_type = '', $count_specifier = '' ) {
 			// Prepare request.
 			$route = "mls/propertycount/$idx_id";
 			$route = add_query_arg( array( 'countType' => $count_type, 'countSpecifier' => $count_specifier ), $route );
@@ -1211,13 +1210,13 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getPropertytypes Documentation.
-		 * @param  string        $idx_id        Format: x000
-		 * @param  string        $filter_field  The field to use when filtering output.
-		 *                                      Allowed values: "mlsPtID, mlsPropertyType"
-		 * @param  string        $filter_value  The value by which to filter. Conditional on use of filterField
-		 * @param  string|array  $rf            String or array of fields to return in the output.
-		 * @return array                        An array of property type information including MLS property type ID, MLS
-		 *                                      property type name, parent property type, and subtypes.
+		 * @param  string       $idx_id        Format: x000
+		 * @param  string       $filter_field  The field to use when filtering output.
+		 *                                     Allowed values: "mlsPtID, mlsPropertyType"
+		 * @param  string       $filter_value  The value by which to filter. Conditional on use of filterField
+		 * @param  string|array $rf            String or array of fields to return in the output.
+		 * @return array                       An array of property type information including MLS property type ID, MLS
+		 *                                     property type name, parent property type, and subtypes.
 		 */
 		public function get_mls_propertytypes( $idx_id, $filter_field = '', $filter_value = '', $rf = '' ) {
 			// Prepare request.
@@ -1232,16 +1231,16 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getSearchfields Documentation.
-		 * @param  string        $idx_id        Format: x000
-		 * @param  string        $filter_field  The field to use when filtering output.
-		 *                                      Allowed values: "mlsPtID, parentPtID"
-		 * @param  string        $filter_value  The value by which to filter. Conditional on use of filterField
-		 * @param  string|array  $rf            String or array of fields to return in the output.
-		 * @return array                        An array containing all MLS fields that are searchable according to MLS rules
-		 *                                      and IDX guidelines. Array contains the field's name (which is the field to
-		 *                                      be used as a key when performing a search), the display name (as should be
-		 *                                      displayed in a search form), and both the mlsPtID and parentPtID to which
-		 *                                      the field belongs.
+		 * @param  string       $idx_id        Format: x000
+		 * @param  string       $filter_field  The field to use when filtering output.
+		 *                                     Allowed values: "mlsPtID, parentPtID"
+		 * @param  string       $filter_value  The value by which to filter. Conditional on use of filterField
+		 * @param  string|array $rf            String or array of fields to return in the output.
+		 * @return array                       An array containing all MLS fields that are searchable according to MLS rules
+		 *                                     and IDX guidelines. Array contains the field's name (which is the field to
+		 *                                     be used as a key when performing a search), the display name (as should be
+		 *                                     displayed in a search form), and both the mlsPtID and parentPtID to which
+		 *                                     the field belongs.
 		 */
 		public function get_mls_searchfields( $idx_id, $filter_field = '', $filter_value = '', $rf = '' ) {
 			// Prepare request.
@@ -1256,10 +1255,12 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getSearchfieldvalues Documentation.
-		 * @param  string  $idx_id     Format: x000
-		 * @param  int     $mls_pt_id  The IDX assigned ID of the MLS property type(s). See the propertytypes method in this API/Component for a lookup of property type IDs.
-		 * @param  string  $name       Mls field name - the IDX assigned name of the MLS field name. See the searchfields for the list of searchable fields.
-		 * @return array               An array containing all the values for the given mls field.
+		 * @param  string $idx_id     Format: x000
+		 * @param  int    $mls_pt_id  The IDX assigned ID of the MLS property type(s). See the propertytypes method in this
+		 *                            API/Component for a lookup of property type IDs.
+		 * @param  string $name       Mls field name - the IDX assigned name of the MLS field name. See the searchfields for
+		 *                            the list of searchable fields.
+		 * @return array              An array containing all the values for the given mls field.
 		 */
 		public function get_mls_searchfieldvalues( $idx_id, $mls_pt_id, $name ) {
 			// Prepare request.
@@ -1275,13 +1276,13 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getZipcodes Documentation.
-		 * @param  string        $idx_id        Format: x000
-		 * @param  string        $filter_field  The field to use when filtering output.
-		 *                                      Allowed values: "mlsPtID, parentPtID"
-		 * @param  string        $filter_value  The value by which to filter. Conditional on use of filterField
-		 * @param  string|array  $rf            String or array of fields to return in the output.
-		 * @return array                        Available zipcodes along with applicable property type and state as well as
-		 *                                      a count of the number of occurrences of each value.
+		 * @param  string       $idx_id        Format: x000
+		 * @param  string       $filter_field  The field to use when filtering output.
+		 *                                     Allowed values: "mlsPtID, parentPtID"
+		 * @param  string       $filter_value  The value by which to filter. Conditional on use of filterField
+		 * @param  string|array $rf            String or array of fields to return in the output.
+		 * @return array                       Available zipcodes along with applicable property type and state as well as
+		 *                                     a count of the number of occurrences of each value.
 		 */
 		public function get_mls_zipcodes( $idx_id, $filter_field = '', $filter_value = '', $rf = '' ) {
 			// Prepare request.
@@ -1292,9 +1293,9 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		}
 
 
-		/* ------------------------------------------------------------------------------------------------------------- */
-		/* ------------------------------------------- Leads Endpoints ------------------------------------------------- */
-		/* ------------------------------------------------------------------------------------------------------------- */
+		/* -------------------------------------------------------------------------------------------------------------
+		   ------------------------------------------- Leads Endpoints -------------------------------------------------
+		   ------------------------------------------------------------------------------------------------------------- */
 
 
 		/**
@@ -1303,28 +1304,28 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * Note: Each lead field should be passed as an indexed array starting at and going to, at most, 100. There must not
 		 *       be any gaps. LeadID is required for each lead to be updated
 		 *
-     * Data Example:
-     * $data = array(
-     *  'id[0]' = 1,
-     *  'firstName[0]' => 'John',
-     *  'lastName[0]' => 'Doe',
-     *  'email[0]' => 'john@example.com',
-     *  'id[1]' = 2,
-     *  'firstName[1]' => 'Aaron',
-     *  'lastName[1]' => 'Aaronson',
-     *  'email[1]' => 'aaron@example.com'
-     * );
+		 * Data Example:
+		 * $data = array(
+		 *  'id[0]' = 1,
+		 *  'firstName[0]' => 'John',
+		 *  'lastName[0]' => 'Doe',
+		 *  'email[0]' => 'john@example.com',
+		 *  'id[1]' = 2,
+		 *  'firstName[1]' => 'Aaron',
+		 *  'lastName[1]' => 'Aaronson',
+		 *  'email[1]' => 'aaron@example.com'
+		 * );
 		 *
 		 * @api POST
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-postBulklead Documentation.
-		 * @param  array  $data  Supplemental fields to update.
-		 * @return mixed         If a leads are successfully updated the updated lead IDs will be returned. If no POST
-		 *                       data is supplied then a list of updatable fields with format information is returned.
+		 * @param  array $data  Supplemental fields to update.
+		 * @return mixed        If a leads are successfully updated the updated lead IDs will be returned. If no POST
+		 *                      data is supplied then a list of updatable fields with format information is returned.
 		 */
 		public function post_bulkleads( $data = array() ) {
 			$fields['method'] = 'POST';
 			$fields['body'] = $data;
-			$route = "leads/bulklead";
+			$route = 'leads/bulklead';
 
 			return $this->build_request( $route, $fields )->request();
 		}
@@ -1335,26 +1336,26 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * Note: Each lead field should be passed as an indexed array starting at and going to, at most, 100. There must not
 		 *       be any gaps.
 		 *
-     * Data Example:
-     * $data = array(
-     *  'firstName[0]' => 'John',
-     *  'lastName[0]' => 'Doe',
-     *  'email[0]' => 'john@example.com',
-     *  'firstName[1]' => 'Aaron',
-     *  'lastName[1]' => 'Aaronson',
-     *  'email[1]' => 'aaron@example.com'
-     * );
+		 * Data Example:
+		 * $data = array(
+		 *  'firstName[0]' => 'John',
+		 *  'lastName[0]' => 'Doe',
+		 *  'email[0]' => 'john@example.com',
+		 *  'firstName[1]' => 'Aaron',
+		 *  'lastName[1]' => 'Aaronson',
+		 *  'email[1]' => 'aaron@example.com'
+		 * );
 		 *
 		 * @api PUT
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-getBulklead Documentation.
-		 * @param  array  $data  Supplemental fields to update.
-		 * @return array         If a lead is successfully created the new lead IDs will be returned. If no PUT data is
-		 *                       supplied then a list of updatable fields with format information is returned.
+		 * @param  array $data  Supplemental fields to update.
+		 * @return array        If a lead is successfully created the new lead IDs will be returned. If no PUT data is
+		 *                      supplied then a list of updatable fields with format information is returned.
 		 */
 		public function put_bulkleads( $data = array() ) {
 			$fields['method'] = 'PUT';
 			$fields['body'] = $data;
-			$route = "leads/bulklead";
+			$route = 'leads/bulklead';
 
 			return $this->build_request( $route, $fields )->request();
 		}
@@ -1367,8 +1368,8 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api DELETE
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-deleteLead Documentation.
-		 * @param  int   $lead_id  The ID of a lead.
-		 * @return void            Nothing on success.
+		 * @param  int $lead_id  The ID of a lead.
+		 * @return void          Nothing on success.
 		 */
 		public function delete_lead( $lead_id ) {
 			$fields['method'] = 'DELETE';
@@ -1400,17 +1401,17 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * Data Example:
 		 * $data = array(
-     *  'firstName' => 'John',
-     *  'lastName' => 'Doe',
-     *  'email' => 'john@example.com'
-     * );
+		 *  'firstName' => 'John',
+		 *  'lastName' => 'Doe',
+		 *  'email' => 'john@example.com'
+		 * );
 		 *
 		 * @api POST
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-postLead Documentation.
-		 * @param  int    $lead_id  The ID of a lead.
-		 * @param  array  $data     Lead fields to update.
-		 * @return mixed            If a leads are successfully updated the updated lead IDs will be returned. If no POST
-		 *                          data is supplied then a list of updatable fields with format information is returned.
+		 * @param  int   $lead_id  The ID of a lead.
+		 * @param  array $data     Lead fields to update.
+		 * @return mixed           If a leads are successfully updated the updated lead IDs will be returned. If no POST
+		 *                         data is supplied then a list of updatable fields with format information is returned.
 		 */
 		public function post_lead( $lead_id, $data ) {
 			$fields['method'] = 'POST';
@@ -1431,21 +1432,21 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * Data Example:
 		 * $data = array(
-     *  'firstName' => 'John',
-     *  'lastName' => 'Doe',
-     *  'email' => 'john@example.com'
-     * );
+		 *  'firstName' => 'John',
+		 *  'lastName' => 'Doe',
+		 *  'email' => 'john@example.com'
+		 * );
 		 *
 		 * @api PUT
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-putLead Documentation.
-		 * @param  array  $data  Lead fields to create.
-		 * @return mixed         If a lead is successfully created the new lead's ID will be returned. If no PUT data is
-		 *                       supplied then a list of updatable fields with format information is returned.
+		 * @param  array $data  Lead fields to create.
+		 * @return mixed        If a lead is successfully created the new lead's ID will be returned. If no PUT data is
+		 *                      supplied then a list of updatable fields with format information is returned.
 		 */
 		public function put_lead() {
 			$fields['method'] = 'PUT';
 			$fields['body'] = $data;
-			$route = "leads/leads";
+			$route = 'leads/leads';
 
 			return $this->build_request( $route, $fields )->request();
 		}
@@ -1478,7 +1479,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return array   All available APIs/Components.
 		 */
 		public function get_leads_listcomponents() {
-			return $this->build_request( "leads/listcomponents" )->request();
+			return $this->build_request( 'leads/listcomponents' )->request();
 		}
 
 		/**
@@ -1489,7 +1490,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return array   Basic information about all available methods in this API.
 		 */
 		public function get_leads_listmethods() {
-			return $this->build_request( "leads/listmethods" )->request();
+			return $this->build_request( 'leads/listmethods' )->request();
 		}
 
 		/**
@@ -1497,9 +1498,9 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api DELETE
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-deleteNote Documentation.
-		 * @param  int   $lead_id  The ID of a lead.
-		 * @param  int   $note_id  The ID of the note to delete.
-		 * @return void            Nothing on success.
+		 * @param  int $lead_id  The ID of a lead.
+		 * @param  int $note_id  The ID of the note to delete.
+		 * @return void          Nothing on success.
 		 */
 		public function delete_leads_note( $lead_id, $note_id ) {
 			$fields['method'] = 'DELETE';
@@ -1537,10 +1538,10 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api POST
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-postNote Documentation.
-		 * @param  int    $lead_id  The ID of a lead.
-		 * @param  int    $note_id  The ID of the note to update.
-		 * @param  array  $data     Note data.
-		 * @return mixed            If no data is supplied then a list of updatable fields with format information is returned.
+		 * @param  int   $lead_id  The ID of a lead.
+		 * @param  int   $note_id  The ID of the note to update.
+		 * @param  array $data     Note data.
+		 * @return mixed           If no data is supplied then a list of updatable fields with format information is returned.
 		 */
 		public function post_leads_note( $lead_id, $note_id, $data = array() ) {
 			$fields['method'] = 'POST';
@@ -1560,10 +1561,10 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api POST
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-putNote Documentation.
-		 * @param  int    $lead_id  The ID of a lead.
-		 * @param  array  $data     Note data.
-		 * @return mixed            If a note is successfully created the new notes's ID will be returned. If no PUT data is
-		 *                          supplied then a list of updatable fields with format information is returned.
+		 * @param  int   $lead_id  The ID of a lead.
+		 * @param  array $data     Note data.
+		 * @return mixed           If a note is successfully created the new notes's ID will be returned. If no PUT data is
+		 *                         supplied then a list of updatable fields with format information is returned.
 		 */
 		public function put_leads_note( $lead_id, $data = array() ) {
 			$fields['method'] = 'PUT';
@@ -1578,9 +1579,9 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api DELETE
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-deleteProperty Documentation.
-		 * @param  int   $lead_id      The ID of a lead.
-		 * @param  int   $property_id  The ID of a property to delete.
-		 * @return void                Nothing on success.
+		 * @param  int $lead_id      The ID of a lead.
+		 * @param  int $property_id  The ID of a property to delete.
+		 * @return void              Nothing on success.
 		 */
 		public function delete_leads_property( $lead_id, $property_id ) {
 			$fields['method'] = 'DELETE';
@@ -1620,10 +1621,10 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api POST
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-postProperty Documentation.
-		 * @param  int    $lead_id      The ID of a lead.
-		 * @param  int    $property_id  The ID of the note to update.
-		 * @param  array  $data         Property data.
-		 * @return mixed                If no data is supplied then a list of updatable fields with format information is returned.
+		 * @param  int   $lead_id      The ID of a lead.
+		 * @param  int   $property_id  The ID of the note to update.
+		 * @param  array $data         Property data.
+		 * @return mixed               If no data is supplied then a list of updatable fields with format information is returned.
 		 */
 		public function post_leads_property( $lead_id, $property_id, $data = array() ) {
 			$fields['method'] = 'POST';
@@ -1645,11 +1646,11 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api PUT
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-putProperty Documentation.
-		 * @param  int    $lead_id   The ID of a lead.
-		 * @param  array  $data      Property data.
-		 * @return mixed             If a saved property is successfully created the new property's ID will be returned.
-		 *                           If no data is supplied then a list of updatable fields with format information is
-		 *                           returned.
+		 * @param  int   $lead_id   The ID of a lead.
+		 * @param  array $data      Property data.
+		 * @return mixed            If a saved property is successfully created the new property's ID will be returned.
+		 *                          If no data is supplied then a list of updatable fields with format information is
+		 *                          returned.
 		 */
 		public function put_leads_property( $lead_id, $data = array() ) {
 			$fields['method'] = 'PUT';
@@ -1664,9 +1665,9 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api DELETE
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-deleteSearch Documentation.
-		 * @param  int   $lead_id    The ID of a lead.
-		 * @param  int   $search_id  The ID of a saved search to delete.
-		 * @return void              Nothing on success.
+		 * @param  int $lead_id    The ID of a lead.
+		 * @param  int $search_id  The ID of a saved search to delete.
+		 * @return void            Nothing on success.
 		 */
 		public function delete_leads_search( $lead_id, $search_id ) {
 			$fields['method'] = 'DELETE';
@@ -1707,11 +1708,11 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api POST
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-postSearch Documentation.
-		 * @param  int    $lead_id    The ID of a lead.
-		 * @param  int    $search_id  The ID of a lead's saved search.
-		 * @param  array  $data       Search data.
-		 * @return mixed              If a lead search is successfully created the new searches' ID will be returned. If no
-		 *                            data is supplied then a list of updatable fields with format information is returned.
+		 * @param  int   $lead_id    The ID of a lead.
+		 * @param  int   $search_id  The ID of a lead's saved search.
+		 * @param  array $data       Search data.
+		 * @return mixed             If a lead search is successfully created the new searches' ID will be returned. If no
+		 *                           data is supplied then a list of updatable fields with format information is returned.
 		 */
 		public function post_leads_search( $lead_id, $search_id, $data = array() ) {
 			$fields['method'] = 'POST';
@@ -1733,10 +1734,10 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api PUT
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-putSearch Documentation.
-		 * @param  int    $lead_id    The ID of a lead.
-		 * @param  array  $data       Search data.
-		 * @return mixed              If a lead search is successfully created the new searches' ID will be returned. If no
-		 *                            data is supplied then a list of updatable fields with format information is returned.
+		 * @param  int   $lead_id    The ID of a lead.
+		 * @param  array $data       Search data.
+		 * @return mixed             If a lead search is successfully created the new searches' ID will be returned. If no
+		 *                           data is supplied then a list of updatable fields with format information is returned.
 		 */
 		public function put_leads_search( $lead_id, $data = array() ) {
 			$fields['method'] = 'PUT';
@@ -1746,9 +1747,9 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 			return $this->build_request( $route, $fields )->request();
 		}
 
-		/* ------------------------------------------------------------------------------------------------------------- */
-		/* ------------------------------------- Specialty Partner Endpoints ------------------------------------------- */
-		/* ------------------------------------------------------------------------------------------------------------- */
+		/* -------------------------------------------------------------------------------------------------------------
+		   ------------------------------------- Specialty Partner Endpoints -------------------------------------------
+		   ------------------------------------------------------------------------------------------------------------- */
 
 		/**
 		 * Get IDX account and agent/office add-on pricing.
@@ -1760,7 +1761,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return array  IDX account and agent/office add-on pricing.
 		 */
 		public function get_specialtypartner_pricing() {
-			return $this->build_request( "specialtypartner/pricing" )->request();
+			return $this->build_request( 'specialtypartner/pricing' )->request();
 		}
 
 		/**
@@ -1787,13 +1788,13 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api PUT
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Specialty_Partner-putSubscriber Documentation.
-		 * @param  array  $data       Subscriber data.
-		 * @return mixed              Nothing on success
+		 * @param  array $data   Subscriber data.
+		 * @return mixed         Nothing on success
 		 */
 		public function put_specialtypartner_subscriber( $data = array() ) {
 			$fields['method'] = 'PUT';
 			$fields['body'] = $data;
-			$route = "specialtypartner/subscriber";
+			$route = 'specialtypartner/subscriber';
 
 			return $this->build_request( $route, $fields )->request();
 		}
