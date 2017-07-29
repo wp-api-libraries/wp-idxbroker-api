@@ -168,9 +168,11 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 			return $domain;
 		}
 
-		/* -------------------------------------------------------------------------------------------------------------
-		   ------------------------------------------- Partners Endpoints ----------------------------------------------
-		   ------------------------------------------------------------------------------------------------------------- */
+		/*
+		 -------------------------------------------------------------------------------------------------------------
+		 ------------------------------------------- Partners Endpoints ----------------------------------------------
+		 -------------------------------------------------------------------------------------------------------------
+		 */
 
 		/**
 		 * Get a list of all agents for your clients.
@@ -457,9 +459,11 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		}
 
 
-		/* -------------------------------------------------------------------------------------------------------------
-		   ------------------------------------------- Client Endpoints ------------------------------------------------
-		   ------------------------------------------------------------------------------------------------------------- */
+		/*
+		 -------------------------------------------------------------------------------------------------------------
+		 ------------------------------------------- Client Endpoints ------------------------------------------------
+		 -------------------------------------------------------------------------------------------------------------
+		 */
 
 		/**
 		 * Get your account type.
@@ -576,7 +580,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @param  string $dynamic_url  Dynamic wrapper url.
 		 * @param  int    $savedlink_id Saved link ID if setting dynamic wrapper url for a specific saved link.
 		 * @param  int    $page_id      Page ID if setting dynamic wrapper url for a specific page.
-		 * @return void                 No data returned on success.
+		 * @return mixed                No data returned on success.
 		 */
 		public function post_clients_dynamicwrapperurl( $dynamic_url, $savedlink_id = null, $page_id = null ) {
 			// Prepare request.
@@ -753,7 +757,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @api DELETE
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-deleteSavedlinks Documentation.
 		 * @param  string $saved_links_id The ID of a client's saved link.
-		 * @return void                   Nothing on success.
+		 * @return mixed                  Nothing on success.
 		 */
 		public function delete_clients_savedlink( $saved_links_id ) {
 			$fields['method'] = 'DELETE';
@@ -881,8 +885,8 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api DELETE
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-deleteSupplemental Documentation.
-		 * @param  string $listing_id The listingID of a supplmental property
-		 * @return void               Nothing on success.
+		 * @param  string $listing_id The listingID of a supplmental property.
+		 * @return mixed              Nothing on success.
 		 */
 		public function delete_clients_supplemental( $listing_id ) {
 			$fields['method'] = 'DELETE';
@@ -1009,7 +1013,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api DELETE
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getWrappercache Documentation.
-		 * @return void               Nothing on success.
+		 * @return mixed   Nothing on success.
 		 */
 		public function delete_clients_wrappercache() {
 			$fields['method'] = 'DELETE';
@@ -1035,9 +1039,11 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 			return $this->build_request( $route )->request();
 		}
 
-		/* -------------------------------------------------------------------------------------------------------------
-		   --------------------------------------------- MLS Endpoints -------------------------------------------------
-		   ------------------------------------------------------------------------------------------------------------- */
+		/*
+		 -------------------------------------------------------------------------------------------------------------
+		 --------------------------------------------- MLS Endpoints -------------------------------------------------
+		 -------------------------------------------------------------------------------------------------------------
+		 */
 
 		/**
 		 * Gives the date and time a particular MLS was last downloaded, processed and the last time images gathering was completed.
@@ -1046,7 +1052,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getAge Documentation.
-		 * @param  string       $idx_id  Format: x000
+		 * @param  string       $idx_id  Format: x000 .
 		 * @param  string|array $rf      String or array of fields to return in the output.
 		 * @return array                 An array of timestamps for last downloaded, last processes and last images gathered.
 		 */
@@ -1084,10 +1090,10 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getCities Documentation.
-		 * @param  string       $idx_id        Format: x000
+		 * @param  string       $idx_id        Format: x000 .
 		 * @param  string       $filter_field  The field to use when filtering output.
-		 *                                     Allowed values: "cityID, cityName, stateAbrv, mlsPtID"
-		 * @param  string       $filter_value  The value by which to filter. Conditional on use of filterField
+		 *                                     Allowed values: "cityID, cityName, stateAbrv, mlsPtID".
+		 * @param  string       $filter_value  The value by which to filter. Conditional on use of filterField.
 		 * @param  string|array $rf            String or array of fields to return in the output.
 		 * @return array                       Available cities along with applicable city ID, property type, and state as
 		 *                                     well as a count of the number of occurrences for each value.
@@ -1106,10 +1112,10 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getCounties Documentation.
-		 * @param  string       $idx_id        Format: x000
+		 * @param  string       $idx_id        Format: x000.
 		 * @param  string       $filter_field  The field to use when filtering output.
-		 *                                     Allowed values: "countyID, countyName, stateAbrv, mlsPtID"
-		 * @param  string       $filter_value  The value by which to filter. Conditional on use of filterField
+		 *                                     Allowed values: "countyID, countyName, stateAbrv, mlsPtID".
+		 * @param  string       $filter_value  The value by which to filter. Conditional on use of filterField.
 		 * @param  string|array $rf            String or array of fields to return in the output.
 		 * @return array                       Available counties along with applicable county ID, property type, and state
 		 *                                     as well as a count of the number of occurrences of each value.
@@ -1153,10 +1159,10 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getPostalcodes Documentation.
-		 * @param  string       $idx_id        Format: x000
+		 * @param  string       $idx_id        Format: x000.
 		 * @param  string       $filter_field  The field to use when filtering output.
-		 *                                     Allowed values: "id, stateAbrv, mlsPtID"
-		 * @param  string       $filter_value  The value by which to filter. Conditional on use of filterField
+		 *                                     Allowed values: "id, stateAbrv, mlsPtID".
+		 * @param  string       $filter_value  The value by which to filter. Conditional on use of filterField.
 		 * @param  string|array $rf            String or array of fields to return in the output.
 		 * @return array                       Available postalcodes along with applicable property type and state as well
 		 *                                     as a count of the number of occurrences of each value.
@@ -1174,7 +1180,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getPrices Documentation.
-		 * @param  string       $idx_id        Format: x000
+		 * @param  string       $idx_id        Format: x000.
 		 * @param  string|array $rf            String or array of fields to return in the output.
 		 * @return array                       A multidimensional array with the total sum and the sum for each property type.
 		 */
@@ -1191,9 +1197,9 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getPropertycount Documentation.
-		 * @param  string $idx_id           Format: x000
+		 * @param  string $idx_id           Format: x000.
 		 * @param  string $count_type       Specify if you are looking for the count of a city, county, or zipcode.
-		 *                                  Allowed values: "city", "county", "zipcode"
+		 *                                  Allowed values: "city", "county", "zipcode".
 		 * @param  int    $count_specifier  The numeric city ID, county ID, or zipcode for which you want to get a property count.
 		 * @return int                      An integer count of the number of properties.
 		 */
@@ -1210,10 +1216,10 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getPropertytypes Documentation.
-		 * @param  string       $idx_id        Format: x000
+		 * @param  string       $idx_id        Format: x000.
 		 * @param  string       $filter_field  The field to use when filtering output.
-		 *                                     Allowed values: "mlsPtID, mlsPropertyType"
-		 * @param  string       $filter_value  The value by which to filter. Conditional on use of filterField
+		 *                                     Allowed values: "mlsPtID, mlsPropertyType".
+		 * @param  string       $filter_value  The value by which to filter. Conditional on use of filterField.
 		 * @param  string|array $rf            String or array of fields to return in the output.
 		 * @return array                       An array of property type information including MLS property type ID, MLS
 		 *                                     property type name, parent property type, and subtypes.
@@ -1231,10 +1237,10 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getSearchfields Documentation.
-		 * @param  string       $idx_id        Format: x000
+		 * @param  string       $idx_id        Format: x000.
 		 * @param  string       $filter_field  The field to use when filtering output.
-		 *                                     Allowed values: "mlsPtID, parentPtID"
-		 * @param  string       $filter_value  The value by which to filter. Conditional on use of filterField
+		 *                                     Allowed values: "mlsPtID, parentPtID".
+		 * @param  string       $filter_value  The value by which to filter. Conditional on use of filterField.
 		 * @param  string|array $rf            String or array of fields to return in the output.
 		 * @return array                       An array containing all MLS fields that are searchable according to MLS rules
 		 *                                     and IDX guidelines. Array contains the field's name (which is the field to
@@ -1255,7 +1261,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getSearchfieldvalues Documentation.
-		 * @param  string $idx_id     Format: x000
+		 * @param  string $idx_id     Format: x000.
 		 * @param  int    $mls_pt_id  The IDX assigned ID of the MLS property type(s). See the propertytypes method in this
 		 *                            API/Component for a lookup of property type IDs.
 		 * @param  string $name       Mls field name - the IDX assigned name of the MLS field name. See the searchfields for
@@ -1276,10 +1282,10 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getZipcodes Documentation.
-		 * @param  string       $idx_id        Format: x000
+		 * @param  string       $idx_id        Format: x000.
 		 * @param  string       $filter_field  The field to use when filtering output.
-		 *                                     Allowed values: "mlsPtID, parentPtID"
-		 * @param  string       $filter_value  The value by which to filter. Conditional on use of filterField
+		 *                                     Allowed values: "mlsPtID, parentPtID".
+		 * @param  string       $filter_value  The value by which to filter. Conditional on use of filterField.
 		 * @param  string|array $rf            String or array of fields to return in the output.
 		 * @return array                       Available zipcodes along with applicable property type and state as well as
 		 *                                     a count of the number of occurrences of each value.
@@ -1293,9 +1299,11 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		}
 
 
-		/* -------------------------------------------------------------------------------------------------------------
-		   ------------------------------------------- Leads Endpoints -------------------------------------------------
-		   ------------------------------------------------------------------------------------------------------------- */
+		/*
+		 -------------------------------------------------------------------------------------------------------------
+		 ------------------------------------------- Leads Endpoints -------------------------------------------------
+		 -------------------------------------------------------------------------------------------------------------
+		 */
 
 
 		/**
@@ -1369,7 +1377,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @api DELETE
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-deleteLead Documentation.
 		 * @param  int $lead_id  The ID of a lead.
-		 * @return void          Nothing on success.
+		 * @return mixed         Nothing on success.
 		 */
 		public function delete_lead( $lead_id ) {
 			$fields['method'] = 'DELETE';
@@ -1443,7 +1451,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return mixed        If a lead is successfully created the new lead's ID will be returned. If no PUT data is
 		 *                      supplied then a list of updatable fields with format information is returned.
 		 */
-		public function put_lead() {
+		public function put_lead( $data = array() ) {
 			$fields['method'] = 'PUT';
 			$fields['body'] = $data;
 			$route = 'leads/leads';
@@ -1500,7 +1508,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-deleteNote Documentation.
 		 * @param  int $lead_id  The ID of a lead.
 		 * @param  int $note_id  The ID of the note to delete.
-		 * @return void          Nothing on success.
+		 * @return mixed         Nothing on success.
 		 */
 		public function delete_leads_note( $lead_id, $note_id ) {
 			$fields['method'] = 'DELETE';
@@ -1581,7 +1589,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-deleteProperty Documentation.
 		 * @param  int $lead_id      The ID of a lead.
 		 * @param  int $property_id  The ID of a property to delete.
-		 * @return void              Nothing on success.
+		 * @return mixed             Nothing on success.
 		 */
 		public function delete_leads_property( $lead_id, $property_id ) {
 			$fields['method'] = 'DELETE';
@@ -1667,7 +1675,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-deleteSearch Documentation.
 		 * @param  int $lead_id    The ID of a lead.
 		 * @param  int $search_id  The ID of a saved search to delete.
-		 * @return void            Nothing on success.
+		 * @return mixed           Nothing on success.
 		 */
 		public function delete_leads_search( $lead_id, $search_id ) {
 			$fields['method'] = 'DELETE';
@@ -1682,7 +1690,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-getSearch Documentation.
 		 * @param  int   $lead_id    The ID of a lead.
-		 * @param  int   $search_id  The ID of a lead's search
+		 * @param  int   $search_id  The ID of a lead's search.
 		 * @param  array $args       Query args to send in to API call.
 		 * @return array             An array with 2 keys. The key searchInformation that contains all existing saved search
 		 *                           information. The key info will return messages about any returned saved search. Currently
@@ -1747,9 +1755,11 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 			return $this->build_request( $route, $fields )->request();
 		}
 
-		/* -------------------------------------------------------------------------------------------------------------
-		   ------------------------------------- Specialty Partner Endpoints -------------------------------------------
-		   ------------------------------------------------------------------------------------------------------------- */
+		/*
+		 -------------------------------------------------------------------------------------------------------------
+		 ------------------------------------- Specialty Partner Endpoints -------------------------------------------
+		 -------------------------------------------------------------------------------------------------------------
+		 */
 
 		/**
 		 * Get IDX account and agent/office add-on pricing.
