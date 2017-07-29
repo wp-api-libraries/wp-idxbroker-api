@@ -672,108 +672,840 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 			return $this->build_request( 'clients/listmethods' )->request();
 		}
 
-
-		public function get_clients_offices() {
-		}
-		public function get_clients_postalcodes() {
-		}
-		public function get_clients_postalcodeslistname() {
-		}
-		public function get_clients_properties() {
-		}
-		public function delete_clients_savedlink() {
-		}
-		public function get_clients_savedlinks() {
-		}
-		public function post_clients_savedlink() {
-		}
-		public function put_clients_savedlink() {
-		}
-		public function get_clients_searchquery() {
-		}
-		public function get_clients_soldpending() {
-		}
-		public function delete_clients_supplemental() {
-		}
-		public function get_clients_supplemental() {
-		}
-		public function post_clients_supplemental() {
-		}
-		public function put_clients_supplemental() {
-		}
-		public function get_clients_systemlinks() {
-		}
-		public function get_clients_widgets() {
-		}
-		public function delete_clients_wrappercache() {
-		}
-		public function get_clients_zipcodes() {
-		}
-
-		/* MLS Endpoints. */
-
 		/**
-		 * [get_mls_age description]
+		 * View all offices on a mutli-user account.
 		 *
-		 * @return [type] [description]
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getOffices Documentation.
+		 *
+		 * @param  array $args  Query args to send in to API call.
+		 * @return array        All offices on the account or those matching filter values.
 		 */
-		public function get_mls_age() {
-		}
-		public function get_mls_approvedmls() {
-		}
-		public function get_mls_cities() {
-		}
-		public function get_mls_counties() {
-		}
-		public function get_mls_listcomponents() {
-		}
-		public function get_mls_listmethods() {
-		}
-		public function get_mls_postalcodes() {
-		}
-		public function get_mls_prices() {
-		}
-		public function get_mls_propertycount() {
-		}
-		public function get_mls_propertytypes() {
-		}
-		public function get_mls_searchfields() {
-		}
-		public function get_mls_searchfieldvalues() {
-		}
-		public function get_mls_zipcodes() {
-		}
+		public function get_clients_offices( $args = array() ) {
+			// Prepare request.
+			$route = 'clients/offices';
+			$route = add_query_arg( $args, $route );
 
-		/* Leads Endpoints. */
+			return $this->build_request( $route )->request();
+		}
 
 		/**
-		 * [add_bulk_leads description]
+		 * Returns the postalcodes available in each of a client's postalcode lists. Since a client can build any number of
+		 * postalcode lists this method requires the ID of which list you want to view. To get a list of all postalcode
+		 * lists available do not send the primary request ID. The default list on each account has the id combinedActiveMLS.
+		 *
+		 * Note: This method was previously called as "zipcodes" but was changed to keep API format more international.
+		 * Calls to "zipcodes" will be forwarded to "postalcodes" and "zipcodes" is listed as deprecated in the method list.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getPostalcodes Documentation.
+		 * @param  string $list_id If no ID is given a list of IDs is returned.
+		 * @param  array  $args    Query args to send in to API call.
+		 * @return array           All postalcodes in a given list or, if no list ID is provided, a list of list IDs.
 		 */
-		public function post_bulkleads() {
+		public function get_clients_postalcodes( $list_id = '', $args = array() ) {
+			// Prepare request.
+			$route = ( '' === $list_id ) ? 'clients/postalcodes' : "clients/postalcodes/$list_id";
+			$route = add_query_arg( $args, $route );
+
+			return $this->build_request( $route )->request();
 		}
-		public function put_bulkleads() {
+
+		/**
+		 * Returns the IDs and names for each of a client's postalcode lists including MLS postalcode lists. To get the list
+		 * of all postal code lists available do not send the primary request ID. The default list on each account has the ID
+		 * combinedActiveMLS
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getPostalcodeslistname Documentation.
+		 *
+		 * @return array A list of city list IDs and names
+		 */
+		public function get_clients_postalcodeslistname() {
+			return $this->build_request( 'clients/postalcodeslistname' )->request();
 		}
-		public function delete_lead() {
+
+		/**
+		 * Returns the search results for a provided saved link ID.
+		 *
+		 * Note: Valid ancillarykey is required in the request header.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-properties Documentation.
+		 * @param  string $saved_links_id The ID of a client's saved link.
+		 * @param  array  $args           Query args to send in to API call.
+		 * @return array                  All property results for a provided Saved Link ID.
+		 */
+		public function get_clients_properties( $saved_links_id, $args = array() ) {
+			// Prepare request.
+			$route = "clients/properties/$saved_links_id";
+			$route = add_query_arg( $args, $route );
+
+			return $this->build_request( $route )->request();
 		}
-		public function get_lead() {
+
+		/**
+		 * Remove a new client saved link.
+		 *
+		 * @api DELETE
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-deleteSavedlinks Documentation.
+		 * @param  string $saved_links_id The ID of a client's saved link.
+		 * @return void                   Nothing on success.
+		 */
+		public function delete_clients_savedlink( $saved_links_id ) {
+			$fields['method'] = 'DELETE';
+			$route = "clients/savedlinks/$saved_links_id";
+
+			return $this->build_request( $route, $fields )->request();
 		}
-		public function post_lead() {
+
+		/**
+		 * Get saved links for a given client account.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getSavedlinks Documentation.
+		 * @param  array  $args           Query args to send in to API call.
+		 * @return array                  All saved links on the account.
+		 */
+		public function get_clients_savedlinks( $args = array() ) {
+			// Prepare request.
+			$route = "clients/savedlinks";
+			$route = add_query_arg( $args, $route );
+
+			return $this->build_request( $route )->request();
 		}
+
+		/**
+		 * Update an existing client's saved link
+		 *
+		 * This method is to be used at your own risk. We will NOT be held accountable for programmatic errors in your code
+		 * or the improper use of search values or options within said values resulting in broken saved links.
+		 *
+		 * Note: The updatable fields need to be in a URL encoded, ampersand delineated query string format.
+		 *
+     * Data Example:
+     * $data = array(
+     *  'linkName' => 'Good_side_of_tracks',
+     *  'pageTitle' => 'Good_side_of_tracks',
+     *  'linkTitle' => 'Good_side_of_tracks',
+     *  'queryString' => array('idxID' => 'a001', 'hp' => '200000')
+     * );
+		 *
+		 * @api POST
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-postSavedlinks Documentation.
+		 * @param  string $saved_links_id The ID of a client's saved link.
+		 * @param  array  $data           Savedlink fields to update.
+		 * @return mixed                  If no POST data is supplied, then a list of updatable fields with format
+		 *                                information is returned, otherwise on success 204 is returned.
+		 */
+		public function post_clients_savedlink( $saved_links_id, $data = array() ) {
+			$fields['method'] = 'POST';
+			$fields['body'] = $data;
+			$route = "clients/savedlinks/$saved_links_id";
+
+			return $this->build_request( $route, $fields )->request();
+		}
+
+		/**
+		 * Create a new client saved link.
+		 *
+		 * Note: The updatable fields need to be in a URL encoded, ampersand delineated query string format. This action is
+		 *       not allowed if the client has more than 1000 saved links.
+		 *
+		 * Data Example:
+		 * $data = array(
+		 *  'linkName' => 'Good_side_of_tracks',
+		 *  'pageTitle' => 'Good_side_of_tracks',
+		 *  'linkTitle' => 'Good_side_of_tracks',
+		 *  'queryString' => array('idxID' => 'a001', 'hp' => '200000')
+		 * );
+		 *
+		 * @api PUT
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-putSavedlinks Documentation.
+		 * @param  array  $data           Savedlink fields to create.
+		 * @return mixed                  If a client saved link is successfully created, the new saved link's ID will be
+		 *                                returned. If no PUT data is supplied, then a list of updatable fields with format
+		 *                                information is returned.
+		 */
+		public function put_clients_savedlink( $data = array() ) {
+			$fields['method'] = 'PUT';
+			$fields['body'] = $data;
+			$route = "clients/savedlinks";
+
+			return $this->build_request( $route, $fields )->request();
+		}
+
+		/**
+		 * Performs search and returns the results.
+		 *
+		 * Note: Valid ancillarykey is required in the request header.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getSearchquery Documentation.
+		 * @param  array  $args           Query args to send in to API call.
+		 * @return array                  All available APIs/Components.
+		 */
+		public function get_clients_searchquery( $args = array() ) {
+			// Prepare request.
+			$route = "clients/searchquery";
+			$route = add_query_arg( $args, $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+		/**
+		 * Returns a basic set of information for all of the client's sold and pending properties. That is, those that have
+		 * been removed from their MLS data.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getSoldpending Documentation.
+		 * @param  array  $args           Query args to send in to API call.
+		 * @return array                  Sold/pending properties on the account.
+		 */
+		public function get_clients_soldpending( $args = array() ) {
+			// Prepare request.
+			$route = "clients/soldpending";
+			$route = add_query_arg( $args, $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+		/**
+		 * Remove a clients supplemental property.
+		 *
+		 * This method is to be used at your own risk. We will NOT be held accountable for programmatic errors in your code
+		 * or the improper use of search values or options within said values resulting in deletion of supplemental properties.
+		 *
+		 * @api DELETE
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-deleteSupplemental Documentation.
+		 * @param  string $listing_id The listingID of a supplmental property
+		 * @return void               Nothing on success.
+		 */
+		public function delete_clients_supplemental( $listing_id ) {
+			$fields['method'] = 'DELETE';
+			$route = "clients/supplemental/$listing_id";
+
+			return $this->build_request( $route, $fields )->request();
+		}
+
+		/**
+		 * Returns a basic set of information for all of the client's supplemental (non-MLS) properties.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getSupplemental Documentation.
+		 * @param  array  $args           Query args to send in to API call.
+		 * @return array                  Supplemental properties on the account.
+		 */
+		public function get_clients_supplemental( $args = array() ) {
+			// Prepare request.
+			$route = "clients/supplemental";
+			$route = add_query_arg( $args, $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+		/**
+		 * Update an existing supplemental listing.
+		 *
+		 * Note: if updating images, existing images are deleted and the new images are inserted instead for the listing.
+		 *
+     * Data Example:
+     * $data = array(
+     *  'likeIdxID' => 'a001',
+     *  'likeMlsPtID' => '1',
+     *  'images' => array('http://example.com/image1.jpg', 'http://example.com/image2.jpg')
+     * );
+		 *
+		 * @api POST
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-postSupplemental Documentation.
+		 * @param  string $listing_id The supplemental listing ID.
+		 * @param  array  $data       Supplemental fields to update.
+		 * @return mixed              If no POST data is supplied, then a list of updatable fields with format information
+		 *                            is returned, otherwise on success 204 is returned.
+		 */
+		public function post_clients_supplemental( $listing_id, $data = array() ) {
+			$fields['method'] = 'POST';
+			$fields['body'] = $data;
+			$route = "clients/supplemental/$listing_id";
+
+			return $this->build_request( $route, $fields )->request();
+		}
+
+		/**
+		 * Create a new supplemental listing.
+		 *
+		 * Note: likeIdxID and likeMlsPtID fields are required.
+		 *
+		 * Data Example:
+		 * $data = array(
+     *  'likeIdxID' => 'a001',
+     *  'likeMlsPtID' => '1',
+     *  'images' => array('http://example.com/image1.jpg', 'http://example.com/image2.jpg')
+     * );
+		 *
+		 * @api PUT
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-putSupplemental Documentation.
+		 * @param  array  $data  Supplemental fields to create.
+		 * @return mixed         If a supplemental listing is successfully created, the new supplemental listing ID will be
+		 *                       returned. If no PUT data is supplied, then a list of updatable fields with format
+		 *                       information is returned.
+		 */
+		public function put_clients_supplemental( $data = array() ) {
+			$fields['method'] = 'PUT';
+			$fields['body'] = $data;
+			$route = "clients/supplemental";
+
+			return $this->build_request( $route, $fields )->request();
+		}
+
+		/**
+		 * Gathers all the pages system pages (search, featured, contact, etc) that can be directly linked to without
+		 * additional property information being included in the URL.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getSystemlinks Documentation.
+		 * @param  string|array  $rf  String or array of fields to return in the output.
+		 * @return array              The name, unique ID, and URL for all system links on the account. Additionally there
+		 *                            is a boolean named systemresults. If true this is a property results page that requires
+		 *                            additional parameters. This means the url can be useful when dynamically building
+		 *                            results page links but should not be linked to directly. When a client has more than
+		 *                            one MLS on their account, listings for search pages that can vary by MLS ID will
+		 *                            include a subpages array element.
+		 */
+		public function get_clients_systemlinks( $rf = '') {
+			// Prepare request.
+			$route = "clients/systemlinks";
+			$route = add_query_arg( array( 'rf' => $rf ), $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+		/**
+		 * Gather all the URLs for javascript widgets on the user's account. These widgets can then be placed on the user's
+		 * main site via the included URLs.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getWidgetsrc Documentation.
+		 * @param  string|array  $rf  String or array of fields to return in the output.
+		 * @return array              The name, unique ID and URL for all javascript widgets that have been created on the
+		 *                            user's account.
+		 */
+		public function get_clients_widgets( $rf = '' ) {
+			// Prepare request.
+			$route = "clients/widgetsrc";
+			$route = add_query_arg( array( 'rf' => $rf ), $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+		/**
+		 * Remove a clients supplemental property.
+		 *
+		 * This method is to be used at your own risk. We will NOT be held accountable for programmatic errors in your code
+		 * or the improper use of search values or options within said values resulting in deletion of supplemental properties.
+		 *
+		 * @api DELETE
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getWrappercache Documentation.
+		 * @return void               Nothing on success.
+		 */
+		public function delete_clients_wrappercache() {
+			$fields['method'] = 'DELETE';
+			return $this->build_request( "clients/wrappercache", $fields )->request();
+		}
+
+		/**
+		 * Returns the zipcodes available in each of a client's zipcode lists. Since a client can build any number of
+		 * zipcode lists this method requires the ID of which list you want to view. To get a list of all zipcode lists
+		 * available do not send the primary request ID. The default list on each account has the id combinedActiveMLS.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getZipcodes Documentation.
+		 * @param  string        $list_id If no ID is given a list of IDs is returned.
+		 * @param  string|array  $rf      String or array of fields to return in the output.
+		 * @return array                  All zipcodes in a given list or, if no list ID is provided, a list of list IDs..
+		 */
+		public function get_clients_zipcodes( $list_id = '', $rf = '' ) {
+			// Prepare request.
+			$route = ( '' === $list_id ) ? 'clients/zipcodes' : "clients/zipcodes/$list_id";
+			$route = add_query_arg( array( 'rf' => $rf ), $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+		/* --------------------------------------------- MLS Endpoints -------------------------------------------------- */
+
+		/**
+		 * Gives the date and time a particular MLS was last downloaded, processed and the last time images gathering was completed.
+		 *
+		 * Note: dates/times given are UTC.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getAge Documentation.
+		 * @param  string        $idx_id  Format: x000
+		 * @param  string|array  $rf      String or array of fields to return in the output.
+		 * @return array                  An array of timestamps for last downloaded, last processes and last images gathered.
+		 */
+		public function get_mls_age( $idx_id, $rf = '' ) {
+			// Prepare request.
+			$route = "mls/age/$idx_id";
+			$route = add_query_arg( array( 'rf' => $rf ), $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+		/**
+		 * This method provides all of the IDX IDs and names for all of the paperwork approved MLSs on the client's account.
+		 *
+		 * Note: This method was previously camelcased as "approvedMLS" but was made lower case to fit the API naming
+		 * convention. Calls to "approvedMLS" will be forwarded to "approvedmls" and "approvedMLS" is listed as deprecated
+		 * in the method list.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getApprovedmls Documentation.
+		 * @param  string|array  $rf  String or array of fields to return in the output.
+		 * @return array              A list of IDs and names for all MLSs approved for display on the client account.
+		 */
+		public function get_mls_approvedmls( $rf = '' ) {
+			// Prepare request.
+			$route = "mls/approvedmls";
+			$route = add_query_arg( array( 'rf' => $rf ), $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+		/**
+		 * All cities represented in the current set of MLS data are available from this method. The output can be filtered
+		 * using additional GET parameters.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getCities Documentation.
+		 * @param  string        $idx_id        Format: x000
+		 * @param  string        $filter_field  The field to use when filtering output.
+		 *                                      Allowed values: "cityID, cityName, stateAbrv, mlsPtID"
+		 * @param  string        $filter_value  The value by which to filter. Conditional on use of filterField
+		 * @param  string|array  $rf            String or array of fields to return in the output.
+		 * @return array                        Available cities along with applicable city ID, property type, and state as
+		 *                                      well as a count of the number of occurrences for each value.
+		 */
+		public function get_mls_cities( $idx_id, $filter_field = '', $filter_value = '', $rf = '' ) {
+			// Prepare request.
+			$route = "mls/cities/$idx_id";
+			$route = add_query_arg( array( 'filterField' => $filter_field, 'filterValue' => $filter_value, 'rf' => $rf ), $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+		/**
+		 * All counties represented in the current set of MLS data are available from this method. The output can be
+		 * filtered using additional GET parameters.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getCounties Documentation.
+		 * @param  string        $idx_id        Format: x000
+		 * @param  string        $filter_field  The field to use when filtering output.
+		 *                                      Allowed values: "countyID, countyName, stateAbrv, mlsPtID"
+		 * @param  string        $filter_value  The value by which to filter. Conditional on use of filterField
+		 * @param  string|array  $rf            String or array of fields to return in the output.
+		 * @return array                        Available counties along with applicable county ID, property type, and state
+		 *                                      as well as a count of the number of occurrences of each value.
+		 */
+		public function get_mls_counties( $idx_id, $filter_field = '', $filter_value = '', $rf = '' ) {
+			// Prepare request.
+			$route = "mls/counties/$idx_id";
+			$route = add_query_arg( array( 'filterField' => $filter_field, 'filterValue' => $filter_value, 'rf' => $rf ), $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+		/**
+		 * This is a simple, access anywhere, method for getting a list of all API components available.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getListcomponents Documentation.
+		 *
+		 * @return array All available APIs/Components
+		 */
+		public function get_mls_listcomponents() {
+			return $this->build_request( "mls/listcomponents" )->request();
+		}
+
+		/**
+		 * A simple method for listing all available methods in the current API component. This method will also list which
+		 * request methods (GET, PUT, POST, or DELETE) are supported by each method in addition to each method status.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-listmethods Documentation.
+		 *
+		 * @return array Basic information about all available methods in this API.
+		 */
+		public function get_mls_listmethods() {
+			return $this->build_request( "mls/listmethods" )->request();
+		}
+
+		/**
+		 * All postal codes represented in the current set of MLS data are available from this method. The output can be
+		 * filtered using additional GET parameters.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getPostalcodes Documentation.
+		 * @param  string        $idx_id        Format: x000
+		 * @param  string        $filter_field  The field to use when filtering output.
+		 *                                      Allowed values: "id, stateAbrv, mlsPtID"
+		 * @param  string        $filter_value  The value by which to filter. Conditional on use of filterField
+		 * @param  string|array  $rf            String or array of fields to return in the output.
+		 * @return array                        Available postalcodes along with applicable property type and state as well
+		 *                                      as a count of the number of occurrences of each value.
+		 */
+		public function get_mls_postalcodes( $idx_id, $filter_field = '', $filter_value = '', $rf = '' ) {
+			// Prepare request.
+			$route = "mls/postalcodes/$idx_id";
+			$route = add_query_arg( array( 'filterField' => $filter_field, 'filterValue' => $filter_value, 'rf' => $rf ), $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+		/**
+		 * The sum total of properties listed in a given MLS as well as sums for each property type in the MLS.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getPrices Documentation.
+		 * @param  string        $idx_id        Format: x000
+		 * @param  string|array  $rf            String or array of fields to return in the output.
+		 * @return array                        A multidimensional array with the total sum and the sum for each property type.
+		 */
+		public function get_mls_prices( $idx_id, $rf = '') {
+			// Prepare request.
+			$route = "mls/prices/$idx_id";
+			$route = add_query_arg( array( 'rf' => $rf ), $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+		/**
+		 * Gives a total number of listings available for a given city, county, or zipcode.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getPropertycount Documentation.
+		 * @param  string $idx_id           Format: x000
+		 * @param  string $count_type       Specify if you are looking for the count of a city, county, or zipcode.
+		 *                                  Allowed values: "city", "county", "zipcode"
+		 * @param  int    $count_specifier  The numeric city ID, county ID, or zipcode for which you want to get a property count.
+		 * @return int                      An integer count of the number of properties.
+		 */
+		public function get_mls_propertycount( $idx_id, $count_type = '', $count_specifier = '') {
+			// Prepare request.
+			$route = "mls/propertycount/$idx_id";
+			$route = add_query_arg( array( 'countType' => $count_type, 'countSpecifier' => $count_specifier ), $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+		/**
+		 * Gives the property type information for all types that are available on a given MLS.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getPropertytypes Documentation.
+		 * @param  string        $idx_id        Format: x000
+		 * @param  string        $filter_field  The field to use when filtering output.
+		 *                                      Allowed values: "mlsPtID, mlsPropertyType"
+		 * @param  string        $filter_value  The value by which to filter. Conditional on use of filterField
+		 * @param  string|array  $rf            String or array of fields to return in the output.
+		 * @return array                        An array of property type information including MLS property type ID, MLS
+		 *                                      property type name, parent property type, and subtypes.
+		 */
+		public function get_mls_propertytypes( $idx_id, $filter_field = '', $filter_value = '', $rf = '' ) {
+			// Prepare request.
+			$route = "mls/propertytypes/$idx_id";
+			$route = add_query_arg( array( 'filterField' => $filter_field, 'filterValue' => $filter_value, 'rf' => $rf ), $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+		/**
+		 * All the fields in a given MLS that are currently allowed to be searched according to MLS guidelines.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getSearchfields Documentation.
+		 * @param  string        $idx_id        Format: x000
+		 * @param  string        $filter_field  The field to use when filtering output.
+		 *                                      Allowed values: "mlsPtID, parentPtID"
+		 * @param  string        $filter_value  The value by which to filter. Conditional on use of filterField
+		 * @param  string|array  $rf            String or array of fields to return in the output.
+		 * @return array                        An array containing all MLS fields that are searchable according to MLS rules
+		 *                                      and IDX guidelines. Array contains the field's name (which is the field to
+		 *                                      be used as a key when performing a search), the display name (as should be
+		 *                                      displayed in a search form), and both the mlsPtID and parentPtID to which
+		 *                                      the field belongs.
+		 */
+		public function get_mls_searchfields( $idx_id, $filter_field = '', $filter_value = '', $rf = '' ) {
+			// Prepare request.
+			$route = "mls/searchfields/$idx_id";
+			$route = add_query_arg( array( 'filterField' => $filter_field, 'filterValue' => $filter_value, 'rf' => $rf ), $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+		/**
+		 * Field values in a given MLS that are currently allowed to be searched according to MLS guidelines.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getSearchfieldvalues Documentation.
+		 * @param  string  $idx_id     Format: x000
+		 * @param  int     $mls_pt_id  The IDX assigned ID of the MLS property type(s). See the propertytypes method in this API/Component for a lookup of property type IDs.
+		 * @param  string  $name       Mls field name - the IDX assigned name of the MLS field name. See the searchfields for the list of searchable fields.
+		 * @return array               An array containing all the values for the given mls field.
+		 */
+		public function get_mls_searchfieldvalues( $idx_id, $mls_pt_id, $name ) {
+			// Prepare request.
+			$route = "mls/searchfieldvalues/$idx_id";
+			$route = add_query_arg( array( 'mlsPtID' => $mls_pt_id, 'name' => $name ), $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+		/**
+		 * All zip codes represented in the current set of MLS data are available from this method. The output can be
+		 * filtered using additional GET parameters.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getZipcodes Documentation.
+		 * @param  string        $idx_id        Format: x000
+		 * @param  string        $filter_field  The field to use when filtering output.
+		 *                                      Allowed values: "mlsPtID, parentPtID"
+		 * @param  string        $filter_value  The value by which to filter. Conditional on use of filterField
+		 * @param  string|array  $rf            String or array of fields to return in the output.
+		 * @return array                        Available zipcodes along with applicable property type and state as well as
+		 *                                      a count of the number of occurrences of each value.
+		 */
+		public function get_mls_zipcodes( $idx_id, $filter_field = '', $filter_value = '', $rf = '' ) {
+			// Prepare request.
+			$route = "mls/zipcodes/$idx_id";
+			$route = add_query_arg( array( 'filterField' => $filter_field, 'filterValue' => $filter_value, 'rf' => $rf ), $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+
+		/* ----------------------------------------------- Leads Endpoints --------------------------------------------- */
+
+
+		/**
+		 * Update leads in batches of up to 100 per request.
+		 *
+		 * Note: Each lead field should be passed as an indexed array starting at and going to, at most, 100. There must not
+		 *       be any gaps. LeadID is required for each lead to be updated
+		 *
+     * Data Example:
+     * $data = array(
+     *  'id[0]' = 1,
+     *  'firstName[0]' => 'John',
+     *  'lastName[0]' => 'Doe',
+     *  'email[0]' => 'john@example.com',
+     *  'id[1]' = 2,
+     *  'firstName[1]' => 'Aaron',
+     *  'lastName[1]' => 'Aaronson',
+     *  'email[1]' => 'aaron@example.com'
+     * );
+		 *
+		 * @api POST
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-postBulklead Documentation.
+		 * @param  array  $data  Supplemental fields to update.
+		 * @return mixed         If a leads are successfully updated the updated lead IDs will be returned. If no POST
+		 *                       data is supplied then a list of updatable fields with format information is returned.
+		 */
+		public function post_bulkleads( $data = array() ) {
+			$fields['method'] = 'POST';
+			$fields['body'] = $data;
+			$route = "leads/bulklead";
+
+			return $this->build_request( $route, $fields )->request();
+		}
+
+		/**
+		 * Add leads in batches of up to 100 per request.
+		 *
+		 * Note: Each lead field should be passed as an indexed array starting at and going to, at most, 100. There must not
+		 *       be any gaps.
+		 *
+     * Data Example:
+     * $data = array(
+     *  'firstName[0]' => 'John',
+     *  'lastName[0]' => 'Doe',
+     *  'email[0]' => 'john@example.com',
+     *  'firstName[1]' => 'Aaron',
+     *  'lastName[1]' => 'Aaronson',
+     *  'email[1]' => 'aaron@example.com'
+     * );
+		 *
+		 * @api PUT
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-getBulklead Documentation.
+		 * @param  array  $data  Supplemental fields to update.
+		 * @return array         If a lead is successfully created the new lead IDs will be returned. If no PUT data is
+		 *                       supplied then a list of updatable fields with format information is returned.
+		 */
+		public function put_bulkleads( $data = array() ) {
+			$fields['method'] = 'PUT';
+			$fields['body'] = $data;
+			$route = "leads/bulklead";
+
+			return $this->build_request( $route, $fields )->request();
+		}
+
+		/**
+		 * Remove a lead system wide.
+		 *
+		 * This method is to be used at your own risk. We will NOT be held accountable for programmatic errors in your code
+		 * or the improper use of search values or options within said values resulting in deletion of leads.
+		 *
+		 * @api DELETE
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-deleteLead Documentation.
+		 * @param  int   $lead_id  The ID of a lead.
+		 * @return void            Nothing on success.
+		 */
+		public function delete_lead( $lead_id ) {
+			$fields['method'] = 'DELETE';
+			$route = "leads/lead/$lead_id";
+
+			return $this->build_request( $route, $fields )->request();
+		}
+
+		/**
+		 * Get information for one or multiple leads.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-getlead Documentation.
+		 * @param  string $lead_id If no ID is given a list of IDs is returned.
+		 * @param  array  $args    Query args to send in to API call.
+		 * @return array           If a lead ID is provided detailed information about that lead is returned. Otherwise
+		 *                         simple information about all leads is returned.
+		 */
+		public function get_leads( $lead_id = '', $args = array() ) {
+			// Prepare request.
+			$route = ( '' === $lead_id ) ? 'leads/lead' : "leads/lead/$lead_id";
+			$route = add_query_arg( $args, $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+		/**
+		 * Update the information for one lead specified by the primary request ID.
+		 *
+		 * Data Example:
+		 * $data = array(
+     *  'firstName' => 'John',
+     *  'lastName' => 'Doe',
+     *  'email' => 'john@example.com'
+     * );
+		 *
+		 * @api POST
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-postLead Documentation.
+		 * @param  int    $lead_id  The ID of a lead.
+		 * @param  array  $data     Lead fields to update.
+		 * @return mixed            If a leads are successfully updated the updated lead IDs will be returned. If no POST
+		 *                          data is supplied then a list of updatable fields with format information is returned.
+		 */
+		public function post_lead( $lead_id, $data ) {
+			$fields['method'] = 'POST';
+			$fields['body'] = $data;
+			$route = "leads/leads/$lead_id";
+
+			return $this->build_request( $route, $fields )->request();
+		}
+
+		/**
+		 * Create a new lead.
+		 *
+		 * Special Note: Currently the API cannot differentiate between a lead rejected due to server error or one rejected
+		 *               due to bad email address. The lead system requires email addresses that are correctly formatted to
+		 *               cut down on garbage accounts, and they need to have a valid MX record. Most 500 error from this
+		 *               method are a result of bad email addresses. In future versions we will differentiate the error and
+		 *               make the MX record requirement optional.
+		 *
+		 * Data Example:
+		 * $data = array(
+     *  'firstName' => 'John',
+     *  'lastName' => 'Doe',
+     *  'email' => 'john@example.com'
+     * );
+		 *
+		 * @api PUT
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-putLead Documentation.
+		 * @param  array  $data  Lead fields to create.
+		 * @return mixed         If a lead is successfully created the new lead's ID will be returned. If no PUT data is
+		 *                       supplied then a list of updatable fields with format information is returned.
+		 */
 		public function put_lead() {
+			$fields['method'] = 'PUT';
+			$fields['body'] = $data;
+			$route = "leads/leads";
+
+			return $this->build_request( $route, $fields )->request();
 		}
-		public function get_leadtraffic() {
+
+		/**
+		 * Get traffic history for a specified lead.
+		 *
+		 * For bandwidth and memory considerations there is a limit of 5,000 on the number of lead traffics that can be
+		 * returned in any single request.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-getLeadtraffic Documentation.
+		 * @param  string $lead_id If no ID is given a list of IDs is returned.
+		 * @param  array  $args    Query args to send in to API call.
+		 * @return array           The applicable client account ID, date, lead ID, IP , page, and referrer.
+		 */
+		public function get_leadtraffic( $lead_id, $args = array() ) {
+			// Prepare request.
+			$route = "leads/leadtraffic/$lead_id";
+			$route = add_query_arg( $args, $route );
+
+			return $this->build_request( $route )->request();
 		}
+
+		/**
+		 * This is a simple, access anywhere, method for getting a list of all API components available.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-getListcomponents Documentation.
+		 * @return array   All available APIs/Components.
+		 */
 		public function get_leads_listcomponents() {
+			return $this->build_request( "leads/listcomponents" )->request();
 		}
+
+		/**
+		 * This is a simple, access anywhere, method for getting a list of all API components available.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-listmethods Documentation.
+		 * @return array   Basic information about all available methods in this API.
+		 */
 		public function get_leads_listmethods() {
+			return $this->build_request( "leads/listmethods" )->request();
 		}
+
+		/**
+		 * Remove a lead note.
+		 *
+		 * @api DELETE
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-deleteNote Documentation.
+		 * @param  int   $lead_id  The ID of a lead.
+		 * @param  int   $note_id  The ID of the note to delete.
+		 * @return void            Nothing on success.
+		 */
 		public function delete_leads_note() {
+			$fields['method'] = 'DELETE';
+			$route = "leads/note/$lead_id/$note_id";
+
+			return $this->build_request( $route, $fields )->request();
 		}
+
+		public function get_leads_note() {
+		}
+
 		public function post_leads_note() {
 		}
 		public function put_leads_note() {
-		}
-		public function get_leads_note() {
 		}
 		public function delete_leads_property() {
 		}
