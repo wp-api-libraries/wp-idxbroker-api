@@ -453,7 +453,10 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		public function get_partners_propertytypes( $idx_id = '', $rf = '' ) {
 			// Prepare request.
 			$route = ('' === $idx_id ) ? 'partners/propertytypes' : "partners/propertytypes/$idx_id";
-			$route = add_query_arg( array( 'rf' => $rf ), $route );
+			$args = array(
+				'rf' => $rf
+			);
+			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
 		}
@@ -520,7 +523,10 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		public function get_clients_cities( $list_id = '', $rf = '' ) {
 			// Prepare request.
 			$route = ('' === $list_id ) ? 'clients/cities' : "clients/cities/$list_id";
-			$route = add_query_arg( array( 'rf' => $rf ), $route );
+			$args = array(
+				'rf' => $rf
+			);
+			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
 		}
@@ -552,7 +558,10 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		public function get_clients_counties( $list_id = '', $rf = '' ) {
 			// Prepare request.
 			$route = ('' === $list_id ) ? 'clients/counties' : "clients/counties/$list_id";
-			$route = add_query_arg( array( 'rf' => $rf ), $route );
+			$args = array(
+				'rf' => $rf
+			);
+			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
 		}
@@ -587,10 +596,10 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 			$fields['method'] = 'POST';
 			$fields['body']['dynamicURL'] = $dynamic_url;
 
-			if ( !empty( $savedlink_id ) ) {
+			if ( ! empty( $savedlink_id ) ) {
 				$fields['body']['savedLinkID'] = $savedlink_id;
 			}
-			if ( !empty( $page_id ) ) {
+			if ( ! empty( $page_id ) ) {
 				$fields['body']['pageID'] = $page_id;
 			}
 
@@ -661,7 +670,13 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		public function get_clients_listing( $idx_id, $listing_id, $rf = '', $disclaimers = true ) {
 			// Prepare request.
 			$route = "clients/listing/$idx_id/$listing_id";
-			$route = add_query_arg( array( 'rf' => $rf, 'disclaimers' => $disclaimers ), $route );
+			$route = add_query_arg(
+				array(
+					'rf' => $rf,
+					'disclaimers' => $disclaimers
+				),
+				$route
+			);
 
 			return $this->build_request( $route )->request();
 		}
@@ -982,7 +997,12 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		public function get_clients_systemlinks( $rf = '' ) {
 			// Prepare request.
 			$route = 'clients/systemlinks';
-			$route = add_query_arg( array( 'rf' => $rf ), $route );
+			$route = add_query_arg(
+				array(
+					'rf' => $rf
+				),
+				$route
+			);
 
 			return $this->build_request( $route )->request();
 		}
@@ -1000,7 +1020,12 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		public function get_clients_widgets( $rf = '' ) {
 			// Prepare request.
 			$route = 'clients/widgetsrc';
-			$route = add_query_arg( array( 'rf' => $rf ), $route );
+			$route = add_query_arg(
+				array(
+					'rf' => $rf
+				),
+				$route
+			);
 
 			return $this->build_request( $route )->request();
 		}

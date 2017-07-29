@@ -17,6 +17,8 @@ engines:
   phpmd:
     enabled: true
     checks:
+      ExcessivePublicCount:
+        enabled: false
       Naming/ShortVariable:
         enabled: false
       Design/TooManyMethods:
