@@ -32,7 +32,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">12</span></a></li>
+                <span class="label label-info">0</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -69,10 +69,8 @@
 <li class="method public "><a href="#method_delete_clients_wrappercache" title="delete_clients_wrappercache() :: Remove a clients supplemental property."><span class="description">Remove a clients supplemental property.</span><pre>delete_clients_wrappercache()</pre></a></li>
 <li class="method public "><a href="#method_delete_lead" title="delete_lead() :: Remove a lead system wide."><span class="description">Remove a lead system wide.</span><pre>delete_lead()</pre></a></li>
 <li class="method public "><a href="#method_delete_leads_note" title="delete_leads_note() :: Remove a lead note."><span class="description">Remove a lead note.</span><pre>delete_leads_note()</pre></a></li>
-<li class="method public "><a href="#method_delete_leads_property" title="delete_leads_property() :: "><span class="description">delete_leads_property()
-        </span><pre>delete_leads_property()</pre></a></li>
-<li class="method public "><a href="#method_delete_leads_search" title="delete_leads_search() :: "><span class="description">delete_leads_search()
-        </span><pre>delete_leads_search()</pre></a></li>
+<li class="method public "><a href="#method_delete_leads_property" title="delete_leads_property() :: Remove a lead saved property."><span class="description">Remove a lead saved property.</span><pre>delete_leads_property()</pre></a></li>
+<li class="method public "><a href="#method_delete_leads_search" title="delete_leads_search() :: Remove a lead saved search."><span class="description">Remove a lead saved search.</span><pre>delete_leads_search()</pre></a></li>
 <li class="method public "><a href="#method_get_clients_accounttype" title="get_clients_accounttype() :: Get your account type."><span class="description">Get your account type.</span><pre>get_clients_accounttype()</pre></a></li>
 <li class="method public "><a href="#method_get_clients_agents" title="get_clients_agents() :: View agent information on a multi-user account."><span class="description">View agent information on a multi-user account.</span><pre>get_clients_agents()</pre></a></li>
 <li class="method public "><a href="#method_get_clients_apiversion" title="get_clients_apiversion() :: Get the default api version."><span class="description">Get the default api version.</span><pre>get_clients_apiversion()</pre></a></li>
@@ -134,12 +132,9 @@ available do not send the primary request ID. The default list on each account h
 <li class="method public "><a href="#method_get_leads" title="get_leads() :: Get information for one or multiple leads."><span class="description">Get information for one or multiple leads.</span><pre>get_leads()</pre></a></li>
 <li class="method public "><a href="#method_get_leads_listcomponents" title="get_leads_listcomponents() :: This is a simple, access anywhere, method for getting a list of all API components available."><span class="description">This is a simple, access anywhere, method for getting a list of all API components available.</span><pre>get_leads_listcomponents()</pre></a></li>
 <li class="method public "><a href="#method_get_leads_listmethods" title="get_leads_listmethods() :: This is a simple, access anywhere, method for getting a list of all API components available."><span class="description">This is a simple, access anywhere, method for getting a list of all API components available.</span><pre>get_leads_listmethods()</pre></a></li>
-<li class="method public "><a href="#method_get_leads_note" title="get_leads_note() :: "><span class="description">get_leads_note()
-        </span><pre>get_leads_note()</pre></a></li>
-<li class="method public "><a href="#method_get_leads_property" title="get_leads_property() :: "><span class="description">get_leads_property()
-        </span><pre>get_leads_property()</pre></a></li>
-<li class="method public "><a href="#method_get_leads_search" title="get_leads_search() :: "><span class="description">get_leads_search()
-        </span><pre>get_leads_search()</pre></a></li>
+<li class="method public "><a href="#method_get_leads_note" title="get_leads_note() :: Get notes for a lead."><span class="description">Get notes for a lead.</span><pre>get_leads_note()</pre></a></li>
+<li class="method public "><a href="#method_get_leads_property" title="get_leads_property() :: Get saved properties for a lead."><span class="description">Get saved properties for a lead.</span><pre>get_leads_property()</pre></a></li>
+<li class="method public "><a href="#method_get_leads_search" title="get_leads_search() :: Get searches for a lead."><span class="description">Get searches for a lead.</span><pre>get_leads_search()</pre></a></li>
 <li class="method public "><a href="#method_get_leadtraffic" title="get_leadtraffic() :: Get traffic history for a specified lead."><span class="description">Get traffic history for a specified lead.</span><pre>get_leadtraffic()</pre></a></li>
 <li class="method public "><a href="#method_get_mls_age" title="get_mls_age() :: Gives the date and time a particular MLS was last downloaded, processed and the last time images gathering was completed."><span class="description">Gives the date and time a particular MLS was last downloaded, processed and the last time images gathering was completed.</span><pre>get_mls_age()</pre></a></li>
 <li class="method public "><a href="#method_get_mls_approvedmls" title="get_mls_approvedmls() :: This method provides all of the IDX IDs and names for all of the paperwork approved MLSs on the client's account."><span class="description">This method provides all of the IDX IDs and names for all of the paperwork approved MLSs on the client's account.</span><pre>get_mls_approvedmls()</pre></a></li>
@@ -187,7 +182,7 @@ in the client API component in that it can look up property types for any active
 which the client is a member."><span class="description">Gives the names and IDs of all available property types. This method differs from the property type lookup method
 in the client API component in that it can look up property types for any active Platinum MLS, not just those for
 which the client is a member.</span><pre>get_partners_propertytypes()</pre></a></li>
-<li class="method public "><a href="#method_get_specialtypartner_pricing" title="get_specialtypartner_pricing() :: [get_specialty_partner_pricing description]"><span class="description">[get_specialty_partner_pricing description]</span><pre>get_specialtypartner_pricing()</pre></a></li>
+<li class="method public "><a href="#method_get_specialtypartner_pricing" title="get_specialtypartner_pricing() :: Get IDX account and agent/office add-on pricing."><span class="description">Get IDX account and agent/office add-on pricing.</span><pre>get_specialtypartner_pricing()</pre></a></li>
 <li class="method public "><a href="#method_post_bulkleads" title="post_bulkleads() :: Update leads in batches of up to 100 per request."><span class="description">Update leads in batches of up to 100 per request.</span><pre>post_bulkleads()</pre></a></li>
 <li class="method public "><a href="#method_post_clients_dynamicwrapperurl" title="post_clients_dynamicwrapperurl() :: Update dynamic wrapper url for global, pages and saved links. If savedLinkID, or pageID are not passed, the
 global dynamic wrapper url will be updated."><span class="description">Update dynamic wrapper url for global, pages and saved links. If savedLinkID, or pageID are not passed, the
@@ -195,24 +190,17 @@ global dynamic wrapper url will be updated.</span><pre>post_clients_dynamicwrapp
 <li class="method public "><a href="#method_post_clients_savedlink" title="post_clients_savedlink() :: Update an existing client's saved link"><span class="description">Update an existing client's saved link</span><pre>post_clients_savedlink()</pre></a></li>
 <li class="method public "><a href="#method_post_clients_supplemental" title="post_clients_supplemental() :: Update an existing supplemental listing."><span class="description">Update an existing supplemental listing.</span><pre>post_clients_supplemental()</pre></a></li>
 <li class="method public "><a href="#method_post_lead" title="post_lead() :: Update the information for one lead specified by the primary request ID."><span class="description">Update the information for one lead specified by the primary request ID.</span><pre>post_lead()</pre></a></li>
-<li class="method public "><a href="#method_post_leads_note" title="post_leads_note() :: "><span class="description">post_leads_note()
-        </span><pre>post_leads_note()</pre></a></li>
-<li class="method public "><a href="#method_post_leads_property" title="post_leads_property() :: "><span class="description">post_leads_property()
-        </span><pre>post_leads_property()</pre></a></li>
-<li class="method public "><a href="#method_post_leads_search" title="post_leads_search() :: "><span class="description">post_leads_search()
-        </span><pre>post_leads_search()</pre></a></li>
+<li class="method public "><a href="#method_post_leads_note" title="post_leads_note() :: Update the notes information for one lead specified by the primary request ID."><span class="description">Update the notes information for one lead specified by the primary request ID.</span><pre>post_leads_note()</pre></a></li>
+<li class="method public "><a href="#method_post_leads_property" title="post_leads_property() :: Update an existing lead's saved property."><span class="description">Update an existing lead's saved property.</span><pre>post_leads_property()</pre></a></li>
+<li class="method public "><a href="#method_post_leads_search" title="post_leads_search() :: Update an existing lead's saved search."><span class="description">Update an existing lead's saved search.</span><pre>post_leads_search()</pre></a></li>
 <li class="method public "><a href="#method_put_bulkleads" title="put_bulkleads() :: Add leads in batches of up to 100 per request."><span class="description">Add leads in batches of up to 100 per request.</span><pre>put_bulkleads()</pre></a></li>
 <li class="method public "><a href="#method_put_clients_savedlink" title="put_clients_savedlink() :: Create a new client saved link."><span class="description">Create a new client saved link.</span><pre>put_clients_savedlink()</pre></a></li>
 <li class="method public "><a href="#method_put_clients_supplemental" title="put_clients_supplemental() :: Create a new supplemental listing."><span class="description">Create a new supplemental listing.</span><pre>put_clients_supplemental()</pre></a></li>
 <li class="method public "><a href="#method_put_lead" title="put_lead() :: Create a new lead."><span class="description">Create a new lead.</span><pre>put_lead()</pre></a></li>
-<li class="method public "><a href="#method_put_leads_note" title="put_leads_note() :: "><span class="description">put_leads_note()
-        </span><pre>put_leads_note()</pre></a></li>
-<li class="method public "><a href="#method_put_leads_property" title="put_leads_property() :: "><span class="description">put_leads_property()
-        </span><pre>put_leads_property()</pre></a></li>
-<li class="method public "><a href="#method_put_leads_search" title="put_leads_search() :: "><span class="description">put_leads_search()
-        </span><pre>put_leads_search()</pre></a></li>
-<li class="method public "><a href="#method_put_specialtypartner_subscriber" title="put_specialtypartner_subscriber() :: "><span class="description">put_specialtypartner_subscriber()
-        </span><pre>put_specialtypartner_subscriber()</pre></a></li>
+<li class="method public "><a href="#method_put_leads_note" title="put_leads_note() :: Create a new lead note."><span class="description">Create a new lead note.</span><pre>put_leads_note()</pre></a></li>
+<li class="method public "><a href="#method_put_leads_property" title="put_leads_property() :: Create a new lead saved property."><span class="description">Create a new lead saved property.</span><pre>put_leads_property()</pre></a></li>
+<li class="method public "><a href="#method_put_leads_search" title="put_leads_search() :: Create a new lead saved search."><span class="description">Create a new lead saved search.</span><pre>put_leads_search()</pre></a></li>
+<li class="method public "><a href="#method_put_specialtypartner_subscriber" title="put_specialtypartner_subscriber() :: Create IDX subscriber."><span class="description">Create IDX subscriber.</span><pre>put_specialtypartner_subscriber()</pre></a></li>
 <li class="method public "><a href="#method_request" title="request() :: Request function."><span class="description">Request function.</span><pre>request()</pre></a></li>
 <li class="method public "><a href="#method_response_code_msg" title="response_code_msg() :: Response code message."><span class="description">Response code message.</span><pre>response_code_msg()</pre></a></li>
 </ul>
@@ -308,7 +296,7 @@ global dynamic wrapper url will be updated.</span><pre>post_clients_dynamicwrapp
 </div>
 <a id="method_delete_clients_savedlink"></a><div class="element clickable method public method_delete_clients_savedlink " data-toggle="collapse" data-target=".method_delete_clients_savedlink .collapse" title="public">
 <h2>Remove a new client saved link.</h2>
-<pre>delete_clients_savedlink(string $saved_links_id) : void</pre>
+<pre>delete_clients_savedlink(string $saved_links_id) : mixed</pre>
 <div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -326,11 +314,14 @@ global dynamic wrapper url will be updated.</span><pre>post_clients_dynamicwrapp
 <div class="subelement argument">
 <h4>$saved_links_id</h4>
 <code>string</code><p>The ID of a client's saved link.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Nothing on success.</div>
 </div></div>
 </div>
 <a id="method_delete_clients_supplemental"></a><div class="element clickable method public method_delete_clients_supplemental " data-toggle="collapse" data-target=".method_delete_clients_supplemental .collapse" title="public">
 <h2>Remove a clients supplemental property.</h2>
-<pre>delete_clients_supplemental(string $listing_id) : void</pre>
+<pre>delete_clients_supplemental(string $listing_id) : mixed</pre>
 <div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>This method is to be used at your own risk. We will NOT be held accountable for programmatic errors in your code
@@ -348,12 +339,15 @@ or the improper use of search values or options within said values resulting in 
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$listing_id</h4>
-<code>string</code><p>The listingID of a supplmental property</p></div>
+<code>string</code><p>The listingID of a supplmental property.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Nothing on success.</div>
 </div></div>
 </div>
 <a id="method_delete_clients_wrappercache"></a><div class="element clickable method public method_delete_clients_wrappercache " data-toggle="collapse" data-target=".method_delete_clients_wrappercache .collapse" title="public">
 <h2>Remove a clients supplemental property.</h2>
-<pre>delete_clients_wrappercache() : void</pre>
+<pre>delete_clients_wrappercache() : mixed</pre>
 <div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>This method is to be used at your own risk. We will NOT be held accountable for programmatic errors in your code
@@ -368,11 +362,14 @@ or the improper use of search values or options within said values resulting in 
 <td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Clients-getWrappercache">Documentation.</a></td>
 </tr>
 </table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Nothing on success.</div>
 </div></div>
 </div>
 <a id="method_delete_lead"></a><div class="element clickable method public method_delete_lead " data-toggle="collapse" data-target=".method_delete_lead .collapse" title="public">
 <h2>Remove a lead system wide.</h2>
-<pre>delete_lead(integer $lead_id) : void</pre>
+<pre>delete_lead(integer $lead_id) : mixed</pre>
 <div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>This method is to be used at your own risk. We will NOT be held accountable for programmatic errors in your code
@@ -391,11 +388,14 @@ or the improper use of search values or options within said values resulting in 
 <div class="subelement argument">
 <h4>$lead_id</h4>
 <code>integer</code><p>The ID of a lead.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Nothing on success.</div>
 </div></div>
 </div>
 <a id="method_delete_leads_note"></a><div class="element clickable method public method_delete_leads_note " data-toggle="collapse" data-target=".method_delete_leads_note .collapse" title="public">
 <h2>Remove a lead note.</h2>
-<pre>delete_leads_note() : void</pre>
+<pre>delete_leads_note(integer $lead_id, integer $note_id) : mixed</pre>
 <div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -409,21 +409,73 @@ or the improper use of search values or options within said values resulting in 
 <td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-deleteNote">Documentation.</a></td>
 </tr>
 </table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$lead_id</h4>
+<code>integer</code><p>The ID of a lead.</p></div>
+<div class="subelement argument">
+<h4>$note_id</h4>
+<code>integer</code><p>The ID of the note to delete.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Nothing on success.</div>
 </div></div>
 </div>
 <a id="method_delete_leads_property"></a><div class="element clickable method public method_delete_leads_property " data-toggle="collapse" data-target=".method_delete_leads_property .collapse" title="public">
-<h2>delete_leads_property()
-        </h2>
-<pre>delete_leads_property() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Remove a lead saved property.</h2>
+<pre>delete_leads_property(integer $lead_id, integer $property_id) : mixed</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>DELETE</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-deleteProperty">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$lead_id</h4>
+<code>integer</code><p>The ID of a lead.</p></div>
+<div class="subelement argument">
+<h4>$property_id</h4>
+<code>integer</code><p>The ID of a property to delete.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Nothing on success.</div>
+</div></div>
 </div>
 <a id="method_delete_leads_search"></a><div class="element clickable method public method_delete_leads_search " data-toggle="collapse" data-target=".method_delete_leads_search .collapse" title="public">
-<h2>delete_leads_search()
-        </h2>
-<pre>delete_leads_search() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Remove a lead saved search.</h2>
+<pre>delete_leads_search(integer $lead_id, integer $search_id) : mixed</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>DELETE</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-deleteSearch">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$lead_id</h4>
+<code>integer</code><p>The ID of a lead.</p></div>
+<div class="subelement argument">
+<h4>$search_id</h4>
+<code>integer</code><p>The ID of a saved search to delete.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Nothing on success.</div>
+</div></div>
 </div>
 <a id="method_get_clients_accounttype"></a><div class="element clickable method public method_get_clients_accounttype " data-toggle="collapse" data-target=".method_get_clients_accounttype .collapse" title="public">
 <h2>Get your account type.</h2>
@@ -959,11 +1011,11 @@ additional property information being included in the URL.</h2>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>array</code>The name, unique ID, and URL for all system links on the account. Additionally there
-                           is a boolean named systemresults. If true this is a property results page that requires
-                           additional parameters. This means the url can be useful when dynamically building
-                           results page links but should not be linked to directly. When a client has more than
-                           one MLS on their account, listings for search pages that can vary by MLS ID will
-                           include a subpages array element.</div>
+                          is a boolean named systemresults. If true this is a property results page that requires
+                          additional parameters. This means the url can be useful when dynamically building
+                          results page links but should not be linked to directly. When a client has more than
+                          one MLS on their account, listings for search pages that can vary by MLS ID will
+                          include a subpages array element.</div>
 </div></div>
 </div>
 <a id="method_get_clients_widgets"></a><div class="element clickable method public method_get_clients_widgets " data-toggle="collapse" data-target=".method_get_clients_widgets .collapse" title="public">
@@ -990,7 +1042,7 @@ main site via the included URLs.</h2>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>array</code>The name, unique ID and URL for all javascript widgets that have been created on the
-                           user's account.</div>
+                          user's account.</div>
 </div></div>
 </div>
 <a id="method_get_clients_zipcodes"></a><div class="element clickable method public method_get_clients_zipcodes " data-toggle="collapse" data-target=".method_get_clients_zipcodes .collapse" title="public">
@@ -1106,25 +1158,101 @@ available do not send the primary request ID. The default list on each account h
 </div></div>
 </div>
 <a id="method_get_leads_note"></a><div class="element clickable method public method_get_leads_note " data-toggle="collapse" data-target=".method_get_leads_note .collapse" title="public">
-<h2>get_leads_note()
-        </h2>
-<pre>get_leads_note() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Get notes for a lead.</h2>
+<pre>get_leads_note(integer $lead_id, integer $note_id<code> = ''</code>, array $args<code> = array()</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-getNote">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$lead_id</h4>
+<code>integer</code><p>The ID of a lead.</p></div>
+<div class="subelement argument">
+<h4>$note_id</h4>
+<code>integer</code><p>The ID of the note to delete.</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Query args to send in to API call.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Lead note information. If no note ID is sent all notes for the lead are returned. If a
+                        note ID is passed only the one note is returned.</div>
+</div></div>
 </div>
 <a id="method_get_leads_property"></a><div class="element clickable method public method_get_leads_property " data-toggle="collapse" data-target=".method_get_leads_property .collapse" title="public">
-<h2>get_leads_property()
-        </h2>
-<pre>get_leads_property() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Get saved properties for a lead.</h2>
+<pre>get_leads_property(integer $lead_id, integer $property_id<code> = ''</code>, array $args<code> = array()</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-getProperty">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$lead_id</h4>
+<code>integer</code><p>The ID of a lead.</p></div>
+<div class="subelement argument">
+<h4>$property_id</h4>
+<code>integer</code><p>The ID of a lead's saved property.</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Query args to send in to API call.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>If no property ID is passed all properties are returned. If a property ID is passed
+                            only the information for that specified property is returned.</div>
+</div></div>
 </div>
 <a id="method_get_leads_search"></a><div class="element clickable method public method_get_leads_search " data-toggle="collapse" data-target=".method_get_leads_search .collapse" title="public">
-<h2>get_leads_search()
-        </h2>
-<pre>get_leads_search() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Get searches for a lead.</h2>
+<pre>get_leads_search(integer $lead_id, integer $search_id<code> = ''</code>, array $args<code> = array()</code>) : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-getSearch">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$lead_id</h4>
+<code>integer</code><p>The ID of a lead.</p></div>
+<div class="subelement argument">
+<h4>$search_id</h4>
+<code>integer</code><p>The ID of a lead's search.</p></div>
+<div class="subelement argument">
+<h4>$args</h4>
+<code>array</code><p>Query args to send in to API call.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>An array with 2 keys. The key searchInformation that contains all existing saved search
+                          information. The key info will return messages about any returned saved search. Currently
+                          this info will tell you if any search's advanced fields are not valid in the IDX system.</div>
+</div></div>
 </div>
 <a id="method_get_leadtraffic"></a><div class="element clickable method public method_get_leadtraffic " data-toggle="collapse" data-target=".method_get_leadtraffic .collapse" title="public">
 <h2>Get traffic history for a specified lead.</h2>
@@ -1174,7 +1302,7 @@ returned in any single request.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$idx_id</h4>
-<code>string</code><p>Format: x000</p></div>
+<code>string</code><p>Format: x000 .</p></div>
 <div class="subelement argument">
 <h4>$rf</h4>
 <code>string</code><code>array</code><p>String or array of fields to return in the output.</p></div>
@@ -1230,21 +1358,21 @@ using additional GET parameters.</h2>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$idx_id</h4>
-<code>string</code><p>Format: x000</p></div>
+<code>string</code><p>Format: x000 .</p></div>
 <div class="subelement argument">
 <h4>$filter_field</h4>
 <code>string</code><p>The field to use when filtering output.
-Allowed values: "cityID, cityName, stateAbrv, mlsPtID"</p></div>
+Allowed values: "cityID, cityName, stateAbrv, mlsPtID".</p></div>
 <div class="subelement argument">
 <h4>$filter_value</h4>
-<code>string</code><p>The value by which to filter. Conditional on use of filterField</p></div>
+<code>string</code><p>The value by which to filter. Conditional on use of filterField.</p></div>
 <div class="subelement argument">
 <h4>$rf</h4>
 <code>string</code><code>array</code><p>String or array of fields to return in the output.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>array</code>Available cities along with applicable city ID, property type, and state as
-                                     well as a count of the number of occurrences for each value.</div>
+                                    well as a count of the number of occurrences for each value.</div>
 </div></div>
 </div>
 <a id="method_get_mls_counties"></a><div class="element clickable method public method_get_mls_counties " data-toggle="collapse" data-target=".method_get_mls_counties .collapse" title="public">
@@ -1267,21 +1395,21 @@ filtered using additional GET parameters.</h2>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$idx_id</h4>
-<code>string</code><p>Format: x000</p></div>
+<code>string</code><p>Format: x000.</p></div>
 <div class="subelement argument">
 <h4>$filter_field</h4>
 <code>string</code><p>The field to use when filtering output.
-Allowed values: "countyID, countyName, stateAbrv, mlsPtID"</p></div>
+Allowed values: "countyID, countyName, stateAbrv, mlsPtID".</p></div>
 <div class="subelement argument">
 <h4>$filter_value</h4>
-<code>string</code><p>The value by which to filter. Conditional on use of filterField</p></div>
+<code>string</code><p>The value by which to filter. Conditional on use of filterField.</p></div>
 <div class="subelement argument">
 <h4>$rf</h4>
 <code>string</code><code>array</code><p>String or array of fields to return in the output.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>array</code>Available counties along with applicable county ID, property type, and state
-                                     as well as a count of the number of occurrences of each value.</div>
+                                    as well as a count of the number of occurrences of each value.</div>
 </div></div>
 </div>
 <a id="method_get_mls_listcomponents"></a><div class="element clickable method public method_get_mls_listcomponents " data-toggle="collapse" data-target=".method_get_mls_listcomponents .collapse" title="public">
@@ -1347,21 +1475,21 @@ filtered using additional GET parameters.</h2>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$idx_id</h4>
-<code>string</code><p>Format: x000</p></div>
+<code>string</code><p>Format: x000.</p></div>
 <div class="subelement argument">
 <h4>$filter_field</h4>
 <code>string</code><p>The field to use when filtering output.
-Allowed values: "id, stateAbrv, mlsPtID"</p></div>
+Allowed values: "id, stateAbrv, mlsPtID".</p></div>
 <div class="subelement argument">
 <h4>$filter_value</h4>
-<code>string</code><p>The value by which to filter. Conditional on use of filterField</p></div>
+<code>string</code><p>The value by which to filter. Conditional on use of filterField.</p></div>
 <div class="subelement argument">
 <h4>$rf</h4>
 <code>string</code><code>array</code><p>String or array of fields to return in the output.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>array</code>Available postalcodes along with applicable property type and state as well
-                                     as a count of the number of occurrences of each value.</div>
+                                    as a count of the number of occurrences of each value.</div>
 </div></div>
 </div>
 <a id="method_get_mls_prices"></a><div class="element clickable method public method_get_mls_prices " data-toggle="collapse" data-target=".method_get_mls_prices .collapse" title="public">
@@ -1383,7 +1511,7 @@ Allowed values: "id, stateAbrv, mlsPtID"</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$idx_id</h4>
-<code>string</code><p>Format: x000</p></div>
+<code>string</code><p>Format: x000.</p></div>
 <div class="subelement argument">
 <h4>$rf</h4>
 <code>string</code><code>array</code><p>String or array of fields to return in the output.</p></div>
@@ -1411,11 +1539,11 @@ Allowed values: "id, stateAbrv, mlsPtID"</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$idx_id</h4>
-<code>string</code><p>Format: x000</p></div>
+<code>string</code><p>Format: x000.</p></div>
 <div class="subelement argument">
 <h4>$count_type</h4>
 <code>string</code><p>Specify if you are looking for the count of a city, county, or zipcode.
-Allowed values: "city", "county", "zipcode"</p></div>
+Allowed values: "city", "county", "zipcode".</p></div>
 <div class="subelement argument">
 <h4>$count_specifier</h4>
 <code>integer</code><p>The numeric city ID, county ID, or zipcode for which you want to get a property count.</p></div>
@@ -1443,21 +1571,21 @@ Allowed values: "city", "county", "zipcode"</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$idx_id</h4>
-<code>string</code><p>Format: x000</p></div>
+<code>string</code><p>Format: x000.</p></div>
 <div class="subelement argument">
 <h4>$filter_field</h4>
 <code>string</code><p>The field to use when filtering output.
-Allowed values: "mlsPtID, mlsPropertyType"</p></div>
+Allowed values: "mlsPtID, mlsPropertyType".</p></div>
 <div class="subelement argument">
 <h4>$filter_value</h4>
-<code>string</code><p>The value by which to filter. Conditional on use of filterField</p></div>
+<code>string</code><p>The value by which to filter. Conditional on use of filterField.</p></div>
 <div class="subelement argument">
 <h4>$rf</h4>
 <code>string</code><code>array</code><p>String or array of fields to return in the output.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>array</code>An array of property type information including MLS property type ID, MLS
-                                     property type name, parent property type, and subtypes.</div>
+                                    property type name, parent property type, and subtypes.</div>
 </div></div>
 </div>
 <a id="method_get_mls_searchfields"></a><div class="element clickable method public method_get_mls_searchfields " data-toggle="collapse" data-target=".method_get_mls_searchfields .collapse" title="public">
@@ -1479,24 +1607,24 @@ Allowed values: "mlsPtID, mlsPropertyType"</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$idx_id</h4>
-<code>string</code><p>Format: x000</p></div>
+<code>string</code><p>Format: x000.</p></div>
 <div class="subelement argument">
 <h4>$filter_field</h4>
 <code>string</code><p>The field to use when filtering output.
-Allowed values: "mlsPtID, parentPtID"</p></div>
+Allowed values: "mlsPtID, parentPtID".</p></div>
 <div class="subelement argument">
 <h4>$filter_value</h4>
-<code>string</code><p>The value by which to filter. Conditional on use of filterField</p></div>
+<code>string</code><p>The value by which to filter. Conditional on use of filterField.</p></div>
 <div class="subelement argument">
 <h4>$rf</h4>
 <code>string</code><code>array</code><p>String or array of fields to return in the output.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>array</code>An array containing all MLS fields that are searchable according to MLS rules
-                                     and IDX guidelines. Array contains the field's name (which is the field to
-                                     be used as a key when performing a search), the display name (as should be
-                                     displayed in a search form), and both the mlsPtID and parentPtID to which
-                                     the field belongs.</div>
+                                    and IDX guidelines. Array contains the field's name (which is the field to
+                                    be used as a key when performing a search), the display name (as should be
+                                    displayed in a search form), and both the mlsPtID and parentPtID to which
+                                    the field belongs.</div>
 </div></div>
 </div>
 <a id="method_get_mls_searchfieldvalues"></a><div class="element clickable method public method_get_mls_searchfieldvalues " data-toggle="collapse" data-target=".method_get_mls_searchfieldvalues .collapse" title="public">
@@ -1518,13 +1646,15 @@ Allowed values: "mlsPtID, parentPtID"</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$idx_id</h4>
-<code>string</code><p>Format: x000</p></div>
+<code>string</code><p>Format: x000.</p></div>
 <div class="subelement argument">
 <h4>$mls_pt_id</h4>
-<code>integer</code><p>The IDX assigned ID of the MLS property type(s). See the propertytypes method in this API/Component for a lookup of property type IDs.</p></div>
+<code>integer</code><p>The IDX assigned ID of the MLS property type(s). See the propertytypes method in this
+API/Component for a lookup of property type IDs.</p></div>
 <div class="subelement argument">
 <h4>$name</h4>
-<code>string</code><p>Mls field name - the IDX assigned name of the MLS field name. See the searchfields for the list of searchable fields.</p></div>
+<code>string</code><p>Mls field name - the IDX assigned name of the MLS field name. See the searchfields for
+the list of searchable fields.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>array</code>An array containing all the values for the given mls field.</div>
@@ -1550,21 +1680,21 @@ filtered using additional GET parameters.</h2>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$idx_id</h4>
-<code>string</code><p>Format: x000</p></div>
+<code>string</code><p>Format: x000.</p></div>
 <div class="subelement argument">
 <h4>$filter_field</h4>
 <code>string</code><p>The field to use when filtering output.
-Allowed values: "mlsPtID, parentPtID"</p></div>
+Allowed values: "mlsPtID, parentPtID".</p></div>
 <div class="subelement argument">
 <h4>$filter_value</h4>
-<code>string</code><p>The value by which to filter. Conditional on use of filterField</p></div>
+<code>string</code><p>The value by which to filter. Conditional on use of filterField.</p></div>
 <div class="subelement argument">
 <h4>$rf</h4>
 <code>string</code><code>array</code><p>String or array of fields to return in the output.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>array</code>Available zipcodes along with applicable property type and state as well as
-                                     a count of the number of occurrences of each value.</div>
+                                    a count of the number of occurrences of each value.</div>
 </div></div>
 </div>
 <a id="method_get_partners_aggregatedagents"></a><div class="element clickable method public method_get_partners_aggregatedagents " data-toggle="collapse" data-target=".method_get_partners_aggregatedagents .collapse" title="public">
@@ -2020,14 +2150,24 @@ is specified then only the IDX property types (parentPtID) will be returned.</p>
 </div></div>
 </div>
 <a id="method_get_specialtypartner_pricing"></a><div class="element clickable method public method_get_specialtypartner_pricing " data-toggle="collapse" data-target=".method_get_specialtypartner_pricing .collapse" title="public">
-<h2>[get_specialty_partner_pricing description]</h2>
-<pre>get_specialtypartner_pricing() : \[type]</pre>
-<div class="labels"></div>
+<h2>Get IDX account and agent/office add-on pricing.</h2>
+<pre>get_specialtypartner_pricing() : array</pre>
+<div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
+<div class="long_description"><p>Note: This method is only available for specialty billing partners.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>GET</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Specialty_Partner-getPricing">Documentation.</a></td>
+</tr>
+</table>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>\[type]</code>[description]</div>
+<code>array</code>IDX account and agent/office add-on pricing.</div>
 </div></div>
 </div>
 <a id="method_post_bulkleads"></a><div class="element clickable method public method_post_bulkleads " data-toggle="collapse" data-target=".method_post_bulkleads .collapse" title="public">
@@ -2065,13 +2205,13 @@ $data = array(
 <h3>Returns</h3>
 <div class="subelement response">
 <code>mixed</code>If a leads are successfully updated the updated lead IDs will be returned. If no POST
-                      data is supplied then a list of updatable fields with format information is returned.</div>
+                     data is supplied then a list of updatable fields with format information is returned.</div>
 </div></div>
 </div>
 <a id="method_post_clients_dynamicwrapperurl"></a><div class="element clickable method public method_post_clients_dynamicwrapperurl " data-toggle="collapse" data-target=".method_post_clients_dynamicwrapperurl .collapse" title="public">
 <h2>Update dynamic wrapper url for global, pages and saved links. If savedLinkID, or pageID are not passed, the
 global dynamic wrapper url will be updated.</h2>
-<pre>post_clients_dynamicwrapperurl(string $dynamic_url, integer $savedlink_id<code> = null</code>, integer $page_id<code> = null</code>) : void</pre>
+<pre>post_clients_dynamicwrapperurl(string $dynamic_url, integer $savedlink_id<code> = null</code>, integer $page_id<code> = null</code>) : mixed</pre>
 <div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -2095,6 +2235,9 @@ global dynamic wrapper url will be updated.</h2>
 <div class="subelement argument">
 <h4>$page_id</h4>
 <code>integer</code><p>Page ID if setting dynamic wrapper url for a specific page.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>No data returned on success.</div>
 </div></div>
 </div>
 <a id="method_post_clients_savedlink"></a><div class="element clickable method public method_post_clients_savedlink " data-toggle="collapse" data-target=".method_post_clients_savedlink .collapse" title="public">
@@ -2201,29 +2344,113 @@ $data = array(
 <h3>Returns</h3>
 <div class="subelement response">
 <code>mixed</code>If a leads are successfully updated the updated lead IDs will be returned. If no POST
-                         data is supplied then a list of updatable fields with format information is returned.</div>
+                        data is supplied then a list of updatable fields with format information is returned.</div>
 </div></div>
 </div>
 <a id="method_post_leads_note"></a><div class="element clickable method public method_post_leads_note " data-toggle="collapse" data-target=".method_post_leads_note .collapse" title="public">
-<h2>post_leads_note()
-        </h2>
-<pre>post_leads_note() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Update the notes information for one lead specified by the primary request ID.</h2>
+<pre>post_leads_note(integer $lead_id, integer $note_id, array $data<code> = array()</code>) : mixed</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Data Example:
+$data = array(
+'note' =&gt; 'Test note'
+);</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>POST</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-postNote">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$lead_id</h4>
+<code>integer</code><p>The ID of a lead.</p></div>
+<div class="subelement argument">
+<h4>$note_id</h4>
+<code>integer</code><p>The ID of the note to update.</p></div>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code><p>Note data.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>If no data is supplied then a list of updatable fields with format information is returned.</div>
+</div></div>
 </div>
 <a id="method_post_leads_property"></a><div class="element clickable method public method_post_leads_property " data-toggle="collapse" data-target=".method_post_leads_property .collapse" title="public">
-<h2>post_leads_property()
-        </h2>
-<pre>post_leads_property() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Update an existing lead's saved property.</h2>
+<pre>post_leads_property(integer $lead_id, integer $property_id, array $data<code> = array()</code>) : mixed</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Data Example:</p>
+<p>$data = array(
+'propertyName' =&gt; 'Test Property',
+'property' =&gt; array('idxID' =&gt; 'a001', 'listingID' =&gt; '345678')
+);</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>POST</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-postProperty">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$lead_id</h4>
+<code>integer</code><p>The ID of a lead.</p></div>
+<div class="subelement argument">
+<h4>$property_id</h4>
+<code>integer</code><p>The ID of the note to update.</p></div>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code><p>Property data.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>If no data is supplied then a list of updatable fields with format information is returned.</div>
+</div></div>
 </div>
 <a id="method_post_leads_search"></a><div class="element clickable method public method_post_leads_search " data-toggle="collapse" data-target=".method_post_leads_search .collapse" title="public">
-<h2>post_leads_search()
-        </h2>
-<pre>post_leads_search() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Update an existing lead's saved search.</h2>
+<pre>post_leads_search(integer $lead_id, integer $search_id, array $data<code> = array()</code>) : mixed</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Data Example:</p>
+<p>$data = array(
+'searchName' =&gt; 'Test Search',
+'search' =&gt; array('idxID' =&gt; 'a001', 'hp' =&gt; '200000')
+);</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>POST</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-postSearch">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$lead_id</h4>
+<code>integer</code><p>The ID of a lead.</p></div>
+<div class="subelement argument">
+<h4>$search_id</h4>
+<code>integer</code><p>The ID of a lead's saved search.</p></div>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code><p>Search data.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>If a lead search is successfully created the new searches' ID will be returned. If no
+                          data is supplied then a list of updatable fields with format information is returned.</div>
+</div></div>
 </div>
 <a id="method_put_bulkleads"></a><div class="element clickable method public method_put_bulkleads " data-toggle="collapse" data-target=".method_put_bulkleads .collapse" title="public">
 <h2>Add leads in batches of up to 100 per request.</h2>
@@ -2258,7 +2485,7 @@ $data = array(
 <h3>Returns</h3>
 <div class="subelement response">
 <code>array</code>If a lead is successfully created the new lead IDs will be returned. If no PUT data is
-                      supplied then a list of updatable fields with format information is returned.</div>
+                     supplied then a list of updatable fields with format information is returned.</div>
 </div></div>
 </div>
 <a id="method_put_clients_savedlink"></a><div class="element clickable method public method_put_clients_savedlink " data-toggle="collapse" data-target=".method_put_clients_savedlink .collapse" title="public">
@@ -2292,8 +2519,8 @@ $data = array(
 <h3>Returns</h3>
 <div class="subelement response">
 <code>mixed</code>If a client saved link is successfully created, the new saved link's ID will be
-                               returned. If no PUT data is supplied, then a list of updatable fields with format
-                               information is returned.</div>
+                       returned. If no PUT data is supplied, then a list of updatable fields with format
+                       information is returned.</div>
 </div></div>
 </div>
 <a id="method_put_clients_supplemental"></a><div class="element clickable method public method_put_clients_supplemental " data-toggle="collapse" data-target=".method_put_clients_supplemental .collapse" title="public">
@@ -2325,13 +2552,13 @@ $data = array(
 <h3>Returns</h3>
 <div class="subelement response">
 <code>mixed</code>If a supplemental listing is successfully created, the new supplemental listing ID will be
-                      returned. If no PUT data is supplied, then a list of updatable fields with format
-                      information is returned.</div>
+                     returned. If no PUT data is supplied, then a list of updatable fields with format
+                     information is returned.</div>
 </div></div>
 </div>
 <a id="method_put_lead"></a><div class="element clickable method public method_put_lead " data-toggle="collapse" data-target=".method_put_lead .collapse" title="public">
 <h2>Create a new lead.</h2>
-<pre>put_lead() : mixed</pre>
+<pre>put_lead(array $data<code> = array()</code>) : mixed</pre>
 <div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>Special Note: Currently the API cannot differentiate between a lead rejected due to server error or one rejected
@@ -2355,39 +2582,154 @@ $data = array(
 <td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-putLead">Documentation.</a></td>
 </tr>
 </table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code><p>Lead fields to create.</p></div>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>mixed</code>If a lead is successfully created the new lead's ID will be returned. If no PUT data is
-                      supplied then a list of updatable fields with format information is returned.</div>
+                     supplied then a list of updatable fields with format information is returned.</div>
 </div></div>
 </div>
 <a id="method_put_leads_note"></a><div class="element clickable method public method_put_leads_note " data-toggle="collapse" data-target=".method_put_leads_note .collapse" title="public">
-<h2>put_leads_note()
-        </h2>
-<pre>put_leads_note() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Create a new lead note.</h2>
+<pre>put_leads_note(integer $lead_id, array $data<code> = array()</code>) : mixed</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Data Example:
+$data = array(
+'note' =&gt; 'Test note'
+);</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>POST</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-putNote">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$lead_id</h4>
+<code>integer</code><p>The ID of a lead.</p></div>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code><p>Note data.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>If a note is successfully created the new notes's ID will be returned. If no PUT data is
+                        supplied then a list of updatable fields with format information is returned.</div>
+</div></div>
 </div>
 <a id="method_put_leads_property"></a><div class="element clickable method public method_put_leads_property " data-toggle="collapse" data-target=".method_put_leads_property .collapse" title="public">
-<h2>put_leads_property()
-        </h2>
-<pre>put_leads_property() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Create a new lead saved property.</h2>
+<pre>put_leads_property(integer $lead_id, array $data<code> = array()</code>) : mixed</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Data Example:</p>
+<p>$data = array(
+'propertyName' =&gt; 'Test Property',
+'property' =&gt; array('idxID' =&gt; 'a001', 'listingID' =&gt; '345678')
+);</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>PUT</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-putProperty">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$lead_id</h4>
+<code>integer</code><p>The ID of a lead.</p></div>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code><p>Property data.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>If a saved property is successfully created the new property's ID will be returned.
+                         If no data is supplied then a list of updatable fields with format information is
+                         returned.</div>
+</div></div>
 </div>
 <a id="method_put_leads_search"></a><div class="element clickable method public method_put_leads_search " data-toggle="collapse" data-target=".method_put_leads_search .collapse" title="public">
-<h2>put_leads_search()
-        </h2>
-<pre>put_leads_search() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Create a new lead saved search.</h2>
+<pre>put_leads_search(integer $lead_id, array $data<code> = array()</code>) : mixed</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Data Example:</p>
+<p>$data = array(
+'searchName' =&gt; 'Test Search',
+'search' =&gt; array('idxID' =&gt; 'a001', 'hp' =&gt; '200000')
+);</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>PUT</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-putSearch">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$lead_id</h4>
+<code>integer</code><p>The ID of a lead.</p></div>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code><p>Search data.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>If a lead search is successfully created the new searches' ID will be returned. If no
+                          data is supplied then a list of updatable fields with format information is returned.</div>
+</div></div>
 </div>
 <a id="method_put_specialtypartner_subscriber"></a><div class="element clickable method public method_put_specialtypartner_subscriber " data-toggle="collapse" data-target=".method_put_specialtypartner_subscriber .collapse" title="public">
-<h2>put_specialtypartner_subscriber()
-        </h2>
-<pre>put_specialtypartner_subscriber() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Create IDX subscriber.</h2>
+<pre>put_specialtypartner_subscriber(array $data<code> = array()</code>) : mixed</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Note: this method is only available for specialty billing partners.</p>
+<p>Data Example:</p>
+<p>$data = array(
+'product'               =&gt; 'lite',
+'firstName'             =&gt; 'Test',
+'lastName'              =&gt; 'Test',
+'companyName'           =&gt; 'Test Company',
+'address'               =&gt; '1000 E Test street',
+'city'                  =&gt; 'Eugene',
+'state'                 =&gt; 'OR', // Use XX for international.
+'zipcode'               =&gt; 97402,
+'primaryPhone'          =&gt; '5555555555',
+'email'                 =&gt; 'test@gmail.com',
+'mlsIDList'             =&gt; 'a001,a002',
+'agreeToTermsOfService' =&gt; 'yes'
+);</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td>PUT</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://middleware.idxbroker.com/docs/api/methods/index.html#api-Specialty_Partner-putSubscriber">Documentation.</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code><p>Subscriber data.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>Nothing on success</div>
+</div></div>
 </div>
 <a id="method_request"></a><div class="element clickable method public method_request " data-toggle="collapse" data-target=".method_request .collapse" title="public">
 <h2>Request function.</h2>
@@ -2501,7 +2843,7 @@ $data = array(
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2017-07-28T17:32:04-07:00.<br></footer></div>
+            generated on 2017-07-28T19:16:18-07:00.<br></footer></div>
 </div>
 </body>
 </html>
