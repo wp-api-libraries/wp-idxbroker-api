@@ -132,7 +132,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return string API hourly usage count.
 		 */
 		protected function check_usage() {
-			return $hour_usage = wp_remote_retrieve_header( $this->response, 'hourly-access-key-usage' );
+			return wp_remote_retrieve_header( $this->response, 'hourly-access-key-usage' );
 		}
 
 		/**
@@ -159,7 +159,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 
 			// Parse URL if successful.
 			if ( isset( $links[0]['url'] ) ) {
-				$data = parse_url( $links[0]['url'] );
+				$data = wp_parse_url( $links[0]['url'] );
 				$domain['scheme'] = $data['scheme'];
 				$domain['url'] = $data['host'];
 				$domain['full'] = $data['scheme'] . '://' . $data['host'];
@@ -453,9 +453,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		public function get_partners_propertytypes( $idx_id = '', $rf = '' ) {
 			// Prepare request.
 			$route = ('' === $idx_id ) ? 'partners/propertytypes' : "partners/propertytypes/$idx_id";
-			$args = array(
-				'rf' => $rf
-			);
+			$args = array( 'rf' => $rf );
 			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
@@ -523,9 +521,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		public function get_clients_cities( $list_id = '', $rf = '' ) {
 			// Prepare request.
 			$route = ('' === $list_id ) ? 'clients/cities' : "clients/cities/$list_id";
-			$args = array(
-				'rf' => $rf
-			);
+			$args = array( 'rf' => $rf );
 			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
@@ -558,9 +554,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		public function get_clients_counties( $list_id = '', $rf = '' ) {
 			// Prepare request.
 			$route = ('' === $list_id ) ? 'clients/counties' : "clients/counties/$list_id";
-			$args = array(
-				'rf' => $rf
-			);
+			$args = array( 'rf' => $rf );
 			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
@@ -673,7 +667,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 			$route = add_query_arg(
 				array(
 					'rf' => $rf,
-					'disclaimers' => $disclaimers
+					'disclaimers' => $disclaimers,
 				),
 				$route
 			);
@@ -999,7 +993,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 			$route = 'clients/systemlinks';
 			$route = add_query_arg(
 				array(
-					'rf' => $rf
+					'rf' => $rf,
 				),
 				$route
 			);
