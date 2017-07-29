@@ -47,9 +47,9 @@ ratings:
   - "**.rb"
 exclude_paths:
   - "LICENSE"
-  - "README.md"
   - "tests/"
   - "docs/"
+  - "**.md"
   - "**.png"
   - "**.xml"
   - "**.jpg"
