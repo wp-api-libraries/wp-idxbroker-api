@@ -658,10 +658,10 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @param  string $idx_id      The idxID of MLS.
 		 * @param  string $listing_id  The listing ID.
 		 * @param  string $rf          Array of fields to return in the output.
-		 * @param  bool   $disclaimers Include MLS disclaimer/courtesy in the response. Default true.
+		 * @param  bool   $disclaimers Include MLS disclaimer/courtesy in the response.
 		 * @return array               List of fields that are returnable for the listingID.
 		 */
-		public function get_clients_listing( $idx_id, $listing_id, $rf = '', $disclaimers = true ) {
+		public function get_clients_listing( $idx_id, $listing_id, $rf = '', $disclaimers = '' ) {
 			$route = "clients/listing/$idx_id/$listing_id";
 			$args = array(
 				'rf' => $rf,
