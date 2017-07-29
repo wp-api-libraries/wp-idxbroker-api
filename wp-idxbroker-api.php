@@ -2,7 +2,7 @@
 /**
  * IDX Broker API
  *
- * @see http://middleware.idxbroker.com/docs/api/methods/index.html API Documentation
+ * @link http://middleware.idxbroker.com/docs/api/methods/index.html API Documentation
  * @package WP-API-Libraries\WP-IDX-Broker-API
  * @author sfgarza
  */
@@ -168,7 +168,9 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 			return $domain;
 		}
 
-		/* --------------------------------------------- Partners Endpoints -------------------------------------------- */
+		/* ------------------------------------------------------------------------------------------------------------- */
+		/* ------------------------------------------- Partners Endpoints ---------------------------------------------- */
+		/* ------------------------------------------------------------------------------------------------------------- */
 
 		/**
 		 * Get a list of all agents for your clients.
@@ -455,7 +457,9 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		}
 
 
-		/* --------------------------------------------- Client Endpoints ----------------------------------------------- */
+		/* ------------------------------------------------------------------------------------------------------------- */
+		/* ------------------------------------------- Client Endpoints ------------------------------------------------ */
+		/* ------------------------------------------------------------------------------------------------------------- */
 
 
 		/**
@@ -1032,7 +1036,9 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 			return $this->build_request( $route )->request();
 		}
 
-		/* --------------------------------------------- MLS Endpoints -------------------------------------------------- */
+		/* ------------------------------------------------------------------------------------------------------------- */
+		/* --------------------------------------------- MLS Endpoints ------------------------------------------------- */
+		/* ------------------------------------------------------------------------------------------------------------- */
 
 		/**
 		 * Gives the date and time a particular MLS was last downloaded, processed and the last time images gathering was completed.
@@ -1286,7 +1292,9 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		}
 
 
-		/* ----------------------------------------------- Leads Endpoints --------------------------------------------- */
+		/* ------------------------------------------------------------------------------------------------------------- */
+		/* ------------------------------------------- Leads Endpoints ------------------------------------------------- */
+		/* ------------------------------------------------------------------------------------------------------------- */
 
 
 		/**
@@ -1493,47 +1501,301 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @param  int   $note_id  The ID of the note to delete.
 		 * @return void            Nothing on success.
 		 */
-		public function delete_leads_note() {
+		public function delete_leads_note( $lead_id, $note_id ) {
 			$fields['method'] = 'DELETE';
 			$route = "leads/note/$lead_id/$note_id";
 
 			return $this->build_request( $route, $fields )->request();
 		}
 
-		public function get_leads_note() {
-		}
+		/**
+		 * Get notes for a lead.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-getNote Documentation.
+		 * @param  int   $lead_id  The ID of a lead.
+		 * @param  int   $note_id  The ID of the note to delete.
+		 * @param  array $args     Query args to send in to API call.
+		 * @return array           Lead note information. If no note ID is sent all notes for the lead are returned. If a
+		 *                         note ID is passed only the one note is returned.
+		 */
+		public function get_leads_note( $lead_id, $note_id = '', $args = array() ) {
+			// Prepare request.
+			$route = ( '' === $note_id ) ? "leads/note/$lead_id" : "leads/note/$lead_id/$note_id";
+			$route = add_query_arg( $args, $route );
 
-		public function post_leads_note() {
+			return $this->build_request( $route )->request();
 		}
-		public function put_leads_note() {
-		}
-		public function delete_leads_property() {
-		}
-		public function post_leads_property() {
-		}
-		public function put_leads_property() {
-		}
-		public function get_leads_property() {
-		}
-		public function delete_leads_search() {
-		}
-		public function post_leads_search() {
-		}
-		public function put_leads_search() {
-		}
-		public function get_leads_search() {
-		}
-
-		/* Specialty Partner Endpoints. */
 
 		/**
-		 * [get_specialty_partner_pricing description]
+		 * Update the notes information for one lead specified by the primary request ID.
 		 *
-		 * @return [type] [description]
+		 * Data Example:
+		 * $data = array(
+		 *  'note' => 'Test note'
+		 * );
+		 *
+		 * @api POST
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-postNote Documentation.
+		 * @param  int    $lead_id  The ID of a lead.
+		 * @param  int    $note_id  The ID of the note to update.
+		 * @param  array  $data     Note data.
+		 * @return mixed            If no data is supplied then a list of updatable fields with format information is returned.
+		 */
+		public function post_leads_note( $lead_id, $note_id, $data = array() ) {
+			$fields['method'] = 'POST';
+			$fields['body'] = $data;
+			$route = "leads/note/$lead_id/$note_id";
+
+			return $this->build_request( $route, $fields )->request();
+		}
+
+		/**
+		 * Create a new lead note.
+		 *
+		 * Data Example:
+		 * $data = array(
+		 *  'note' => 'Test note'
+		 * );
+		 *
+		 * @api POST
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-putNote Documentation.
+		 * @param  int    $lead_id  The ID of a lead.
+		 * @param  array  $data     Note data.
+		 * @return mixed            If a note is successfully created the new notes's ID will be returned. If no PUT data is
+		 *                          supplied then a list of updatable fields with format information is returned.
+		 */
+		public function put_leads_note( $lead_id, $data = array() ) {
+			$fields['method'] = 'PUT';
+			$fields['body'] = $data;
+			$route = "leads/note/$lead_id";
+
+			return $this->build_request( $route, $fields )->request();
+		}
+
+		/**
+		 * Remove a lead saved property.
+		 *
+		 * @api DELETE
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-deleteProperty Documentation.
+		 * @param  int   $lead_id      The ID of a lead.
+		 * @param  int   $property_id  The ID of a property to delete.
+		 * @return void                Nothing on success.
+		 */
+		public function delete_leads_property( $lead_id, $property_id ) {
+			$fields['method'] = 'DELETE';
+			$route = "leads/property/$lead_id/$property_id";
+
+			return $this->build_request( $route, $fields )->request();
+		}
+
+		/**
+		 * Get saved properties for a lead.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-getProperty Documentation.
+		 * @param  int   $lead_id      The ID of a lead.
+		 * @param  int   $property_id  The ID of a lead's saved property.
+		 * @param  array $args         Query args to send in to API call.
+		 * @return array               If no property ID is passed all properties are returned. If a property ID is passed
+		 *                             only the information for that specified property is returned.
+		 */
+		public function get_leads_property( $lead_id, $property_id = '', $args = array() ) {
+			// Prepare request.
+			$route = ( '' === $property_id ) ? "leads/property/$lead_id" : "leads/property/$lead_id/$property_id";
+			$route = add_query_arg( $args, $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+		/**
+		 * Update an existing lead's saved property.
+		 *
+		 * Data Example:
+		 *
+		 * $data = array(
+		 *  'propertyName' => 'Test Property',
+		 *  'property' => array('idxID' => 'a001', 'listingID' => '345678')
+		 * );
+		 *
+		 * @api POST
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-postProperty Documentation.
+		 * @param  int    $lead_id      The ID of a lead.
+		 * @param  int    $property_id  The ID of the note to update.
+		 * @param  array  $data         Property data.
+		 * @return mixed                If no data is supplied then a list of updatable fields with format information is returned.
+		 */
+		public function post_leads_property( $lead_id, $property_id, $data = array() ) {
+			$fields['method'] = 'POST';
+			$fields['body'] = $data;
+			$route = "leads/property/$lead_id/$property_id";
+
+			return $this->build_request( $route, $fields )->request();
+		}
+
+		/**
+		 * Create a new lead saved property.
+		 *
+		 * Data Example:
+		 *
+		 * $data = array(
+		 *  'propertyName' => 'Test Property',
+		 *  'property' => array('idxID' => 'a001', 'listingID' => '345678')
+		 * );
+		 *
+		 * @api PUT
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-putProperty Documentation.
+		 * @param  int    $lead_id   The ID of a lead.
+		 * @param  array  $data      Property data.
+		 * @return mixed             If a saved property is successfully created the new property's ID will be returned.
+		 *                           If no data is supplied then a list of updatable fields with format information is
+		 *                           returned.
+		 */
+		public function put_leads_property( $lead_id, $data = array() ) {
+			$fields['method'] = 'PUT';
+			$fields['body'] = $data;
+			$route = "leads/property/$lead_id";
+
+			return $this->build_request( $route, $fields )->request();
+		}
+
+		/**
+		 * Remove a lead saved search.
+		 *
+		 * @api DELETE
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-deleteSearch Documentation.
+		 * @param  int   $lead_id    The ID of a lead.
+		 * @param  int   $search_id  The ID of a saved search to delete.
+		 * @return void              Nothing on success.
+		 */
+		public function delete_leads_search( $lead_id, $search_id ) {
+			$fields['method'] = 'DELETE';
+			$route = "leads/property/$lead_id/$search_id";
+
+			return $this->build_request( $route, $fields )->request();
+		}
+
+		/**
+		 * Get searches for a lead.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-getSearch Documentation.
+		 * @param  int   $lead_id    The ID of a lead.
+		 * @param  int   $search_id  The ID of a lead's search
+		 * @param  array $args       Query args to send in to API call.
+		 * @return array             An array with 2 keys. The key searchInformation that contains all existing saved search
+		 *                           information. The key info will return messages about any returned saved search. Currently
+		 *                           this info will tell you if any search's advanced fields are not valid in the IDX system.
+		 */
+		public function get_leads_search( $lead_id, $search_id = '', $args = array() ) {
+			// Prepare request.
+			$route = ( '' === $search_id ) ? "leads/property/$lead_id" : "leads/property/$lead_id/$search_id";
+			$route = add_query_arg( $args, $route );
+
+			return $this->build_request( $route )->request();
+		}
+
+		/**
+		 * Update an existing lead's saved search.
+		 *
+		 * Data Example:
+		 *
+		 * $data = array(
+		 *  'searchName' => 'Test Search',
+		 *  'search' => array('idxID' => 'a001', 'hp' => '200000')
+		 * );
+		 *
+		 * @api POST
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-postSearch Documentation.
+		 * @param  int    $lead_id    The ID of a lead.
+		 * @param  int    $search_id  The ID of a lead's saved search.
+		 * @param  array  $data       Search data.
+		 * @return mixed              If a lead search is successfully created the new searches' ID will be returned. If no
+		 *                            data is supplied then a list of updatable fields with format information is returned.
+		 */
+		public function post_leads_search( $lead_id, $search_id, $data = array() ) {
+			$fields['method'] = 'POST';
+			$fields['body'] = $data;
+			$route = "leads/search/$lead_id/$search_id";
+
+			return $this->build_request( $route, $fields )->request();
+		}
+
+		/**
+		 * Create a new lead saved search.
+		 *
+		 * Data Example:
+		 *
+		 * $data = array(
+		 *  'searchName' => 'Test Search',
+		 *  'search' => array('idxID' => 'a001', 'hp' => '200000')
+		 * );
+		 *
+		 * @api PUT
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Leads-putSearch Documentation.
+		 * @param  int    $lead_id    The ID of a lead.
+		 * @param  array  $data       Search data.
+		 * @return mixed              If a lead search is successfully created the new searches' ID will be returned. If no
+		 *                            data is supplied then a list of updatable fields with format information is returned.
+		 */
+		public function put_leads_search( $lead_id, $data = array() ) {
+			$fields['method'] = 'PUT';
+			$fields['body'] = $data;
+			$route = "leads/search/$lead_id";
+
+			return $this->build_request( $route, $fields )->request();
+		}
+
+		/* ------------------------------------------------------------------------------------------------------------- */
+		/* ------------------------------------- Specialty Partner Endpoints ------------------------------------------- */
+		/* ------------------------------------------------------------------------------------------------------------- */
+
+		/**
+		 * Get IDX account and agent/office add-on pricing.
+		 *
+		 * Note: This method is only available for specialty billing partners.
+		 *
+		 * @api GET
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Specialty_Partner-getPricing Documentation.
+		 * @return array  IDX account and agent/office add-on pricing.
 		 */
 		public function get_specialtypartner_pricing() {
+			return $this->build_request( "specialtypartner/pricing" )->request();
 		}
-		public function put_specialtypartner_subscriber() {
+
+		/**
+		 * Create IDX subscriber.
+		 *
+		 * Note: this method is only available for specialty billing partners.
+		 *
+		 * Data Example:
+		 *
+		 * $data = array(
+		 *  'product'               => 'lite',
+		 *  'firstName'             => 'Test',
+		 *  'lastName'              => 'Test',
+		 *  'companyName'           => 'Test Company',
+		 *  'address'               => '1000 E Test street',
+		 *  'city'                  => 'Eugene',
+		 *  'state'                 => 'OR', // Use XX for international.
+		 *  'zipcode'               => 97402,
+		 *  'primaryPhone'          => '5555555555',
+		 *  'email'                 => 'test@gmail.com',
+		 *  'mlsIDList'             => 'a001,a002',
+		 *  'agreeToTermsOfService' => 'yes'
+		 * );
+		 *
+		 * @api PUT
+		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Specialty_Partner-putSubscriber Documentation.
+		 * @param  array  $data       Subscriber data.
+		 * @return mixed              Nothing on success
+		 */
+		public function put_specialtypartner_subscriber( $data = array() ) {
+			$fields['method'] = 'PUT';
+			$fields['body'] = $data;
+			$route = "specialtypartner/subscriber";
+
+			return $this->build_request( $route, $fields )->request();
 		}
 
 		/**
