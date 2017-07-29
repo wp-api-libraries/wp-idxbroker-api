@@ -453,7 +453,9 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		public function get_partners_propertytypes( $idx_id = '', $rf = '' ) {
 			// Prepare request.
 			$route = ('' === $idx_id ) ? 'partners/propertytypes' : "partners/propertytypes/$idx_id";
-			$args = array( 'rf' => $rf );
+			$args = array(
+				'rf' => $rf,
+			);
 			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
@@ -488,7 +490,6 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return array        All agents on the account or those matching filter values.
 		 */
 		public function get_clients_agents( $args = array() ) {
-			// Prepare request.
 			$route = 'clients/agents';
 			$route = add_query_arg( $args, $route );
 
@@ -519,9 +520,10 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return array                 All cities in a given list or, if no list ID is provided, a list of list IDs.
 		 */
 		public function get_clients_cities( $list_id = '', $rf = '' ) {
-			// Prepare request.
 			$route = ('' === $list_id ) ? 'clients/cities' : "clients/cities/$list_id";
-			$args = array( 'rf' => $rf );
+			$args = array(
+				'rf' => $rf,
+			);
 			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
@@ -552,9 +554,10 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return array                 All counties in a given list or, if no list ID is provided, a list of list IDs.
 		 */
 		public function get_clients_counties( $list_id = '', $rf = '' ) {
-			// Prepare request.
 			$route = ('' === $list_id ) ? 'clients/counties' : "clients/counties/$list_id";
-			$args = array( 'rf' => $rf );
+			$args = array(
+				'rf' => $rf,
+			);
 			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
@@ -586,7 +589,6 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return mixed                No data returned on success.
 		 */
 		public function post_clients_dynamicwrapperurl( $dynamic_url, $savedlink_id = '', $page_id = '' ) {
-			// Prepare request.
 			$fields['method'] = 'POST';
 			$fields['body']['dynamicURL'] = $dynamic_url;
 
@@ -610,7 +612,6 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return array        Featured properties on the account.
 		 */
 		public function get_clients_featured( $args = array() ) {
-			// Prepare request.
 			$route = 'clients/featured';
 			$route = add_query_arg( $args, $route );
 
@@ -629,7 +630,6 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return array             List of fields that are returnable for the listingID.
 		 */
 		public function get_clients_listallowedfields( $idx_id, $listing_id ) {
-			// Prepare request.
 			$route = "clients/listallowedfields/$idx_id/$listing_id";
 
 			return $this->build_request( $route )->request();
@@ -662,15 +662,12 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return array               List of fields that are returnable for the listingID.
 		 */
 		public function get_clients_listing( $idx_id, $listing_id, $rf = '', $disclaimers = true ) {
-			// Prepare request.
 			$route = "clients/listing/$idx_id/$listing_id";
-			$route = add_query_arg(
-				array(
-					'rf' => $rf,
-					'disclaimers' => $disclaimers,
-				),
-				$route
+			$args = array(
+				'rf' => $rf,
+				'disclaimers' => $disclaimers,
 			);
+			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
 		}
@@ -698,7 +695,6 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return array        All offices on the account or those matching filter values.
 		 */
 		public function get_clients_offices( $args = array() ) {
-			// Prepare request.
 			$route = 'clients/offices';
 			$route = add_query_arg( $args, $route );
 
@@ -720,7 +716,6 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return array           All postalcodes in a given list or, if no list ID is provided, a list of list IDs.
 		 */
 		public function get_clients_postalcodes( $list_id = '', $args = array() ) {
-			// Prepare request.
 			$route = ( '' === $list_id ) ? 'clients/postalcodes' : "clients/postalcodes/$list_id";
 			$route = add_query_arg( $args, $route );
 
@@ -753,7 +748,6 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return array                  All property results for a provided Saved Link ID.
 		 */
 		public function get_clients_properties( $saved_links_id, $args = array() ) {
-			// Prepare request.
 			$route = "clients/properties/$saved_links_id";
 			$route = add_query_arg( $args, $route );
 
@@ -784,7 +778,6 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return array        All saved links on the account.
 		 */
 		public function get_clients_savedlinks( $args = array() ) {
-			// Prepare request.
 			$route = 'clients/savedlinks';
 			$route = add_query_arg( $args, $route );
 
@@ -862,7 +855,6 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return array        All available APIs/Components.
 		 */
 		public function get_clients_searchquery( $args = array() ) {
-			// Prepare request.
 			$route = 'clients/searchquery';
 			$route = add_query_arg( $args, $route );
 
@@ -879,7 +871,6 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return array        Sold/pending properties on the account.
 		 */
 		public function get_clients_soldpending( $args = array() ) {
-			// Prepare request.
 			$route = 'clients/soldpending';
 			$route = add_query_arg( $args, $route );
 
@@ -913,7 +904,6 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return array        Supplemental properties on the account.
 		 */
 		public function get_clients_supplemental( $args = array() ) {
-			// Prepare request.
 			$route = 'clients/supplemental';
 			$route = add_query_arg( $args, $route );
 
@@ -991,12 +981,10 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		public function get_clients_systemlinks( $rf = '' ) {
 			// Prepare request.
 			$route = 'clients/systemlinks';
-			$route = add_query_arg(
-				array(
-					'rf' => $rf,
-				),
-				$route
+			$args =array(
+				'rf' => $rf,
 			);
+			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
 		}
@@ -1014,12 +1002,10 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		public function get_clients_widgets( $rf = '' ) {
 			// Prepare request.
 			$route = 'clients/widgetsrc';
-			$route = add_query_arg(
-				array(
-					'rf' => $rf
-				),
-				$route
+			$args = array(
+				'rf' => $rf,
 			);
+			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
 		}
@@ -1053,7 +1039,10 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		public function get_clients_zipcodes( $list_id = '', $rf = '' ) {
 			// Prepare request.
 			$route = ( '' === $list_id ) ? 'clients/zipcodes' : "clients/zipcodes/$list_id";
-			$route = add_query_arg( array( 'rf' => $rf ), $route );
+			$args = array(
+				'rf' => $rf,
+			);
+			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
 		}
@@ -1078,7 +1067,10 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		public function get_mls_age( $idx_id, $rf = '' ) {
 			// Prepare request.
 			$route = "mls/age/$idx_id";
-			$route = add_query_arg( array( 'rf' => $rf ), $route );
+			$args = array(
+				'rf' => $rf,
+			);
+ 			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
 		}
