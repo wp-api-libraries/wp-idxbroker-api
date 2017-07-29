@@ -46,7 +46,7 @@ ratings:
   - "**.py"
   - "**.rb"
 exclude_paths:
-  - "docs/*"
+  - "docs/"
   - "**.png"
   - "**.jpg"
   - "**.gif"
