@@ -66,7 +66,7 @@
 <li class="method public "><a href="#method_build_request" title="build_request() :: Builds the request for the API call to IDX Broker."><span class="description">Builds the request for the API call to IDX Broker.</span><pre>build_request()</pre></a></li>
 <li class="method public "><a href="#method_delete_clients_savedlink" title="delete_clients_savedlink() :: Remove a new client saved link."><span class="description">Remove a new client saved link.</span><pre>delete_clients_savedlink()</pre></a></li>
 <li class="method public "><a href="#method_delete_clients_supplemental" title="delete_clients_supplemental() :: Remove a clients supplemental property."><span class="description">Remove a clients supplemental property.</span><pre>delete_clients_supplemental()</pre></a></li>
-<li class="method public "><a href="#method_delete_clients_wrappercache" title="delete_clients_wrappercache() :: Remove a clients supplemental property."><span class="description">Remove a clients supplemental property.</span><pre>delete_clients_wrappercache()</pre></a></li>
+<li class="method public "><a href="#method_delete_clients_wrappercache" title="delete_clients_wrappercache() :: Remove a clients wrapper cache."><span class="description">Remove a clients wrapper cache.</span><pre>delete_clients_wrappercache()</pre></a></li>
 <li class="method public "><a href="#method_delete_lead" title="delete_lead() :: Remove a lead system wide."><span class="description">Remove a lead system wide.</span><pre>delete_lead()</pre></a></li>
 <li class="method public "><a href="#method_delete_leads_note" title="delete_leads_note() :: Remove a lead note."><span class="description">Remove a lead note.</span><pre>delete_leads_note()</pre></a></li>
 <li class="method public "><a href="#method_delete_leads_property" title="delete_leads_property() :: Remove a lead saved property."><span class="description">Remove a lead saved property.</span><pre>delete_leads_property()</pre></a></li>
@@ -346,7 +346,7 @@ or the improper use of search values or options within said values resulting in 
 </div></div>
 </div>
 <a id="method_delete_clients_wrappercache"></a><div class="element clickable method public method_delete_clients_wrappercache " data-toggle="collapse" data-target=".method_delete_clients_wrappercache .collapse" title="public">
-<h2>Remove a clients supplemental property.</h2>
+<h2>Remove a clients wrapper cache.</h2>
 <pre>delete_clients_wrappercache() : mixed</pre>
 <div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
@@ -2211,7 +2211,7 @@ $data = array(
 <a id="method_post_clients_dynamicwrapperurl"></a><div class="element clickable method public method_post_clients_dynamicwrapperurl " data-toggle="collapse" data-target=".method_post_clients_dynamicwrapperurl .collapse" title="public">
 <h2>Update dynamic wrapper url for global, pages and saved links. If savedLinkID, or pageID are not passed, the
 global dynamic wrapper url will be updated.</h2>
-<pre>post_clients_dynamicwrapperurl(string $dynamic_url, integer $savedlink_id<code> = null</code>, integer $page_id<code> = null</code>) : mixed</pre>
+<pre>post_clients_dynamicwrapperurl(string $dynamic_url, integer $savedlink_id<code> = ''</code>, integer $page_id<code> = ''</code>) : mixed</pre>
 <div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -2843,7 +2843,7 @@ $data = array(
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2017-07-28T19:16:18-07:00.<br></footer></div>
+            generated on 2017-07-28T20:48:42-07:00.<br></footer></div>
 </div>
 </body>
 </html>
