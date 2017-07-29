@@ -14,11 +14,6 @@ engines:
     enabled: true
     config:
       standard: "WordPress-Core,WordPress-Docs,WordPress-Extra"
-    checks:
-       WordPress Files FileName InvalidClassFileName:
-        enabled: false
-      WordPress PHP DevelopmentFunctions error_log_error_log:
-        enabled: false
   phpmd:
     enabled: true
     checks:
