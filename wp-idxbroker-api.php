@@ -979,9 +979,8 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *                           include a subpages array element.
 		 */
 		public function get_clients_systemlinks( $rf = '' ) {
-			// Prepare request.
 			$route = 'clients/systemlinks';
-			$args =array(
+			$args = array(
 				'rf' => $rf,
 			);
 			$route = add_query_arg( $args, $route );
@@ -1000,7 +999,6 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *                           user's account.
 		 */
 		public function get_clients_widgets( $rf = '' ) {
-			// Prepare request.
 			$route = 'clients/widgetsrc';
 			$args = array(
 				'rf' => $rf,
@@ -1037,7 +1035,6 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return array                 All zipcodes in a given list or, if no list ID is provided, a list of list IDs..
 		 */
 		public function get_clients_zipcodes( $list_id = '', $rf = '' ) {
-			// Prepare request.
 			$route = ( '' === $list_id ) ? 'clients/zipcodes' : "clients/zipcodes/$list_id";
 			$args = array(
 				'rf' => $rf,
@@ -1065,12 +1062,11 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return array                 An array of timestamps for last downloaded, last processes and last images gathered.
 		 */
 		public function get_mls_age( $idx_id, $rf = '' ) {
-			// Prepare request.
 			$route = "mls/age/$idx_id";
 			$args = array(
 				'rf' => $rf,
 			);
- 			$route = add_query_arg( $args, $route );
+			 $route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
 		}
@@ -1088,9 +1084,11 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return array             A list of IDs and names for all MLSs approved for display on the client account.
 		 */
 		public function get_mls_approvedmls( $rf = '' ) {
-			// Prepare request.
 			$route = 'mls/approvedmls';
-			$route = add_query_arg( array( 'rf' => $rf ), $route );
+			$args = array(
+				'rf' => $rf,
+			);
+			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
 		}
@@ -1110,9 +1108,13 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *                                     well as a count of the number of occurrences for each value.
 		 */
 		public function get_mls_cities( $idx_id, $filter_field = '', $filter_value = '', $rf = '' ) {
-			// Prepare request.
 			$route = "mls/cities/$idx_id";
-			$route = add_query_arg( array( 'filterField' => $filter_field, 'filterValue' => $filter_value, 'rf' => $rf ), $route );
+			$args = array(
+				'filterField' => $filter_field,
+				'filterValue' => $filter_value,
+				'rf' => $rf,
+			);
+			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
 		}
@@ -1132,9 +1134,13 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *                                     as well as a count of the number of occurrences of each value.
 		 */
 		public function get_mls_counties( $idx_id, $filter_field = '', $filter_value = '', $rf = '' ) {
-			// Prepare request.
 			$route = "mls/counties/$idx_id";
-			$route = add_query_arg( array( 'filterField' => $filter_field, 'filterValue' => $filter_value, 'rf' => $rf ), $route );
+			$args = array(
+				'filterField' => $filter_field,
+				'filterValue' => $filter_value,
+				'rf' => $rf,
+			);
+			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
 		}
@@ -1179,9 +1185,13 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *                                     as a count of the number of occurrences of each value.
 		 */
 		public function get_mls_postalcodes( $idx_id, $filter_field = '', $filter_value = '', $rf = '' ) {
-			// Prepare request.
 			$route = "mls/postalcodes/$idx_id";
-			$route = add_query_arg( array( 'filterField' => $filter_field, 'filterValue' => $filter_value, 'rf' => $rf ), $route );
+			$args = array(
+				'filterField' => $filter_field,
+				'filterValue' => $filter_value,
+				'rf' => $rf,
+			);
+			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
 		}
@@ -1196,9 +1206,11 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return array                       A multidimensional array with the total sum and the sum for each property type.
 		 */
 		public function get_mls_prices( $idx_id, $rf = '' ) {
-			// Prepare request.
 			$route = "mls/prices/$idx_id";
-			$route = add_query_arg( array( 'rf' => $rf ), $route );
+			$args = array(
+				'rf' => $rf,
+			);
+			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
 		}
@@ -1215,9 +1227,12 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return int                      An integer count of the number of properties.
 		 */
 		public function get_mls_propertycount( $idx_id, $count_type = '', $count_specifier = '' ) {
-			// Prepare request.
 			$route = "mls/propertycount/$idx_id";
-			$route = add_query_arg( array( 'countType' => $count_type, 'countSpecifier' => $count_specifier ), $route );
+			$args = array(
+				'countType' => $count_type,
+				'countSpecifier' => $count_specifier,
+			);
+			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
 		}
@@ -1236,9 +1251,13 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *                                     property type name, parent property type, and subtypes.
 		 */
 		public function get_mls_propertytypes( $idx_id, $filter_field = '', $filter_value = '', $rf = '' ) {
-			// Prepare request.
 			$route = "mls/propertytypes/$idx_id";
-			$route = add_query_arg( array( 'filterField' => $filter_field, 'filterValue' => $filter_value, 'rf' => $rf ), $route );
+			$args = array(
+				'filterField' => $filter_field,
+				'filterValue' => $filter_value,
+				'rf' => $rf,
+			);
+			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
 		}
@@ -1260,9 +1279,13 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *                                     the field belongs.
 		 */
 		public function get_mls_searchfields( $idx_id, $filter_field = '', $filter_value = '', $rf = '' ) {
-			// Prepare request.
 			$route = "mls/searchfields/$idx_id";
-			$route = add_query_arg( array( 'filterField' => $filter_field, 'filterValue' => $filter_value, 'rf' => $rf ), $route );
+			$args = array(
+				'filterField' => $filter_field,
+				'filterValue' => $filter_value,
+				'rf' => $rf,
+			);
+			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
 		}
@@ -1280,9 +1303,12 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return array              An array containing all the values for the given mls field.
 		 */
 		public function get_mls_searchfieldvalues( $idx_id, $mls_pt_id, $name ) {
-			// Prepare request.
 			$route = "mls/searchfieldvalues/$idx_id";
-			$route = add_query_arg( array( 'mlsPtID' => $mls_pt_id, 'name' => $name ), $route );
+			$args = array(
+				'mlsPtID' => $mls_pt_id,
+				'name' => $name,
+			);
+			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
 		}
@@ -1302,9 +1328,13 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *                                     a count of the number of occurrences of each value.
 		 */
 		public function get_mls_zipcodes( $idx_id, $filter_field = '', $filter_value = '', $rf = '' ) {
-			// Prepare request.
 			$route = "mls/zipcodes/$idx_id";
-			$route = add_query_arg( array( 'filterField' => $filter_field, 'filterValue' => $filter_value, 'rf' => $rf ), $route );
+			$args = array(
+				'filterField' => $filter_field,
+				'filterValue' => $filter_value,
+				'rf' => $rf,
+			);
+			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
 		}
@@ -1408,7 +1438,6 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *                         simple information about all leads is returned.
 		 */
 		public function get_leads( $lead_id = '', $args = array() ) {
-			// Prepare request.
 			$route = ( '' === $lead_id ) ? 'leads/lead' : "leads/lead/$lead_id";
 			$route = add_query_arg( $args, $route );
 
@@ -1483,7 +1512,6 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return array           The applicable client account ID, date, lead ID, IP , page, and referrer.
 		 */
 		public function get_leadtraffic( $lead_id, $args = array() ) {
-			// Prepare request.
 			$route = "leads/leadtraffic/$lead_id";
 			$route = add_query_arg( $args, $route );
 
@@ -1540,7 +1568,6 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *                         note ID is passed only the one note is returned.
 		 */
 		public function get_leads_note( $lead_id, $note_id = '', $args = array() ) {
-			// Prepare request.
 			$route = ( '' === $note_id ) ? "leads/note/$lead_id" : "leads/note/$lead_id/$note_id";
 			$route = add_query_arg( $args, $route );
 
@@ -1621,7 +1648,6 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *                             only the information for that specified property is returned.
 		 */
 		public function get_leads_property( $lead_id, $property_id = '', $args = array() ) {
-			// Prepare request.
 			$route = ( '' === $property_id ) ? "leads/property/$lead_id" : "leads/property/$lead_id/$property_id";
 			$route = add_query_arg( $args, $route );
 
@@ -1708,7 +1734,6 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *                           this info will tell you if any search's advanced fields are not valid in the IDX system.
 		 */
 		public function get_leads_search( $lead_id, $search_id = '', $args = array() ) {
-			// Prepare request.
 			$route = ( '' === $search_id ) ? "leads/property/$lead_id" : "leads/property/$lead_id/$search_id";
 			$route = add_query_arg( $args, $route );
 
