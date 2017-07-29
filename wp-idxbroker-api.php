@@ -153,8 +153,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 */
 		public function get_idx_domain() {
 			// Make API call to systemlinks cuz IDX Broker doesnt send it in accounts info. ¯\_(ツ)_/¯.
-			$links = $this->build_request( 'clients/systemlinks?rf=url' )->request();
-
+			$links = $this->get_clients_systemlinks( 'url' );
 			// Default to false.
 			$domain = false;
 
@@ -163,6 +162,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 				$data = parse_url( $links[0]['url'] );
 				$domain['scheme'] = $data['scheme'];
 				$domain['url'] = $data['host'];
+				$domain['full'] = $data['scheme'] . '://' . $data['host'];
 			}
 
 			return $domain;
@@ -582,15 +582,15 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @param  int    $page_id      Page ID if setting dynamic wrapper url for a specific page.
 		 * @return mixed                No data returned on success.
 		 */
-		public function post_clients_dynamicwrapperurl( $dynamic_url, $savedlink_id = null, $page_id = null ) {
+		public function post_clients_dynamicwrapperurl( $dynamic_url, $savedlink_id = '', $page_id = '' ) {
 			// Prepare request.
 			$fields['method'] = 'POST';
 			$fields['body']['dynamicURL'] = $dynamic_url;
 
-			if ( null !== $savedlink_id ) {
+			if ( !empty( $savedlink_id ) ) {
 				$fields['body']['savedLinkID'] = $savedlink_id;
 			}
-			if ( null !== $page_id ) {
+			if ( !empty( $page_id ) ) {
 				$fields['body']['pageID'] = $page_id;
 			}
 
@@ -1006,7 +1006,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		}
 
 		/**
-		 * Remove a clients supplemental property.
+		 * Remove a clients wrapper cache.
 		 *
 		 * This method is to be used at your own risk. We will NOT be held accountable for programmatic errors in your code
 		 * or the improper use of search values or options within said values resulting in deletion of supplemental properties.
