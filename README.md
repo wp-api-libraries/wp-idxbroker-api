@@ -10,9 +10,9 @@ A WordPress php library for interacting with the [IDX Broker API](https://middle
 # Example usage
 The IDX Broker API library contains a method for each API endpoint. Visit the [PHPDocs](https://wp-api-libraries.github.io/wp-idxbroker-api/classes/IdxBrokerAPI.html) for the full library documentation.
 
-### GET Request
+#### GET Requests
 ```php
-$idx_api = new IdxBrokerAPI( 'example_api_key');
+$idx_api = new IdxBrokerAPI( 'example_api_key' );
 
 $res1 = $idx_api->get_clients_featured();
 
@@ -21,7 +21,7 @@ $res2 = $idx_api->get_clients_systemlinks( 'url' );
 $res3 = $idx_api->get_mls_approvedmls();
 ```
 
-### POST Request
+#### POST Requests
 ```php
 $res1 = $idx_api->post_clients_dynamicwrapperurl( 'https://example.com/luxury-real-estate', '12345' );
 
@@ -30,22 +30,38 @@ $res2 = $idx_api->post_leads_note( '3', '1', $data );
 
 ```
 
-### PUT Request
+#### PUT Requests
 ```php
 $data = array( 
   'propertyName' => 'Test Property',
-  'property' => array('idxID' => 'a001', 'listingID' => '345678')
+  'property' => array('idxID' => 'a001', 'listingID' => '345678' )
 );
 $res1 = $idx_api->put_leads_property( 812, $data );
 ```
 
-### DELETE Request
+#### DELETE Requests
 ```php
-$res1 = $idx_api->delete_leads_search( 321, 8 );
+$res1 = $idx_api->delete_clients_supplemental( 345678 );
 ```
+### Helper methods
 
-### Check API Key Usage
+The library also provides a few methods that assist in  extracting  information that is not necessarilly easy to access through the API.
+#### Check API Key Usage
 After you make a call to the API you can check your hourly API key usage using the check_usage method
 ```php
 $usage = $idx_api->check_usage();
+```
+#### GET Client Domain used for client wrapper pages.
+```php
+$domain = $idx_api->get_idx_domain();
+ 
+/*
+Results
+Array
+(
+    [scheme] => https
+    [url] => search.example.com
+    [full] => https://search.example.com
+)
+*/
 ```
