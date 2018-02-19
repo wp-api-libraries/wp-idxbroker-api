@@ -7,16 +7,16 @@
  */
 
 /*
-* Plugin Name: WP IDX Broker API
-* Plugin URI: https://github.com/wp-api-libraries/wp-idxbroker-api
-* Description: Perform API requests to IDX Broker in WordPress.
-* Author: WP API Libraries
-* Version: 1.1.0
-* Text Domain: wp-idxbroker-api
-* Author URI: https://wp-api-libraries.com
-* GitHub Plugin URI: https://github.com/wp-api-libraries/wp-idxbroker-api
-* GitHub Branch: master
-*/
+ * Plugin Name: WP IDX Broker API
+ * Plugin URI: https://github.com/wp-api-libraries/wp-idxbroker-api
+ * Description: Perform API requests to IDX Broker in WordPress.
+ * Author: WP API Libraries
+ * Version: 1.1.0
+ * Text Domain: wp-idxbroker-api
+ * Author URI: https://wp-api-libraries.com
+ * GitHub Plugin URI: https://github.com/wp-api-libraries/wp-idxbroker-api
+ * GitHub Branch: master
+ */
 
 /* Exit if accessed directly */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
@@ -1737,7 +1737,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *                           this info will tell you if any search's advanced fields are not valid in the IDX system.
 		 */
 		public function get_leads_search( $lead_id, $search_id = '', $args = array() ) {
-			$route = ( '' === $search_id ) ? "leads/property/$lead_id" : "leads/property/$lead_id/$search_id";
+			$route = ( '' === $search_id ) ? "leads/search/$lead_id" : "leads/search/$lead_id/$search_id";
 			$route = add_query_arg( $args, $route );
 
 			return $this->build_request( $route )->request();
