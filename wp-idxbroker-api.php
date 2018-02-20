@@ -1467,7 +1467,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		public function post_lead( $lead_id, $data ) {
 			$fields['method'] = 'POST';
 			$fields['body'] = $data;
-			$route = "leads/leads/$lead_id";
+			$route = "leads/lead/$lead_id";
 
 			return $this->build_request( $route, $fields )->request();
 		}
@@ -1497,7 +1497,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		public function put_lead( $data = array() ) {
 			$fields['method'] = 'PUT';
 			$fields['body'] = $data;
-			$route = 'leads/leads';
+			$route = 'leads/lead';
 
 			return $this->build_request( $route, $fields )->request();
 		}
