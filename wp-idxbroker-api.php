@@ -471,6 +471,10 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 -------------------------------------------------------------------------------------------------------------
 		 */
 
+		public function get_clients_accountinfo() {
+			return $this->build_request( 'clients/accountinfo' )->request();
+		}
+
 		/**
 		 * Get your account type.
 		 *
