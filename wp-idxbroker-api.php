@@ -82,7 +82,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @param string $apiversion   Version of API to use.
 		 * @return void
 		 */
-		public function __construct( $api_key, $partner_key = null, $outputtype = 'json', $apiversion = '1.4.0' ) {
+		public function __construct( $api_key, $partner_key = null, $outputtype = 'json', $apiversion = '1.5.0' ) {
 
 			$this->args['headers'] = array(
 				'Content-Type' => 'application/x-www-form-urlencoded',
