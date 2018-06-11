@@ -89,7 +89,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 				'accesskey' => $api_key,
 				'ancillarykey' => $partner_key,
 				'outputtype' => $outputtype,
-				'apiversion' => $apiversion,
+				'api-version' => $apiversion,
 			);
 
 		}
@@ -474,7 +474,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		public function get_clients_accountinfo() {
 			return $this->build_request( 'clients/accountinfo' )->request();
 		}
-		
+
 		public function update_clients_accountinfo( $data ) {
 			$fields['method'] = 'POST';
 			$fields['body'] = $data;
