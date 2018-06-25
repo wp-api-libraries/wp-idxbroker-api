@@ -82,14 +82,14 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @param string $apiversion   Version of API to use.
 		 * @return void
 		 */
-		public function __construct( $api_key, $partner_key = null, $outputtype = 'json', $apiversion = '1.5.0' ) {
+		public function __construct( $api_key, $partner_key = null, $outputtype = 'json', $apiversion = '1.6.0' ) {
 
 			$this->args['headers'] = array(
 				'Content-Type' => 'application/x-www-form-urlencoded',
-				'accesskey' => $api_key,
+				'accesskey'    => $api_key,
 				'ancillarykey' => $partner_key,
-				'outputtype' => $outputtype,
-				'api-version' => $apiversion,
+				'outputtype'   => $outputtype,
+				'api-version'  => $apiversion,
 			);
 
 		}
@@ -102,7 +102,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 */
 		public function request() {
 			$result = false;
-			$this->response = wp_remote_request( $this->api_url . $this->route,  $this->args );
+			$this->response = wp_remote_request( $this->api_url . $this->route, $this->args );
 
 			$this->get_response_code();
 			$this->check_usage();
