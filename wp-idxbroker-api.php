@@ -473,13 +473,25 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 -------------------------------------------------------------------------------------------------------------
 		 */
 
+		/**
+		 * Get client account information.
+		 *
+		 * @return object The response.
+		 */
 		public function get_clients_accountinfo() {
 			return $this->build_request( 'clients/accountinfo' )->request();
 		}
 
+		/**
+		 * Update a client's account information.
+		 *
+		 * @param  array  $data The data to update (key => val).
+		 * @return object       The response.
+		 */
 		public function update_clients_accountinfo( $data ) {
 			$fields['method'] = 'POST';
 			$fields['body'] = $data;
+
 			return $this->build_request( 'clients/accountinfo', $fields )->request();
 		}
 
