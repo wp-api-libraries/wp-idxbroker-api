@@ -102,7 +102,9 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 */
 		public function request() {
 			$result = false;
+			// pp( $this->api_url . $this->route, $this->args );
 			$this->response = wp_remote_request( $this->api_url . $this->route, $this->args );
+			// pp( $this->api_url . $this->route, $this->response );
 
 			$this->get_response_code();
 			$this->check_usage();
