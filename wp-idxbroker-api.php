@@ -102,8 +102,8 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 */
 		public function request() {
 			$result = false;
-			// pp( $this->api_url . $this->route, $this->args );
 			$this->response = wp_remote_request( $this->api_url . $this->route, $this->args );
+			// pp( $this->api_url . $this->route, $this->args );
 			// pp( $this->api_url . $this->route, $this->response );
 
 			$this->get_response_code();
@@ -956,7 +956,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @return mixed              If no POST data is supplied, then a list of updatable fields with format information
 		 *                            is returned, otherwise on success 204 is returned.
 		 */
-		public function post_clients_supplemental( $listing_id, $data = array() ) {
+		public function update_clients_supplemental( $listing_id, $data = array() ) {
 			$fields['method'] = 'POST';
 			$fields['body'] = $data;
 			$route = "clients/supplemental/$listing_id";
@@ -983,12 +983,18 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *                      returned. If no PUT data is supplied, then a list of updatable fields with format
 		 *                      information is returned.
 		 */
-		public function put_clients_supplemental( $data = array() ) {
+		public function create_clients_supplemental( $data = array() ) {
 			$fields['method'] = 'PUT';
 			$fields['body'] = $data;
 			$route = 'clients/supplemental';
 
 			return $this->build_request( $route, $fields )->request();
+		}
+
+		public function put_clients_supplemental( $data = array() ){
+			_deprecated_function( 'put_clients_supplemental', '1.2.3', 'create_clients_supplemental' );
+
+			return $this->create_clients_supplemental( $data );
 		}
 
 		/**
@@ -1825,16 +1831,14 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 */
 
 		/**
-		 * Get IDX account and agent/office add-on pricing.
-		 *
-		 * Note: This method is only available for specialty billing partners.
+		 * Get general pricing.
 		 *
 		 * @api GET
-		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-Specialty_Partner-getPricing Documentation.
-		 * @return array  IDX account and agent/office add-on pricing.
+		 * @see https://middleware.idxbroker.com/docs/api/methods/index.html#api-Partners-getPricing
+		 * @return array Pricings.
 		 */
-		public function get_specialtypartner_pricing() {
-			return $this->build_request( 'specialtypartner/pricing' )->request();
+		public function get_pricing() {
+			return $this->build_request( 'partners/pricing' )->request();
 		}
 
 		/**
@@ -1864,10 +1868,10 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @param  array $data   Subscriber data.
 		 * @return mixed         Nothing on success
 		 */
-		public function put_specialtypartner_subscriber( $data = array() ) {
+		public function create_subscriber( $data = array() ) {
 			$fields['method'] = 'PUT';
 			$fields['body'] = $data;
-			$route = 'specialtypartner/subscriber';
+			$route = 'partners/subscriber';
 
 			return $this->build_request( $route, $fields )->request();
 		}
