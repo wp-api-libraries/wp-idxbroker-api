@@ -89,8 +89,14 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 				'accesskey'    => $api_key,
 				'ancillarykey' => $partner_key,
 				'outputtype'   => $outputtype,
-				'api-version'  => $apiversion,
+				'apiversion'  => $apiversion,
 			);
+
+			if( version_compare( $apiversion, '1.6.0', '<' ) ){
+				// I hate IDX Broker.
+				unset( $this->args['headers']['apiversion'] );
+				$this->args['headers']['api-version'] = $apiversion;
+			}
 
 		}
 
