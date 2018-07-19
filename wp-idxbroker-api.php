@@ -63,7 +63,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @var string
 		 */
-		protected $response;
+		public $response;
 
 		/**
 		 * Response code from the server
@@ -1317,7 +1317,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *                                     displayed in a search form), and both the mlsPtID and parentPtID to which
 		 *                                     the field belongs.
 		 */
-		public function get_mls_searchfields( $idx_id, $filter_field = '', $filter_value = '', $rf = '' ) {
+		public function get_mls_searchfields( $idx_id, $filter_field = null, $filter_value = null, $rf = null ) {
 			$route = "mls/searchfields/$idx_id";
 			$args = array(
 				'filterField' => $filter_field,
@@ -1334,15 +1334,15 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 *
 		 * @api GET
 		 * @see http://middleware.idxbroker.com/docs/api/methods/index.html#api-MLS-getSearchfieldvalues Documentation.
-		 * @param  string $idx_id     Format: x000.
+		 * @param  string $mls_id     Format: x000.
 		 * @param  int    $mls_pt_id  The IDX assigned ID of the MLS property type(s). See the propertytypes method in this
 		 *                            API/Component for a lookup of property type IDs.
 		 * @param  string $name       Mls field name - the IDX assigned name of the MLS field name. See the searchfields for
 		 *                            the list of searchable fields.
 		 * @return array              An array containing all the values for the given mls field.
 		 */
-		public function get_mls_searchfieldvalues( $idx_id, $mls_pt_id, $name ) {
-			$route = "mls/searchfieldvalues/$idx_id";
+		public function get_mls_searchfieldvalues( $mls_id, $mls_pt_id, $name ) {
+			$route = "mls/searchfieldvalues/$mls_id";
 			$args = array(
 				'mlsPtID' => $mls_pt_id,
 				'name' => $name,
