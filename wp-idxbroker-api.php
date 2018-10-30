@@ -18,8 +18,8 @@
  * GitHub Branch: master
  */
 
-/* Exit if accessed directly */
-if ( ! defined( 'ABSPATH' ) ) { exit; }
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
 /* Check if class exists. */
 if ( ! class_exists( 'IdxBrokerAPI' ) ) {
@@ -28,9 +28,9 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 	 *
 	 * @version 1.1.0
 	 * @link http://middleware.idxbroker.com/docs/api/methods/index.html API Documentation
-   * @package WP-API-Libraries\WP-IDX-Broker-API
+	 * @package WP-API-Libraries\WP-IDX-Broker-API
 	 * @author Santiago Garza <https://github.com/sfgarza>
-   * @author imFORZA <https://github.com/imforza>
+	 * @author imFORZA <https://github.com/imforza>
 	 */
 	class IdxBrokerAPI {
 
@@ -92,7 +92,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 				'apiversion'  => $apiversion,
 			);
 
-			if( version_compare( $apiversion, '1.6.0', '<' ) ){
+			if ( version_compare( $apiversion, '1.6.0', '<' ) ) {
 				// I hate IDX Broker.
 				unset( $this->args['headers']['apiversion'] );
 				$this->args['headers']['api-version'] = $apiversion;
@@ -111,7 +111,6 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 			$this->response = wp_remote_request( $this->api_url . $this->route, $this->args );
 			// pp( $this->api_url . $this->route, $this->args );
 			// pp( $this->api_url . $this->route, $this->response );
-
 			$this->get_response_code();
 			$this->check_usage();
 
@@ -491,7 +490,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		/**
 		 * Update a client's account information.
 		 *
-		 * @param  array  $data The data to update (key => val).
+		 * @param  array $data The data to update (key => val).
 		 * @return object       The response.
 		 */
 		public function update_clients_accountinfo( $data ) {
@@ -996,8 +995,12 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 
 			return $this->build_request( $route, $fields )->request();
 		}
-
-		public function put_clients_supplemental( $data = array() ){
+		/**
+		 * Put Supplemental Properties.
+		 * @param  array  $data Data.
+		 * @return [type]       [description]
+		 */
+		public function put_clients_supplemental( $data = array() ) {
 			_deprecated_function( 'put_clients_supplemental', '1.2.3', 'create_clients_supplemental' );
 
 			return $this->create_clients_supplemental( $data );
