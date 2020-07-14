@@ -95,7 +95,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 			// Force use of v 1.6.0
 			if ( version_compare( $apiversion, '1.6.0', '<' ) ) {
 				unset( $this->args['headers']['apiversion'] );
-				$this->args['headers']['api-version'] = $apiversion;
+				$this->args['headers']['apiversion'] = $apiversion;
 			}
 
 		}
