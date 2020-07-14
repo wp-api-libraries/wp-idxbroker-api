@@ -82,7 +82,7 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 		 * @param string $apiversion   Version of API to use.
 		 * @return void
 		 */
-		public function __construct( $api_key, $partner_key = null, $outputtype = 'json', $apiversion = '1.6.0' ) {
+		public function __construct( $api_key, $partner_key = null, $outputtype = 'json', $apiversion = '1.7.0' ) {
 
 			$this->args['headers'] = array(
 				'Content-Type' => 'application/x-www-form-urlencoded',
@@ -92,8 +92,8 @@ if ( ! class_exists( 'IdxBrokerAPI' ) ) {
 				'apiversion'  => $apiversion,
 			);
 
+			// Force use of v 1.6.0
 			if ( version_compare( $apiversion, '1.6.0', '<' ) ) {
-				// I hate IDX Broker.
 				unset( $this->args['headers']['apiversion'] );
 				$this->args['headers']['api-version'] = $apiversion;
 			}
